@@ -1,0 +1,58 @@
+{
+  "status": "Planning allocations, not validated vehicle mass estimates or propulsion feasibility",
+  "remote_exploration_limit_kg_exclusive": 500,
+  "crewed_rover_excluded_from_remote_cap": true,
+  "main_ship_relaunch_required": false,
+  "interstellar_relay_chain": {
+    "status": "Proposed design-to requirement; independent power, optical deployment, pointing and antimatter hardware feasibility unclosed",
+    "separate_from_remote_exploration_allocation": true,
+    "node_count": 200,
+    "mass_cap_all_up_kg": 100,
+    "nominal_node_all_up_kg": 0.4,
+    "dispenser_kg": 5,
+    "nominal_receiver_diameter_m": 20,
+    "receiver_film_thickness_m": 0.00000025,
+    "receiver": "Deployable very thin diffractive/reflective optical membrane focusing a narrowband signal onto a detector; support, focusing and pointing hardware required",
+    "transmitter_aperture_m": 0.05,
+    "optical_transmit_power_W": 1,
+    "wavelength_m": 0.00000155,
+    "braking": "Each node brakes independently after deployment using assumed 0.5c effective exhaust; fuel, containment, power, cooling and stationkeeping must fit its allocation",
+    "stationary_definition": "Approximately at rest in a chosen Solar-System-barycentric frame after braking, not fixed relative to Earth's orbit; transverse motion and stationkeeping unsolved",
+    "deployment": "Release before desired final location to allow braking; endpoint/acceleration-phase deployment trajectories remain to be solved",
+    "storage": "Compact deployment canister mounted directly to the flight superstructure; expanded receivers deploy after release",
+    "mass_accounting": "100 kg cap includes matter/antimatter braking fuel, dry hardware, dispenser and development allowance; see mission-300-trade.json",
+    "communications_role": "Low-rate regenerative store-and-forward interstellar optical relay; no credit for replacing ship navigation, control, local radios or an independent survival link",
+    "calculation_source": "mission_300_trade.py"
+  },
+  "remote_items": [
+    {"name": "Shared antimatter scout carrier", "count": 1, "unit_allocation_kg": 150},
+    {"name": "CubeSat-class daughter probe", "count": 4, "unit_allocation_kg": 8},
+    {"name": "Microlander", "count": 3, "unit_allocation_kg": 25},
+    {"name": "Robotic micro-rover", "count": 2, "unit_allocation_kg": 15},
+    {"name": "Additional shared deployment, relay and support hardware", "count": 1, "unit_allocation_kg": 60},
+    {"name": "Allocated remote uncertainty allowance", "count": 1, "unit_allocation_kg": 103}
+  ],
+  "mass_accounting": "All remote vehicle fuel, containment, power, cooling, shielding, communications, instruments and support are inside these allocations",
+  "space_probe_release": "Before main-ship descent at suitable destination trajectories; no main-ship relaunch",
+  "crewed_rover": {
+    "count": 1,
+    "concept": "Pressurised electric utility rover for two occupants, remotely operable; cruise service pod becomes rover cabin",
+    "pressurised": true,
+    "cruise_use_of_pressure_cabin": "Flight workshop/service room; final room allocation and location pending",
+    "reuse_candidates": ["Pressure enclosure", "Hatch", "Atmosphere monitoring", "Suitable life-support equipment", "Interior fittings", "Communications", "Power and thermal equipment"],
+    "additional_hardware": ["Chassis", "Suspension", "Wheels", "Drive motors", "Steering and brakes", "Dust protection", "Pod load interfaces", "Independent life-support and energy reserves", "Recovery equipment"],
+    "all_private_couple_cabins_retained": true,
+    "mass_kg": null,
+    "mass_includes": ["Chassis and mobility systems", "Reused cabin and equipment counted once in departure mass", "Independent life support and consumables", "Power and thermal control", "Charging equipment", "Unloading and mounting hardware", "Tools", "Spares", "Recovery provisions"],
+    "nominal_crew": 2,
+    "nominal_endurance_days": 7,
+    "range_and_endurance": "Two people for seven days required; driving range and contingency reserves not yet sized"
+  },
+  "feasibility_gates": [
+    "150 kg antimatter carrier independent containment/power/thermal fit",
+    "Microlander target gravity and delta-v within 25 kg allocation",
+    "Daughter probe instruments, communications and lifetime within 8 kg allocation",
+    "Independent power and relay operations after deployment",
+    "Twenty-year storage, operation and release qualification"
+  ]
+}

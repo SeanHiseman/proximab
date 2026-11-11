@@ -1,0 +1,2588 @@
+{
+  "status": "Audit alternatives only; current 3D geometry and selected mass baseline are unchanged.",
+  "iss_comparison": {
+    "mass_kg": 419725,
+    "pressurised_volume_m3": 1005,
+    "habitable_volume_m3": 388,
+    "source": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/"
+  },
+  "compact_geometry": {
+    "disc_count": 2,
+    "disc_radius_m": 20,
+    "axial_depth_m": 4.5,
+    "floor_radii_m": [
+      18,
+      14,
+      10,
+      6
+    ],
+    "gross_floor_area_m2": 1809.5573684677208,
+    "net_floor_area_m2_assumed": 1176.2122895040186,
+    "gross_pressurised_volume_m3": 11309.733552923255,
+    "pressure_area_m2": 6157.5216010359945,
+    "outer_floor_gravity_g": 0.5,
+    "spin_rpm": 4.984027953287711,
+    "area_allocations_per_disc_m2": {
+      "private_cabins": 108,
+      "dining_galley": 40,
+      "lounge_quiet_arts_telepresence": 60,
+      "exercise_rehabilitation": 40,
+      "clinical": 24,
+      "science_control_training_workshop": 55,
+      "hygiene": 20,
+      "plant_stores": 140,
+      "circulation_egress": 100
+    },
+    "all_awake_occupants_per_disc": 18
+  },
+  "scenarios": [
+    {
+      "final_retained_mass_kg": 1990635.1496294157,
+      "departure_mass_kg": 6111490.747139559,
+      "thermal_hydrogen_kg": 119012.4761129859,
+      "propulsion_antimatter_loaded_kg": 2100967.6387231923,
+      "propulsion_matching_matter_loaded_kg": 2100967.6387231923,
+      "retained_direct_propellant_reserve_kg": 200092.15604922752,
+      "hydrogen_tank_kg": 14281.497133558307,
+      "engine_hot_radiator_kg": 83454.64245656942,
+      "initial_thrust_MN": 71.9199008825234,
+      "initial_annihilation_power_PW": 43.12208772937611,
+      "engine_radiator_emitting_area_m2": 16690.928491313884,
+      "hardware_before_margin_kg": 1216040.0682850936,
+      "hardware_margin_kg": 304010.0170712734,
+      "stocks_people_kg": 270492.90822382143,
+      "hardware_with_margin_kg": 1520050.085356367,
+      "components_before_derived": [
+        {
+          "id": "membranes",
+          "system": "Habitat pressure membranes, insulation and restraint",
+          "low_kg": 78037.16151517046,
+          "mass_kg": 130061.93585861743,
+          "high_kg": 234111.48454551137,
+          "basis": "13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding",
+          "kind": "hardware",
+          "status": "Planning estimate; 13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding"
+        },
+        {
+          "id": "floors",
+          "system": "Folding composite floors",
+          "low_kg": 40715.040790523715,
+          "mass_kg": 73287.07342294269,
+          "high_kg": 122145.12237157115,
+          "basis": "4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified",
+          "kind": "hardware",
+          "status": "Planning estimate; 4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified"
+        },
+        {
+          "id": "habframes",
+          "system": "Habitat deployment frames, hatches and cabin partitions",
+          "low_kg": 30000,
+          "mass_kg": 50000,
+          "high_kg": 90000,
+          "basis": "Two large deployable pressure structures; allowances include partitions, access and frame hardware",
+          "kind": "hardware",
+          "status": "Planning estimate; Two large deployable pressure structures; allowances include partitions, access and frame hardware"
+        },
+        {
+          "id": "bearings",
+          "system": "Hubs, bearings, spin motors and balance equipment",
+          "low_kg": 12000,
+          "mass_kg": 24000,
+          "high_kg": 45000,
+          "basis": "Two independently driven hubs; no validated bearing or transfer design",
+          "kind": "hardware",
+          "status": "Planning estimate; Two independently driven hubs; no validated bearing or transfer design"
+        },
+        {
+          "id": "furnishings",
+          "system": "Cabins, wardrooms, lounge, hygiene and exercise fittings",
+          "low_kg": 12000,
+          "mass_kg": 22000,
+          "high_kg": 38000,
+          "basis": "18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant",
+          "kind": "hardware",
+          "status": "Planning estimate; 18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant"
+        },
+        {
+          "id": "structure",
+          "system": "Service spine, engine mounts and attachment structure",
+          "low_kg": 30000,
+          "mass_kg": 55000,
+          "high_kg": 100000,
+          "basis": "281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis",
+          "kind": "hardware",
+          "status": "Planning estimate; 281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis"
+        },
+        {
+          "id": "landing",
+          "system": "Landing supports, restraints and habitat transport covers",
+          "low_kg": 20000,
+          "mass_kg": 38000,
+          "high_kg": 75000,
+          "basis": "Permanent horizontal landing baseline; distributed supports and full-scale packing racks",
+          "kind": "hardware",
+          "status": "Planning estimate; Permanent horizontal landing baseline; distributed supports and full-scale packing racks"
+        },
+        {
+          "id": "dustshield",
+          "system": "Forward dust/gas shield stack and supports",
+          "low_kg": 66000,
+          "mass_kg": 132000,
+          "high_kg": 330000,
+          "basis": "1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection",
+          "kind": "hardware",
+          "status": "Planning estimate; 1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection"
+        },
+        {
+          "id": "radiationshield",
+          "system": "Crew refuge radiation shielding",
+          "low_kg": 15000,
+          "mass_kg": 30000,
+          "high_kg": 70000,
+          "basis": "Dedicated shielding allowance beyond distributed water/food; dose transport unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; Dedicated shielding allowance beyond distributed water/food; dose transport unresolved"
+        },
+        {
+          "id": "engine",
+          "system": "Direct and hydrogen-thermal engine hardware",
+          "low_kg": 35000,
+          "mass_kg": 80000,
+          "high_kg": 180000,
+          "basis": "Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated",
+          "kind": "hardware",
+          "status": "Planning estimate; Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated"
+        },
+        {
+          "id": "containment",
+          "system": "Main antimatter storage and cryogenic hardware",
+          "low_kg": 40000,
+          "mass_kg": 120000,
+          "high_kg": 350000,
+          "basis": "Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling",
+          "kind": "hardware",
+          "status": "Planning estimate; Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling"
+        },
+        {
+          "id": "refuge",
+          "system": "Rigid 36-person descent refuge and airlocks",
+          "low_kg": 12000,
+          "mass_kg": 22000,
+          "high_kg": 40000,
+          "basis": "108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems",
+          "kind": "hardware",
+          "status": "Planning estimate; 108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems"
+        },
+        {
+          "id": "eclss",
+          "system": "Redundant life support and water/waste processing",
+          "low_kg": 15000,
+          "mass_kg": 28000,
+          "high_kg": 50000,
+          "basis": "36-person full-awake design; duplicated critical functions and spares in separate row",
+          "kind": "hardware",
+          "status": "Planning estimate; 36-person full-awake design; duplicated critical functions and spares in separate row"
+        },
+        {
+          "id": "medical",
+          "system": "36 torpor beds, medical systems and embryo storage",
+          "low_kg": 14000,
+          "mass_kg": 27000,
+          "high_kg": 50000,
+          "basis": "36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven",
+          "kind": "hardware",
+          "status": "Planning estimate; 36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven"
+        },
+        {
+          "id": "power",
+          "system": "10MWe power conversion, distribution and startup storage",
+          "low_kg": 20000,
+          "mass_kg": 40000,
+          "high_kg": 85000,
+          "basis": "Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source",
+          "kind": "hardware",
+          "status": "Planning estimate; Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source"
+        },
+        {
+          "id": "warmradiators",
+          "system": "Service/surface radiators and heat-recovery loops",
+          "low_kg": 58721.82463337848,
+          "mass_kg": 93954.91941340556,
+          "high_kg": 164421.10897345972,
+          "basis": "23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; 23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved"
+        },
+        {
+          "id": "avionics",
+          "system": "Avionics, navigation, communications and sensors",
+          "low_kg": 4000,
+          "mass_kg": 8000,
+          "high_kg": 16000,
+          "basis": "Independent navigation/control and high-gain communication; beam link budget unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; Independent navigation/control and high-gain communication; beam link budget unresolved"
+        },
+        {
+          "id": "factory",
+          "system": "Advanced fabrication, chemistry and resource-processing seed",
+          "low_kg": 30000,
+          "mass_kg": 65000,
+          "high_kg": 150000,
+          "basis": "Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration",
+          "kind": "hardware",
+          "status": "Planning estimate; Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration"
+        },
+        {
+          "id": "farm",
+          "system": "Inflatable farm, eight bays and 2,000 m2 crop hardware",
+          "low_kg": 12000,
+          "mass_kg": 25000,
+          "high_kg": 50000,
+          "basis": "Carried envelopes, racks, LEDs, pumps, seed/biological stock; eight 18 x 13 m bay envelopes; 2,016 m2 depicted tray area; ideal 833 m2 rack/access footprint is a lower bound;600t local regolith excluded",
+          "kind": "hardware",
+          "status": "Planning estimate; Carried envelopes, racks, LEDs, pumps, seed/biological stock; eight 18 x 13 m bay envelopes; 2,016 m2 depicted tray area; ideal 833 m2 rack/access footprint is a lower bound;600t local regolith excluded"
+        },
+        {
+          "id": "rover",
+          "system": "Reused pressurised rover module, chassis and7-day stores",
+          "low_kg": 6000,
+          "mass_kg": 10000,
+          "high_kg": 18000,
+          "basis": "Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables",
+          "kind": "hardware",
+          "status": "Planning estimate; Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables"
+        },
+        {
+          "id": "spares",
+          "system": "Repair stock, tools, EVA suits and replacement units",
+          "low_kg": 15000,
+          "mass_kg": 35000,
+          "high_kg": 75000,
+          "basis": "16-year spares allowance beyond already counted redundant installed hardware",
+          "kind": "hardware",
+          "status": "Planning estimate; 16-year spares allowance beyond already counted redundant installed hardware"
+        },
+        {
+          "id": "gas",
+          "system": "Initial habitat atmosphere and gas makeup",
+          "low_kg": 23168.27563376909,
+          "mass_kg": 26168.27563376909,
+          "high_kg": 33168.275633769095,
+          "basis": "Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below",
+          "kind": "consumable",
+          "status": "Planning estimate; Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below"
+        },
+        {
+          "id": "water",
+          "system": "Water/oxygen-cycle buffers and process starting inventory",
+          "low_kg": 15000,
+          "mass_kg": 25000,
+          "high_kg": 45000,
+          "basis": "Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget",
+          "kind": "consumable",
+          "status": "Planning estimate; Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget"
+        },
+        {
+          "id": "food",
+          "system": "Dry food plus food packaging,16years +6months commissioning",
+          "low_kg": 166407.1695,
+          "mass_kg": 190272.6045,
+          "high_kg": 229976.01,
+          "basis": "216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively",
+          "kind": "consumable",
+          "status": "Planning estimate; 216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively"
+        },
+        {
+          "id": "consumables",
+          "system": "Medical, hygiene, nutrient and general consumables",
+          "low_kg": 12000,
+          "mass_kg": 25000,
+          "high_kg": 50000,
+          "basis": "16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved",
+          "kind": "consumable",
+          "status": "Planning estimate; 16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved"
+        },
+        {
+          "id": "processtanks",
+          "system": "Atmosphere, water and process tank hardware",
+          "low_kg": 5000,
+          "mass_kg": 10000,
+          "high_kg": 20000,
+          "basis": "Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately",
+          "kind": "hardware",
+          "status": "Planning estimate; Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately"
+        },
+        {
+          "id": "crew",
+          "system": "36 crew and personal effects",
+          "low_kg": 3240,
+          "mass_kg": 3600,
+          "high_kg": 4320,
+          "basis": "Includes people and personal effects; no births during transit",
+          "kind": "crew",
+          "status": "Planning estimate; Includes people and personal effects; no births during transit"
+        },
+        {
+          "id": "exploration",
+          "system": "Remote exploration complete allocation",
+          "low_kg": 450,
+          "mass_kg": 450,
+          "high_kg": 450,
+          "basis": "Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing",
+          "kind": "payload",
+          "status": "Planning estimate; Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing"
+        },
+        {
+          "id": "powerfuel",
+          "system": "Surface and transit power antimatter plus matching matter",
+          "low_kg": 2.0280900523271344,
+          "mass_kg": 2.0280900523271344,
+          "high_kg": 2.0280900523271344,
+          "basis": "1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)",
+          "kind": "consumable",
+          "status": "Planning estimate; 1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)"
+        }
+      ],
+      "name": "Current 30 m discs",
+      "changes": [
+        "Reproduces the current baseline; not an independently validated design."
+      ],
+      "speculative": false
+    },
+    {
+      "final_retained_mass_kg": 1754076.5063444527,
+      "departure_mass_kg": 5385227.092114137,
+      "thermal_hydrogen_kg": 104869.53792136742,
+      "propulsion_antimatter_loaded_kg": 1851297.5501112763,
+      "propulsion_matching_matter_loaded_kg": 1851297.5501112763,
+      "retained_direct_propellant_reserve_kg": 176314.05237423704,
+      "hydrogen_tank_kg": 12584.34455056409,
+      "engine_hot_radiator_kg": 73537.24649426414,
+      "initial_thrust_MN": 63.37324471545732,
+      "initial_annihilation_power_PW": 37.99764160936492,
+      "engine_radiator_emitting_area_m2": 14707.449298852827,
+      "hardware_before_margin_kg": 1055223.7591010127,
+      "hardware_margin_kg": 263805.9397752532,
+      "stocks_people_kg": 258732.7550939497,
+      "hardware_with_margin_kg": 1319029.698876266,
+      "components_before_derived": [
+        {
+          "id": "membranes",
+          "system": "Habitat pressure membranes, insulation and restraint",
+          "low_kg": 78037.16151517046,
+          "mass_kg": 61575.216010359945,
+          "high_kg": 234111.48454551137,
+          "basis": "13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding",
+          "kind": "hardware",
+          "status": "Planning estimate; 13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding"
+        },
+        {
+          "id": "floors",
+          "system": "Folding composite floors",
+          "low_kg": 40715.040790523715,
+          "mass_kg": 32572.032632418974,
+          "high_kg": 122145.12237157115,
+          "basis": "4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified",
+          "kind": "hardware",
+          "status": "Planning estimate; 4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified"
+        },
+        {
+          "id": "habframes",
+          "system": "Habitat deployment frames, hatches and cabin partitions",
+          "low_kg": 30000,
+          "mass_kg": 50000,
+          "high_kg": 90000,
+          "basis": "Two large deployable pressure structures; allowances include partitions, access and frame hardware",
+          "kind": "hardware",
+          "status": "Planning estimate; Two large deployable pressure structures; allowances include partitions, access and frame hardware"
+        },
+        {
+          "id": "bearings",
+          "system": "Hubs, bearings, spin motors and balance equipment",
+          "low_kg": 12000,
+          "mass_kg": 24000,
+          "high_kg": 45000,
+          "basis": "Two independently driven hubs; no validated bearing or transfer design",
+          "kind": "hardware",
+          "status": "Planning estimate; Two independently driven hubs; no validated bearing or transfer design"
+        },
+        {
+          "id": "furnishings",
+          "system": "Cabins, wardrooms, lounge, hygiene and exercise fittings",
+          "low_kg": 12000,
+          "mass_kg": 22000,
+          "high_kg": 38000,
+          "basis": "18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant",
+          "kind": "hardware",
+          "status": "Planning estimate; 18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant"
+        },
+        {
+          "id": "structure",
+          "system": "Service spine, engine mounts and attachment structure",
+          "low_kg": 30000,
+          "mass_kg": 55000,
+          "high_kg": 100000,
+          "basis": "281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis",
+          "kind": "hardware",
+          "status": "Planning estimate; 281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis"
+        },
+        {
+          "id": "landing",
+          "system": "Landing supports, restraints and habitat transport covers",
+          "low_kg": 20000,
+          "mass_kg": 38000,
+          "high_kg": 75000,
+          "basis": "Permanent horizontal landing baseline; distributed supports and full-scale packing racks",
+          "kind": "hardware",
+          "status": "Planning estimate; Permanent horizontal landing baseline; distributed supports and full-scale packing racks"
+        },
+        {
+          "id": "dustshield",
+          "system": "Forward dust/gas shield stack and supports",
+          "low_kg": 66000,
+          "mass_kg": 92000.0,
+          "high_kg": 330000,
+          "basis": "1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection",
+          "kind": "hardware",
+          "status": "Planning estimate; 1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection"
+        },
+        {
+          "id": "radiationshield",
+          "system": "Crew refuge radiation shielding",
+          "low_kg": 15000,
+          "mass_kg": 30000,
+          "high_kg": 70000,
+          "basis": "Dedicated shielding allowance beyond distributed water/food; dose transport unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; Dedicated shielding allowance beyond distributed water/food; dose transport unresolved"
+        },
+        {
+          "id": "engine",
+          "system": "Direct and hydrogen-thermal engine hardware",
+          "low_kg": 35000,
+          "mass_kg": 80000,
+          "high_kg": 180000,
+          "basis": "Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated",
+          "kind": "hardware",
+          "status": "Planning estimate; Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated"
+        },
+        {
+          "id": "containment",
+          "system": "Main antimatter storage and cryogenic hardware",
+          "low_kg": 40000,
+          "mass_kg": 120000,
+          "high_kg": 350000,
+          "basis": "Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling",
+          "kind": "hardware",
+          "status": "Planning estimate; Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling"
+        },
+        {
+          "id": "refuge",
+          "system": "Rigid 36-person descent refuge and airlocks",
+          "low_kg": 12000,
+          "mass_kg": 22000,
+          "high_kg": 40000,
+          "basis": "108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems",
+          "kind": "hardware",
+          "status": "Planning estimate; 108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems"
+        },
+        {
+          "id": "eclss",
+          "system": "Redundant life support and water/waste processing",
+          "low_kg": 15000,
+          "mass_kg": 28000,
+          "high_kg": 50000,
+          "basis": "36-person full-awake design; duplicated critical functions and spares in separate row",
+          "kind": "hardware",
+          "status": "Planning estimate; 36-person full-awake design; duplicated critical functions and spares in separate row"
+        },
+        {
+          "id": "medical",
+          "system": "36 torpor beds, medical systems and embryo storage",
+          "low_kg": 14000,
+          "mass_kg": 27000,
+          "high_kg": 50000,
+          "basis": "36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven",
+          "kind": "hardware",
+          "status": "Planning estimate; 36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven"
+        },
+        {
+          "id": "power",
+          "system": "10MWe power conversion, distribution and startup storage",
+          "low_kg": 20000,
+          "mass_kg": 40000,
+          "high_kg": 85000,
+          "basis": "Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source",
+          "kind": "hardware",
+          "status": "Planning estimate; Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source"
+        },
+        {
+          "id": "warmradiators",
+          "system": "Service/surface radiators and heat-recovery loops",
+          "low_kg": 58721.82463337848,
+          "mass_kg": 93954.91941340556,
+          "high_kg": 164421.10897345972,
+          "basis": "23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; 23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved"
+        },
+        {
+          "id": "avionics",
+          "system": "Avionics, navigation, communications and sensors",
+          "low_kg": 4000,
+          "mass_kg": 8000,
+          "high_kg": 16000,
+          "basis": "Independent navigation/control and high-gain communication; beam link budget unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; Independent navigation/control and high-gain communication; beam link budget unresolved"
+        },
+        {
+          "id": "factory",
+          "system": "Advanced fabrication, chemistry and resource-processing seed",
+          "low_kg": 30000,
+          "mass_kg": 65000,
+          "high_kg": 150000,
+          "basis": "Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration",
+          "kind": "hardware",
+          "status": "Planning estimate; Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration"
+        },
+        {
+          "id": "farm",
+          "system": "Inflatable farm, eight bays and 2,000 m2 crop hardware",
+          "low_kg": 12000,
+          "mass_kg": 25000,
+          "high_kg": 50000,
+          "basis": "Carried envelopes, racks, LEDs, pumps, seed/biological stock; eight 18 x 13 m bay envelopes; 2,016 m2 depicted tray area; ideal 833 m2 rack/access footprint is a lower bound;600t local regolith excluded",
+          "kind": "hardware",
+          "status": "Planning estimate; Carried envelopes, racks, LEDs, pumps, seed/biological stock; eight 18 x 13 m bay envelopes; 2,016 m2 depicted tray area; ideal 833 m2 rack/access footprint is a lower bound;600t local regolith excluded"
+        },
+        {
+          "id": "rover",
+          "system": "Reused pressurised rover module, chassis and7-day stores",
+          "low_kg": 6000,
+          "mass_kg": 10000,
+          "high_kg": 18000,
+          "basis": "Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables",
+          "kind": "hardware",
+          "status": "Planning estimate; Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables"
+        },
+        {
+          "id": "spares",
+          "system": "Repair stock, tools, EVA suits and replacement units",
+          "low_kg": 15000,
+          "mass_kg": 35000,
+          "high_kg": 75000,
+          "basis": "16-year spares allowance beyond already counted redundant installed hardware",
+          "kind": "hardware",
+          "status": "Planning estimate; 16-year spares allowance beyond already counted redundant installed hardware"
+        },
+        {
+          "id": "gas",
+          "system": "Initial habitat atmosphere and gas makeup",
+          "low_kg": 23168.27563376909,
+          "mass_kg": 14408.122503897375,
+          "high_kg": 33168.275633769095,
+          "basis": "Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below",
+          "kind": "consumable",
+          "status": "Planning estimate; Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below"
+        },
+        {
+          "id": "water",
+          "system": "Water/oxygen-cycle buffers and process starting inventory",
+          "low_kg": 15000,
+          "mass_kg": 25000,
+          "high_kg": 45000,
+          "basis": "Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget",
+          "kind": "consumable",
+          "status": "Planning estimate; Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget"
+        },
+        {
+          "id": "food",
+          "system": "Dry food plus food packaging,16years +6months commissioning",
+          "low_kg": 166407.1695,
+          "mass_kg": 190272.6045,
+          "high_kg": 229976.01,
+          "basis": "216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively",
+          "kind": "consumable",
+          "status": "Planning estimate; 216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively"
+        },
+        {
+          "id": "consumables",
+          "system": "Medical, hygiene, nutrient and general consumables",
+          "low_kg": 12000,
+          "mass_kg": 25000,
+          "high_kg": 50000,
+          "basis": "16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved",
+          "kind": "consumable",
+          "status": "Planning estimate; 16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved"
+        },
+        {
+          "id": "processtanks",
+          "system": "Atmosphere, water and process tank hardware",
+          "low_kg": 5000,
+          "mass_kg": 10000,
+          "high_kg": 20000,
+          "basis": "Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately",
+          "kind": "hardware",
+          "status": "Planning estimate; Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately"
+        },
+        {
+          "id": "crew",
+          "system": "36 crew and personal effects",
+          "low_kg": 3240,
+          "mass_kg": 3600,
+          "high_kg": 4320,
+          "basis": "Includes people and personal effects; no births during transit",
+          "kind": "crew",
+          "status": "Planning estimate; Includes people and personal effects; no births during transit"
+        },
+        {
+          "id": "exploration",
+          "system": "Remote exploration complete allocation",
+          "low_kg": 450,
+          "mass_kg": 450,
+          "high_kg": 450,
+          "basis": "Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing",
+          "kind": "payload",
+          "status": "Planning estimate; Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing"
+        },
+        {
+          "id": "powerfuel",
+          "system": "Surface and transit power antimatter plus matching matter",
+          "low_kg": 2.0280900523271344,
+          "mass_kg": 2.0280900523271344,
+          "high_kg": 2.0280900523271344,
+          "basis": "1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)",
+          "kind": "consumable",
+          "status": "Planning estimate; 1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)"
+        }
+      ],
+      "name": "20 m discs; same equipment assumptions",
+      "changes": [
+        "Four decks per disc; membrane, floors and fill gas scale with geometry.",
+        "46 x 20 m shield retains clearance over the 44 m radiator height.",
+        "Hub, frame, machinery, medical and room-fitting allowances held unchanged."
+      ],
+      "speculative": false
+    },
+    {
+      "final_retained_mass_kg": 1600212.6982289616,
+      "departure_mass_kg": 4912846.585926181,
+      "thermal_hydrogen_kg": 95670.60822729119,
+      "propulsion_antimatter_loaded_kg": 1688905.7217134198,
+      "propulsion_matching_matter_loaded_kg": 1688905.7217134198,
+      "retained_direct_propellant_reserve_kg": 160848.16395691223,
+      "hydrogen_tank_kg": 11480.472987274941,
+      "engine_hot_radiator_kg": 67086.7178297447,
+      "initial_thrust_MN": 57.81428036624758,
+      "initial_annihilation_power_PW": 34.664570436997,
+      "engine_radiator_emitting_area_m2": 13417.343565948937,
+      "hardware_before_margin_kg": 944505.4233424797,
+      "hardware_margin_kg": 236126.35583561994,
+      "stocks_people_kg": 258732.7550939497,
+      "hardware_with_margin_kg": 1180631.7791780997,
+      "components_before_derived": [
+        {
+          "id": "membranes",
+          "system": "Habitat pressure membranes, insulation and restraint",
+          "low_kg": 78037.16151517046,
+          "mass_kg": 61575.216010359945,
+          "high_kg": 234111.48454551137,
+          "basis": "13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding",
+          "kind": "hardware",
+          "status": "Planning estimate; 13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding"
+        },
+        {
+          "id": "floors",
+          "system": "Folding composite floors",
+          "low_kg": 40715.040790523715,
+          "mass_kg": 32572.032632418974,
+          "high_kg": 122145.12237157115,
+          "basis": "4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified",
+          "kind": "hardware",
+          "status": "Planning estimate; 4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified"
+        },
+        {
+          "id": "habframes",
+          "system": "Habitat deployment frames, hatches and cabin partitions",
+          "low_kg": 30000,
+          "mass_kg": 50000,
+          "high_kg": 90000,
+          "basis": "Two large deployable pressure structures; allowances include partitions, access and frame hardware",
+          "kind": "hardware",
+          "status": "Planning estimate; Two large deployable pressure structures; allowances include partitions, access and frame hardware"
+        },
+        {
+          "id": "bearings",
+          "system": "Hubs, bearings, spin motors and balance equipment",
+          "low_kg": 12000,
+          "mass_kg": 24000,
+          "high_kg": 45000,
+          "basis": "Two independently driven hubs; no validated bearing or transfer design",
+          "kind": "hardware",
+          "status": "Planning estimate; Two independently driven hubs; no validated bearing or transfer design"
+        },
+        {
+          "id": "furnishings",
+          "system": "Cabins, wardrooms, lounge, hygiene and exercise fittings",
+          "low_kg": 12000,
+          "mass_kg": 22000,
+          "high_kg": 38000,
+          "basis": "18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant",
+          "kind": "hardware",
+          "status": "Planning estimate; 18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant"
+        },
+        {
+          "id": "structure",
+          "system": "Service spine, engine mounts and attachment structure",
+          "low_kg": 30000,
+          "mass_kg": 55000,
+          "high_kg": 100000,
+          "basis": "281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis",
+          "kind": "hardware",
+          "status": "Planning estimate; 281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis"
+        },
+        {
+          "id": "landing",
+          "system": "Landing supports, restraints and habitat transport covers",
+          "low_kg": 20000,
+          "mass_kg": 38000,
+          "high_kg": 75000,
+          "basis": "Permanent horizontal landing baseline; distributed supports and full-scale packing racks",
+          "kind": "hardware",
+          "status": "Planning estimate; Permanent horizontal landing baseline; distributed supports and full-scale packing racks"
+        },
+        {
+          "id": "dustshield",
+          "system": "Forward dust/gas shield stack and supports",
+          "low_kg": 66000,
+          "mass_kg": 92000.0,
+          "high_kg": 330000,
+          "basis": "1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection",
+          "kind": "hardware",
+          "status": "Planning estimate; 1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection"
+        },
+        {
+          "id": "radiationshield",
+          "system": "Crew refuge radiation shielding",
+          "low_kg": 15000,
+          "mass_kg": 30000,
+          "high_kg": 70000,
+          "basis": "Dedicated shielding allowance beyond distributed water/food; dose transport unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; Dedicated shielding allowance beyond distributed water/food; dose transport unresolved"
+        },
+        {
+          "id": "engine",
+          "system": "Direct and hydrogen-thermal engine hardware",
+          "low_kg": 35000,
+          "mass_kg": 80000,
+          "high_kg": 180000,
+          "basis": "Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated",
+          "kind": "hardware",
+          "status": "Planning estimate; Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated"
+        },
+        {
+          "id": "containment",
+          "system": "Main antimatter storage and cryogenic hardware",
+          "low_kg": 40000,
+          "mass_kg": 120000,
+          "high_kg": 350000,
+          "basis": "Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling",
+          "kind": "hardware",
+          "status": "Planning estimate; Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling"
+        },
+        {
+          "id": "refuge",
+          "system": "Rigid 36-person descent refuge and airlocks",
+          "low_kg": 12000,
+          "mass_kg": 22000,
+          "high_kg": 40000,
+          "basis": "108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems",
+          "kind": "hardware",
+          "status": "Planning estimate; 108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems"
+        },
+        {
+          "id": "eclss",
+          "system": "Redundant life support and water/waste processing",
+          "low_kg": 15000,
+          "mass_kg": 28000,
+          "high_kg": 50000,
+          "basis": "36-person full-awake design; duplicated critical functions and spares in separate row",
+          "kind": "hardware",
+          "status": "Planning estimate; 36-person full-awake design; duplicated critical functions and spares in separate row"
+        },
+        {
+          "id": "medical",
+          "system": "36 torpor beds, medical systems and embryo storage",
+          "low_kg": 14000,
+          "mass_kg": 27000,
+          "high_kg": 50000,
+          "basis": "36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven",
+          "kind": "hardware",
+          "status": "Planning estimate; 36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven"
+        },
+        {
+          "id": "power",
+          "system": "10MWe power conversion, distribution and startup storage",
+          "low_kg": 20000,
+          "mass_kg": 12000.0,
+          "high_kg": 85000,
+          "basis": "Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source",
+          "kind": "hardware",
+          "status": "Planning estimate; Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source"
+        },
+        {
+          "id": "warmradiators",
+          "system": "Service/surface radiators and heat-recovery loops",
+          "low_kg": 58721.82463337848,
+          "mass_kg": 18790.983882681114,
+          "high_kg": 164421.10897345972,
+          "basis": "23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; 23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved"
+        },
+        {
+          "id": "avionics",
+          "system": "Avionics, navigation, communications and sensors",
+          "low_kg": 4000,
+          "mass_kg": 8000,
+          "high_kg": 16000,
+          "basis": "Independent navigation/control and high-gain communication; beam link budget unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; Independent navigation/control and high-gain communication; beam link budget unresolved"
+        },
+        {
+          "id": "factory",
+          "system": "Advanced fabrication, chemistry and resource-processing seed",
+          "low_kg": 30000,
+          "mass_kg": 65000,
+          "high_kg": 150000,
+          "basis": "Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration",
+          "kind": "hardware",
+          "status": "Planning estimate; Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration"
+        },
+        {
+          "id": "farm",
+          "system": "Inflatable farm, eight bays and 2,000 m2 crop hardware",
+          "low_kg": 12000,
+          "mass_kg": 25000,
+          "high_kg": 50000,
+          "basis": "Carried envelopes, racks, LEDs, pumps, seed/biological stock; eight 18 x 13 m bay envelopes; 2,016 m2 depicted tray area; ideal 833 m2 rack/access footprint is a lower bound;600t local regolith excluded",
+          "kind": "hardware",
+          "status": "Planning estimate; Carried envelopes, racks, LEDs, pumps, seed/biological stock; eight 18 x 13 m bay envelopes; 2,016 m2 depicted tray area; ideal 833 m2 rack/access footprint is a lower bound;600t local regolith excluded"
+        },
+        {
+          "id": "rover",
+          "system": "Reused pressurised rover module, chassis and7-day stores",
+          "low_kg": 6000,
+          "mass_kg": 10000,
+          "high_kg": 18000,
+          "basis": "Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables",
+          "kind": "hardware",
+          "status": "Planning estimate; Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables"
+        },
+        {
+          "id": "spares",
+          "system": "Repair stock, tools, EVA suits and replacement units",
+          "low_kg": 15000,
+          "mass_kg": 35000,
+          "high_kg": 75000,
+          "basis": "16-year spares allowance beyond already counted redundant installed hardware",
+          "kind": "hardware",
+          "status": "Planning estimate; 16-year spares allowance beyond already counted redundant installed hardware"
+        },
+        {
+          "id": "gas",
+          "system": "Initial habitat atmosphere and gas makeup",
+          "low_kg": 23168.27563376909,
+          "mass_kg": 14408.122503897375,
+          "high_kg": 33168.275633769095,
+          "basis": "Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below",
+          "kind": "consumable",
+          "status": "Planning estimate; Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below"
+        },
+        {
+          "id": "water",
+          "system": "Water/oxygen-cycle buffers and process starting inventory",
+          "low_kg": 15000,
+          "mass_kg": 25000,
+          "high_kg": 45000,
+          "basis": "Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget",
+          "kind": "consumable",
+          "status": "Planning estimate; Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget"
+        },
+        {
+          "id": "food",
+          "system": "Dry food plus food packaging,16years +6months commissioning",
+          "low_kg": 166407.1695,
+          "mass_kg": 190272.6045,
+          "high_kg": 229976.01,
+          "basis": "216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively",
+          "kind": "consumable",
+          "status": "Planning estimate; 216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively"
+        },
+        {
+          "id": "consumables",
+          "system": "Medical, hygiene, nutrient and general consumables",
+          "low_kg": 12000,
+          "mass_kg": 25000,
+          "high_kg": 50000,
+          "basis": "16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved",
+          "kind": "consumable",
+          "status": "Planning estimate; 16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved"
+        },
+        {
+          "id": "processtanks",
+          "system": "Atmosphere, water and process tank hardware",
+          "low_kg": 5000,
+          "mass_kg": 10000,
+          "high_kg": 20000,
+          "basis": "Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately",
+          "kind": "hardware",
+          "status": "Planning estimate; Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately"
+        },
+        {
+          "id": "crew",
+          "system": "36 crew and personal effects",
+          "low_kg": 3240,
+          "mass_kg": 3600,
+          "high_kg": 4320,
+          "basis": "Includes people and personal effects; no births during transit",
+          "kind": "crew",
+          "status": "Planning estimate; Includes people and personal effects; no births during transit"
+        },
+        {
+          "id": "exploration",
+          "system": "Remote exploration complete allocation",
+          "low_kg": 450,
+          "mass_kg": 450,
+          "high_kg": 450,
+          "basis": "Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing",
+          "kind": "payload",
+          "status": "Planning estimate; Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing"
+        },
+        {
+          "id": "powerfuel",
+          "system": "Surface and transit power antimatter plus matching matter",
+          "low_kg": 2.0280900523271344,
+          "mass_kg": 2.0280900523271344,
+          "high_kg": 2.0280900523271344,
+          "basis": "1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)",
+          "kind": "consumable",
+          "status": "Planning estimate; 1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)"
+        }
+      ],
+      "name": "Compact plus 2 MWe surface bootstrap",
+      "changes": [
+        "Carry 2 MWe rather than the complete 10 MWe surface plant.",
+        "Power-conversion mass reduced to 30%; service radiator area/mass to 20%.",
+        "Keep the factory starter and farm allocations; manufacture later power/cooling locally.",
+        "Assumes 2 MWe is enough to bootstrap that factory; no detailed load audit yet."
+      ],
+      "speculative": false
+    },
+    {
+      "final_retained_mass_kg": 1558794.117329684,
+      "departure_mass_kg": 4785686.531522083,
+      "thermal_hydrogen_kg": 93194.34939561794,
+      "propulsion_antimatter_loaded_kg": 1645191.4840102324,
+      "propulsion_matching_matter_loaded_kg": 1645191.4840102324,
+      "retained_direct_propellant_reserve_kg": 156684.90322368414,
+      "hydrogen_tank_kg": 11183.321927474153,
+      "engine_hot_radiator_kg": 65350.300756705874,
+      "initial_thrust_MN": 56.317863389221245,
+      "initial_annihilation_power_PW": 33.7673413895257,
+      "engine_radiator_emitting_area_m2": 13070.060151341175,
+      "hardware_before_margin_kg": 942471.8552096401,
+      "hardware_margin_kg": 235617.96380241003,
+      "stocks_people_kg": 224019.39509394972,
+      "hardware_with_margin_kg": 1178089.81901205,
+      "components_before_derived": [
+        {
+          "id": "membranes",
+          "system": "Habitat pressure membranes, insulation and restraint",
+          "low_kg": 78037.16151517046,
+          "mass_kg": 61575.216010359945,
+          "high_kg": 234111.48454551137,
+          "basis": "13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding",
+          "kind": "hardware",
+          "status": "Planning estimate; 13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding"
+        },
+        {
+          "id": "floors",
+          "system": "Folding composite floors",
+          "low_kg": 40715.040790523715,
+          "mass_kg": 32572.032632418974,
+          "high_kg": 122145.12237157115,
+          "basis": "4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified",
+          "kind": "hardware",
+          "status": "Planning estimate; 4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified"
+        },
+        {
+          "id": "habframes",
+          "system": "Habitat deployment frames, hatches and cabin partitions",
+          "low_kg": 30000,
+          "mass_kg": 50000,
+          "high_kg": 90000,
+          "basis": "Two large deployable pressure structures; allowances include partitions, access and frame hardware",
+          "kind": "hardware",
+          "status": "Planning estimate; Two large deployable pressure structures; allowances include partitions, access and frame hardware"
+        },
+        {
+          "id": "bearings",
+          "system": "Hubs, bearings, spin motors and balance equipment",
+          "low_kg": 12000,
+          "mass_kg": 24000,
+          "high_kg": 45000,
+          "basis": "Two independently driven hubs; no validated bearing or transfer design",
+          "kind": "hardware",
+          "status": "Planning estimate; Two independently driven hubs; no validated bearing or transfer design"
+        },
+        {
+          "id": "furnishings",
+          "system": "Cabins, wardrooms, lounge, hygiene and exercise fittings",
+          "low_kg": 12000,
+          "mass_kg": 22000,
+          "high_kg": 38000,
+          "basis": "18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant",
+          "kind": "hardware",
+          "status": "Planning estimate; 18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant"
+        },
+        {
+          "id": "structure",
+          "system": "Service spine, engine mounts and attachment structure",
+          "low_kg": 30000,
+          "mass_kg": 55000,
+          "high_kg": 100000,
+          "basis": "281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis",
+          "kind": "hardware",
+          "status": "Planning estimate; 281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis"
+        },
+        {
+          "id": "landing",
+          "system": "Landing supports, restraints and habitat transport covers",
+          "low_kg": 20000,
+          "mass_kg": 38000,
+          "high_kg": 75000,
+          "basis": "Permanent horizontal landing baseline; distributed supports and full-scale packing racks",
+          "kind": "hardware",
+          "status": "Planning estimate; Permanent horizontal landing baseline; distributed supports and full-scale packing racks"
+        },
+        {
+          "id": "dustshield",
+          "system": "Forward dust/gas shield stack and supports",
+          "low_kg": 66000,
+          "mass_kg": 92000.0,
+          "high_kg": 330000,
+          "basis": "1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection",
+          "kind": "hardware",
+          "status": "Planning estimate; 1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection"
+        },
+        {
+          "id": "radiationshield",
+          "system": "Crew refuge radiation shielding",
+          "low_kg": 15000,
+          "mass_kg": 30000,
+          "high_kg": 70000,
+          "basis": "Dedicated shielding allowance beyond distributed water/food; dose transport unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; Dedicated shielding allowance beyond distributed water/food; dose transport unresolved"
+        },
+        {
+          "id": "engine",
+          "system": "Direct and hydrogen-thermal engine hardware",
+          "low_kg": 35000,
+          "mass_kg": 80000,
+          "high_kg": 180000,
+          "basis": "Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated",
+          "kind": "hardware",
+          "status": "Planning estimate; Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated"
+        },
+        {
+          "id": "containment",
+          "system": "Main antimatter storage and cryogenic hardware",
+          "low_kg": 40000,
+          "mass_kg": 120000,
+          "high_kg": 350000,
+          "basis": "Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling",
+          "kind": "hardware",
+          "status": "Planning estimate; Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling"
+        },
+        {
+          "id": "refuge",
+          "system": "Rigid 36-person descent refuge and airlocks",
+          "low_kg": 12000,
+          "mass_kg": 22000,
+          "high_kg": 40000,
+          "basis": "108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems",
+          "kind": "hardware",
+          "status": "Planning estimate; 108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems"
+        },
+        {
+          "id": "eclss",
+          "system": "Redundant life support and water/waste processing",
+          "low_kg": 15000,
+          "mass_kg": 28000,
+          "high_kg": 50000,
+          "basis": "36-person full-awake design; duplicated critical functions and spares in separate row",
+          "kind": "hardware",
+          "status": "Planning estimate; 36-person full-awake design; duplicated critical functions and spares in separate row"
+        },
+        {
+          "id": "medical",
+          "system": "36 torpor beds, medical systems and embryo storage",
+          "low_kg": 14000,
+          "mass_kg": 27000,
+          "high_kg": 50000,
+          "basis": "36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven",
+          "kind": "hardware",
+          "status": "Planning estimate; 36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven"
+        },
+        {
+          "id": "power",
+          "system": "10MWe power conversion, distribution and startup storage",
+          "low_kg": 20000,
+          "mass_kg": 12000.0,
+          "high_kg": 85000,
+          "basis": "Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source",
+          "kind": "hardware",
+          "status": "Planning estimate; Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source"
+        },
+        {
+          "id": "warmradiators",
+          "system": "Service/surface radiators and heat-recovery loops",
+          "low_kg": 58721.82463337848,
+          "mass_kg": 18790.983882681114,
+          "high_kg": 164421.10897345972,
+          "basis": "23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; 23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved"
+        },
+        {
+          "id": "avionics",
+          "system": "Avionics, navigation, communications and sensors",
+          "low_kg": 4000,
+          "mass_kg": 8000,
+          "high_kg": 16000,
+          "basis": "Independent navigation/control and high-gain communication; beam link budget unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; Independent navigation/control and high-gain communication; beam link budget unresolved"
+        },
+        {
+          "id": "factory",
+          "system": "Advanced fabrication, chemistry and resource-processing seed",
+          "low_kg": 30000,
+          "mass_kg": 65000,
+          "high_kg": 150000,
+          "basis": "Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration",
+          "kind": "hardware",
+          "status": "Planning estimate; Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration"
+        },
+        {
+          "id": "farm",
+          "system": "Inflatable farm, eight bays and 2,000 m2 crop hardware",
+          "low_kg": 12000,
+          "mass_kg": 25000,
+          "high_kg": 50000,
+          "basis": "Carried envelopes, racks, LEDs, pumps, seed/biological stock; eight 18 x 13 m bay envelopes; 2,016 m2 depicted tray area; ideal 833 m2 rack/access footprint is a lower bound;600t local regolith excluded",
+          "kind": "hardware",
+          "status": "Planning estimate; Carried envelopes, racks, LEDs, pumps, seed/biological stock; eight 18 x 13 m bay envelopes; 2,016 m2 depicted tray area; ideal 833 m2 rack/access footprint is a lower bound;600t local regolith excluded"
+        },
+        {
+          "id": "rover",
+          "system": "Reused pressurised rover module, chassis and7-day stores",
+          "low_kg": 6000,
+          "mass_kg": 10000,
+          "high_kg": 18000,
+          "basis": "Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables",
+          "kind": "hardware",
+          "status": "Planning estimate; Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables"
+        },
+        {
+          "id": "spares",
+          "system": "Repair stock, tools, EVA suits and replacement units",
+          "low_kg": 15000,
+          "mass_kg": 35000,
+          "high_kg": 75000,
+          "basis": "16-year spares allowance beyond already counted redundant installed hardware",
+          "kind": "hardware",
+          "status": "Planning estimate; 16-year spares allowance beyond already counted redundant installed hardware"
+        },
+        {
+          "id": "gas",
+          "system": "Initial habitat atmosphere and gas makeup",
+          "low_kg": 23168.27563376909,
+          "mass_kg": 14408.122503897375,
+          "high_kg": 33168.275633769095,
+          "basis": "Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below",
+          "kind": "consumable",
+          "status": "Planning estimate; Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below"
+        },
+        {
+          "id": "water",
+          "system": "Water/oxygen-cycle buffers and process starting inventory",
+          "low_kg": 15000,
+          "mass_kg": 25000,
+          "high_kg": 45000,
+          "basis": "Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget",
+          "kind": "consumable",
+          "status": "Planning estimate; Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget"
+        },
+        {
+          "id": "food",
+          "system": "Dry food plus food packaging,16years +6months commissioning",
+          "low_kg": 166407.1695,
+          "mass_kg": 155559.2445,
+          "high_kg": 229976.01,
+          "basis": "216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively",
+          "kind": "consumable",
+          "status": "Planning estimate; 216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively"
+        },
+        {
+          "id": "consumables",
+          "system": "Medical, hygiene, nutrient and general consumables",
+          "low_kg": 12000,
+          "mass_kg": 25000,
+          "high_kg": 50000,
+          "basis": "16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved",
+          "kind": "consumable",
+          "status": "Planning estimate; 16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved"
+        },
+        {
+          "id": "processtanks",
+          "system": "Atmosphere, water and process tank hardware",
+          "low_kg": 5000,
+          "mass_kg": 10000,
+          "high_kg": 20000,
+          "basis": "Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately",
+          "kind": "hardware",
+          "status": "Planning estimate; Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately"
+        },
+        {
+          "id": "crew",
+          "system": "36 crew and personal effects",
+          "low_kg": 3240,
+          "mass_kg": 3600,
+          "high_kg": 4320,
+          "basis": "Includes people and personal effects; no births during transit",
+          "kind": "crew",
+          "status": "Planning estimate; Includes people and personal effects; no births during transit"
+        },
+        {
+          "id": "exploration",
+          "system": "Remote exploration complete allocation",
+          "low_kg": 450,
+          "mass_kg": 450,
+          "high_kg": 450,
+          "basis": "Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing",
+          "kind": "payload",
+          "status": "Planning estimate; Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing"
+        },
+        {
+          "id": "powerfuel",
+          "system": "Surface and transit power antimatter plus matching matter",
+          "low_kg": 2.0280900523271344,
+          "mass_kg": 2.0280900523271344,
+          "high_kg": 2.0280900523271344,
+          "basis": "1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)",
+          "kind": "consumable",
+          "status": "Planning estimate; 1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)"
+        }
+      ],
+      "name": "Compact bootstrap plus bulk food packaging",
+      "changes": [
+        "0.10 kg packaging/person/day instead of 0.26; dry food stays 0.617.",
+        "No torpor nutrition saving. Long shelf-life bulk packaging remains a target."
+      ],
+      "speculative": false
+    },
+    {
+      "final_retained_mass_kg": 1009759.3976719977,
+      "departure_mass_kg": 3100083.5169912833,
+      "thermal_hydrogen_kg": 60369.65951177628,
+      "propulsion_antimatter_loaded_kg": 1065726.0913937096,
+      "propulsion_matching_matter_loaded_kg": 1065726.0913937096,
+      "retained_direct_propellant_reserve_kg": 101497.7229799106,
+      "hydrogen_tank_kg": 7244.359141413152,
+      "engine_hot_radiator_kg": 42332.77480082944,
+      "initial_thrust_MN": 36.48172082628308,
+      "initial_annihilation_power_PW": 21.873889517162393,
+      "engine_radiator_emitting_area_m2": 8466.554960165886,
+      "hardware_before_margin_kg": 559073.7011746125,
+      "hardware_margin_kg": 139768.42529365313,
+      "stocks_people_kg": 209419.54822382142,
+      "hardware_with_margin_kg": 698842.1264682657,
+      "components_before_derived": [
+        {
+          "id": "membranes",
+          "system": "Habitat pressure membranes, insulation and restraint",
+          "low_kg": 78037.16151517046,
+          "mass_kg": 78037.16151517046,
+          "high_kg": 234111.48454551137,
+          "basis": "13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding",
+          "kind": "hardware",
+          "status": "Planning estimate; 13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding"
+        },
+        {
+          "id": "floors",
+          "system": "Folding composite floors",
+          "low_kg": 40715.040790523715,
+          "mass_kg": 40715.040790523715,
+          "high_kg": 122145.12237157115,
+          "basis": "4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified",
+          "kind": "hardware",
+          "status": "Planning estimate; 4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified"
+        },
+        {
+          "id": "habframes",
+          "system": "Habitat deployment frames, hatches and cabin partitions",
+          "low_kg": 30000,
+          "mass_kg": 30000,
+          "high_kg": 90000,
+          "basis": "Two large deployable pressure structures; allowances include partitions, access and frame hardware",
+          "kind": "hardware",
+          "status": "Planning estimate; Two large deployable pressure structures; allowances include partitions, access and frame hardware"
+        },
+        {
+          "id": "bearings",
+          "system": "Hubs, bearings, spin motors and balance equipment",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 45000,
+          "basis": "Two independently driven hubs; no validated bearing or transfer design",
+          "kind": "hardware",
+          "status": "Planning estimate; Two independently driven hubs; no validated bearing or transfer design"
+        },
+        {
+          "id": "furnishings",
+          "system": "Cabins, wardrooms, lounge, hygiene and exercise fittings",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 38000,
+          "basis": "18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant",
+          "kind": "hardware",
+          "status": "Planning estimate; 18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant"
+        },
+        {
+          "id": "structure",
+          "system": "Service spine, engine mounts and attachment structure",
+          "low_kg": 30000,
+          "mass_kg": 30000,
+          "high_kg": 100000,
+          "basis": "281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis",
+          "kind": "hardware",
+          "status": "Planning estimate; 281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis"
+        },
+        {
+          "id": "landing",
+          "system": "Landing supports, restraints and habitat transport covers",
+          "low_kg": 20000,
+          "mass_kg": 20000,
+          "high_kg": 75000,
+          "basis": "Permanent horizontal landing baseline; distributed supports and full-scale packing racks",
+          "kind": "hardware",
+          "status": "Planning estimate; Permanent horizontal landing baseline; distributed supports and full-scale packing racks"
+        },
+        {
+          "id": "dustshield",
+          "system": "Forward dust/gas shield stack and supports",
+          "low_kg": 66000,
+          "mass_kg": 66000,
+          "high_kg": 330000,
+          "basis": "1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection",
+          "kind": "hardware",
+          "status": "Planning estimate; 1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection"
+        },
+        {
+          "id": "radiationshield",
+          "system": "Crew refuge radiation shielding",
+          "low_kg": 15000,
+          "mass_kg": 15000,
+          "high_kg": 70000,
+          "basis": "Dedicated shielding allowance beyond distributed water/food; dose transport unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; Dedicated shielding allowance beyond distributed water/food; dose transport unresolved"
+        },
+        {
+          "id": "engine",
+          "system": "Direct and hydrogen-thermal engine hardware",
+          "low_kg": 35000,
+          "mass_kg": 35000,
+          "high_kg": 180000,
+          "basis": "Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated",
+          "kind": "hardware",
+          "status": "Planning estimate; Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated"
+        },
+        {
+          "id": "containment",
+          "system": "Main antimatter storage and cryogenic hardware",
+          "low_kg": 40000,
+          "mass_kg": 40000,
+          "high_kg": 350000,
+          "basis": "Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling",
+          "kind": "hardware",
+          "status": "Planning estimate; Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling"
+        },
+        {
+          "id": "refuge",
+          "system": "Rigid 36-person descent refuge and airlocks",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 40000,
+          "basis": "108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems",
+          "kind": "hardware",
+          "status": "Planning estimate; 108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems"
+        },
+        {
+          "id": "eclss",
+          "system": "Redundant life support and water/waste processing",
+          "low_kg": 15000,
+          "mass_kg": 15000,
+          "high_kg": 50000,
+          "basis": "36-person full-awake design; duplicated critical functions and spares in separate row",
+          "kind": "hardware",
+          "status": "Planning estimate; 36-person full-awake design; duplicated critical functions and spares in separate row"
+        },
+        {
+          "id": "medical",
+          "system": "36 torpor beds, medical systems and embryo storage",
+          "low_kg": 14000,
+          "mass_kg": 14000,
+          "high_kg": 50000,
+          "basis": "36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven",
+          "kind": "hardware",
+          "status": "Planning estimate; 36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven"
+        },
+        {
+          "id": "power",
+          "system": "10MWe power conversion, distribution and startup storage",
+          "low_kg": 20000,
+          "mass_kg": 6000.0,
+          "high_kg": 85000,
+          "basis": "Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source",
+          "kind": "hardware",
+          "status": "Planning estimate; Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source"
+        },
+        {
+          "id": "warmradiators",
+          "system": "Service/surface radiators and heat-recovery loops",
+          "low_kg": 58721.82463337848,
+          "mass_kg": 11744.364926675697,
+          "high_kg": 164421.10897345972,
+          "basis": "23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; 23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved"
+        },
+        {
+          "id": "avionics",
+          "system": "Avionics, navigation, communications and sensors",
+          "low_kg": 4000,
+          "mass_kg": 4000,
+          "high_kg": 16000,
+          "basis": "Independent navigation/control and high-gain communication; beam link budget unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; Independent navigation/control and high-gain communication; beam link budget unresolved"
+        },
+        {
+          "id": "factory",
+          "system": "Advanced fabrication, chemistry and resource-processing seed",
+          "low_kg": 30000,
+          "mass_kg": 30000,
+          "high_kg": 150000,
+          "basis": "Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration",
+          "kind": "hardware",
+          "status": "Planning estimate; Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration"
+        },
+        {
+          "id": "farm",
+          "system": "Inflatable farm, eight bays and 2,000 m2 crop hardware",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 50000,
+          "basis": "Carried envelopes, racks, LEDs, pumps, seed/biological stock; eight 18 x 13 m bay envelopes; 2,016 m2 depicted tray area; ideal 833 m2 rack/access footprint is a lower bound;600t local regolith excluded",
+          "kind": "hardware",
+          "status": "Planning estimate; Carried envelopes, racks, LEDs, pumps, seed/biological stock; eight 18 x 13 m bay envelopes; 2,016 m2 depicted tray area; ideal 833 m2 rack/access footprint is a lower bound;600t local regolith excluded"
+        },
+        {
+          "id": "rover",
+          "system": "Reused pressurised rover module, chassis and7-day stores",
+          "low_kg": 6000,
+          "mass_kg": 6000,
+          "high_kg": 18000,
+          "basis": "Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables",
+          "kind": "hardware",
+          "status": "Planning estimate; Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables"
+        },
+        {
+          "id": "spares",
+          "system": "Repair stock, tools, EVA suits and replacement units",
+          "low_kg": 15000,
+          "mass_kg": 15000,
+          "high_kg": 75000,
+          "basis": "16-year spares allowance beyond already counted redundant installed hardware",
+          "kind": "hardware",
+          "status": "Planning estimate; 16-year spares allowance beyond already counted redundant installed hardware"
+        },
+        {
+          "id": "gas",
+          "system": "Initial habitat atmosphere and gas makeup",
+          "low_kg": 23168.27563376909,
+          "mass_kg": 23168.27563376909,
+          "high_kg": 33168.275633769095,
+          "basis": "Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below",
+          "kind": "consumable",
+          "status": "Planning estimate; Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below"
+        },
+        {
+          "id": "water",
+          "system": "Water/oxygen-cycle buffers and process starting inventory",
+          "low_kg": 15000,
+          "mass_kg": 15000,
+          "high_kg": 45000,
+          "basis": "Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget",
+          "kind": "consumable",
+          "status": "Planning estimate; Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget"
+        },
+        {
+          "id": "food",
+          "system": "Dry food plus food packaging,16years +6months commissioning",
+          "low_kg": 166407.1695,
+          "mass_kg": 155559.2445,
+          "high_kg": 229976.01,
+          "basis": "216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively",
+          "kind": "consumable",
+          "status": "Planning estimate; 216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively"
+        },
+        {
+          "id": "consumables",
+          "system": "Medical, hygiene, nutrient and general consumables",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 50000,
+          "basis": "16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved",
+          "kind": "consumable",
+          "status": "Planning estimate; 16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved"
+        },
+        {
+          "id": "processtanks",
+          "system": "Atmosphere, water and process tank hardware",
+          "low_kg": 5000,
+          "mass_kg": 5000,
+          "high_kg": 20000,
+          "basis": "Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately",
+          "kind": "hardware",
+          "status": "Planning estimate; Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately"
+        },
+        {
+          "id": "crew",
+          "system": "36 crew and personal effects",
+          "low_kg": 3240,
+          "mass_kg": 3240,
+          "high_kg": 4320,
+          "basis": "Includes people and personal effects; no births during transit",
+          "kind": "crew",
+          "status": "Planning estimate; Includes people and personal effects; no births during transit"
+        },
+        {
+          "id": "exploration",
+          "system": "Remote exploration complete allocation",
+          "low_kg": 450,
+          "mass_kg": 450,
+          "high_kg": 450,
+          "basis": "Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing",
+          "kind": "payload",
+          "status": "Planning estimate; Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing"
+        },
+        {
+          "id": "powerfuel",
+          "system": "Surface and transit power antimatter plus matching matter",
+          "low_kg": 2.0280900523271344,
+          "mass_kg": 2.0280900523271344,
+          "high_kg": 2.0280900523271344,
+          "basis": "1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)",
+          "kind": "consumable",
+          "status": "Planning estimate; 1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)"
+        }
+      ],
+      "name": "30 m discs with lightweight equipment targets",
+      "changes": [
+        "Retain both existing 30 m discs; use prior low equipment/material targets, 2 MWe bootstrap and bulk food.",
+        "Keep baseline margin, fuel reserve and hot-engine thermal assumptions."
+      ],
+      "speculative": true
+    },
+    {
+      "final_retained_mass_kg": 869021.9457669805,
+      "departure_mass_kg": 2668002.5124668563,
+      "thermal_hydrogen_kg": 51955.50454411859,
+      "propulsion_antimatter_loaded_kg": 917188.1576272692,
+      "propulsion_matching_matter_loaded_kg": 917188.1576272692,
+      "retained_direct_propellant_reserve_kg": 87351.25309878156,
+      "hydrogen_tank_kg": 6234.66054529423,
+      "engine_hot_radiator_kg": 36432.55057783791,
+      "initial_thrust_MN": 31.397000206659715,
+      "initial_annihilation_power_PW": 18.825167731562047,
+      "engine_radiator_emitting_area_m2": 7286.510115567581,
+      "hardware_before_margin_kg": 567163.7783555019,
+      "hardware_margin_kg": 141790.94458887549,
+      "stocks_people_kg": 72715.96972382141,
+      "hardware_with_margin_kg": 708954.7229443775,
+      "components_before_derived": [
+        {
+          "id": "membranes",
+          "system": "Habitat pressure membranes, insulation and restraint",
+          "low_kg": 78037.16151517046,
+          "mass_kg": 78037.16151517046,
+          "high_kg": 234111.48454551137,
+          "basis": "13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding",
+          "kind": "hardware",
+          "status": "Planning estimate; 13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding"
+        },
+        {
+          "id": "floors",
+          "system": "Folding composite floors",
+          "low_kg": 40715.040790523715,
+          "mass_kg": 40715.040790523715,
+          "high_kg": 122145.12237157115,
+          "basis": "4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified",
+          "kind": "hardware",
+          "status": "Planning estimate; 4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified"
+        },
+        {
+          "id": "habframes",
+          "system": "Habitat deployment frames, hatches and cabin partitions",
+          "low_kg": 30000,
+          "mass_kg": 30000,
+          "high_kg": 90000,
+          "basis": "Two large deployable pressure structures; allowances include partitions, access and frame hardware",
+          "kind": "hardware",
+          "status": "Planning estimate; Two large deployable pressure structures; allowances include partitions, access and frame hardware"
+        },
+        {
+          "id": "bearings",
+          "system": "Hubs, bearings, spin motors and balance equipment",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 45000,
+          "basis": "Two independently driven hubs; no validated bearing or transfer design",
+          "kind": "hardware",
+          "status": "Planning estimate; Two independently driven hubs; no validated bearing or transfer design"
+        },
+        {
+          "id": "furnishings",
+          "system": "Cabins, wardrooms, lounge, hygiene and exercise fittings",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 38000,
+          "basis": "18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant",
+          "kind": "hardware",
+          "status": "Planning estimate; 18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant"
+        },
+        {
+          "id": "structure",
+          "system": "Service spine, engine mounts and attachment structure",
+          "low_kg": 30000,
+          "mass_kg": 30000,
+          "high_kg": 100000,
+          "basis": "281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis",
+          "kind": "hardware",
+          "status": "Planning estimate; 281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis"
+        },
+        {
+          "id": "landing",
+          "system": "Landing supports, restraints and habitat transport covers",
+          "low_kg": 20000,
+          "mass_kg": 20000,
+          "high_kg": 75000,
+          "basis": "Permanent horizontal landing baseline; distributed supports and full-scale packing racks",
+          "kind": "hardware",
+          "status": "Planning estimate; Permanent horizontal landing baseline; distributed supports and full-scale packing racks"
+        },
+        {
+          "id": "dustshield",
+          "system": "Forward dust/gas shield stack and supports",
+          "low_kg": 66000,
+          "mass_kg": 66000,
+          "high_kg": 330000,
+          "basis": "1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection",
+          "kind": "hardware",
+          "status": "Planning estimate; 1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection"
+        },
+        {
+          "id": "radiationshield",
+          "system": "Crew refuge radiation shielding",
+          "low_kg": 15000,
+          "mass_kg": 15000,
+          "high_kg": 70000,
+          "basis": "Dedicated shielding allowance beyond distributed water/food; dose transport unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; Dedicated shielding allowance beyond distributed water/food; dose transport unresolved"
+        },
+        {
+          "id": "engine",
+          "system": "Direct and hydrogen-thermal engine hardware",
+          "low_kg": 35000,
+          "mass_kg": 35000,
+          "high_kg": 180000,
+          "basis": "Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated",
+          "kind": "hardware",
+          "status": "Planning estimate; Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated"
+        },
+        {
+          "id": "containment",
+          "system": "Main antimatter storage and cryogenic hardware",
+          "low_kg": 40000,
+          "mass_kg": 40000,
+          "high_kg": 350000,
+          "basis": "Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling",
+          "kind": "hardware",
+          "status": "Planning estimate; Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling"
+        },
+        {
+          "id": "refuge",
+          "system": "Rigid 36-person descent refuge and airlocks",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 40000,
+          "basis": "108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems",
+          "kind": "hardware",
+          "status": "Planning estimate; 108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems"
+        },
+        {
+          "id": "eclss",
+          "system": "Redundant life support and water/waste processing",
+          "low_kg": 15000,
+          "mass_kg": 15000,
+          "high_kg": 50000,
+          "basis": "36-person full-awake design; duplicated critical functions and spares in separate row",
+          "kind": "hardware",
+          "status": "Planning estimate; 36-person full-awake design; duplicated critical functions and spares in separate row"
+        },
+        {
+          "id": "medical",
+          "system": "36 torpor beds, medical systems and embryo storage",
+          "low_kg": 14000,
+          "mass_kg": 14000,
+          "high_kg": 50000,
+          "basis": "36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven",
+          "kind": "hardware",
+          "status": "Planning estimate; 36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven"
+        },
+        {
+          "id": "power",
+          "system": "10MWe power conversion, distribution and startup storage",
+          "low_kg": 20000,
+          "mass_kg": 6000.0,
+          "high_kg": 85000,
+          "basis": "Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source",
+          "kind": "hardware",
+          "status": "Planning estimate; Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source"
+        },
+        {
+          "id": "warmradiators",
+          "system": "Service/surface radiators and heat-recovery loops",
+          "low_kg": 58721.82463337848,
+          "mass_kg": 11744.364926675697,
+          "high_kg": 164421.10897345972,
+          "basis": "23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; 23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved"
+        },
+        {
+          "id": "avionics",
+          "system": "Avionics, navigation, communications and sensors",
+          "low_kg": 4000,
+          "mass_kg": 4000,
+          "high_kg": 16000,
+          "basis": "Independent navigation/control and high-gain communication; beam link budget unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; Independent navigation/control and high-gain communication; beam link budget unresolved"
+        },
+        {
+          "id": "factory",
+          "system": "Advanced fabrication, chemistry and resource-processing seed",
+          "low_kg": 30000,
+          "mass_kg": 30000,
+          "high_kg": 150000,
+          "basis": "Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration",
+          "kind": "hardware",
+          "status": "Planning estimate; Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration"
+        },
+        {
+          "id": "farm",
+          "system": "Inflatable farm, eight bays and 2,000 m2 crop hardware",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 50000,
+          "basis": "Carried envelopes, racks, LEDs, pumps, seed/biological stock; eight 18 x 13 m bay envelopes; 2,016 m2 depicted tray area; ideal 833 m2 rack/access footprint is a lower bound;600t local regolith excluded",
+          "kind": "hardware",
+          "status": "Planning estimate; Carried envelopes, racks, LEDs, pumps, seed/biological stock; eight 18 x 13 m bay envelopes; 2,016 m2 depicted tray area; ideal 833 m2 rack/access footprint is a lower bound;600t local regolith excluded"
+        },
+        {
+          "id": "rover",
+          "system": "Reused pressurised rover module, chassis and7-day stores",
+          "low_kg": 6000,
+          "mass_kg": 6000,
+          "high_kg": 18000,
+          "basis": "Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables",
+          "kind": "hardware",
+          "status": "Planning estimate; Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables"
+        },
+        {
+          "id": "spares",
+          "system": "Repair stock, tools, EVA suits and replacement units",
+          "low_kg": 15000,
+          "mass_kg": 15000,
+          "high_kg": 75000,
+          "basis": "16-year spares allowance beyond already counted redundant installed hardware",
+          "kind": "hardware",
+          "status": "Planning estimate; 16-year spares allowance beyond already counted redundant installed hardware"
+        },
+        {
+          "id": "gas",
+          "system": "Initial habitat atmosphere and gas makeup",
+          "low_kg": 23168.27563376909,
+          "mass_kg": 23168.27563376909,
+          "high_kg": 33168.275633769095,
+          "basis": "Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below",
+          "kind": "consumable",
+          "status": "Planning estimate; Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below"
+        },
+        {
+          "id": "water",
+          "system": "Water/oxygen-cycle buffers and process starting inventory",
+          "low_kg": 15000,
+          "mass_kg": 15000,
+          "high_kg": 45000,
+          "basis": "Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget",
+          "kind": "consumable",
+          "status": "Planning estimate; Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget"
+        },
+        {
+          "id": "food",
+          "system": "Dry food plus food packaging,16years +6months commissioning",
+          "low_kg": 166407.1695,
+          "mass_kg": 18855.665999999997,
+          "high_kg": 229976.01,
+          "basis": "216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively",
+          "kind": "consumable",
+          "status": "Planning estimate; 216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively"
+        },
+        {
+          "id": "consumables",
+          "system": "Medical, hygiene, nutrient and general consumables",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 50000,
+          "basis": "16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved",
+          "kind": "consumable",
+          "status": "Planning estimate; 16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved"
+        },
+        {
+          "id": "processtanks",
+          "system": "Atmosphere, water and process tank hardware",
+          "low_kg": 5000,
+          "mass_kg": 5000,
+          "high_kg": 20000,
+          "basis": "Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately",
+          "kind": "hardware",
+          "status": "Planning estimate; Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately"
+        },
+        {
+          "id": "crew",
+          "system": "36 crew and personal effects",
+          "low_kg": 3240,
+          "mass_kg": 3240,
+          "high_kg": 4320,
+          "basis": "Includes people and personal effects; no births during transit",
+          "kind": "crew",
+          "status": "Planning estimate; Includes people and personal effects; no births during transit"
+        },
+        {
+          "id": "exploration",
+          "system": "Remote exploration complete allocation",
+          "low_kg": 450,
+          "mass_kg": 450,
+          "high_kg": 450,
+          "basis": "Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing",
+          "kind": "payload",
+          "status": "Planning estimate; Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing"
+        },
+        {
+          "id": "powerfuel",
+          "system": "Surface and transit power antimatter plus matching matter",
+          "low_kg": 2.0280900523271344,
+          "mass_kg": 2.0280900523271344,
+          "high_kg": 2.0280900523271344,
+          "basis": "1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)",
+          "kind": "consumable",
+          "status": "Planning estimate; 1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)"
+        },
+        {
+          "id": "flightfarm_startup",
+          "system": "Cruise hydroponic conversion and startup stock",
+          "kind": "hardware",
+          "mass_kg": 15000,
+          "basis": "Additional 15 t allowance; existing farm hardware already counted. No carried surface regolith."
+        }
+      ],
+      "name": "30 m lightweight discs plus cruise food production",
+      "changes": [
+        "Operate the carried 2,000 m2 crop hardware in cruise, repurposing inner stores into crop rooms.",
+        "Replace 16.5 years of stored food with a two-year full-crew reserve and add 15 t hydroponic/startup hardware.",
+        "Three-tier crop footprint including 25% access is at least 833 m2; actual crop/maintenance footprint may be larger.",
+        "Assumes a complete reliable diet, nutrient recovery, pollination and disease control; these are not demonstrated by crop-area arithmetic.",
+        "Uses the full-size discs. The smaller-disc proposal has not fitted this farm alongside the accommodation."
+      ],
+      "speculative": true
+    },
+    {
+      "final_retained_mass_kg": 870876.1774513706,
+      "departure_mass_kg": 2673695.2280728845,
+      "thermal_hydrogen_kg": 52066.36197778116,
+      "propulsion_antimatter_loaded_kg": 919145.1615334466,
+      "propulsion_matching_matter_loaded_kg": 919145.1615334466,
+      "retained_direct_propellant_reserve_kg": 87537.63442316111,
+      "hydrogen_tank_kg": 6247.9634373337385,
+      "engine_hot_radiator_kg": 36510.286692505244,
+      "initial_thrust_MN": 31.463991970057144,
+      "initial_annihilation_power_PW": 18.865334982391385,
+      "engine_radiator_emitting_area_m2": 7302.057338501048,
+      "hardware_before_margin_kg": 468543.31834740785,
+      "hardware_margin_kg": 117135.82958685196,
+      "stocks_people_kg": 197659.39509394972,
+      "hardware_with_margin_kg": 585679.1479342598,
+      "components_before_derived": [
+        {
+          "id": "membranes",
+          "system": "Habitat pressure membranes, insulation and restraint",
+          "low_kg": 78037.16151517046,
+          "mass_kg": 36945.12960621597,
+          "high_kg": 234111.48454551137,
+          "basis": "13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding",
+          "kind": "hardware",
+          "status": "Planning estimate; 13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding"
+        },
+        {
+          "id": "floors",
+          "system": "Folding composite floors",
+          "low_kg": 40715.040790523715,
+          "mass_kg": 18095.57368467721,
+          "high_kg": 122145.12237157115,
+          "basis": "4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified",
+          "kind": "hardware",
+          "status": "Planning estimate; 4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified"
+        },
+        {
+          "id": "habframes",
+          "system": "Habitat deployment frames, hatches and cabin partitions",
+          "low_kg": 30000,
+          "mass_kg": 30000,
+          "high_kg": 90000,
+          "basis": "Two large deployable pressure structures; allowances include partitions, access and frame hardware",
+          "kind": "hardware",
+          "status": "Planning estimate; Two large deployable pressure structures; allowances include partitions, access and frame hardware"
+        },
+        {
+          "id": "bearings",
+          "system": "Hubs, bearings, spin motors and balance equipment",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 45000,
+          "basis": "Two independently driven hubs; no validated bearing or transfer design",
+          "kind": "hardware",
+          "status": "Planning estimate; Two independently driven hubs; no validated bearing or transfer design"
+        },
+        {
+          "id": "furnishings",
+          "system": "Cabins, wardrooms, lounge, hygiene and exercise fittings",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 38000,
+          "basis": "18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant",
+          "kind": "hardware",
+          "status": "Planning estimate; 18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant"
+        },
+        {
+          "id": "structure",
+          "system": "Service spine, engine mounts and attachment structure",
+          "low_kg": 30000,
+          "mass_kg": 30000,
+          "high_kg": 100000,
+          "basis": "281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis",
+          "kind": "hardware",
+          "status": "Planning estimate; 281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis"
+        },
+        {
+          "id": "landing",
+          "system": "Landing supports, restraints and habitat transport covers",
+          "low_kg": 20000,
+          "mass_kg": 20000,
+          "high_kg": 75000,
+          "basis": "Permanent horizontal landing baseline; distributed supports and full-scale packing racks",
+          "kind": "hardware",
+          "status": "Planning estimate; Permanent horizontal landing baseline; distributed supports and full-scale packing racks"
+        },
+        {
+          "id": "dustshield",
+          "system": "Forward dust/gas shield stack and supports",
+          "low_kg": 66000,
+          "mass_kg": 46000.0,
+          "high_kg": 330000,
+          "basis": "1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection",
+          "kind": "hardware",
+          "status": "Planning estimate; 1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection"
+        },
+        {
+          "id": "radiationshield",
+          "system": "Crew refuge radiation shielding",
+          "low_kg": 15000,
+          "mass_kg": 15000,
+          "high_kg": 70000,
+          "basis": "Dedicated shielding allowance beyond distributed water/food; dose transport unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; Dedicated shielding allowance beyond distributed water/food; dose transport unresolved"
+        },
+        {
+          "id": "engine",
+          "system": "Direct and hydrogen-thermal engine hardware",
+          "low_kg": 35000,
+          "mass_kg": 35000,
+          "high_kg": 180000,
+          "basis": "Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated",
+          "kind": "hardware",
+          "status": "Planning estimate; Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated"
+        },
+        {
+          "id": "containment",
+          "system": "Main antimatter storage and cryogenic hardware",
+          "low_kg": 40000,
+          "mass_kg": 40000,
+          "high_kg": 350000,
+          "basis": "Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling",
+          "kind": "hardware",
+          "status": "Planning estimate; Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling"
+        },
+        {
+          "id": "refuge",
+          "system": "Rigid 36-person descent refuge and airlocks",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 40000,
+          "basis": "108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems",
+          "kind": "hardware",
+          "status": "Planning estimate; 108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems"
+        },
+        {
+          "id": "eclss",
+          "system": "Redundant life support and water/waste processing",
+          "low_kg": 15000,
+          "mass_kg": 15000,
+          "high_kg": 50000,
+          "basis": "36-person full-awake design; duplicated critical functions and spares in separate row",
+          "kind": "hardware",
+          "status": "Planning estimate; 36-person full-awake design; duplicated critical functions and spares in separate row"
+        },
+        {
+          "id": "medical",
+          "system": "36 torpor beds, medical systems and embryo storage",
+          "low_kg": 14000,
+          "mass_kg": 14000,
+          "high_kg": 50000,
+          "basis": "36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven",
+          "kind": "hardware",
+          "status": "Planning estimate; 36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven"
+        },
+        {
+          "id": "power",
+          "system": "10MWe power conversion, distribution and startup storage",
+          "low_kg": 20000,
+          "mass_kg": 6000.0,
+          "high_kg": 85000,
+          "basis": "Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source",
+          "kind": "hardware",
+          "status": "Planning estimate; Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source"
+        },
+        {
+          "id": "warmradiators",
+          "system": "Service/surface radiators and heat-recovery loops",
+          "low_kg": 58721.82463337848,
+          "mass_kg": 11744.364926675697,
+          "high_kg": 164421.10897345972,
+          "basis": "23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; 23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved"
+        },
+        {
+          "id": "avionics",
+          "system": "Avionics, navigation, communications and sensors",
+          "low_kg": 4000,
+          "mass_kg": 4000,
+          "high_kg": 16000,
+          "basis": "Independent navigation/control and high-gain communication; beam link budget unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; Independent navigation/control and high-gain communication; beam link budget unresolved"
+        },
+        {
+          "id": "factory",
+          "system": "Advanced fabrication, chemistry and resource-processing seed",
+          "low_kg": 30000,
+          "mass_kg": 30000,
+          "high_kg": 150000,
+          "basis": "Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration",
+          "kind": "hardware",
+          "status": "Planning estimate; Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration"
+        },
+        {
+          "id": "farm",
+          "system": "Inflatable farm, eight bays and 2,000 m2 crop hardware",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 50000,
+          "basis": "Carried envelopes, racks, LEDs, pumps, seed/biological stock; eight 18 x 13 m bay envelopes; 2,016 m2 depicted tray area; ideal 833 m2 rack/access footprint is a lower bound;600t local regolith excluded",
+          "kind": "hardware",
+          "status": "Planning estimate; Carried envelopes, racks, LEDs, pumps, seed/biological stock; eight 18 x 13 m bay envelopes; 2,016 m2 depicted tray area; ideal 833 m2 rack/access footprint is a lower bound;600t local regolith excluded"
+        },
+        {
+          "id": "rover",
+          "system": "Reused pressurised rover module, chassis and7-day stores",
+          "low_kg": 6000,
+          "mass_kg": 6000,
+          "high_kg": 18000,
+          "basis": "Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables",
+          "kind": "hardware",
+          "status": "Planning estimate; Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables"
+        },
+        {
+          "id": "spares",
+          "system": "Repair stock, tools, EVA suits and replacement units",
+          "low_kg": 15000,
+          "mass_kg": 15000,
+          "high_kg": 75000,
+          "basis": "16-year spares allowance beyond already counted redundant installed hardware",
+          "kind": "hardware",
+          "status": "Planning estimate; 16-year spares allowance beyond already counted redundant installed hardware"
+        },
+        {
+          "id": "gas",
+          "system": "Initial habitat atmosphere and gas makeup",
+          "low_kg": 23168.27563376909,
+          "mass_kg": 11408.122503897375,
+          "high_kg": 33168.275633769095,
+          "basis": "Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below",
+          "kind": "consumable",
+          "status": "Planning estimate; Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below"
+        },
+        {
+          "id": "water",
+          "system": "Water/oxygen-cycle buffers and process starting inventory",
+          "low_kg": 15000,
+          "mass_kg": 15000,
+          "high_kg": 45000,
+          "basis": "Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget",
+          "kind": "consumable",
+          "status": "Planning estimate; Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget"
+        },
+        {
+          "id": "food",
+          "system": "Dry food plus food packaging,16years +6months commissioning",
+          "low_kg": 166407.1695,
+          "mass_kg": 155559.2445,
+          "high_kg": 229976.01,
+          "basis": "216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively",
+          "kind": "consumable",
+          "status": "Planning estimate; 216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively"
+        },
+        {
+          "id": "consumables",
+          "system": "Medical, hygiene, nutrient and general consumables",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 50000,
+          "basis": "16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved",
+          "kind": "consumable",
+          "status": "Planning estimate; 16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved"
+        },
+        {
+          "id": "processtanks",
+          "system": "Atmosphere, water and process tank hardware",
+          "low_kg": 5000,
+          "mass_kg": 5000,
+          "high_kg": 20000,
+          "basis": "Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately",
+          "kind": "hardware",
+          "status": "Planning estimate; Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately"
+        },
+        {
+          "id": "crew",
+          "system": "36 crew and personal effects",
+          "low_kg": 3240,
+          "mass_kg": 3240,
+          "high_kg": 4320,
+          "basis": "Includes people and personal effects; no births during transit",
+          "kind": "crew",
+          "status": "Planning estimate; Includes people and personal effects; no births during transit"
+        },
+        {
+          "id": "exploration",
+          "system": "Remote exploration complete allocation",
+          "low_kg": 450,
+          "mass_kg": 450,
+          "high_kg": 450,
+          "basis": "Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing",
+          "kind": "payload",
+          "status": "Planning estimate; Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing"
+        },
+        {
+          "id": "powerfuel",
+          "system": "Surface and transit power antimatter plus matching matter",
+          "low_kg": 2.0280900523271344,
+          "mass_kg": 2.0280900523271344,
+          "high_kg": 2.0280900523271344,
+          "basis": "1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)",
+          "kind": "consumable",
+          "status": "Planning estimate; 1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)"
+        }
+      ],
+      "name": "Aggressive lightweight equipment targets",
+      "changes": [
+        "Use prior low hardware allocations, plus compact/2 MWe/bulk-food changes.",
+        "Keep baseline 25% hardware margin, 5% direct-fuel reserve, 0.5c exhaust and 1e-7 engine heat interception.",
+        "Engine and containment allowances are optimistic targets, not mass predictions."
+      ],
+      "speculative": true
+    },
+    {
+      "final_retained_mass_kg": 765784.0679554049,
+      "departure_mass_kg": 2351049.737310029,
+      "thermal_hydrogen_kg": 45783.30595248173,
+      "propulsion_antimatter_loaded_kg": 808228.2407821566,
+      "propulsion_matching_matter_loaded_kg": 808228.2407821566,
+      "retained_direct_propellant_reserve_kg": 76974.11816217077,
+      "hydrogen_tank_kg": 5493.996714297808,
+      "engine_hot_radiator_kg": 32104.444454350654,
+      "initial_thrust_MN": 27.66710628766968,
+      "initial_annihilation_power_PW": 16.588779599455496,
+      "engine_radiator_emitting_area_m2": 6420.88889087013,
+      "hardware_before_margin_kg": 463383.50938621734,
+      "hardware_margin_kg": 115845.87734655433,
+      "stocks_people_kg": 109580.5630604625,
+      "hardware_with_margin_kg": 579229.3867327716,
+      "components_before_derived": [
+        {
+          "id": "membranes",
+          "system": "Habitat pressure membranes, insulation and restraint",
+          "low_kg": 78037.16151517046,
+          "mass_kg": 36945.12960621597,
+          "high_kg": 234111.48454551137,
+          "basis": "13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding",
+          "kind": "hardware",
+          "status": "Planning estimate; 13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding"
+        },
+        {
+          "id": "floors",
+          "system": "Folding composite floors",
+          "low_kg": 40715.040790523715,
+          "mass_kg": 18095.57368467721,
+          "high_kg": 122145.12237157115,
+          "basis": "4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified",
+          "kind": "hardware",
+          "status": "Planning estimate; 4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified"
+        },
+        {
+          "id": "habframes",
+          "system": "Habitat deployment frames, hatches and cabin partitions",
+          "low_kg": 30000,
+          "mass_kg": 30000,
+          "high_kg": 90000,
+          "basis": "Two large deployable pressure structures; allowances include partitions, access and frame hardware",
+          "kind": "hardware",
+          "status": "Planning estimate; Two large deployable pressure structures; allowances include partitions, access and frame hardware"
+        },
+        {
+          "id": "bearings",
+          "system": "Hubs, bearings, spin motors and balance equipment",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 45000,
+          "basis": "Two independently driven hubs; no validated bearing or transfer design",
+          "kind": "hardware",
+          "status": "Planning estimate; Two independently driven hubs; no validated bearing or transfer design"
+        },
+        {
+          "id": "furnishings",
+          "system": "Cabins, wardrooms, lounge, hygiene and exercise fittings",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 38000,
+          "basis": "18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant",
+          "kind": "hardware",
+          "status": "Planning estimate; 18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant"
+        },
+        {
+          "id": "structure",
+          "system": "Service spine, engine mounts and attachment structure",
+          "low_kg": 30000,
+          "mass_kg": 30000,
+          "high_kg": 100000,
+          "basis": "281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis",
+          "kind": "hardware",
+          "status": "Planning estimate; 281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis"
+        },
+        {
+          "id": "landing",
+          "system": "Landing supports, restraints and habitat transport covers",
+          "low_kg": 20000,
+          "mass_kg": 20000,
+          "high_kg": 75000,
+          "basis": "Permanent horizontal landing baseline; distributed supports and full-scale packing racks",
+          "kind": "hardware",
+          "status": "Planning estimate; Permanent horizontal landing baseline; distributed supports and full-scale packing racks"
+        },
+        {
+          "id": "dustshield",
+          "system": "Forward dust/gas shield stack and supports",
+          "low_kg": 66000,
+          "mass_kg": 46000.0,
+          "high_kg": 330000,
+          "basis": "1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection",
+          "kind": "hardware",
+          "status": "Planning estimate; 1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection"
+        },
+        {
+          "id": "radiationshield",
+          "system": "Crew refuge radiation shielding",
+          "low_kg": 15000,
+          "mass_kg": 15000,
+          "high_kg": 70000,
+          "basis": "Dedicated shielding allowance beyond distributed water/food; dose transport unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; Dedicated shielding allowance beyond distributed water/food; dose transport unresolved"
+        },
+        {
+          "id": "engine",
+          "system": "Direct and hydrogen-thermal engine hardware",
+          "low_kg": 35000,
+          "mass_kg": 35000,
+          "high_kg": 180000,
+          "basis": "Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated",
+          "kind": "hardware",
+          "status": "Planning estimate; Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated"
+        },
+        {
+          "id": "containment",
+          "system": "Main antimatter storage and cryogenic hardware",
+          "low_kg": 40000,
+          "mass_kg": 40000,
+          "high_kg": 350000,
+          "basis": "Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling",
+          "kind": "hardware",
+          "status": "Planning estimate; Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling"
+        },
+        {
+          "id": "refuge",
+          "system": "Rigid 36-person descent refuge and airlocks",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 40000,
+          "basis": "108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems",
+          "kind": "hardware",
+          "status": "Planning estimate; 108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems"
+        },
+        {
+          "id": "eclss",
+          "system": "Redundant life support and water/waste processing",
+          "low_kg": 15000,
+          "mass_kg": 15000,
+          "high_kg": 50000,
+          "basis": "36-person full-awake design; duplicated critical functions and spares in separate row",
+          "kind": "hardware",
+          "status": "Planning estimate; 36-person full-awake design; duplicated critical functions and spares in separate row"
+        },
+        {
+          "id": "medical",
+          "system": "36 torpor beds, medical systems and embryo storage",
+          "low_kg": 14000,
+          "mass_kg": 14000,
+          "high_kg": 50000,
+          "basis": "36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven",
+          "kind": "hardware",
+          "status": "Planning estimate; 36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven"
+        },
+        {
+          "id": "power",
+          "system": "10MWe power conversion, distribution and startup storage",
+          "low_kg": 20000,
+          "mass_kg": 6000.0,
+          "high_kg": 85000,
+          "basis": "Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source",
+          "kind": "hardware",
+          "status": "Planning estimate; Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source"
+        },
+        {
+          "id": "warmradiators",
+          "system": "Service/surface radiators and heat-recovery loops",
+          "low_kg": 58721.82463337848,
+          "mass_kg": 11744.364926675697,
+          "high_kg": 164421.10897345972,
+          "basis": "23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; 23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved"
+        },
+        {
+          "id": "avionics",
+          "system": "Avionics, navigation, communications and sensors",
+          "low_kg": 4000,
+          "mass_kg": 4000,
+          "high_kg": 16000,
+          "basis": "Independent navigation/control and high-gain communication; beam link budget unresolved",
+          "kind": "hardware",
+          "status": "Planning estimate; Independent navigation/control and high-gain communication; beam link budget unresolved"
+        },
+        {
+          "id": "factory",
+          "system": "Advanced fabrication, chemistry and resource-processing seed",
+          "low_kg": 30000,
+          "mass_kg": 30000,
+          "high_kg": 150000,
+          "basis": "Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration",
+          "kind": "hardware",
+          "status": "Planning estimate; Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration"
+        },
+        {
+          "id": "farm",
+          "system": "Inflatable farm, eight bays and 2,000 m2 crop hardware",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 50000,
+          "basis": "Carried envelopes, racks, LEDs, pumps, seed/biological stock; eight 18 x 13 m bay envelopes; 2,016 m2 depicted tray area; ideal 833 m2 rack/access footprint is a lower bound;600t local regolith excluded",
+          "kind": "hardware",
+          "status": "Planning estimate; Carried envelopes, racks, LEDs, pumps, seed/biological stock; eight 18 x 13 m bay envelopes; 2,016 m2 depicted tray area; ideal 833 m2 rack/access footprint is a lower bound;600t local regolith excluded"
+        },
+        {
+          "id": "rover",
+          "system": "Reused pressurised rover module, chassis and7-day stores",
+          "low_kg": 6000,
+          "mass_kg": 6000,
+          "high_kg": 18000,
+          "basis": "Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables",
+          "kind": "hardware",
+          "status": "Planning estimate; Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables"
+        },
+        {
+          "id": "spares",
+          "system": "Repair stock, tools, EVA suits and replacement units",
+          "low_kg": 15000,
+          "mass_kg": 15000,
+          "high_kg": 75000,
+          "basis": "16-year spares allowance beyond already counted redundant installed hardware",
+          "kind": "hardware",
+          "status": "Planning estimate; 16-year spares allowance beyond already counted redundant installed hardware"
+        },
+        {
+          "id": "gas",
+          "system": "Initial habitat atmosphere and gas makeup",
+          "low_kg": 23168.27563376909,
+          "mass_kg": 11408.122503897375,
+          "high_kg": 33168.275633769095,
+          "basis": "Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below",
+          "kind": "consumable",
+          "status": "Planning estimate; Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below"
+        },
+        {
+          "id": "water",
+          "system": "Water/oxygen-cycle buffers and process starting inventory",
+          "low_kg": 15000,
+          "mass_kg": 15000,
+          "high_kg": 45000,
+          "basis": "Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget",
+          "kind": "consumable",
+          "status": "Planning estimate; Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget"
+        },
+        {
+          "id": "food",
+          "system": "Dry food plus food packaging,16years +6months commissioning",
+          "low_kg": 166407.1695,
+          "mass_kg": 67480.4124665128,
+          "high_kg": 229976.01,
+          "basis": "216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively",
+          "kind": "consumable",
+          "status": "Planning estimate; 216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively"
+        },
+        {
+          "id": "consumables",
+          "system": "Medical, hygiene, nutrient and general consumables",
+          "low_kg": 12000,
+          "mass_kg": 12000,
+          "high_kg": 50000,
+          "basis": "16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved",
+          "kind": "consumable",
+          "status": "Planning estimate; 16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved"
+        },
+        {
+          "id": "processtanks",
+          "system": "Atmosphere, water and process tank hardware",
+          "low_kg": 5000,
+          "mass_kg": 5000,
+          "high_kg": 20000,
+          "basis": "Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately",
+          "kind": "hardware",
+          "status": "Planning estimate; Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately"
+        },
+        {
+          "id": "crew",
+          "system": "36 crew and personal effects",
+          "low_kg": 3240,
+          "mass_kg": 3240,
+          "high_kg": 4320,
+          "basis": "Includes people and personal effects; no births during transit",
+          "kind": "crew",
+          "status": "Planning estimate; Includes people and personal effects; no births during transit"
+        },
+        {
+          "id": "exploration",
+          "system": "Remote exploration complete allocation",
+          "low_kg": 450,
+          "mass_kg": 450,
+          "high_kg": 450,
+          "basis": "Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing",
+          "kind": "payload",
+          "status": "Planning estimate; Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing"
+        },
+        {
+          "id": "powerfuel",
+          "system": "Surface and transit power antimatter plus matching matter",
+          "low_kg": 2.0280900523271344,
+          "mass_kg": 2.0280900523271344,
+          "high_kg": 2.0280900523271344,
+          "basis": "1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)",
+          "kind": "consumable",
+          "status": "Planning estimate; 1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)"
+        }
+      ],
+      "name": "Additional hypothetical 20% torpor nutrition",
+      "changes": [
+        "Torpor food demand assumed 20% of awake demand; normal nutrition during burns and commissioning.",
+        "Packaging scales with food. Clinical feed delivery and sterile consumables are not redesigned.",
+        "No demonstrated safe human 21-day torpor regimen establishes this saving."
+      ],
+      "speculative": true
+    }
+  ],
+  "500_t_departure_constraint": {
+    "maximum_retained_kg_at_same_propulsion_assumptions": 162860.03137296072,
+    "bulk_full_metabolism_food_alone_kg": 155559.2445
+  },
+  "limits": [
+    "Comparison of whole-ISS mass to only habitat fabric is not an equivalent comparison.",
+    "ISS receives frequent cargo and external operational support; this mission carries its supplies, propulsion and settlement seed.",
+    "A cruise farm could reduce stocks, but it requires a complete diet, nutrient accounting, maintenance access and failure reserves.",
+    "An inflatable envelope saves structural and packaging mass; floors, pressure-restraint loads, radiation protection, machinery and supplies remain.",
+    "A broad flat disc needs pressure ties or compartmentalisation; thin fabric alone cannot carry the pressure loads.",
+    "About 5 rpm at the compact outer floor requires adaptation studies, especially with repeated torpor recovery.",
+    "No calculation here demonstrates a tonnes-scale antimatter bank or establishes an achievable dry mass.",
+    "500 t departure is not interchangeable with 500 t retained or 500 t hardware."
+  ]
+}

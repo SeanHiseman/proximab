@@ -1,0 +1,127 @@
+{
+  "status": "32-person lightweight two-deck concept: two 8.5 m-floor discs at 0.25 g, filled to the hub; hardware targets, torpor and full-diet food factory unvalidated",
+  "disc_count": 2,
+  "people_per_disc": 16,
+  "couples_per_disc": 4,
+  "primary_occupied_enclosure": "Inflatable, separately isolatable rounded/lobed compartments",
+  "preferred_arrival_architecture": "Staged surface delivery: habitats and settlement equipment descend; cruise-only module remains in orbit.",
+  "landing_propulsion_selection": "Hybrid candidate: direct antimatter orbital braking, then antimatter-heated hydrogen terminal descent; safe cutoff unresolved",
+  "landing_thermal_Isp_target_seconds_unproven": 1800,
+  "main_ship_flies_after_settlement": false,
+  "cruise_cabin_gravity_target_g": 0.25,
+  "landing_acceleration_policy": "Size for braking needs subject to crew, structural and equipment limits; no 1.2g landing cap",
+  "residential_pressure_compartments_per_disc": 4,
+  "private_double_cabins_per_residential_compartment": 1,
+  "geometry_study_not_selected_dimensions": {
+    "deployed_radius_m": 9.5,
+    "axial_envelope_m": 4.5,
+    "deck_floor_radii_m": [
+      8.5,
+      5.4
+    ],
+    "gravity_at_outer_floor_g": [
+      0.25
+    ],
+    "interior_room_dimensions": "Two decks per disc. Outer deck: four 4-berth bays and four two-cell shared rooms. Inner deck, up to the hub: four three-cell plant, garden, workshop and store rooms. About 375 m2 gross per disc."
+  },
+  "pressure_enclosure_material_candidates": [
+    "Redundant polymer gas barriers",
+    "Vectran or aramid structural restraint",
+    "Flexible insulation and protective layers"
+  ],
+  "rigid_or_semirigid_parts": [
+    "Central hubs and bearings",
+    "Locking composite structural members",
+    "Hatches and load interfaces",
+    "Folding sandwich floor panels",
+    "Medical bed and equipment racks",
+    "Independent descent crew refuges",
+    "Pressure-gas and cryogenic tanks",
+    "Reactor and descent engine mounts",
+    "Landing supports and surface foundations"
+  ],
+  "operating_states": [
+    "Expanded, spinning cruise habitat",
+    "Expanded, locked habitat during powered flight with floors re-set across the thrust",
+    "Expanded, nonrotating surface settlement lying flat round a central hall, joined to two inflatable residences"
+  ],
+  "not_yet_estimated": [
+    "Validated fabric packing and deployment mechanisms",
+    "Pressure, creep, puncture, fire and structural qualification",
+    "Refuge endurance, medical recovery and crash-load certification",
+    "Access and floor conversion under thrust gravity",
+    "Post-20-year repacking and deployment qualification"
+  ],
+  "deck_programmes": [
+    [
+      "Residential",
+      "Galley and dining",
+      "Hygiene and laundry",
+      "Residential",
+      "Medical and torpor service",
+      "Exercise and rehabilitation",
+      "Residential",
+      "Shared lounge",
+      "Mission control",
+      "Residential",
+      "Airlock and pressure services",
+      "Clinical recovery"
+    ],
+    [
+      "Fresh-food garden",
+      "Water recovery",
+      "Life support",
+      "Oxygen generation",
+      "CO2 removal",
+      "Heat exchanger",
+      "Electrical distribution",
+      "Clean workshop",
+      "Suit maintenance",
+      "Food reserve",
+      "Medical stores",
+      "Water tanks"
+    ]
+  ],
+  "common_space_programme": {
+    "design_occupancy_per_disc": 16,
+    "dining_seats_per_disc": 16,
+    "lounge_seats_per_disc": 12,
+    "normal_awake_shipwide": "Exactly eight people in awake phase, with paired starts staggered every 42 hours; sleep and recovery watchkeeping still require qualification.",
+    "flight_occupancy_policy": "Eight awake and 24 torpid during departure, coast and arrival braking. All 32 awake for descent; retain 32 protected descent places. Transit common rooms are sized for eight, surface expansion supports 32.",
+    "quiet_loud_separation": "Berth bays alternate with shared rooms on the outer deck; plant, garden, workshop and stores fill the low-gravity inner deck.",
+    "circulation": "Each deck is a ring of four merged rooms (outer deck: four two-cell rooms between four berth bays). Rooms are walked through via doorways in bulkheads along a 1.2 m aisle; each shared room has a ladder to the deck above (inner deck to the hub). Egress and disability access require full human-factors review.",
+    "lighting": "Indirect circadian lighting, glare-controlled task lights and dimmable cabin lights",
+    "privacy": "Curtained two-tier berths in transit; private couple cabins are in the surface inflatables.",
+    "air_quality": "Dedicated ventilation diffusers, return grilles and washable surfaces; no crop CO2 enrichment in living areas"
+  },
+  "habitat_layout_revision": "ISS-informed functional equipment and long-duration social-space proposal; not an as-built replica or certified pressure vessel",
+  "cabin_bay_layout": [
+    {
+      "cell": 0,
+      "offset_m": 0
+    },
+    {
+      "cell": 3,
+      "offset_m": 0
+    },
+    {
+      "cell": 6,
+      "offset_m": 0
+    },
+    {
+      "cell": 9,
+      "offset_m": 0
+    }
+  ],
+  "berth_bays_per_disc": 4,
+  "berths_per_bay": 4,
+  "usable_area_allocations_shipwide_m2": {
+    "32 two-tier berths in eight bays": 80,
+    "galley_dining_lounge": 70,
+    "exercise_and_medical": 70,
+    "hygiene": 18,
+    "control": 18,
+    "airlocks_and_recovery": 36,
+    "inner-deck plant, garden, workshop and stores": 190
+  }
+}

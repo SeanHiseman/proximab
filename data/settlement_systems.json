@@ -1,0 +1,284 @@
+{
+  "status": "Mission design with explicitly assumed advanced fabrication and sufficient local resources",
+  "environment": {
+    "destination": "Proxima Centauri b",
+    "airless": false,
+    "airless_status": "Superseded: a thin, dusty atmosphere is now assumed for surface operations and the settlement view. Not an observation; the atmosphere of Proxima b is unknown.",
+    "surface_composition_and_accessible_volatiles": "Observationally unknown; sufficient accessible local resources assumed for this design",
+    "descent_model_atmosphere": "The descent and landing mass model still ignores the atmosphere (no aerobraking credit). That is conservative for propellant; entry heating, winds and dust are not yet assessed.",
+    "surface_character": "Assumed Mars-like: wind-worked regolith, dunes, scattered rock and few surviving small craters."
+  },
+  "power": {
+    "primary": "Antimatter with purpose-designed electrical conversion, shielding and heat rejection",
+    "emergency_backup": "Solar panels plus stored energy for critical loads and containment",
+    "power_fuel_is_separate_from_main_ship_future_flight_fuel": true,
+    "surface_antimatter_inventory_kg": 1,
+    "matching_ordinary_matter_inventory_kg": 1,
+    "conversion_efficiency_sensitivity_assumption": 0.4,
+    "electrical_load_sensitivity_MW": [
+      1,
+      3,
+      10,
+      100
+    ],
+    "reserve_lifetime_sensitivity_years": [
+      20
+    ],
+    "selected_average_power_MW": null,
+    "working_operating_load_allocation_MW": 10,
+    "working_load_status": "Provisional allocations, not measured subsystem demand or a selected generator rating",
+    "initial_load_allocations_MW": {
+      "crop_lighting": 0.4,
+      "crop_environmental_control": 0.6,
+      "habitats_and_medical": 0.3,
+      "life_support_water_and_gases": 0.4,
+      "antimatter_containment_and_cryogenics": 0.5,
+      "advanced_fabrication": 2.0,
+      "local_resource_processing": 4.0,
+      "rover_and_robot_charging": 0.2,
+      "computing_and_communications": 0.1,
+      "electrical_distribution_and_conversion_auxiliaries": 0.5,
+      "operating_margin": 1.0
+    },
+    "selected_generator_rating_MW": null,
+    "peak_load_and_backup_duration": "Not yet sized; schedule batch processing and evaluate critical-load shedding",
+    "heat_recovery": {
+      "required_where_useful": true,
+      "priorities": [
+        "Compatible industrial preheating and drying",
+        "Water processing and hot water",
+        "Habitat and crop heating only when needed",
+        "Thermal storage to shift peak demand"
+      ],
+      "interface": "Isolated heat exchangers between source, process and occupied-space loops",
+      "generation": "Assess an integrated bottoming cycle before revising net electrical efficiency; no double-counted recovery credit",
+      "steady_state": "Reuse can reduce new heating demand but does not eliminate final heat rejection; lighted farms may need cooling rather than heat",
+      "credited_power_or_radiator_reduction": "None until source temperatures and actual heat sinks are matched"
+    },
+    "thermal_reference": {
+      "electrical_load_MW": 10,
+      "conversion_waste_heat_MW": 15,
+      "conversion_loop_radiator_temperature_K": 600,
+      "load_heat_MW": 10,
+      "load_loop_radiator_temperature_K": 330,
+      "emissivity_assumed": 0.9,
+      "radiator_conditions": "Ideal unobstructed cold-space view; real terrain, planet, sky, piping and view factors require further sizing"
+    },
+    "selected_reserve_lifetime_years": 20,
+    "reserve_start": "Surface settlement, after landing; separate from transit and propulsion consumption",
+    "self_replenishment": "Cannot replenish antimatter fuel using only its own output; requires a net external energy source",
+    "carried_generator_target_MWe": 2,
+    "expanded_surface_target_MWe": 10,
+    "carried_power_policy": "2 MWe critical systems and compact food factory during cruise, then batch fabrication and local power expansion toward 10 MWe.",
+    "cruise_load_allocations_MWe": {
+      "food_factory_and_fresh_garden": 0.25,
+      "habitats_medical": 0.267,
+      "life_support_water_waste": 0.356,
+      "containment_cryogenics": 0.5,
+      "computing_communications": 0.1,
+      "robotics": 0.1,
+      "distribution_auxiliaries": 0.15,
+      "unallocated_operating_margin": 0.277
+    },
+    "cruise_load_status": "2 MWe allocation, not measured demand; no large staple-crop lighting or crop-pod climate plant carried."
+  },
+  "greenhouse": {
+    "construction": "Surface greenhouses manufactured locally after food-factory commissioning; not part of carried farm hardware.",
+    "primary_growing_medium": "Processed local regolith with added/recycled nutrients, water, organics and biological inputs as needed",
+    "raw_surface_regolith_assumed_fertile": false,
+    "initial_planted_area_m2_study": 2867.2000000000003,
+    "expandable_planted_area_m2_study": 4000,
+    "reference_planted_area_m2_per_adult": 50,
+    "gross_to_planted_area_study_factor": 1.25,
+    "stacked_tiers_study": 4,
+    "stacking_status": "Four tiers use dwarf/compact crop varieties; a full varied diet at this geometry is a design target, not proven output.",
+    "crop_CO2_reference_ppm": [
+      1000,
+      1200
+    ],
+    "CO2_status": "Crop-specific enrichment in an oxygen-containing atmosphere; no universal yield gain or crew-space setpoint assumed",
+    "daily_light_integral_mol_m2_day_study": 40,
+    "fixture_photon_efficacy_umol_J_study": 3,
+    "fixture_to_canopy_delivery_fraction_study": 0.8,
+    "photoperiod_hours_study": 16,
+    "nominal_crop_bays_initial": 8,
+    "planted_area_per_bay_m2_study": 358.40000000000003,
+    "bed_depth_m_sensitivity_assumption": 0.2,
+    "processed_regolith_bulk_density_kg_m3_sensitivity_assumption": 1500,
+    "initial_local_substrate_mass_kg_study": 860160.0000000001,
+    "qualified_food_output": "Unknown; requires crop mix, lighting, nutrients, yield, failures and population model",
+    "supply_chain": [
+      "Regolith assay",
+      "Screening and conditioning",
+      "Contaminant treatment",
+      "Nutrient amendment",
+      "Waste treatment and nutrient recovery",
+      "Seed and microbial banks",
+      "Harvest and food processing",
+      "Buffer food stock"
+    ],
+    "light_and_thermal_design": "Artificial LED lighting is primary; full air circulation, dehumidification, heat rejection and pressure support; daylight is optional and not credited in lighting budget",
+    "carried_from_earth": false,
+    "surface_view_phase": "Later expansion built with local materials, not immediate landing inventory."
+  },
+  "manufacturing": {
+    "goal": "Total independence from Earth resupply, accepted as an advanced-technology design assumption",
+    "complete_local_production_and_repair_assumed": true,
+    "advanced_3D_printing_required": true,
+    "supporting_capabilities": [
+      "Metal, polymer and ceramic fabrication",
+      "Precision machining and heat treatment",
+      "Metrology and nondestructive inspection",
+      "Electronics production and repair",
+      "Chemical and pharmaceutical manufacture",
+      "Textile and pressure-envelope repair",
+      "Mining and feedstock purification",
+      "Recycling and material recovery",
+      "Repair and reproduction of manufacturing equipment"
+    ],
+    "universal_repair_and_self_reproduction_demonstrated": false,
+    "local_raw_material_sufficiency": "Assumed sufficient and accessible for all required production and repair",
+    "industrial_machinery_mass_kg": null,
+    "note": "Industrial production equipment is a declared separate settlement system, not hidden in the sub-500 kg remote exploration allowance"
+  },
+  "population": {
+    "founding_adults": 32,
+    "couples": 16,
+    "first_birth_target_months_after_landing": 9,
+    "birth_timing_status": "Planning target, not guaranteed conception, gestation or healthy birth",
+    "all_couples_birth_simultaneously_required": false,
+    "couple_related_embryos_per_couple": 2,
+    "couple_related_embryos_total": 32,
+    "unrelated_donor_embryos_required": true,
+    "unrelated_donor_embryo_count": null,
+    "medical_facilities": [
+      "IVF and embryo storage",
+      "Obstetric care",
+      "Operative delivery capability",
+      "Neonatal care",
+      "Pediatric care"
+    ],
+    "notes": [
+      "Two embryos do not guarantee two live births",
+      "Growth, genetic diversity and kinship need multigeneration planning",
+      "No established evidence guarantees human pregnancy and child development in the assumed Proxima b environment"
+    ],
+    "founding_couples": 16,
+    "founding_men": 16,
+    "founding_women": 16,
+    "related_embryos_total": 32,
+    "population_after_32_live_births_if_achieved": 64
+  },
+  "crewed_rover": {
+    "pressurised": true,
+    "nominal_people": 2,
+    "nominal_endurance_days": 7,
+    "cruise_hardware_reuse_required": true,
+    "driving_range_km": null,
+    "contingency_reserve_endurance_days": null
+  },
+  "cruise_agriculture": {
+    "active": false,
+    "bay_count": 8,
+    "bay_semi_axes_m": [
+      9,
+      4.5,
+      6.5
+    ],
+    "cruise_centres_m": [
+      [
+        -123,
+        -11,
+        5.6
+      ],
+      [
+        -104,
+        -11,
+        5.6
+      ],
+      [
+        -85,
+        -11,
+        5.6
+      ],
+      [
+        -66,
+        -11,
+        5.6
+      ],
+      [
+        -123,
+        11,
+        5.6
+      ],
+      [
+        -104,
+        11,
+        5.6
+      ],
+      [
+        -85,
+        11,
+        5.6
+      ],
+      [
+        -66,
+        11,
+        5.6
+      ]
+    ],
+    "tray_length_m": 12.8,
+    "tray_width_m": 7,
+    "tiers": 4,
+    "tier_pitch_m": 1.2,
+    "canopy_area_m2": 2867.2000000000003,
+    "food_reserve_years_full_crew": 2.5,
+    "reserve_policy": "Two years full-crew cruise contingency plus six months surface commissioning; no torpor metabolic discount.",
+    "additional_root_loop_water_kg": 8000,
+    "additional_nutrient_makeup_kg": 6000,
+    "additional_access_volume_m3": 100,
+    "hydroponic_conversion_hardware_kg": 15000,
+    "nutrient_recovery_target_fraction": 0.9,
+    "gravity_policy": "Capillary root-zone, forced ventilation and robot access needed through coast and thrust; complete-diet yields and long-duration closure unvalidated.",
+    "surface_reuse": "Same eight pressure bays and growth hardware land, then redeploy with local-regolith-compatible trays and locally made foundations.",
+    "status": "Historical large crop-farm option, no longer carried in the selected minimum-mass design."
+  },
+  "food_factory": {
+    "selected": true,
+    "crew_design_capacity": 32,
+    "hardware_target_kg": 10000,
+    "independent_production_trains": 2,
+    "nominal_edible_energy_kcal_person_day": 2500,
+    "electrical_process_allocation_MWe": 0.25,
+    "circulating_startup_inventory_kg": 1000,
+    "extra_process_water_kg": 3000,
+    "full_elemental_recycling_assumed": true,
+    "production_chain": [
+      "Recover CO2, water and waste nutrients",
+      "Sterilise/mineralise and separate reject streams",
+      "Generate hydrogen and food intermediates electrically",
+      "Microbial proteins, carbohydrate and lipid production",
+      "Micronutrient/food-grade finishing and galley ingredients"
+    ],
+    "qualification": "A fully redundant, complete-diet 10 t integrated system is a lowest studied design target, not demonstrated hardware. Both trains must operate during powered flight as well as coast.",
+    "fresh_food_canopy_m2": 60,
+    "reserve_edible_food_kg": 1000,
+    "reserve_packaging_kg": 20,
+    "factory_does_not_consume_flight_propellant_hydrogen": true
+  },
+  "proxima_b_sky": {
+    "source": "https://en.wikipedia.org/wiki/Proxima_Centauri_b and https://en.wikipedia.org/wiki/Proxima_Centauri (values as published there; planet radius and atmosphere unmeasured)",
+    "orbit_au": 0.04857,
+    "star_radius_solar": 0.1542,
+    "star_effective_temperature_K": 3042,
+    "star_angular_diameter_deg_note": "about 1.7 degrees from the planet, roughly three times the Sun seen from Earth",
+    "likely_tidally_locked": true,
+    "equilibrium_temperature_K": 234,
+    "alpha_cen_distance_au": 12950,
+    "alpha_cen_earth_distance_au": 276400,
+    "alpha_cen_separation_au": 30,
+    "alpha_cen_A_mag_from_earth": 0.01,
+    "alpha_cen_B_mag_from_earth": 1.33,
+    "alpha_cen_note": "From Proxima b, A and B appear as a close bright pair near magnitudes -6.6 and -5.3."
+  }
+}

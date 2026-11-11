@@ -1,0 +1,250 @@
+{
+  "status": "Unselected planning sensitivities; no demonstrated minimum mass or crew safety claim.",
+  "baseline": {
+    "status": "Unselected conditional engine-reuse study; late stage separation/divert and thermal hardware cooling unqualified.",
+    "thermal_delta_v_km_s": 0.4,
+    "effective_exhaust_fraction_c": 0.5,
+    "thermal_hardware_allowance_kg": 10000,
+    "departure_mass_kg": 1330200.471023441,
+    "final_retained_mass_kg": 376301.2986193752,
+    "thermal_hydrogen_kg": 8624.470734699447,
+    "thermal_antimatter_kg": 1.4950214117360902e-05,
+    "mass_at_thermal_ignition_kg": 384925.7693839751,
+    "early_release_mass_kg": 54170.0,
+    "late_engine_stage_release_mass_kg": 126832.91155831816,
+    "direct_propellant_consumed_kg": 764271.7900811478,
+    "retained_correction_propellant_kg": 377.44383819201636,
+    "propulsion_antimatter_loaded_kg": 382324.61697462015,
+    "engine_hot_radiator_kg": 18164.37417610091,
+    "hardware_with_margin_kg": 512227.2405195559,
+    "landed_hardware_with_margin_kg": 332021.77279942983,
+    "peak_descent_thrust_MN": 8.971914737702333,
+    "phase_masses_kg": {
+      "departure": 1330200.471023441,
+      "after_interstellar_braking": 565970.3743908647,
+      "after_capture": 565962.8229454089,
+      "after_early_release": 511792.8229454089,
+      "before_engine_release": 511758.68094229326,
+      "after_engine_release": 384925.7693839751,
+      "after_touchdown": 376301.2986193752
+    }
+  },
+  "departure_ledger_kg": {
+    "Habitat envelopes, floors, frames, bearings and fittings": 97221.17564823362,
+    "Flight and settlement support frames": 30000,
+    "Landing supports, restraints and transport covers": 20000,
+    "Dust shield and crew radiation-shield allowance": 42164.70588235294,
+    "Cruise engine, touchdown engine and containment": 75000,
+    "Rigid crew refuge and airlocks": 9452.235294117647,
+    "Life support, medical and process tanks": 32000.0,
+    "Electrical conversion and service radiators": 17744.3649266757,
+    "Avionics, navigation and communications": 4000,
+    "Settlement fabrication and resource-processing seed": 30000,
+    "Food-factory hardware": 10000,
+    "Pressurised rover": 6000,
+    "Spares, tools and suits": 15000,
+    "Separation interfaces": 2000,
+    "Calculated hot radiators and hydrogen tanks": 19199.310664264845,
+    "Hardware development allowance (25%)": 102445.44810391119,
+    "People, stocks and scout payloads": 44699.52581994541,
+    "Propulsion matter and antimatter, including correction reserve": 764649.2339492403,
+    "Touchdown hydrogen": 8624.470734699447
+  },
+  "stock_rows_kg": {
+    "gas": 11014.157374046672,
+    "water": 16333.333333333332,
+    "food": 1020,
+    "consumables": 12000,
+    "crew": 2880,
+    "exploration": 30,
+    "powerfuel": 2.0351125654089177,
+    "foodloop_inventory": 1000,
+    "spacescouts": 420
+  },
+  "current_geometry": {
+    "gross_floor_area_m2": 1526.8140296446395,
+    "net_floor_area_m2_assumed": 992.4291192690157,
+    "full_disc_gross_pressure_volume_m3": 10751.31545874767,
+    "full_disc_pressure_area_m2": 5881.061447520093
+  },
+  "proposed_geometry": {
+    "torus_count": 2,
+    "major_radius_m": 17,
+    "tube_radius_m": 2.5,
+    "outer_radius_m": 19.5,
+    "floor_radius_m": 18,
+    "pressure_area_m2": 3355.665496370382,
+    "pressure_volume_m3": 4194.581870462977,
+    "gross_floor_area_m2": 678.5840131753953,
+    "assumed_net_floor_area_m2": 441.07960856400695,
+    "spin_rpm_at_half_g": 4.984027953287711
+  },
+  "proposed_area_programme_m2": {
+    "32 convertible torpor/sleep berths, equipment footprint": 80,
+    "Four shared double cabins for the eight awake crew": 32,
+    "Galley and dining": 24,
+    "Lounge, library, learning, arts and telepresence": 32,
+    "Exercise and rehabilitation": 24,
+    "Medical, recovery and private consultation": 24,
+    "Hygiene": 12,
+    "Control and communications": 12,
+    "Life support, water and electrical equipment": 40,
+    "Clean workshop and science bench": 20,
+    "Two airlocks and suit service": 20,
+    "Accessible stores and food reserve": 24,
+    "Circulation, berth access and transfer": 64
+  },
+  "scenarios": [
+    {
+      "name": "A: rounded single-deck rims, surface kit and access allowance",
+      "result": {
+        "status": "Unselected conditional engine-reuse study; late stage separation/divert and thermal hardware cooling unqualified.",
+        "thermal_delta_v_km_s": 0.4,
+        "effective_exhaust_fraction_c": 0.5,
+        "thermal_hardware_allowance_kg": 10000,
+        "departure_mass_kg": 1267325.2805005077,
+        "final_retained_mass_kg": 351217.43021005107,
+        "thermal_hydrogen_kg": 8049.572136679755,
+        "thermal_antimatter_kg": 1.3953647788764678e-05,
+        "mass_at_thermal_ignition_kg": 359267.00237463816,
+        "early_release_mass_kg": 54170.0,
+        "late_engine_stage_release_mass_kg": 125741.84108159774,
+        "direct_propellant_consumed_kg": 728146.4370442717,
+        "retained_correction_propellant_kg": 359.6030286636817,
+        "propulsion_antimatter_loaded_kg": 364253.02005042136,
+        "engine_hot_radiator_kg": 17305.790442347246,
+        "hardware_with_margin_kg": 491524.4312231725,
+        "landed_hardware_with_margin_kg": 312392.19317023846,
+        "peak_descent_thrust_MN": 8.50294905112053,
+        "phase_masses_kg": {
+          "departure": 1267325.2805005077,
+          "after_interstellar_braking": 539218.3953506058,
+          "after_capture": 539211.2008427562,
+          "after_early_release": 485041.2008427562,
+          "before_engine_release": 485008.8434562359,
+          "after_engine_release": 359267.00237463816,
+          "after_touchdown": 351217.43021005107
+        }
+      },
+      "component_reductions_kg": {
+        "membranes": 15152.375706898267,
+        "floors": 8482.300164692442,
+        "gas": 5454.288780132819
+      },
+      "additional_components_kg": {
+        "surface_expansion": 6000,
+        "rim_access": 2000
+      },
+      "departure_saving_kg": 62875.19052293338,
+      "landed_saving_kg": 25083.868409324146
+    },
+    {
+      "name": "B: A plus simpler frames and shared room fittings",
+      "result": {
+        "status": "Unselected conditional engine-reuse study; late stage separation/divert and thermal hardware cooling unqualified.",
+        "thermal_delta_v_km_s": 0.4,
+        "effective_exhaust_fraction_c": 0.5,
+        "thermal_hardware_allowance_kg": 10000,
+        "departure_mass_kg": 1233788.6711399688,
+        "final_retained_mass_kg": 337838.100635092,
+        "thermal_hydrogen_kg": 7742.930525841604,
+        "thermal_antimatter_kg": 1.3422095432644061e-05,
+        "mass_at_thermal_ignition_kg": 345581.0311877778,
+        "early_release_mass_kg": 54170.0,
+        "late_engine_stage_release_mass_kg": 125159.88174186033,
+        "direct_propellant_consumed_kg": 708877.7582103306,
+        "retained_correction_propellant_kg": 350.0870295096226,
+        "propulsion_antimatter_loaded_kg": 354613.9226333422,
+        "engine_hot_radiator_kg": 16847.83576988057,
+        "hardware_with_margin_kg": 477572.6583076301,
+        "landed_hardware_with_margin_kg": 299012.8635952794,
+        "peak_descent_thrust_MN": 8.252810341343508,
+        "phase_masses_kg": {
+          "departure": 1233788.6711399688,
+          "after_interstellar_braking": 524949.3225536456,
+          "after_capture": 524942.31843054,
+          "after_early_release": 470772.31843054004,
+          "before_engine_release": 470740.9129296382,
+          "after_engine_release": 345581.0311877778,
+          "after_touchdown": 337838.100635092
+        }
+      },
+      "component_reductions_kg": {
+        "membranes": 15152.375706898267,
+        "floors": 8482.300164692442,
+        "habframes": 6000.0,
+        "furnishings": 4666.666666666666,
+        "gas": 5454.288780132819
+      },
+      "additional_components_kg": {
+        "surface_expansion": 6000,
+        "rim_access": 2000
+      },
+      "departure_saving_kg": 96411.79988347227,
+      "landed_saving_kg": 38463.19798428321
+    },
+    {
+      "name": "C: B plus aggressive machinery, landing, rover and frame targets",
+      "result": {
+        "status": "Unselected conditional engine-reuse study; late stage separation/divert and thermal hardware cooling unqualified.",
+        "thermal_delta_v_km_s": 0.4,
+        "effective_exhaust_fraction_c": 0.5,
+        "thermal_hardware_allowance_kg": 10000,
+        "departure_mass_kg": 1168087.515269973,
+        "final_retained_mass_kg": 316514.794125001,
+        "thermal_hydrogen_kg": 7254.220458568301,
+        "thermal_antimatter_kg": 1.2574933865076825e-05,
+        "mass_at_thermal_ignition_kg": 323769.01460871915,
+        "early_release_mass_kg": 54170.0,
+        "late_engine_stage_release_mass_kg": 119019.7724100244,
+        "direct_propellant_consumed_kg": 671128.7282512295,
+        "retained_correction_propellant_kg": 331.4443534728719,
+        "propulsion_antimatter_loaded_kg": 335730.08631492616,
+        "engine_hot_radiator_kg": 15950.662445241218,
+        "hardware_with_margin_kg": 450127.88514174,
+        "landed_hardware_with_margin_kg": 277689.5570851884,
+        "peak_descent_thrust_MN": 7.762766694309907,
+        "phase_masses_kg": {
+          "departure": 1168087.515269973,
+          "after_interstellar_braking": 496994.9588350367,
+          "after_capture": 496988.3276923245,
+          "after_early_release": 442818.3276923245,
+          "before_engine_release": 442788.7870187436,
+          "after_engine_release": 323769.01460871915,
+          "after_touchdown": 316514.794125001
+        }
+      },
+      "component_reductions_kg": {
+        "membranes": 15152.375706898267,
+        "floors": 8482.300164692442,
+        "habframes": 6000.0,
+        "furnishings": 4666.666666666666,
+        "landing": 5000,
+        "factory": 10000,
+        "rover": 2000,
+        "gas": 5454.288780132819,
+        "flightstructure": 4000
+      },
+      "additional_components_kg": {
+        "surface_expansion": 6000,
+        "rim_access": 2000
+      },
+      "departure_saving_kg": 162112.95575346798,
+      "landed_saving_kg": 59786.50449437421
+    }
+  ],
+  "marginal_savings": {
+    "membranes": {
+      "departure_saving_per_1000kg": 3144.057127550943,
+      "landed_saving_per_1000kg": 1254.3121476524393
+    },
+    "flightstructure": {
+      "departure_saving_per_1000kg": 3063.0461754093412,
+      "landed_saving_per_1000kg": 0.0
+    },
+    "water": {
+      "departure_saving_per_1000kg": 2515.2457020406146,
+      "landed_saving_per_1000kg": 1003.4497181219631
+    }
+  }
+}

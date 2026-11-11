@@ -1,0 +1,42 @@
+id,item,previous_kg,target_kg,change_kg,basis
+membranes,"Habitat pressure membranes, insulation and restraint",5887.0933054149855,5887.0933054149855,0.0,"Vectran/aramid restraint, redundant gas liners, insulation and local impact layers; retain 6 kg/m2 assumption."
+floors,Folding composite floors,2016,2016,0,"CFRP sandwich panels, local metal inserts; 8 kg/m2 target needs load/fire/repair qualification."
+habframes,"Habitat deployment frames, hatches and cabin partitions",8000,5000,3000,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+bearings,"Hubs, bearings, spin motors and balance equipment",6000,5000,1000,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+furnishings,"Cabins, wardrooms, lounge, hygiene and exercise fittings",3000,2000,1000,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+structure,Settlement delivery frame and surface services,8000,5000,3000,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+landing,"Landing supports, restraints and habitat transport covers",10000,6000,4000,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+dustshield,Forward dust/gas shield stack and supports,31000.0,31000.0,0.0,Current allowance held; no additional reduction claimed.
+radiationshield,Total modular polyethylene berth/shelter shielding provision,40000,40000,0,Replace the old 11.16 t refuge allowance with 40 t total modular polyethylene provision for two berth shelters; no qualified GCR or engine-dose result.
+engine,Hydrogen-heated touchdown assembly,10000,8000,2000,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+containment,Touchdown antimatter isolation hardware,2000,1500,500,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+refuge,Rigid 32-person descent refuge and airlocks,6000,4500,1500,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+eclss,Redundant life support and water/waste processing,10000,8000,2000,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+medical,"32 torpor beds, medical systems and embryo storage",11000,9500,1500,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+power,"2 MWe conversion, distribution and backup allowance",6000,4500,1500,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+warmradiators,Service/surface radiators and heat-recovery loops,11744.364926675697,5637.295164804333,6107.069761871364,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+avionics,"Avionics, navigation, communications and sensors",2500,750,1750,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+factory,"Advanced fabrication, chemistry and resource-processing seed",15000,12000,3000,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+rover,"Reused pressurised rover module, chassis and7-day stores",3500,2500,1000,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+spares,"Repair stock, tools, EVA suits and replacement units",10000,3000,7000,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+gas,Initial habitat atmosphere and gas makeup,2000,2000,0,About 1.3 t initial fill for pods/factory/refuge/tunnels plus about 0.7 t deployment/makeup reserve.
+water,Water/oxygen-cycle buffers and process starting inventory,3000,5000,-2000,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+food,One tonne spare edible food plus packaging,1020,1020,0,Current allowance held; no additional reduction claimed.
+consumables,"Medical, hygiene, nutrient and general consumables",8000,8000,0,"Specialist medicines, hygiene and process chemicals; stretch target, not assumed 100% chemical recycling."
+processtanks,"Atmosphere, water and process tank hardware",2000,1500,500,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+crew,32 crew and personal effects,2880,2880,0,Current allowance held; no additional reduction claimed.
+exploration,Two surface micro-rovers,30,30,0,Current allowance held; no additional reduction claimed.
+foodfactory,Redundant microbial/chemical full-diet food factory and small garden,10000,3000,7000,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+foodloop_inventory,Food-loop startup and circulating material inventory,1000,1000,0,Current allowance held; no additional reduction claimed.
+flightstructure,Cruise engine standoff and support frame,12000,8000,4000,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+cruiseengine,Interstellar magnetic nozzle and cruise engine,25000,25000,0,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+bulkcontainment,Bulk cruise antimatter containment and cryogenics,38000,38000,0,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+spacescouts,"Space scouts, microlanders and their support allocations",420,420,0,Current allowance held; no additional reduction claimed.
+separation,Separation interfaces and independent service isolation,2000,1500,500,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+hotradiators,Direct-engine hot radiators,18164.37417610091,10898.624505660548,7265.749670440364,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+hydrogentank,Touchdown hydrogen tank hardware,1034.9364881639337,1034.9364881639337,0.0,Current allowance held; no additional reduction claimed.
+spinbooms,Spin booms and pod balance attachments,4000,3000,1000,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+transfertunnels,Pressurised transfer tunnels and flexible interfaces,2000,1500,500,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+surfacekit,Packed surface expansion starter,4000,3000,1000,300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.
+relaychain,200-node relay dry hardware and dispenser,0,57.182909239981036,-57.182909239981036,Independent 100 kg all-up cap includes braking fuel and allowance; optical/power/containment feasibility unclosed.
+margin,Hardware development allowance (15%),79961.6922240889,38742.169855992564,41219.52236809633,Planning reserve on system hardware; scout payload remains fixed. Lower reserve is not a physical saving.

@@ -1,0 +1,21 @@
+{
+  "layout": {
+    "disc_radius_m": 30,
+    "disc_axial_depth_m": 4.5,
+    "forward_shield_height_m_study": 66,
+    "forward_shield_width_m_study": 20
+  },
+  "habitat": {
+    "disc_count": 2,
+    "geometry_study_not_selected_dimensions": {
+      "deck_floor_radii_m": [
+        28,
+        24,
+        20,
+        16,
+        12,
+        8
+      ]
+    }
+  }
+}

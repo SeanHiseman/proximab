@@ -1,0 +1,408 @@
+{
+  "status": "Unselected stretch targets; 100% water recovery as instructed; GCR/engine protection not closed.",
+  "boundary": "All hardware including empty propulsion tanks, plus separate people/stocks. All fuel excluded; no propellant resizing.",
+  "geometry": {
+    "pod_count": 2,
+    "pod_radius_m": 3.2,
+    "cylindrical_length_m": 18,
+    "total_capsule_length_m": 24.4,
+    "spin_centre_radius_m": 16.3,
+    "maximum_outer_radius_m": 19.5,
+    "pressure_area_m2": 981.1822175691642,
+    "pressure_volume_m3": 1432.6332706802223,
+    "gross_floor_area_m2": 252,
+    "assumed_net_floor_area_m2": 201.60000000000002,
+    "floor_radius_range_m": [
+      15.8,
+      18.3
+    ],
+    "gravity_reference_radius_m": 17.5,
+    "spin_rpm_at_half_g_reference": 5.054726916488363
+  },
+  "area_programme_m2": {
+    "32 berths in two-tier racks, including their equipment footprint": 40,
+    "Galley, dining and flexible common rooms": 24,
+    "Exercise and rehabilitation": 12,
+    "Medical and recovery working space": 12,
+    "Hygiene": 8,
+    "Control, communications and clean work bench": 8,
+    "Life-support and electrical service bays": 22,
+    "Two airlocks and suit service": 12,
+    "Accessible stores": 12,
+    "Circulation and berth transfer access": 28
+  },
+  "items": [
+    {
+      "id": "membranes",
+      "item": "Habitat pressure membranes, insulation and restraint",
+      "kind": "hardware",
+      "baseline_kg": 35286.36868512056,
+      "target_kg": 5887.0933054149855,
+      "basis": "Vectran/aramid restraint, redundant gas liners, insulation and local impact layers; retain 6 kg/m2 assumption."
+    },
+    {
+      "id": "floors",
+      "item": "Folding composite floors",
+      "kind": "hardware",
+      "baseline_kg": 15268.140296446396,
+      "target_kg": 2016,
+      "basis": "CFRP sandwich panels, local metal inserts; 8 kg/m2 target needs load/fire/repair qualification."
+    },
+    {
+      "id": "habframes",
+      "item": "Habitat deployment frames, hatches and cabin partitions",
+      "kind": "hardware",
+      "baseline_kg": 24000.0,
+      "target_kg": 8000,
+      "basis": "Two small pods, partitions, hatches and deployable supports; exclude separately counted spin booms/tunnels."
+    },
+    {
+      "id": "bearings",
+      "item": "Hubs, bearings, spin motors and balance equipment",
+      "kind": "hardware",
+      "baseline_kg": 12000,
+      "target_kg": 6000,
+      "basis": "One balanced two-pod rotor; duplicated drive/control, common bearing failure loses spin, not pressure isolation."
+    },
+    {
+      "id": "furnishings",
+      "item": "Cabins, wardrooms, lounge, hygiene and exercise fittings",
+      "kind": "hardware",
+      "baseline_kg": 10666.666666666666,
+      "target_kg": 3000,
+      "basis": "No permanent private cabins; convertible berth privacy screens, shared folding galley/common fittings."
+    },
+    {
+      "id": "structure",
+      "item": "Settlement delivery frame and surface services",
+      "kind": "hardware",
+      "baseline_kg": 10000,
+      "target_kg": 8000,
+      "basis": "Compact retained delivery frame; CFRP members, local titanium/metal joints; load model outstanding."
+    },
+    {
+      "id": "landing",
+      "item": "Landing supports, restraints and habitat transport covers",
+      "kind": "hardware",
+      "baseline_kg": 20000,
+      "target_kg": 10000,
+      "basis": "Smaller stowed payload and common restraints; stretch target, not sized landing gear."
+    },
+    {
+      "id": "dustshield",
+      "item": "Forward dust/gas shield stack and supports",
+      "kind": "hardware",
+      "baseline_kg": 31000.0,
+      "target_kg": 31000.0,
+      "basis": "Current allowance held; no additional reduction claimed."
+    },
+    {
+      "id": "radiationshield",
+      "item": "Total modular polyethylene berth/shelter shielding provision",
+      "kind": "hardware",
+      "baseline_kg": 11164.70588235294,
+      "target_kg": 40000,
+      "basis": "Replace the old 11.16 t refuge allowance with 40 t total modular polyethylene provision for two berth shelters; no qualified GCR or engine-dose result."
+    },
+    {
+      "id": "engine",
+      "item": "Hydrogen-heated touchdown assembly",
+      "kind": "hardware",
+      "baseline_kg": 10000,
+      "target_kg": 10000,
+      "basis": "Current allowance held; no additional reduction claimed."
+    },
+    {
+      "id": "containment",
+      "item": "Touchdown antimatter isolation hardware",
+      "kind": "hardware",
+      "baseline_kg": 2000,
+      "target_kg": 2000,
+      "basis": "Current allowance held; no additional reduction claimed."
+    },
+    {
+      "id": "refuge",
+      "item": "Rigid 32-person descent refuge and airlocks",
+      "kind": "hardware",
+      "baseline_kg": 9452.235294117647,
+      "target_kg": 6000,
+      "basis": "Compact two-tier 32-place rigid burn/descent refuge; medical and restraint interfaces need layout."
+    },
+    {
+      "id": "eclss",
+      "item": "Redundant life support and water/waste processing",
+      "kind": "hardware",
+      "baseline_kg": 14000.0,
+      "target_kg": 10000,
+      "basis": "Two compact independent process trains and modular racks; retain full 32-person metabolic throughput."
+    },
+    {
+      "id": "medical",
+      "item": "32 torpor beds, medical systems and embryo storage",
+      "kind": "hardware",
+      "baseline_kg": 13000,
+      "target_kg": 11000,
+      "basis": "32 medical/ordinary berths at 200 kg each plus 4.6 t common clinical/torpor equipment; stretch target."
+    },
+    {
+      "id": "power",
+      "item": "2 MWe conversion, distribution and backup allowance",
+      "kind": "hardware",
+      "baseline_kg": 6000,
+      "target_kg": 6000,
+      "basis": "Current allowance held; no additional reduction claimed."
+    },
+    {
+      "id": "warmradiators",
+      "item": "Service/surface radiators and heat-recovery loops",
+      "kind": "hardware",
+      "baseline_kg": 11744.364926675697,
+      "target_kg": 11744.364926675697,
+      "basis": "Current allowance held; no additional reduction claimed."
+    },
+    {
+      "id": "avionics",
+      "item": "Avionics, navigation, communications and sensors",
+      "kind": "hardware",
+      "baseline_kg": 4000,
+      "target_kg": 2500,
+      "basis": "Shared modular electronics with independent survival controls; antenna/link budget outstanding."
+    },
+    {
+      "id": "factory",
+      "item": "Advanced fabrication, chemistry and resource-processing seed",
+      "kind": "hardware",
+      "baseline_kg": 30000,
+      "target_kg": 15000,
+      "basis": "Minimum resource-processing, machining, polymer and repair starter; local expansion capability must be demonstrated."
+    },
+    {
+      "id": "rover",
+      "item": "Reused pressurised rover module, chassis and7-day stores",
+      "kind": "hardware",
+      "baseline_kg": 6000,
+      "target_kg": 3500,
+      "basis": "Shorter-range two-seat rover, small pressure cabin and removable tools; independent emergency systems retained."
+    },
+    {
+      "id": "spares",
+      "item": "Repair stock, tools, EVA suits and replacement units",
+      "kind": "hardware",
+      "baseline_kg": 15000,
+      "target_kg": 10000,
+      "basis": "Standardised repair stock/tools/suits; failure-rate and shelf-life audit required."
+    },
+    {
+      "id": "gas",
+      "item": "Initial habitat atmosphere and gas makeup",
+      "kind": "consumable",
+      "baseline_kg": 11014.157374046672,
+      "target_kg": 2000,
+      "basis": "About 1.3 t initial fill for pods/factory/refuge/tunnels plus about 0.7 t deployment/makeup reserve."
+    },
+    {
+      "id": "water",
+      "item": "Water/oxygen-cycle buffers and process starting inventory",
+      "kind": "consumable",
+      "baseline_kg": 16333.333333333332,
+      "target_kg": 3000,
+      "basis": "100% recovery assumed: working fluid only, no annual loss reserve; distributed clean/process/medical inventories."
+    },
+    {
+      "id": "food",
+      "item": "One tonne spare edible food plus packaging",
+      "kind": "consumable",
+      "baseline_kg": 1020,
+      "target_kg": 1020,
+      "basis": "Current allowance held; no additional reduction claimed."
+    },
+    {
+      "id": "consumables",
+      "item": "Medical, hygiene, nutrient and general consumables",
+      "kind": "consumable",
+      "baseline_kg": 12000,
+      "target_kg": 8000,
+      "basis": "Specialist medicines, hygiene and process chemicals; stretch target, not assumed 100% chemical recycling."
+    },
+    {
+      "id": "processtanks",
+      "item": "Atmosphere, water and process tank hardware",
+      "kind": "hardware",
+      "baseline_kg": 5000,
+      "target_kg": 2000,
+      "basis": "Small distributed water cells and lined composite gas bottles; no duplicate water or shield mass."
+    },
+    {
+      "id": "crew",
+      "item": "32 crew and personal effects",
+      "kind": "crew",
+      "baseline_kg": 2880,
+      "target_kg": 2880,
+      "basis": "Current allowance held; no additional reduction claimed."
+    },
+    {
+      "id": "exploration",
+      "item": "Two surface micro-rovers",
+      "kind": "payload",
+      "baseline_kg": 30,
+      "target_kg": 30,
+      "basis": "Current allowance held; no additional reduction claimed."
+    },
+    {
+      "id": "foodfactory",
+      "item": "Redundant microbial/chemical full-diet food factory and small garden",
+      "kind": "hardware",
+      "baseline_kg": 10000,
+      "target_kg": 10000,
+      "basis": "Current allowance held; no additional reduction claimed."
+    },
+    {
+      "id": "foodloop_inventory",
+      "item": "Food-loop startup and circulating material inventory",
+      "kind": "consumable",
+      "baseline_kg": 1000,
+      "target_kg": 1000,
+      "basis": "Current allowance held; no additional reduction claimed."
+    },
+    {
+      "id": "flightstructure",
+      "item": "Cruise engine standoff and support frame",
+      "kind": "hardware",
+      "baseline_kg": 20000,
+      "target_kg": 12000,
+      "basis": "Compact cruise support truss, but no reduction of a required radiation standoff is established."
+    },
+    {
+      "id": "cruiseengine",
+      "item": "Interstellar magnetic nozzle and cruise engine",
+      "kind": "hardware",
+      "baseline_kg": 25000,
+      "target_kg": 25000,
+      "basis": "Current allowance held; no additional reduction claimed."
+    },
+    {
+      "id": "bulkcontainment",
+      "item": "Bulk cruise antimatter containment and cryogenics",
+      "kind": "hardware",
+      "baseline_kg": 38000,
+      "target_kg": 38000,
+      "basis": "Current allowance held; no additional reduction claimed."
+    },
+    {
+      "id": "spacescouts",
+      "item": "Space scouts, microlanders and their support allocations",
+      "kind": "payload",
+      "baseline_kg": 420,
+      "target_kg": 420,
+      "basis": "Current allowance held; no additional reduction claimed."
+    },
+    {
+      "id": "separation",
+      "item": "Separation interfaces and independent service isolation",
+      "kind": "hardware",
+      "baseline_kg": 2000,
+      "target_kg": 2000,
+      "basis": "Current allowance held; no additional reduction claimed."
+    },
+    {
+      "id": "hotradiators",
+      "item": "Direct-engine hot radiators",
+      "kind": "hardware",
+      "baseline_kg": 18164.37417610091,
+      "target_kg": 18164.37417610091,
+      "basis": "Current allowance held; no additional reduction claimed."
+    },
+    {
+      "id": "hydrogentank",
+      "item": "Touchdown hydrogen tank hardware",
+      "kind": "hardware",
+      "baseline_kg": 1034.9364881639337,
+      "target_kg": 1034.9364881639337,
+      "basis": "Current allowance held; no additional reduction claimed."
+    },
+    {
+      "id": "spinbooms",
+      "item": "Spin booms and pod balance attachments",
+      "kind": "hardware",
+      "baseline_kg": 0,
+      "target_kg": 4000,
+      "basis": "CFRP/tension structure; separate from main ship frame."
+    },
+    {
+      "id": "transfertunnels",
+      "item": "Pressurised transfer tunnels and flexible interfaces",
+      "kind": "hardware",
+      "baseline_kg": 0,
+      "target_kg": 2000,
+      "basis": "Rounded fabric tunnels and isolation hatches; medical transfer clearance requires checking."
+    },
+    {
+      "id": "surfacekit",
+      "item": "Packed surface expansion starter",
+      "kind": "hardware",
+      "baseline_kg": 0,
+      "target_kg": 4000,
+      "basis": "Approximately 60-80 m2 initial expansion target; envelope, floors, connectors and deployment hardware, not full settlement."
+    },
+    {
+      "id": "margin",
+      "item": "Hardware development allowance (25%)",
+      "kind": "allowance",
+      "baseline_kg": 102445.44810391119,
+      "target_kg": 79961.6922240889,
+      "basis": "Budget allowance, not installed radiation shielding or proof against omitted equipment."
+    }
+  ],
+  "totals": {
+    "baseline_kg": {
+      "dry_hardware_including_allowance_kg": 512677.2405195559,
+      "supplies_kg": 41367.490707380006,
+      "crew_kg": 2880,
+      "total_without_fuels_kg": 556924.731226936
+    },
+    "target_kg": {
+      "dry_hardware_including_allowance_kg": 400258.46112044447,
+      "supplies_kg": 15020,
+      "crew_kg": 2880,
+      "total_without_fuels_kg": 418158.46112044447
+    }
+  },
+  "water_inventory_kg": {
+    "potable_hygiene": 800,
+    "food_process": 800,
+    "medical": 600,
+    "recovery_and_thermal_loops": 800
+  },
+  "shielding": {
+    "two_shelters_inner_dimensions_m": [
+      4,
+      4.8,
+      2.6
+    ],
+    "total_inner_surface_m2": 168.32,
+    "cases": [
+      {
+        "column_g_cm2": 20,
+        "water_thickness_m": 0.2,
+        "thin_shell_water_kg": 33664.0,
+        "full_shell_water_kg": 37440.00000000003
+      },
+      {
+        "column_g_cm2": 40,
+        "water_thickness_m": 0.4,
+        "thin_shell_water_kg": 67328.0,
+        "full_shell_water_kg": 82944.00000000001
+      },
+      {
+        "column_g_cm2": 100,
+        "water_thickness_m": 1.0,
+        "thin_shell_water_kg": 168320.0,
+        "full_shell_water_kg": 275520.0
+      }
+    ],
+    "credited_existing_mass_kg": 3000,
+    "water_credit_status": "Upper bound if all water remains in shield cells; working water in pipes/processors reduces local coverage.",
+    "dedicated_polyethylene_provision_kg": 40000,
+    "whole_pod_thin_shell_20g_cm2_kg": 196236.44351383284
+  }
+}

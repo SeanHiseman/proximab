@@ -1,0 +1,160 @@
+{
+  "status": "32-person selected compact three-deck concept, two retained discs; hardware targets and full-diet food factory unvalidated",
+  "disc_count": 2,
+  "people_per_disc": 16,
+  "couples_per_disc": 8,
+  "primary_occupied_enclosure": "Inflatable, separately isolatable rounded/lobed compartments",
+  "preferred_arrival_architecture": "Staged surface delivery: habitats and settlement equipment descend; cruise-only module remains in orbit.",
+  "landing_propulsion_selection": "Hybrid candidate: direct antimatter orbital braking, then antimatter-heated hydrogen terminal descent; safe cutoff unresolved",
+  "landing_thermal_Isp_target_seconds_unproven": 1800,
+  "main_ship_flies_after_settlement": false,
+  "cruise_cabin_gravity_target_g": 0.5,
+  "landing_acceleration_policy": "Size for braking needs subject to crew, structural and equipment limits; no 1.2g landing cap",
+  "residential_pressure_compartments_per_disc": 4,
+  "private_double_cabins_per_residential_compartment": 2,
+  "usable_area_allocations_per_disc_m2": {
+    "private_double_cabins": 96,
+    "galley_and_dining": 36,
+    "lounge_quiet_arts_telepresence": 54,
+    "exercise_rehabilitation": 36,
+    "clinical": 24,
+    "science_control_training_workshop": 50,
+    "hygiene": 18,
+    "plant_food_factory_stores": 90,
+    "circulation_egress": 80
+  },
+  "private_double_cabin_area_m2": 12,
+  "geometry_study_not_selected_dimensions": {
+    "deployed_radius_m": 19.5,
+    "axial_envelope_m": 4.5,
+    "deck_floor_radii_m": [
+      17.5,
+      13.5,
+      9.5
+    ],
+    "gravity_at_outer_floor_g": [
+      0.5
+    ],
+    "interior_room_dimensions": "Eight 12 m2 double cabins and 484 m2 per-disc programme within 496 m2 assumed net area. Detailed access, pressure and life-cycle fit unvalidated."
+  },
+  "pressure_enclosure_material_candidates": [
+    "Redundant polymer gas barriers",
+    "Vectran or aramid structural restraint",
+    "Flexible insulation and protective layers"
+  ],
+  "rigid_or_semirigid_parts": [
+    "Central hubs and bearings",
+    "Locking composite structural members",
+    "Hatches and load interfaces",
+    "Folding sandwich floor panels",
+    "Medical bed and equipment racks",
+    "Independent descent crew refuges",
+    "Pressure-gas and cryogenic tanks",
+    "Reactor and descent engine mounts",
+    "Landing supports and surface foundations"
+  ],
+  "operating_states": [
+    "Expanded, spinning cruise habitat",
+    "Expanded, locked habitat during powered flight; access/floor conversion unresolved",
+    "Unoccupied, deflated, equipment-secured compact assembly attached to landing spacecraft",
+    "Expanded, nonrotating surface settlement with reconfigured floors"
+  ],
+  "not_yet_estimated": [
+    "Validated fabric packing and deployment mechanisms",
+    "Pressure, creep, puncture, fire and structural qualification",
+    "Refuge endurance, medical recovery and crash-load certification",
+    "Access and floor conversion under thrust gravity",
+    "Post-20-year repacking and deployment qualification"
+  ],
+  "deck_programmes": [
+    [
+      "Residential",
+      "Galley and dining",
+      "Hygiene and laundry",
+      "Residential",
+      "Medical and torpor service",
+      "Exercise and rehabilitation",
+      "Residential",
+      "Clinical recovery",
+      "Airlock and pressure services",
+      "Residential",
+      "Counselling and telemedicine",
+      "Pantry and hydration"
+    ],
+    [
+      "Shared lounge",
+      "Quiet library",
+      "Second dining room",
+      "Training and conference",
+      "Arts and music studio",
+      "Science laboratory",
+      "Mission control",
+      "Shared lounge",
+      "Private telepresence",
+      "Water recovery",
+      "Life support",
+      "Workshop access"
+    ],
+    [
+      "Fresh-food garden",
+      "Fresh-food garden",
+      "Oxygen generation",
+      "CO2 removal",
+      "Electrical distribution",
+      "Heat exchanger",
+      "Water tanks",
+      "Clean workshop",
+      "Medical stores",
+      "Suit maintenance",
+      "Precision tools",
+      "Food reserve"
+    ]
+  ],
+  "common_space_programme": {
+    "design_occupancy_per_disc": 16,
+    "dining_seats_per_disc": 16,
+    "lounge_seats_per_disc": 12,
+    "normal_awake_shipwide": "Exactly eight people in awake phase, with paired starts staggered every 42 hours; sleep and recovery watchkeeping still require qualification.",
+    "flight_occupancy_policy": "Eight awake and 24 torpid during departure, coast and arrival braking. All 32 awake for descent; retain 32 protected descent places. Transit common rooms are sized for eight, surface expansion supports 32.",
+    "quiet_loud_separation": "Cabins in six outer-deck sectors; shared rooms on first and second decks; lower-gravity inner decks prioritise plant and stores.",
+    "circulation": "Each deck is a ring of four merged rooms (outer deck: four two-cell rooms between four private cabin pods). Rooms are walked through via doorways in bulkheads along a 1.2 m aisle; each communal room has a ladder hatch to the deck above (innermost deck to the hub). Egress and disability access require full human-factors review.",
+    "lighting": "Indirect circadian lighting, glare-controlled task lights and dimmable cabin lights",
+    "privacy": "Lockable couple cabins, private telepresence and counselling rooms; acoustically lined partitions",
+    "air_quality": "Dedicated ventilation diffusers, return grilles and washable surfaces; no crop CO2 enrichment in living areas"
+  },
+  "habitat_layout_revision": "ISS-informed functional equipment and long-duration social-space proposal; not an as-built replica or certified pressure vessel",
+  "cabin_bay_layout": [
+    {
+      "cell": 0,
+      "offset_m": -2.05
+    },
+    {
+      "cell": 0,
+      "offset_m": 2.05
+    },
+    {
+      "cell": 3,
+      "offset_m": -2.05
+    },
+    {
+      "cell": 3,
+      "offset_m": 2.05
+    },
+    {
+      "cell": 6,
+      "offset_m": -2.05
+    },
+    {
+      "cell": 6,
+      "offset_m": 2.05
+    },
+    {
+      "cell": 9,
+      "offset_m": -2.05
+    },
+    {
+      "cell": 9,
+      "offset_m": 2.05
+    }
+  ]
+}

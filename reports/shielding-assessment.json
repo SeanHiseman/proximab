@@ -1,0 +1,401 @@
+{
+  "status": "SCREENING ONLY; no particle transport or verified crew protection",
+  "sources": {
+    "dose_limits": "https://www.nasa.gov/reference/4-0-human-performance/",
+    "annihilation_products": "https://ntrs.nasa.gov/api/citations/20200001904/downloads/20200001904.pdf",
+    "tungsten_coefficients": "https://physics.nist.gov/PhysRefData/XrayMassCoef/ElemTab/z74.html",
+    "water_coefficients": "https://physics.nist.gov/PhysRefData/XrayMassCoef/ComTab/water.html",
+    "dust_erosion": "https://arxiv.org/pdf/1608.05284",
+    "impact_secondaries": "https://arxiv.org/html/2201.02721v1",
+    "bumper_simulations": "https://ldrd-annual.llnl.gov/archives/ldrd-annual-2018/hed/erd/17-ERD-091",
+    "gcr_transport": "https://ntrs.nasa.gov/api/citations/20170005580/downloads/20170005580.pdf"
+  },
+  "reference_limits": {
+    "career_effective_mSv": 600,
+    "nuclear_sources_mSv_per_mission_year": 20,
+    "design_reference_SPE_mSv": 250,
+    "long_mission_SPE_water_equivalent_g_cm2": 20
+  },
+  "proposed_20yr_budget_mSv_not_a_NASA_allocation": {
+    "propulsion": 10,
+    "onboard_power": 10,
+    "ISM_secondaries": 100,
+    "GCR": 300,
+    "SPE": 50,
+    "reserve_including_prior_exposure": 130
+  },
+  "mission": {
+    "initial_mass_kg": 1330200.471023441,
+    "after_acceleration_kg": 867671.630629953,
+    "after_braking_kg": 565970.3743908647,
+    "each_burn_proper_days": 62.991082647809804,
+    "burned_interstellar_mass_kg": 764230.0966325763,
+    "peak_c": 0.21044392894633923,
+    "initial_power_PW": 9.385765892876083,
+    "assumed_prompt_gamma_fraction": 0.3776595744680851,
+    "initial_prompt_gamma_PW": 3.544624353160649,
+    "two_burn_prompt_gamma_J": 2.5939765294547727e+22,
+    "omitted": [
+      "capture/descent burns",
+      "onboard power sources",
+      "shield mass feedback"
+    ]
+  },
+  "engine_photon_cases": [
+    {
+      "source_distance_m": 40.3,
+      "cases": [
+        {
+          "hypothetical_photon_energy_MeV": 4,
+          "fluence_J_m2": 1.2710015668069092e+18,
+          "unshielded_water_kerma_proxy_Gy": 2625889237023074.5,
+          "required_primary_attenuation_factor": 2.6258892370230746e+17,
+          "narrow_beam_W_cm": 51.466208553121454,
+          "W_areal_kg_m2": 9932.978250752441,
+          "extra_W_cm_if_multiplicative_buildup_1000": 8.863664717543617,
+          "distance_only_proxy_m": 20651102757.375465
+        },
+        {
+          "hypothetical_photon_energy_MeV": 10,
+          "fluence_J_m2": 1.2710015668069092e+18,
+          "unshielded_water_kerma_proxy_Gy": 1990388453619620.0,
+          "required_primary_attenuation_factor": 1.99038845361962e+17,
+          "narrow_beam_W_cm": 43.47690158650461,
+          "W_areal_kg_m2": 8391.04200619539,
+          "extra_W_cm_if_multiplicative_buildup_1000": 7.53981001252183,
+          "distance_only_proxy_m": 17979349219.699493
+        }
+      ]
+    },
+    {
+      "source_distance_m": 84.5,
+      "cases": [
+        {
+          "hypothetical_photon_energy_MeV": 4,
+          "fluence_J_m2": 2.8909645105359514e+17,
+          "unshielded_water_kerma_proxy_Gy": 597273267876727.6,
+          "required_primary_attenuation_factor": 5.972732678767276e+16,
+          "narrow_beam_W_cm": 49.56612446745217,
+          "W_areal_kg_m2": 9566.262022218269,
+          "extra_W_cm_if_multiplicative_buildup_1000": 8.863664717543617,
+          "distance_only_proxy_m": 20651102757.37546
+        },
+        {
+          "hypothetical_photon_energy_MeV": 10,
+          "fluence_J_m2": 2.8909645105359514e+17,
+          "unshielded_water_kerma_proxy_Gy": 452725042349930.0,
+          "required_primary_attenuation_factor": 4.5272504234993e+16,
+          "narrow_beam_W_cm": 41.86060928864648,
+          "W_areal_kg_m2": 8079.097592708771,
+          "extra_W_cm_if_multiplicative_buildup_1000": 7.53981001252183,
+          "distance_only_proxy_m": 17979349219.699493
+        }
+      ]
+    },
+    {
+      "source_distance_m": 100,
+      "cases": [
+        {
+          "hypothetical_photon_energy_MeV": 4,
+          "fluence_J_m2": 2.0642209346354326e+17,
+          "unshielded_water_kerma_proxy_Gy": 426468045095680.44,
+          "required_primary_attenuation_factor": 4.264680450956804e+16,
+          "narrow_beam_W_cm": 49.133912728647076,
+          "W_areal_kg_m2": 9482.845156628886,
+          "extra_W_cm_if_multiplicative_buildup_1000": 8.863664717543617,
+          "distance_only_proxy_m": 20651102757.37546
+        },
+        {
+          "hypothetical_photon_energy_MeV": 10,
+          "fluence_J_m2": 2.0642209346354326e+17,
+          "unshielded_water_kerma_proxy_Gy": 323256998363908.75,
+          "required_primary_attenuation_factor": 3.2325699836390876e+16,
+          "narrow_beam_W_cm": 41.49295160983987,
+          "W_areal_kg_m2": 8008.139660699095,
+          "extra_W_cm_if_multiplicative_buildup_1000": 7.53981001252183,
+          "distance_only_proxy_m": 17979349219.699493
+        }
+      ]
+    },
+    {
+      "source_distance_m": 1000,
+      "cases": [
+        {
+          "hypothetical_photon_energy_MeV": 4,
+          "fluence_J_m2": 2064220934635432.8,
+          "unshielded_water_kerma_proxy_Gy": 4264680450956.8047,
+          "required_primary_attenuation_factor": 426468045095680.44,
+          "narrow_beam_W_cm": 43.22480291695133,
+          "W_areal_kg_m2": 8342.386962971608,
+          "extra_W_cm_if_multiplicative_buildup_1000": 8.863664717543617,
+          "distance_only_proxy_m": 20651102757.375465
+        },
+        {
+          "hypothetical_photon_energy_MeV": 10,
+          "fluence_J_m2": 2064220934635432.8,
+          "unshielded_water_kerma_proxy_Gy": 3232569983639.088,
+          "required_primary_attenuation_factor": 323256998363908.8,
+          "narrow_beam_W_cm": 36.466411601491984,
+          "W_areal_kg_m2": 7038.017439087953,
+          "extra_W_cm_if_multiplicative_buildup_1000": 7.53981001252183,
+          "distance_only_proxy_m": 17979349219.699493
+        }
+      ]
+    },
+    {
+      "source_distance_m": 10000,
+      "cases": [
+        {
+          "hypothetical_photon_energy_MeV": 4,
+          "fluence_J_m2": 20642209346354.33,
+          "unshielded_water_kerma_proxy_Gy": 42646804509.56805,
+          "required_primary_attenuation_factor": 4264680450956.8047,
+          "narrow_beam_W_cm": 37.31569310525559,
+          "W_areal_kg_m2": 7201.928769314329,
+          "extra_W_cm_if_multiplicative_buildup_1000": 8.863664717543617,
+          "distance_only_proxy_m": 20651102757.375465
+        },
+        {
+          "hypothetical_photon_energy_MeV": 10,
+          "fluence_J_m2": 20642209346354.33,
+          "unshielded_water_kerma_proxy_Gy": 32325699836.390884,
+          "required_primary_attenuation_factor": 3232569983639.0884,
+          "narrow_beam_W_cm": 31.439871593144105,
+          "W_areal_kg_m2": 6067.895217476812,
+          "extra_W_cm_if_multiplicative_buildup_1000": 7.53981001252183,
+          "distance_only_proxy_m": 17979349219.699493
+        }
+      ]
+    },
+    {
+      "source_distance_m": 100000,
+      "cases": [
+        {
+          "hypothetical_photon_energy_MeV": 4,
+          "fluence_J_m2": 206422093463.54327,
+          "unshielded_water_kerma_proxy_Gy": 426468045.0956805,
+          "required_primary_attenuation_factor": 42646804509.56805,
+          "narrow_beam_W_cm": 31.406583293559844,
+          "W_areal_kg_m2": 6061.47057565705,
+          "extra_W_cm_if_multiplicative_buildup_1000": 8.863664717543617,
+          "distance_only_proxy_m": 20651102757.37546
+        },
+        {
+          "hypothetical_photon_energy_MeV": 10,
+          "fluence_J_m2": 206422093463.54327,
+          "unshielded_water_kerma_proxy_Gy": 323256998.36390877,
+          "required_primary_attenuation_factor": 32325699836.390877,
+          "narrow_beam_W_cm": 26.413331584796214,
+          "W_areal_kg_m2": 5097.77299586567,
+          "extra_W_cm_if_multiplicative_buildup_1000": 7.53981001252183,
+          "distance_only_proxy_m": 17979349219.699493
+        }
+      ]
+    }
+  ],
+  "shadow_cases": [
+    {
+      "source_radius_m": 0,
+      "shield_distance_from_source_m": 5,
+      "height_m": 2.371708235734208,
+      "width_m": 1.0769230769230769,
+      "area_m2": 2.5541473307906855,
+      "W_mass_tonnes_at_50cm": 24.647521742130117,
+      "central_point_incident_gamma_TW": 27.881955436244755,
+      "emitting_km2_if_all_deposited_1500K": 107.92049942130541,
+      "emitting_km2_if_all_deposited_2500K": 13.98649672500118
+    },
+    {
+      "source_radius_m": 0,
+      "shield_distance_from_source_m": 10,
+      "height_m": 4.743416471468416,
+      "width_m": 2.1538461538461537,
+      "area_m2": 10.216589323162742,
+      "W_mass_tonnes_at_50cm": 98.59008696852047,
+      "central_point_incident_gamma_TW": 27.881955436244755,
+      "emitting_km2_if_all_deposited_1500K": 107.92049942130541,
+      "emitting_km2_if_all_deposited_2500K": 13.98649672500118
+    },
+    {
+      "source_radius_m": 0,
+      "shield_distance_from_source_m": 50,
+      "height_m": 23.717082357342083,
+      "width_m": 10.76923076923077,
+      "area_m2": 255.4147330790686,
+      "W_mass_tonnes_at_50cm": 2464.752174213012,
+      "central_point_incident_gamma_TW": 27.88195543624476,
+      "emitting_km2_if_all_deposited_1500K": 107.92049942130542,
+      "emitting_km2_if_all_deposited_2500K": 13.986496725001182
+    },
+    {
+      "source_radius_m": 0.1,
+      "shield_distance_from_source_m": 5,
+      "height_m": 2.559209995767067,
+      "width_m": 1.2615384615384615,
+      "area_m2": 3.2285418408138384,
+      "W_mass_tonnes_at_50cm": 31.155428763853543,
+      "central_point_incident_gamma_TW": 35.01805534603421,
+      "emitting_km2_if_all_deposited_1500K": 135.5416419895088,
+      "emitting_km2_if_all_deposited_2500K": 17.56619680184034
+    },
+    {
+      "source_radius_m": 0.1,
+      "shield_distance_from_source_m": 10,
+      "height_m": 4.918419991534134,
+      "width_m": 2.3230769230769233,
+      "area_m2": 11.425867980333143,
+      "W_mass_tonnes_at_50cm": 110.25962601021483,
+      "central_point_incident_gamma_TW": 31.091649517388245,
+      "emitting_km2_if_all_deposited_1500K": 120.34401071407243,
+      "emitting_km2_if_all_deposited_2500K": 15.596583788543787
+    },
+    {
+      "source_radius_m": 0.1,
+      "shield_distance_from_source_m": 50,
+      "height_m": 23.792099957670665,
+      "width_m": 10.815384615384614,
+      "area_m2": 257.3207118498842,
+      "W_mass_tonnes_at_50cm": 2483.144869351383,
+      "central_point_incident_gamma_TW": 28.0839395257056,
+      "emitting_km2_if_all_deposited_1500K": 108.70230340415789,
+      "emitting_km2_if_all_deposited_2500K": 14.087818521178864
+    },
+    {
+      "source_radius_m": 1,
+      "shield_distance_from_source_m": 5,
+      "height_m": 4.246883641517567,
+      "width_m": 2.9230769230769234,
+      "area_m2": 12.413967567512888,
+      "W_mass_tonnes_at_50cm": 119.79478702649938,
+      "central_point_incident_gamma_TW": 123.99223693716542,
+      "emitting_km2_if_all_deposited_1500K": 479.9270325648999,
+      "emitting_km2_if_all_deposited_2500K": 62.19854342041103
+    },
+    {
+      "source_radius_m": 1,
+      "shield_distance_from_source_m": 10,
+      "height_m": 6.493767283035133,
+      "width_m": 3.8461538461538463,
+      "area_m2": 24.97602801167359,
+      "W_mass_tonnes_at_50cm": 241.01867031265016,
+      "central_point_incident_gamma_TW": 65.83857156505235,
+      "emitting_km2_if_all_deposited_1500K": 254.83619829796194,
+      "emitting_km2_if_all_deposited_2500K": 33.02677129941587
+    },
+    {
+      "source_radius_m": 1,
+      "shield_distance_from_source_m": 50,
+      "height_m": 24.468836415175662,
+      "width_m": 11.23076923076923,
+      "area_m2": 274.8038551242805,
+      "W_mass_tonnes_at_50cm": 2651.857201949307,
+      "central_point_incident_gamma_TW": 29.932677441442497,
+      "emitting_km2_if_all_deposited_1500K": 115.85806834401826,
+      "emitting_km2_if_all_deposited_2500K": 15.015205657384767
+    }
+  ],
+  "thermal_distance_screen": {
+    "assumed_available_heat_W": 938576589.2876084,
+    "assumed_source": "point; not a finite engine; frozen baseline power/envelope",
+    "all_existing_engine_heat_allowance_given_to_crew_shadow_shield": true,
+    "cases": [
+      {
+        "deposited_fraction": 1,
+        "habitat_centre_to_source_m": 12819.531808331341
+      },
+      {
+        "deposited_fraction": 0.1,
+        "habitat_centre_to_source_m": 4060.566475214001
+      },
+      {
+        "deposited_fraction": 0.01,
+        "habitat_centre_to_source_m": 1290.7552945034565
+      }
+    ],
+    "not_a_safe_distance": true
+  },
+  "onboard_2MWe_power_at_40percent_efficiency": {
+    "annihilation_MW": 5,
+    "10MeV_proxy_at_10m": {
+      "fluence_J_m2": 948406676277.3738,
+      "unshielded_water_kerma_proxy_Gy": 1485204855.0503674,
+      "required_primary_attenuation_factor": 148520485505.03674,
+      "narrow_beam_W_cm": 28.077715552231922,
+      "W_areal_kg_m2": 5418.999101580761,
+      "extra_W_cm_if_multiplicative_buildup_1000": 7.53981001252183,
+      "distance_only_proxy_m": 3853835.563500819
+    }
+  },
+  "forward_shield": {
+    "incoming_proton_MeV": 21.493048438717047,
+    "assumed_H_cm3": 0.2,
+    "peak_H_only_deposition_W_m2": 44.44589789921247,
+    "nominal_face_area_m2": 620.0,
+    "current_areal_g_cm2": 5.0,
+    "helium_and_dust_not_in_heat_estimate": true,
+    "nominal_H_column_cm2": 8.034998390362874e+17,
+    "grain_energies_at_density_3000kg_m3": [
+      {
+        "radius_micrometres": 1,
+        "energy_J": 25.87143333502526
+      },
+      {
+        "radius_micrometres": 10,
+        "energy_J": 25871.433335025245
+      },
+      {
+        "radius_micrometres": 100,
+        "energy_J": 25871433.335025247
+      },
+      {
+        "radius_micrometres": 1000,
+        "energy_J": 25871433335.02526
+      }
+    ],
+    "max_unmitigated_hazardous_grain_density_m3_for_99_9percent_no_hit": 4.016703270016301e-23,
+    "dust_standoff_m_to_simulate_not_selected": [
+      10,
+      30,
+      100
+    ],
+    "unmeasured_cloud_half_angles_deg": [
+      1,
+      10
+    ],
+    "cloud_radius_cases_m": [
+      {
+        "standoff_m": 10,
+        "one_degree": 0.17455064928217584,
+        "ten_degrees": 1.7632698070846498
+      },
+      {
+        "standoff_m": 30,
+        "one_degree": 0.5236519478465276,
+        "ten_degrees": 5.289809421253949
+      },
+      {
+        "standoff_m": 100,
+        "one_degree": 1.7455064928217585,
+        "ten_degrees": 17.632698070846498
+      }
+    ]
+  },
+  "SPE_20g_cm2_mass_screen": {
+    "flat_areal_kg_m2": 200,
+    "refuge_outer_area_m2": 93.31371930261872,
+    "refuge_thin_layer_tonnes_lower_estimate": 18.662743860523744,
+    "both_wheels_outer_area_m2": 5881.061447520093,
+    "both_wheels_thin_layer_tonnes_lower_estimate": 1176.2122895040186,
+    "limits": "thin-layer mass; excludes finite thickness growth, structure, plumbing and openings; not GCR qualification"
+  },
+  "transport_required": [
+    "full annihilation/exhaust source",
+    "EM and hadronic cascades",
+    "neutrons and muons",
+    "finite source/3D geometry and penetrations",
+    "body phantoms/effective and organ doses",
+    "heat deposition",
+    "GCR and SPE environments",
+    "reversed braking orientation"
+  ]
+}

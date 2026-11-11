@@ -1,0 +1,564 @@
+{
+  "status": "Selected compact lightweight hardware target; pressure, structure, shielding and antimatter technology remain unvalidated",
+  "ship_length_m_study": 127,
+  "design_to_dry_mass_cap_kg": 300000,
+  "design_to_mass_trade": "MISSION_300_TRADE.md; proposed allocation in mission-300-trade.json. Existing rendered geometry/mass ledger remain the reference, not a validated 300 t implementation.",
+  "disc_radius_m": 19.5,
+  "disc_axial_depth_m": 4.5,
+  "disc_centres_x_m": [
+    0,
+    0
+  ],
+  "cabin_floor_radius_m": 17.5,
+  "service_spine_z_offset_m_study": 8,
+  "forward_shield_height_m_study": 40,
+  "forward_shield_width_m_study": 15.5,
+  "shield_areal_mass_kg_m2_sensitivity": 50,
+  "shield_status": "Coverage and areal mass are geometry/sensitivity inputs, not demonstrated protection",
+  "compaction_status": "Full-scale rigid equipment in covered transport racks; folded panels conserve envelope volume. Fabric packing and deployment hardware unqualified.",
+  "radiator_panels_study": {
+    "placement": "Separated forward and aft service bays; no radiator faces spanning occupied habitat discs",
+    "height_m": 36,
+    "plane_z_m": [
+      -3.6,
+      13.5
+    ],
+    "banks": [
+      {
+        "name": "Forward service cooling",
+        "x_min_m": -125,
+        "x_max_m": -91.17676409256751,
+        "loop": "cool service loop",
+        "emitting_area_m2_target": 4697.745970670278,
+        "cruise_x_min_m": 19.9
+      },
+      {
+        "name": "Aft machinery cooling",
+        "x_min_m": 65,
+        "x_max_m": 91.44028913182655,
+        "loop": "hot machinery loop",
+        "emitting_area_m2_target": 3634.601634983022,
+        "cruise_x_min_m": 54.1
+      }
+    ],
+    "thermal_status": "Geometric emitting area matches selected ideal hot/service requirement; view factors, finite environments, margins and engineering qualification remain open.",
+    "cruise_plane_z_m": [
+      1.2,
+      14.8
+    ]
+  },
+  "habitat_interior_status": "Three decks per disc, eight 12 m2 double cabins and shared rooms. Primary food production in two compact rigid service modules; small fresh-food gardens inside the discs.",
+  "landing_orientation": "Compare horizontal and upright; neither selected as flight-ready",
+  "surface_power_standoff": "Illustrative spacing only; dose and routing study required",
+  "mass_ledger": [
+    {
+      "id": "membranes",
+      "system": "Habitat pressure membranes, insulation and restraint",
+      "mass_kg": 35286.36868512056,
+      "basis": "5881.1 m2 outer-envelope approximation x 6 kg/m2. Internal compartment area, pressure ties and 20-year life unqualified.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "13006.2 m\u00b2 full-disc surface \u00d76/10/18 kg/m\u00b2; advanced laminate assumptions, excluding separate radiation shielding",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "floors",
+      "system": "Folding composite floors",
+      "mass_kg": 15268.140296446396,
+      "basis": "1526.8 m2 gross floor x 10 kg/m2; floor loading, folding and service access unvalidated.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "4071.5 m\u00b2 gross deck area \u00d710/18/30 kg/m\u00b2; load ratings and folding joints unqualified",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "habframes",
+      "system": "Habitat deployment frames, hatches and cabin partitions",
+      "mass_kg": 24000.0,
+      "basis": "6 t fixed hubs/attachments plus 24 t reference deployable frames scaled from four to three decks. Separate bearings remain counted.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Two large deployable pressure structures; allowances include partitions, access and frame hardware",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "bearings",
+      "system": "Hubs, bearings, spin motors and balance equipment",
+      "mass_kg": 12000,
+      "basis": "Retained lightweight target from reference: Two independently driven hubs; no validated bearing or transfer design",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Two independently driven hubs; no validated bearing or transfer design",
+      "surface_delivery": false,
+      "delivery_role": "Flight-only: detached before surface descent"
+    },
+    {
+      "id": "furnishings",
+      "system": "Cabins, wardrooms, lounge, hygiene and exercise fittings",
+      "mass_kg": 10666.666666666666,
+      "basis": "Eight 12 m2 couple cabins per disc, 32-person shared rooms; occupancy-linked furnishings scaled 32/36.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "18 shared cabins; common rooms sized for all36 awake; excludes medical systems and life-support plant",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "structure",
+      "system": "Settlement delivery frame and surface services",
+      "mass_kg": 10000,
+      "basis": "10 t retained from 30 t cruise support allocation. Supports mandatory descent, unloading and habitat deployment; load paths unqualified.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "landing",
+      "system": "Landing supports, restraints and habitat transport covers",
+      "mass_kg": 20000,
+      "basis": "Retained lightweight target from reference: Permanent horizontal landing baseline; distributed supports and full-scale packing racks",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Permanent horizontal landing baseline; distributed supports and full-scale packing racks",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "dustshield",
+      "system": "Forward dust/gas shield stack and supports",
+      "mass_kg": 31000.0,
+      "basis": "40 x 15.5 m rectangle covering the habitat stack and nozzle ring at an unproven 50 kg/m2; no change in claimed protection performance.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "1320 m\u00b2 frontal area \u00d750/100/250 kg/m\u00b2; sensitivity only, no demonstrated0.26c dust/gas protection",
+      "surface_delivery": false,
+      "delivery_role": "Flight-only: detached before surface descent"
+    },
+    {
+      "id": "radiationshield",
+      "system": "Crew refuge radiation shielding",
+      "mass_kg": 11164.70588235294,
+      "basis": "Refuge shield allowance scaled by reduced hull area at unchanged assumed areal protection; radiation transport unvalidated.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Dedicated shielding allowance beyond distributed water/food; dose transport unresolved",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "engine",
+      "system": "Dedicated direct/thermal descent engine",
+      "mass_kg": 10000,
+      "basis": "10 t target reassigned from former combined 35 t engine allowance. Independent direct braking and thermal touchdown engine must be engineered; not a proven mass.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "containment",
+      "system": "Descent antimatter containment",
+      "mass_kg": 2000,
+      "basis": "2 t target reassigned from 40 t bulk storage allowance for the much smaller descent fuel inventory. Containment, shielding and power unqualified.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "refuge",
+      "system": "Rigid 32-person descent refuge and airlocks",
+      "mass_kg": 9452.235294117647,
+      "basis": "32-seat refuge target: 70% pressure-hull allowance scaled by surface area, 30% by crew; crash/medical/endurance qualification outstanding.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "108m\u00b3 minimum pressure-volume allocation at3m\u00b3/person; seats, medical interfaces and emergency systems",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "eclss",
+      "system": "Redundant life support and water/waste processing",
+      "mass_kg": 14000.0,
+      "basis": "6 t fixed control/redundancy plus 9 t reference throughput-dependent hardware scaled 32/36. Full closure unvalidated.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "36-person full-awake design; duplicated critical functions and spares in separate row",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "medical",
+      "system": "32 torpor beds, medical systems and embryo storage",
+      "mass_kg": 13000,
+      "basis": "32 convertible torpor beds x 250 kg plus 5 t fixed medical and embryo systems. Torpor remains unproven.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "36 medical beds \u00d7250/500/900kg plus clinical/cryogenic equipment; safe repeated torpor unproven",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "power",
+      "system": "10MWe power conversion, distribution and startup storage",
+      "mass_kg": 6000,
+      "basis": "2 MWe carried conversion/distribution/startup target; full local expansion later. Hardware and demand unqualified.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Two isolated conversion trains, switchgear, cables, backup battery/solar starter kit; speculative AM heat source",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "warmradiators",
+      "system": "Service/surface radiators and heat-recovery loops",
+      "mass_kg": 11744.364926675697,
+      "basis": "2 MWe service/surface starter at reference 600/330 K loops and 2.5 kg per emitting m2; includes reference 25% area allowance.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "23488.7 m\u00b2 emitting area including25% area allowance \u00d72.5/4/7 kg/m\u00b2;600K/330K ideal loops, terrain/view factors unresolved",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "avionics",
+      "system": "Avionics, navigation, communications and sensors",
+      "mass_kg": 4000,
+      "basis": "Retained lightweight target from reference: Independent navigation/control and high-gain communication; beam link budget unresolved",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Independent navigation/control and high-gain communication; beam link budget unresolved",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "factory",
+      "system": "Advanced fabrication, chemistry and resource-processing seed",
+      "mass_kg": 30000,
+      "basis": "Retained lightweight target from reference: Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Complete local production assumed; numerical machinery allowance is not a self-replicating factory demonstration",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "rover",
+      "system": "Reused pressurised rover module, chassis and7-day stores",
+      "mass_kg": 6000,
+      "basis": "Retained lightweight target from reference: Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Cabin counted once, reused from cruise;2 occupants, battery, chassis, suits and consumables",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "spares",
+      "system": "Repair stock, tools, EVA suits and replacement units",
+      "mass_kg": 15000,
+      "basis": "15 t initial repair/feedstock buffer retained; parts and end-of-life material recycled/reprinted. No claim that installed components last 20 years.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "16-year spares allowance beyond already counted redundant installed hardware",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "gas",
+      "system": "Initial habitat atmosphere and gas makeup",
+      "mass_kg": 11014.157374046672,
+      "basis": "Initial habitat and two food-factory module atmosphere at 70 kPa/293 K plus 2 t contingency. No large external crop-bay gas.",
+      "kind": "consumable",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Full-disc gross volume25446.9m\u00b3 at70kPa/293K; air-equivalent gas constant; makeup allowance, packaging tanks below",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "water",
+      "system": "Water/oxygen-cycle buffers and process starting inventory",
+      "mass_kg": 16333.333333333332,
+      "basis": "15 t reference water/process buffer scaled 32/36 plus 3 t food-factory process water. Perfect eventual recycling assumed.",
+      "kind": "consumable",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Regenerative water/oxygen systems assumed; starting water plus loss/contingency stock, no16-year open-loop water budget",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "food",
+      "system": "One tonne spare edible food plus packaging",
+      "mass_kg": 1020,
+      "basis": "User-selected 1,000 kg edible emergency diet plus separate 20 kg reusable/bulk packaging allowance; normal full-crew metabolism.",
+      "kind": "consumable",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "216958 person-days; no torpor metabolic discount; nominal NASA0.617kg dry food +0.26kg packaging/person/day; all waste retained conservatively",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "consumables",
+      "system": "Medical, hygiene, nutrient and general consumables",
+      "mass_kg": 12000,
+      "basis": "Initial medical, hygiene, purification and chemical buffer; universal fabrication and ultimate material recovery assumed, no automatic annual mass consumption.",
+      "kind": "consumable",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "16-year specialist consumables allocation; safe drug/food shelf life and nutrient renewal unresolved",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "processtanks",
+      "system": "Atmosphere, water and process tank hardware",
+      "mass_kg": 5000,
+      "basis": "Retained lightweight target from reference: Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Reusable ordinary-material pressure tanks; thermal hydrogen tank sized separately",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "crew",
+      "system": "36 crew and personal effects",
+      "mass_kg": 2880,
+      "basis": "32 people and personal effects at 90 kg/person total; no transit births.",
+      "kind": "crew",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Includes people and personal effects; no births during transit",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "exploration",
+      "system": "Two surface micro-rovers",
+      "mass_kg": 30,
+      "basis": "30 kg from unchanged 450 kg remote allowance; all other scouts/support released before descent.",
+      "kind": "payload",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "powerfuel",
+      "system": "Surface and transit power antimatter plus matching matter",
+      "mass_kg": 2.0351125654089177,
+      "basis": "Separate 1 kg surface antimatter bank plus matching matter, and 20 years of 2 MWe transit power at 40% conversion.",
+      "kind": "consumable",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "1kg surface antimatter +1kg matter; separate2MWe/16-year transit supply at40% efficiency(0.0140kg antimatter)",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "foodfactory",
+      "system": "Redundant microbial/chemical full-diet food factory and small garden",
+      "mass_kg": 10000,
+      "kind": "hardware",
+      "basis": "Lowest studied 10 t target for two complete-diet trains, sterile processing, pressure modules, culture banks and fresh garden; no demonstrated integrated design.",
+      "status": "Advanced-technology target, unvalidated.",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "foodloop_inventory",
+      "system": "Food-loop startup and circulating material inventory",
+      "mass_kg": 1000,
+      "kind": "consumable",
+      "basis": "Separate 1 t process/nutrient inventory, not edible emergency food; perfect eventual elemental recovery assumed.",
+      "status": "Working-inventory target; chemical balance unvalidated.",
+      "surface_delivery": true,
+      "delivery_role": "Settlement essential or mandatory descent equipment"
+    },
+    {
+      "id": "flightstructure",
+      "system": "Cruise engine standoff and support frame",
+      "mass_kg": 20000,
+      "basis": "Reassigned from existing total allowance; detached in destination orbit before terminal descent. Detailed interface and sizing unvalidated.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "281m ship and target1.2g thrust; advanced composite/metal allowance, no structural analysis",
+      "surface_delivery": false,
+      "delivery_role": "Flight-only: detached before surface descent"
+    },
+    {
+      "id": "cruiseengine",
+      "system": "Interstellar magnetic nozzle and cruise engine",
+      "mass_kg": 25000,
+      "basis": "Reassigned from existing total allowance; detached in destination orbit before terminal descent. Detailed interface and sizing unvalidated.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Speculative coils, nozzle, cooling, chambers and feed system; target exhaust/thrust not demonstrated",
+      "surface_delivery": false,
+      "delivery_role": "Flight-only: detached before surface descent"
+    },
+    {
+      "id": "bulkcontainment",
+      "system": "Bulk cruise antimatter containment and cryogenics",
+      "mass_kg": 38000,
+      "basis": "Reassigned from existing total allowance; detached in destination orbit before terminal descent. Detailed interface and sizing unvalidated.",
+      "kind": "hardware",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Speculative allocation only; no known design stores calculated tonnes of antimatter, no demonstrated mass scaling",
+      "surface_delivery": false,
+      "delivery_role": "Flight-only: detached before surface descent"
+    },
+    {
+      "id": "spacescouts",
+      "system": "Space scouts, microlanders and their support allocations",
+      "mass_kg": 420,
+      "basis": "Reassigned from existing total allowance; detached in destination orbit before terminal descent. Detailed interface and sizing unvalidated.",
+      "kind": "payload",
+      "status": "Optimistic planning target, not validated hardware.",
+      "reference_basis": "Strict user allocation below500kg; carrier feasibility unproven; conservatively retained throughout fuel sizing",
+      "surface_delivery": false,
+      "delivery_role": "Flight-only: detached before surface descent"
+    },
+    {
+      "id": "separation",
+      "system": "Separation interfaces and independent service isolation",
+      "mass_kg": 2000,
+      "kind": "hardware",
+      "surface_delivery": true,
+      "delivery_role": "Mandatory descent equipment",
+      "basis": "2 t additional target for releasable interfaces, valves, power/data isolation and separation controls; includes retained interface halves conservatively. Unqualified.",
+      "status": "New planning target; no demonstrated staging design."
+    },
+    {
+      "id": "hydrogentank",
+      "system": "Thermal hydrogen tanks and insulation",
+      "mass_kg": 1062.6740519545126,
+      "kind": "derived",
+      "surface_delivery": true,
+      "basis": "12% of calculated terminal hydrogen; needed for descent.",
+      "status": "Conditional staged planning result."
+    },
+    {
+      "id": "landingradiator",
+      "system": "Descent-engine hot radiators",
+      "mass_kg": 8040.530504291555,
+      "kind": "derived",
+      "surface_delivery": true,
+      "basis": "1,500 K, 1e-7 absorbed heat, sized for the landing vehicle at 1.788 Earth g proper acceleration; unproven.",
+      "status": "Conditional staged planning result."
+    },
+    {
+      "id": "engineradiator",
+      "system": "Detachable cruise-only hot radiator extensions",
+      "mass_kg": 10132.477670623555,
+      "kind": "derived",
+      "surface_delivery": false,
+      "basis": "Additional hot area above retained descent cooling, sized for peak interstellar thrust and detached in orbit.",
+      "status": "Conditional staged planning result."
+    },
+    {
+      "id": "margin",
+      "system": "Landed hardware development allowance",
+      "mass_kg": 68421.42157690649,
+      "kind": "derived",
+      "surface_delivery": true,
+      "basis": "25% of retained hardware including descent tanks, cooling and separation interfaces.",
+      "status": "Conditional staged planning result."
+    },
+    {
+      "id": "flightmargin",
+      "system": "Flight-only hardware development allowance",
+      "mass_kg": 34033.11941765589,
+      "kind": "derived",
+      "surface_delivery": false,
+      "basis": "25% allowance follows the flight hardware off the lander; it is still carried during cruise.",
+      "status": "Conditional staged planning result."
+    },
+    {
+      "id": "fuelreserve",
+      "system": "Unused correction propellant, matter plus antimatter",
+      "mass_kg": 377.6232470512623,
+      "kind": "derived",
+      "surface_delivery": false,
+      "basis": "100 km/s ideal correction allowance for the pre-separation vehicle; unused reserve left with bulk storage in orbit, counted once.",
+      "status": "Conditional staged planning result."
+    }
+  ],
+  "mass_budget_status": "32 people, 20 years onboard, one tonne edible reserve, staged settlement delivery, compact full-diet food-factory target; enabling technologies and reserve adequacy unvalidated.",
+  "hydrogen_tanks_study": {
+    "count": 2,
+    "hydrogen_density_kg_m3": 70.8,
+    "ullage_fraction": 0.05,
+    "capacity_margin_over_nominal_load": 0.05,
+    "semi_axis_x_m": 6,
+    "semi_axis_radial_m": 1.658405408611915
+  },
+  "refuge_study": {
+    "radius_m": 2.05,
+    "length_m": 4.8,
+    "seat_rows": 4,
+    "seats_per_row": 4,
+    "centre_m": [
+      -10,
+      7,
+      8
+    ],
+    "cruise_centre_m": [
+      23,
+      0,
+      8
+    ],
+    "seating_tiers": 2
+  },
+  "food_factory_modules_study": {
+    "centres_m": [
+      [
+        -91,
+        -4,
+        8
+      ],
+      [
+        -91,
+        4,
+        8
+      ]
+    ],
+    "radius_m": 1.5,
+    "length_m": 6,
+    "production_trains": 2,
+    "target_hardware_kg": 10000,
+    "cruise_centres_m": [
+      [
+        29.8,
+        0,
+        8
+      ],
+      [
+        36.9,
+        0,
+        8
+      ]
+    ]
+  },
+  "surface_delivery_policy": "No dust shield, spin bearings, main cruise engine, bulk storage, cruise standoff frame or excess hot radiators descend. Independent descent engine, small containment and required descent cooling do descend.",
+  "settlement_disc_centres_x_m": [
+    -38,
+    36
+  ],
+  "disc_centres_z_m": [
+    3.25,
+    12.75
+  ],
+  "surface_disc_centres_x_m": [
+    -24,
+    24
+  ],
+  "surface_disc_centres_z_m": [
+    -45,
+    -53.046
+  ]
+}

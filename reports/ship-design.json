@@ -1,0 +1,915 @@
+{
+  "name": "Lightweight two-disc ship / two-deck discs at 0.25 g / 0.2 g burns",
+  "status": "Selected viewer design. Screening calculations only: antimatter production, storage, the engine, torpor and radiation protection are not demonstrated, and three items do not close (see open_items).",
+  "nominal": {
+    "departure_mass_kg": 731258.4499277687,
+    "final_retained_mass_kg": 151212.82042029605,
+    "thermal_hydrogen_kg": 3465.6551790041,
+    "thermal_antimatter_kg": 6.007590329525028e-06,
+    "mass_at_thermal_ignition_kg": 154678.4756113153,
+    "early_release_mass_kg": 12414.986345625975,
+    "late_engine_stage_release_mass_kg": 131539.12336727302,
+    "direct_propellant_consumed_kg": 432625.8646035544,
+    "retained_correction_propellant_kg": 199.17251088137425,
+    "propulsion_antimatter_loaded_kg": 216412.5185632255,
+    "propulsion_matter_loaded_kg": 216412.5185632255,
+    "engine_hot_radiator_kg": 3493.5657773302955,
+    "engine_hot_radiator_emitting_area_m2": 1164.521925776765,
+    "hydrogen_tank_kg": 415.878621480492,
+    "hardware_margin_fraction": 0.15,
+    "effective_exhaust_fraction_c": 0.5,
+    "main_acceleration_g": 0.2,
+    "phase_masses_kg": {
+      "departure": 731258.4499277687,
+      "after_acceleration": 467326.95060260646,
+      "after_interstellar_braking": 298655.66514972004,
+      "after_capture": 298651.68034403503,
+      "after_early_release": 286236.6939984091,
+      "before_engine_release": 286217.5989785883,
+      "after_engine_release": 154678.4756113153,
+      "after_touchdown": 151212.82042029605
+    },
+    "peak_thrust_N": 5017833.580736727,
+    "departure_thrust_N": 1434239.1355968304
+  },
+  "components": [
+    {
+      "id": "membranes",
+      "system": "Disc pressure membranes, insulation and restraint",
+      "mass_kg": 9624.424917267948,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "1604 m2 envelope x 6 kg/m2. Calculated in ship_design.py from the drawn geometry.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "floors",
+      "system": "Folding composite floors",
+      "mass_kg": 7510.9197162024775,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "751 m2 single deck x 10 kg/m2. Calculated in ship_design.py from the drawn geometry.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "habframes",
+      "system": "Disc frames, bulkheads, hatches and berth partitions",
+      "mass_kg": 6546.003242432843,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Reference 24 t scaled by pressure-envelope area.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "bearings",
+      "system": "Two hubs, bearings, spin motors and balance equipment",
+      "mass_kg": 6000,
+      "kind": "hardware",
+      "release_stage": "orbit",
+      "surface_delivery": false,
+      "basis": "Reference 12 t halved: two rotors kept, each carrying well under half the former rotating mass. Allocation.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "furnishings",
+      "system": "Berth bays, galley, commons, hygiene and exercise fittings",
+      "mass_kg": 2500,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Eight awake in transit; 32 two-tier berths. Allocation between the pod (2 t) and torus (6 t) studies.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "transfertunnels",
+      "system": "Hub-to-hub transfer tube and flexible interfaces",
+      "mass_kg": 500,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "One short axial tube replaces the pod tunnels and spin booms. Allocation.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "surfacekit",
+      "system": "Two packed inflatable surface habitats with interiors and link tunnels",
+      "mass_kg": 8312.500168838058,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Hoop-load sized restraint, 3.54 kg/m2 shell, floors, fittings and anchors. Calculated in ship_design.py from the drawn geometry.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "structure",
+      "system": "Settlement delivery frame and surface services",
+      "mass_kg": 5000,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "landing",
+      "system": "Landing supports, restraints and habitat transport covers",
+      "mass_kg": 6000,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "dustshield",
+      "system": "Forward wind screen: stripper films, deflector coil, mast and catcher plate",
+      "mass_kg": 4373.24,
+      "kind": "hardware",
+      "release_stage": "orbit",
+      "surface_delivery": false,
+      "basis": "3048 kg catcher at 10 kg/m2 plus mast, coil and films. Replaces the 31 t solid plate. Calculated in ship_design.py from the drawn geometry.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "aftscreen",
+      "system": "Aft annular wind screen for the braking burn",
+      "mass_kg": 600,
+      "kind": "hardware",
+      "release_stage": "handover",
+      "surface_delivery": false,
+      "basis": "Stripper film ring and deflector coil at the aft tank end. Allocation.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "engine",
+      "system": "Hydrogen-heated touchdown assembly",
+      "mass_kg": 8000,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "containment",
+      "system": "Touchdown antimatter isolation hardware",
+      "mass_kg": 1500,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "refuge",
+      "system": "Rigid 32-person descent refuge and airlocks",
+      "mass_kg": 4500,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "eclss",
+      "system": "Redundant life support and water/waste processing",
+      "mass_kg": 8000,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "medical",
+      "system": "32 torpor beds, medical systems and embryo storage",
+      "mass_kg": 9500,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "power",
+      "system": "2 MWe conversion, distribution and backup allowance",
+      "mass_kg": 4500,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "warmradiators",
+      "system": "Service/surface radiators and heat-recovery loops",
+      "mass_kg": 5637.295164804333,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "avionics",
+      "system": "Avionics, navigation, communications and sensors",
+      "mass_kg": 750,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "factory",
+      "system": "Advanced fabrication, chemistry and resource-processing seed",
+      "mass_kg": 12000,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "rover",
+      "system": "Reused pressurised rover module, chassis and7-day stores",
+      "mass_kg": 2500,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "spares",
+      "system": "Repair stock, tools, EVA suits and replacement units",
+      "mass_kg": 3000,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "processtanks",
+      "system": "Atmosphere, water and process tank hardware",
+      "mass_kg": 1500,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "foodfactory",
+      "system": "Redundant microbial/chemical full-diet food factory and small garden",
+      "mass_kg": 3000,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "separation",
+      "system": "Separation interfaces and independent service isolation",
+      "mass_kg": 1500,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "cruiseengine",
+      "system": "Interstellar magnetic nozzle and cruise engine",
+      "mass_kg": 25000,
+      "kind": "hardware",
+      "release_stage": "handover",
+      "surface_delivery": false,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "bulkcontainment",
+      "system": "Bulk cruise antimatter containment and cryogenics",
+      "mass_kg": 38000,
+      "kind": "hardware",
+      "release_stage": "handover",
+      "surface_delivery": false,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "relaychain",
+      "system": "200-node relay dry hardware and dispenser",
+      "mass_kg": 57.182909239981036,
+      "kind": "hardware",
+      "release_stage": "orbit",
+      "surface_delivery": false,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "spacescouts",
+      "system": "Space scouts, microlanders and their support allocations",
+      "mass_kg": 420,
+      "kind": "payload",
+      "release_stage": "orbit",
+      "surface_delivery": false,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "exploration",
+      "system": "Two surface micro-rovers",
+      "mass_kg": 30,
+      "kind": "payload",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "gas",
+      "system": "Disc, module and inflatable-habitat atmosphere plus reserve",
+      "mass_kg": 4141.245314616007,
+      "kind": "consumable",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "2430 m3 discs, 1502 m3 surface habitats and modules at 70 kPa / 293 K, plus 0.8 t reserve. Calculated in ship_design.py from the drawn geometry.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "water",
+      "system": "Water/oxygen-cycle buffers and process starting inventory",
+      "mass_kg": 5000,
+      "kind": "consumable",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "food",
+      "system": "One tonne spare edible food plus packaging",
+      "mass_kg": 1020,
+      "kind": "consumable",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "consumables",
+      "system": "Medical, hygiene, nutrient and general consumables",
+      "mass_kg": 8000,
+      "kind": "consumable",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "foodloop_inventory",
+      "system": "Food-loop startup and circulating material inventory",
+      "mass_kg": 1000,
+      "kind": "consumable",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "crew",
+      "system": "32 crew and personal effects",
+      "mass_kg": 2880,
+      "kind": "crew",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "Retained 300 t trade allocation (MISSION_300_TRADE.md); not a validated hardware mass.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "shadowshield",
+      "system": "Tungsten engine shadow shield",
+      "mass_kg": 21238.546505787097,
+      "kind": "hardware",
+      "release_stage": "handover",
+      "surface_delivery": false,
+      "basis": "52 cm tungsten disc of 0.82 m radius. Not in any earlier budget. Calculated in ship_design.py from the drawn geometry.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "flightstructure",
+      "system": "Engine boom and thrust spine",
+      "mass_kg": 14309.396265235338,
+      "kind": "hardware",
+      "release_stage": "handover",
+      "surface_delivery": false,
+      "basis": "Carbon-fibre truss sized by buckling for 5.0 MN descent thrust, safety factor 2, 30% for joints and bracing.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "hydrogentanks",
+      "system": "Liquid-hydrogen propellant tank",
+      "mass_kg": 11567.144370571415,
+      "kind": "hardware",
+      "release_stage": "handover",
+      "surface_delivery": false,
+      "basis": "5.3% of the hydrogen load: shell at 150 kPa, insulation and fittings. Not in any earlier budget.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "hotradiators",
+      "system": "Engine hot radiator fins",
+      "mass_kg": 3493.5657773302955,
+      "kind": "hardware",
+      "release_stage": "handover",
+      "surface_delivery": false,
+      "basis": "1,500 K, 3 kg per emitting m2, sized on the 1e-7 absorbed-fraction assumption.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "hydrogentank",
+      "system": "Touchdown hydrogen tanks",
+      "mass_kg": 415.878621480492,
+      "kind": "hardware",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "12% of touchdown hydrogen.",
+      "status": "Planning target; unvalidated hardware."
+    },
+    {
+      "id": "margin",
+      "system": "Surface hardware development allowance",
+      "mass_kg": 16844.55327465392,
+      "kind": "derived",
+      "release_stage": "surface",
+      "surface_delivery": true,
+      "basis": "15% of that stage's hardware.",
+      "status": "Budget reserve, not installed equipment."
+    },
+    {
+      "id": "flightmargin",
+      "system": "Released hardware development allowance",
+      "mass_kg": 17131.29793783862,
+      "kind": "derived",
+      "release_stage": "handover",
+      "surface_delivery": false,
+      "basis": "15% of that stage's hardware.",
+      "status": "Budget reserve, not installed equipment."
+    },
+    {
+      "id": "earlymargin",
+      "system": "Early-release hardware allowance",
+      "mass_kg": 1564.563436385997,
+      "kind": "derived",
+      "release_stage": "orbit",
+      "surface_delivery": false,
+      "basis": "15% of that stage's hardware.",
+      "status": "Budget reserve, not installed equipment."
+    },
+    {
+      "id": "fuelreserve",
+      "system": "Unused correction stock",
+      "mass_kg": 199.17251088137425,
+      "kind": "derived",
+      "release_stage": "handover",
+      "surface_delivery": false,
+      "basis": "100 km/s correction allowance left in the released store.",
+      "status": "Conditional."
+    }
+  ],
+  "trajectory": {
+    "onboard_transfer_years": 19.9,
+    "rapidity": 0.22386891643597645,
+    "peak_speed_c": 0.22020249805176353,
+    "each_burn_onboard_days": 396.050062732245,
+    "cruise_onboard_years": 17.731348048009608,
+    "earth_transfer_years": 20.36434230604388,
+    "awake_years_if_all_awake_during_burns": 6.601488963992792,
+    "torpor_years_if_all_awake_during_burns": 13.298511036007206,
+    "awake_years_continuous_transit_roster_before_descent": 4.975,
+    "torpor_years_continuous_transit_roster_before_descent": 14.924999999999999,
+    "cruise_cycles_per_person": 231.29910266198246
+  },
+  "totals": {
+    "dry_hardware_with_allowance_kg": 272476.5123080688,
+    "supplies_people_payload_kg": 22491.245314616008,
+    "non_fuel_kg": 294967.7576226848,
+    "departure_kg": 731258.4499277687,
+    "landed_kg": 151212.82042029605,
+    "antimatter_kg": 216412.5185632255,
+    "reference_departure_kg": 1330200,
+    "reference_landed_kg": 376301,
+    "reference_antimatter_kg": 382320
+  },
+  "habitat": {
+    "floor_radius_m": 8.5,
+    "envelope_radius_m": 9.27,
+    "axial_depth_m": 4.5,
+    "spin_rad_s": 0.5370576154873341,
+    "spin_rpm": 5.1285224537973395,
+    "gravity_at_floor_g": 0.25,
+    "gravity_at_head_g": 0.19705882352941176,
+    "deck_floor_radii_m": [
+      8.5,
+      5.4
+    ],
+    "deck_gravity_g": [
+      0.25,
+      0.15882352941176472
+    ],
+    "rim_speed_m_s": 4.56498973164234,
+    "pressure_envelope_area_m2": 1604.070819544658,
+    "gross_floor_area_m2": 751.0919716202477,
+    "usable_floor_area_m2_at_65_percent": 488.209781553161,
+    "pressure_volume_m3": 2429.6955060749965,
+    "rim_hoop_load_kN_m": 157.5,
+    "membranes_kg": 9624.424917267948,
+    "floors_kg": 7510.9197162024775,
+    "frames_kg": 6546.003242432843,
+    "bearings_kg": 6000,
+    "fittings_kg": 2500,
+    "transfer_tube_kg": 500,
+    "atmosphere_kg": 2021.1681257879065,
+    "reference_comparison": {
+      "pressure_envelope_area_m2": 5881.1,
+      "gross_floor_area_m2": 1526.8,
+      "pressure_volume_m3": 10751.0,
+      "spin_rpm": 5.05,
+      "gravity_at_floor_g": 0.5
+    },
+    "status": "Same construction coefficients as the three-deck reference. Flat faces need internal ties; a quarter of Earth gravity at about 5 rpm is unvalidated for 20 years."
+  },
+  "surface_inflatables": {
+    "count": 2,
+    "radius_m": 3.75,
+    "cylinder_length_m": 12,
+    "overall_length_m": 19.5,
+    "hoop_load_kN_m": 262.5,
+    "restraint_allowable_MPa": 400.0,
+    "restraint_kg_m2": {
+      "cylinder": 1.378125,
+      "end_caps": 0.9187500000000001
+    },
+    "shell_areal_mass_kg_m2": 3.5417307692307687,
+    "per_module_kg": {
+      "shell": 1627.276272220215,
+      "floors": 1143.8322316029657,
+      "interiors": 780,
+      "hatches_frame_anchors": 400,
+      "total": 3951.108503823181
+    },
+    "tunnel_kg_each": 205.14158059584847,
+    "hardware_kg": 8312.500168838058,
+    "floor_area_m2_per_module": {
+      "lower": 85.64789839803426,
+      "upper": 100.1550797513536
+    },
+    "gross_floor_area_m2": 371.6059562987757,
+    "pressure_volume_m3": 1502.0739874976198,
+    "fill_gas_kg": 1249.5162700488702,
+    "packed_volume_m3": 33.25000067535223,
+    "packed_bales": 8,
+    "bale_mass_kg": 1039.0625211047573,
+    "status": "Closed pressure vessels, so no ground anchoring against pressure. No orbital debris layer: surface use only. Seam life, deployment at 1.2 g and local weather are unqualified."
+  },
+  "engine": {
+    "initial_thrust_MN": 1.4342391355968305,
+    "mass_annihilated_kg_s": 0.009568213591262729,
+    "annihilation_power_PW": 0.8599481516407381,
+    "prompt_gamma_power_PW": 0.3247676530132575,
+    "prompt_gamma_fraction": 0.3776595744680851,
+    "integrated_gamma_energy_J": 1.4684338444161484e+22,
+    "charged_pion_momentum_MeV_c": 363.09945621000315,
+    "ideal_exhaust_ceiling_c": 0.5804947341486861,
+    "momentum_efficiency_needed": 0.8613342560863464,
+    "pion_gyroradius_m_at_10T": 0.12111389466644534,
+    "pion_decay_length_m": 20.29215274369868,
+    "assumed_absorbed_fraction": 1e-07,
+    "assumed_absorbed_heat_GW": 0.08599481516407381,
+    "nozzle_coil_geometric_interception": 0.0375,
+    "nozzle_coil_intercepted_gamma_GW": 12178.786987997157,
+    "heat_closure_gap_factor": 141622.34042553193,
+    "bare_structure_survival_distance_km": 2.5460053574832036,
+    "acceleration_g_closing_if_0p1_percent_absorbed": 0.0014646257097848184,
+    "status": "0.5c effective exhaust needs about 86% of the charged-pion momentum collimated and is at the ceiling of the beamed-core concept. Thermal closure at 1.2 g relies on the 1e-7 absorbed-fraction assumption, which no physical nozzle geometry here supports."
+  },
+  "shadow_shield": {
+    "unshielded_kerma_Gy": 31923422889964.957,
+    "attenuation_needed": 3192342288996495.5,
+    "thickness_m": 0.5171685245110844,
+    "primary_only_thickness_m": 0.45807742639412696,
+    "buildup_allowance_m": 0.05909109811695746,
+    "radius_m": 0.8229865968825569,
+    "mass_kg": 21238.546505787097,
+    "areal_mass_t_m2": 9.98135252306393,
+    "shield_distance_m": 4.5,
+    "boom_length_m": 170,
+    "protected_radius_m": 12.701715882229927,
+    "source_radius_m": 0.5,
+    "solid_angle_fraction": 0.008157734719004772,
+    "intercepted_gamma_TW": 2.6493683585959453,
+    "radiative_capacity_MW_at_3000K": 6.8411670129479765,
+    "heat_gap_factor": 387268.48117895704,
+    "unshielded_flux_at_tanks_GW_m2": 0.8942625836230694,
+    "status": "Sized for dose only. The disc intercepts terawatts and cannot be cooled at 1.2 g; neutrons, muons, scatter round the edge and the true source size are not modelled."
+  },
+  "storage": {
+    "antimatter_kg": 216412.5185572179,
+    "matching_hydrogen_kg": 216412.5185572179,
+    "ice_volume_m3": 2516.4246343862546,
+    "ice_fill_fraction": 0.3977667729169837,
+    "antimatter_store": {
+      "volume_m3": 6326.382206166445,
+      "radius_m": 7.5,
+      "cylinder_length_m": 25.799999999999997,
+      "overall_length_m": 40.8,
+      "layers": 6,
+      "surface_area_m2": 1922.6547039969532
+    },
+    "hydrogen_tank": {
+      "volume_m3": 3151.2102999187186,
+      "radius_m": 7.5,
+      "cylinder_length_m": 7.832202522814512,
+      "overall_length_m": 22.832202522814512,
+      "surface_area_m2": 1075.9421956642261
+    },
+    "hydrogen_tank_hardware_kg": 11567.144370571415,
+    "hydrogen_tank_fraction": 0.05344951598774147,
+    "charged_storage": {
+      "penning_density_limit_kg_m3_at_20T": 1.77083756256e-09,
+      "volume_needed_m3": 122209130375776.83
+    },
+    "diamagnetic_levitation": {
+      "B_gradB_T2_m": 98.5871987082443,
+      "field_T_across_one_metre": 14.0418801239894,
+      "field_T_across_one_centimetre": 1.40418801239894
+    },
+    "electrostatic_levitation": {
+      "log_radius_m": 1.0,
+      "log_length_m": 4.0,
+      "log_mass_kg": 1080.7078728348888,
+      "log_count": 200.25070974039397,
+      "applied_field_MV_m": 1.0,
+      "required_surface_field_MV_m": 6.350079140184072,
+      "charge_per_mass_C_kg": 1.96133e-06
+    },
+    "sublimation": [
+      {
+        "temperature_K": 1.5,
+        "vapour_pressure_Pa": 2.9787659071154837e-22,
+        "loss_kg_per_year": 2.999641727354838e-13,
+        "wall_annihilation_power_W": 0.001708585910725286
+      },
+      {
+        "temperature_K": 2.0,
+        "vapour_pressure_Pa": 1.4526848117519107e-15,
+        "loss_kg_per_year": 1.266878714372825e-06,
+        "wall_annihilation_power_W": 7216.098850191511
+      },
+      {
+        "temperature_K": 2.5,
+        "vapour_pressure_Pa": 1.496416225835134e-11,
+        "loss_kg_per_year": 0.011672423751218651,
+        "wall_annihilation_power_W": 66485735.89131235
+      },
+      {
+        "temperature_K": 3.0,
+        "vapour_pressure_Pa": 7.084454529487395e-09,
+        "loss_kg_per_year": 5.044573232812076,
+        "wall_annihilation_power_W": 28733720672.718987
+      },
+      {
+        "temperature_K": 4.2,
+        "vapour_pressure_Pa": 4.7e-05,
+        "loss_kg_per_year": 28284.71805740171,
+        "wall_annihilation_power_W": 161108809498824.8
+      }
+    ],
+    "cold_stage": {
+      "heat_leak_W_at_1p5K": 0.3532303744237046,
+      "cooler_input_kW": 1.4058568902063442
+    },
+    "energy_content_Mt_TNT": 9297412.609788587,
+    "status": "Only neutral condensed antihydrogen reaches the required density. Charged levitation, charge retention on the ice, 1.5 K walls and failure containment are undemonstrated; the 38 t containment figure is an allocation."
+  },
+  "structure": {
+    "design_acceleration_g": 0.2,
+    "previous_acceleration_g": 1.2,
+    "checks": [
+      {
+        "element": "Wind-screen mast (reinforced)",
+        "limit_g_at_safety_factor_2": 0.4305632986801056,
+        "margin_at_design": 2.152816493400528,
+        "load": "1.7 kN tip-equivalent load",
+        "basis": "Euler cantilever, 250 m; the first 0.7 m-radius, 1.5 kg/m mast would buckle above 0.056 g."
+      },
+      {
+        "element": "Engine boom",
+        "limit_g_at_safety_factor_2": 0.6997206332190419,
+        "margin_at_design": 3.4986031660952093,
+        "load": "1.43 MN in the burns; 5.02 MN in descent braking",
+        "basis": "Sized by buckling for descent thrust; the interstellar burn uses a fraction of it."
+      },
+      {
+        "element": "Disc burn braces",
+        "limit_g_at_safety_factor_2": 10.83107324730754,
+        "margin_at_design": 54.155366236537695,
+        "load": "16 kN per brace",
+        "basis": "29.9 t per disc on four 240 mm carbon tubes; hub bearing not credited."
+      },
+      {
+        "element": "Disc pressure envelope",
+        "limit_g_at_safety_factor_2": 43.73296288813143,
+        "margin_at_design": 218.66481444065715,
+        "load": "32 Pa inertial against 70,000 Pa pressure",
+        "basis": "16 kg/m2 smeared over the envelope; limit set where inertial load reaches 10% of cabin pressure."
+      },
+      {
+        "element": "Bow catcher plate ribs",
+        "limit_g_at_safety_factor_2": 2.4652904843313257,
+        "margin_at_design": 12.326452421656628,
+        "load": "7.3 kN m root moment per rib",
+        "basis": "Four ribs with 6 cm2 carbon caps 0.5 m apart."
+      },
+      {
+        "element": "Antihydrogen levitation",
+        "limit_g_at_safety_factor_2": 0.3149567046092003,
+        "margin_at_design": 1.5747835230460012,
+        "load": "6.4 MV/m surface field",
+        "basis": "Assumed 10 MV/m charge-retention limit on the ice; an assumption, not a measurement. No safety factor applied."
+      },
+      {
+        "element": "Hydrogen tank head",
+        "limit_g_at_safety_factor_2": 1.8924286461658448,
+        "margin_at_design": 9.462143230829223,
+        "load": "3.2 kPa head on a 150 kPa shell",
+        "basis": "Limit where head reaches 20% of design pressure."
+      }
+    ],
+    "governing_element": "Antihydrogen levitation",
+    "governing_limit_g": 0.3149567046092003,
+    "status": "Static screening of axial load paths only. Dynamics, thrust offset, slosh, joints and thermal distortion are not modelled."
+  },
+  "truss": {
+    "peak_thrust_MN": 5.017833580736728,
+    "interstellar_burn_thrust_MN": 1.4342391355968305,
+    "boom_longeron_area_cm2_each": 90.56417042728604,
+    "boom_stress_MPa": 138.5159704180569,
+    "boom_euler_safety_factor": 2.0,
+    "governed_by": "buckling",
+    "boom_kg": 12809.396265235338,
+    "spine_kg": 1500.0
+  },
+  "interstellar_flow": {
+    "speed_c": 0.22020249805176353,
+    "proton_kinetic_MeV": 23.610185723730662,
+    "hydrogen_density_cm3": 0.2,
+    "proton_flux_m2_s": 13535243256520.094,
+    "kinetic_power_W_m2": 51.20069574358855,
+    "frontal_area_m2": 304.82399999999996,
+    "beam_current_mA": 0.660963891866162,
+    "beam_power_kW": 15.607200879343633,
+    "proton_range_in_carbon_kg_m2": 6.3965697216321935,
+    "thick_target_photons_per_proton": 0.005149223511709316,
+    "unscreened": {
+      "photons_per_s": 21245011313284.24,
+      "dose_rate_mSv_h": 33.926005688977725,
+      "coast_dose_Sv": 5273.220740098658,
+      "each_burn_dose_Sv": 55.25701445792562,
+      "note": "Solid front shield at the ship: every stopped proton is a thick-target gamma source. A 50 kg/m2 plate attenuates 4.4 MeV photons by only about 15%."
+    },
+    "gamma_attenuation_alternative": {
+      "e_folds_to_100_mSv": 10.872981693984489,
+      "tungsten_kg_m2": 2692.6651049986353,
+      "mass_t": 820.7889479661039
+    },
+    "screen": {
+      "mast_length_m": 250,
+      "films": 3,
+      "film_areal_mass_g_m2": 0.21999999999999997,
+      "ion_rigidity_T_m": 1.4028207682298233,
+      "deflection_angle_rad": 0.0684,
+      "field_integral_T_m": 0.09595294054691991,
+      "field_T": 0.03,
+      "field_length_m": 3.1984313515639973,
+      "coil_ampere_turns": 381971.8634205488,
+      "residual_coast_dose_mSv": {
+        "films": 1.7916681953857327,
+        "exposed_structure": 71.20682835296174,
+        "film_hole_leakage": 5.273220740098659,
+        "total": 78.27171728844613
+      },
+      "allocation_mSv": 100
+    },
+    "dust": {
+      "mass_density_kg_m3": 4.6832799999999994e-24,
+      "column_kg_m2": 1.8815073630809317e-07,
+      "energy_J_m2": 425518038.3239981,
+      "upper_bound_erosion_kg_m2": 7.212170141084713,
+      "grain_energy_J": {
+        "0.1 micrometre": 0.02841985887272046,
+        "1 micrometre": 28.41985887272046,
+        "100 micrometres": 28419858.87272046
+      }
+    },
+    "status": "Thick-target yield is an order-of-magnitude estimate (factor of about two); neutrons, helium and heavier ions add to it. Film survival, hole statistics and charge-state fractions are assumptions."
+  },
+  "cosmic_rays": {
+    "free_space_dose_equivalent_Sv_year": 0.67206,
+    "mission_dose_Sv": 13.4412,
+    "career_limit_Sv": 0.6,
+    "exceedance_factor": 22.402,
+    "stowed_goods_shelter": {
+      "mass_t": 10.0,
+      "wrapped_area_m2": 400,
+      "areal_density_g_cm2": 2.5
+    },
+    "dedicated_shelter_option": {
+      "areal_density_g_cm2": 20,
+      "mass_t": 37.4,
+      "expected_reduction": "roughly a quarter to a third; still far above the limit"
+    },
+    "status": "Outside the heliosphere the low-energy flux is higher than this measurement. No passive mass this ship can carry meets a 600 mSv career limit over 20 years; this is an open mission-level item."
+  },
+  "geometry": {
+    "hydrogen_tank": {
+      "x0": 55.5,
+      "x1": 78.33220252281451,
+      "radius_m": 7.5
+    },
+    "antimatter_store": {
+      "x0": 79.83220252281451,
+      "x1": 120.63220252281451,
+      "radius_m": 7.5,
+      "log_radius_m": 1.0,
+      "log_length_m": 4.0
+    },
+    "boom": {
+      "x0": 121.63220252281451,
+      "x1": 287.1322025228145
+    },
+    "shield": {
+      "x": 287.1322025228145,
+      "radius_m": 0.8229865968825569,
+      "thickness_m": 0.5171685245110844
+    },
+    "source_x": 291.6322025228145,
+    "cone": {
+      "source_radius_m": 0.5,
+      "protected_radius_m": 12.701715882229927,
+      "boom_length_m": 170
+    },
+    "hot_fins": {
+      "count": 3,
+      "start_from_source_m": 36.0,
+      "inner_radius_m": 2.9,
+      "width_scale": 0.3639598922477976,
+      "planform_m2": 672.3370473244368,
+      "required_emitting_m2": 1164.521925776765,
+      "effective_emitting_m2": 1164.521925776765
+    },
+    "service_fins": {
+      "count": 4,
+      "half_angle_deg": 38.602548281134844,
+      "outer_radius_m": 12.301715882229928,
+      "sections": [
+        {
+          "x0": 12.27,
+          "x1": 39.5,
+          "inner_radius_m": 4.2
+        },
+        {
+          "x0": 55.5,
+          "x1": 120.63220252281451,
+          "inner_radius_m": 7.8
+        }
+      ],
+      "required_emitting_m2": 2818.6475824021663,
+      "effective_emitting_m2": 2877.3718064822706
+    },
+    "screen": {
+      "x": -260.57,
+      "catcher_x": -10.57,
+      "mast_radius_m": 1.5,
+      "width_m": 19.54,
+      "height_m": 15.6,
+      "films": 3
+    },
+    "aft_screen_x": 121.13220252281451,
+    "ship_length_m": 316.2022025228145,
+    "overall_length_with_mast_m": 566.2022025228146
+  },
+  "open_items": [
+    "Engine heat: the nozzle coil alone intercepts about 12 TW of gamma rays against 0.09 GW assumed absorbed, a gap of about 1e+05.",
+    "Shadow shield heat: 2.6 TW intercepted against 7 MW radiated at 3,000 K.",
+    "Cosmic rays: about 13 Sv over 20 years against a 0.6 Sv career limit.",
+    "Antimatter storage: no demonstrated way to make, charge, levitate or safely fail hundreds of tonnes of antihydrogen ice."
+  ]
+}

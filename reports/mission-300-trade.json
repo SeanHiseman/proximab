@@ -1,0 +1,677 @@
+{
+  "status": "300 t cap allocation, not a demonstrated feasible 300 t spacecraft.",
+  "occupancy": {
+    "departure_awake": 8,
+    "coast_awake": 8,
+    "arrival_braking_awake": 8,
+    "descent_awake": 32,
+    "policy": "24 remain in torpor through departure, coast and arrival braking; all 32 are awake for descent. Surface food provision supports 32 awake.",
+    "crew": 32,
+    "transit_torpid": 24
+  },
+  "food": {
+    "transit": {
+      "awake": 8,
+      "torpid": 24,
+      "kcal_day": 56000.0,
+      "protein_kg_day": 2.688,
+      "lipid_kg_day": 1.8666666666666667,
+      "carbohydrate_kg_day": 7.112,
+      "protein_biomass_kg_day": 4.135384615384615,
+      "additional_lipid_kg_day": 1.453128205128205,
+      "additional_carbohydrate_kg_day": 6.491692307692308,
+      "food_solids_kg_day": 12.080205128205128,
+      "chemical_food_power_W": 2711.8518518518517
+    },
+    "descent_and_surface": {
+      "awake": 32,
+      "torpid": 0,
+      "kcal_day": 80000.0,
+      "protein_kg_day": 2.688,
+      "lipid_kg_day": 2.6666666666666665,
+      "carbohydrate_kg_day": 11.312,
+      "protein_biomass_kg_day": 4.135384615384615,
+      "additional_lipid_kg_day": 2.253128205128205,
+      "additional_carbohydrate_kg_day": 10.691692307692307,
+      "food_solids_kg_day": 17.08020512820513,
+      "chemical_food_power_W": 3874.074074074074
+    },
+    "torpor_factor_sensitivity": [
+      {
+        "awake": 8,
+        "torpid": 24,
+        "kcal_day": 44000.0,
+        "protein_kg_day": 2.688,
+        "lipid_kg_day": 1.4666666666666666,
+        "carbohydrate_kg_day": 5.012,
+        "protein_biomass_kg_day": 4.135384615384615,
+        "additional_lipid_kg_day": 1.053128205128205,
+        "additional_carbohydrate_kg_day": 4.391692307692307,
+        "food_solids_kg_day": 9.580205128205128,
+        "chemical_food_power_W": 2130.740740740741
+      },
+      {
+        "awake": 8,
+        "torpid": 24,
+        "kcal_day": 56000.0,
+        "protein_kg_day": 2.688,
+        "lipid_kg_day": 1.8666666666666667,
+        "carbohydrate_kg_day": 7.112,
+        "protein_biomass_kg_day": 4.135384615384615,
+        "additional_lipid_kg_day": 1.453128205128205,
+        "additional_carbohydrate_kg_day": 6.491692307692308,
+        "food_solids_kg_day": 12.080205128205128,
+        "chemical_food_power_W": 2711.8518518518517
+      },
+      {
+        "awake": 8,
+        "torpid": 24,
+        "kcal_day": 68000.0,
+        "protein_kg_day": 2.688,
+        "lipid_kg_day": 2.2666666666666666,
+        "carbohydrate_kg_day": 9.212,
+        "protein_biomass_kg_day": 4.135384615384615,
+        "additional_lipid_kg_day": 1.853128205128205,
+        "additional_carbohydrate_kg_day": 8.591692307692307,
+        "food_solids_kg_day": 14.580205128205128,
+        "chemical_food_power_W": 3292.962962962963
+      }
+    ],
+    "productivity_g_L_h": {
+      "protein_biomass": 0.5,
+      "carbohydrate": 0.25,
+      "lipid": 0.1
+    },
+    "uptime_fraction": 0.8,
+    "one_train_working_volume_L": {
+      "protein_biomass": 430.7692307692307,
+      "carbohydrate": 1352.4358974358972,
+      "lipid": 756.8376068376067
+    },
+    "two_installed_trains_capacity_kcal_day": 112000.0,
+    "surface_operating_volume_L": {
+      "protein_biomass": 430.7692307692307,
+      "carbohydrate": 2227.435897435897,
+      "lipid": 1173.5042735042732
+    },
+    "vessel_shell_screen": [
+      {
+        "branch": "protein_biomass",
+        "volume_m3": 0.43076923076923074,
+        "radius_m": 0.29514268555984546,
+        "shell_thickness_m": 0.002,
+        "unreinforced_shell_mass_kg": 52.54303449288038
+      },
+      {
+        "branch": "carbohydrate",
+        "volume_m3": 1.3524358974358972,
+        "radius_m": 0.4321714066386977,
+        "shell_thickness_m": 0.002,
+        "unreinforced_shell_mass_kg": 112.65829150144589
+      },
+      {
+        "branch": "lipid",
+        "volume_m3": 0.7568376068376067,
+        "radius_m": 0.3561377695065478,
+        "shell_thickness_m": 0.002,
+        "unreinforced_shell_mass_kg": 76.50453329874328
+      }
+    ],
+    "hardware_allocation_kg": {
+      "two_train_vessels_and_jackets": 600,
+      "electrolysis_and_gas_conditioning": 250,
+      "carbon_intermediate_and_enzyme_hardware": 400,
+      "harvesting_and_slurry_processing": 300,
+      "pumps_valves_heat_exchange": 300,
+      "culture_and_micronutrient_modules": 200,
+      "controls_and_analysis": 100,
+      "enclosure_frames_and_mounts": 550,
+      "cleaning_and_sterilisation": 300
+    },
+    "assumed_water_inventory_kg": 5000,
+    "transit_process_volume_L": 2540.0427350427344,
+    "surface_process_volume_L": 3831.709401709401,
+    "water_note": "Process-liquid volume screen only: feedstock/cell displacement, auxiliary stages and hold-up require validation. 100% recovery; no loss reserve.",
+    "dry_food_for_one_all_awake_day_kg": 17.08020512820513,
+    "electrical_power_W_at_efficiencies": {
+      "0.05": 54237.03703703703,
+      "0.1": 27118.518518518515,
+      "0.15": 18079.012345679013
+    },
+    "electrical_plant_allocation_W": 125000,
+    "status": "Two coast-duty trains; both operate on surface. Complete diet, sustained rate, enzyme renewal and 20-year closure unvalidated."
+  },
+  "relay_chain": {
+    "count": 200,
+    "mass_cap_all_up_kg": 100,
+    "nominal_node_all_up_kg": 0.4,
+    "dispenser_kg": 5,
+    "dry_hardware_kg": 57.182909239981036,
+    "dry_development_allowance_kg": 8.577436385997155,
+    "braking_matter_plus_antimatter_kg": 27.81709076001897,
+    "braking_antimatter_kg": 13.908545380009485,
+    "total_with_dry_allowance_kg": 93.57743638599716,
+    "remaining_cap_kg": 6.42256361400284,
+    "node_dry_hardware_kg": 0.2609145461999052,
+    "spacing_AU": 1336.0857404892377,
+    "spacing_light_days": 7.7165876865671645,
+    "transmitter_aperture_m": 0.05,
+    "optical_transmit_power_W": 1,
+    "wavelength_m": 1.55e-06,
+    "nominal_receiver_diameter_m": 20,
+    "nominal_film_thickness_m": 2.5e-07,
+    "receiver_cases": [
+      {
+        "receiver_diameter_m": 1,
+        "receiver_area_m2": 0.7853981633974483,
+        "detected_photons_s": 0.025073897981472814,
+        "screen_bits_s_at_10_photons_per_bit": 0.0025073897981472814,
+        "bare_film_kg_at_1um": 0.0010995574287564274,
+        "bare_film_kg_at_quarter_um": 0.00027488935718910685
+      },
+      {
+        "receiver_diameter_m": 5,
+        "receiver_area_m2": 19.634954084936208,
+        "detected_photons_s": 0.6268474495368203,
+        "screen_bits_s_at_10_photons_per_bit": 0.06268474495368202,
+        "bare_film_kg_at_1um": 0.02748893571891069,
+        "bare_film_kg_at_quarter_um": 0.006872233929727673
+      },
+      {
+        "receiver_diameter_m": 10,
+        "receiver_area_m2": 78.53981633974483,
+        "detected_photons_s": 2.507389798147281,
+        "screen_bits_s_at_10_photons_per_bit": 0.2507389798147281,
+        "bare_film_kg_at_1um": 0.10995574287564276,
+        "bare_film_kg_at_quarter_um": 0.02748893571891069
+      },
+      {
+        "receiver_diameter_m": 20,
+        "receiver_area_m2": 314.1592653589793,
+        "detected_photons_s": 10.029559192589124,
+        "screen_bits_s_at_10_photons_per_bit": 1.0029559192589124,
+        "bare_film_kg_at_1um": 0.43982297150257105,
+        "bare_film_kg_at_quarter_um": 0.10995574287564276
+      }
+    ],
+    "coast_release_braking_distance_ly": 0.01849200638003125,
+    "coast_release_braking_proper_days": 62.991082647809804,
+    "one_way_end_to_end_light_years": 4.2465,
+    "chain_survival_for_node_reliability": {
+      "0.99": 0.13397967485796172,
+      "0.999": 0.8186488294786356,
+      "0.9999": 0.9801976930432228
+    },
+    "status": "Proposed 100 kg requirement, NOT feasible hardware demonstrated. Wide diffractive receivers included. Independent power, braking/containment, pointing, background rejection and trajectory deployment do not yet close.",
+    "stationary_definition": "Approximately at rest in a chosen Solar-System-barycentric frame after braking. Gravitational motion, transverse motion and stationkeeping remain to be solved; not Earth-fixed."
+  },
+  "thermal": {
+    "electrical_load_allocations_W": {
+      "food": 125000,
+      "habitat_medical": 150000,
+      "life_support": 200000,
+      "containment_cryogenics": 300000,
+      "computing_comms": 20000,
+      "robotics": 50000,
+      "distribution": 80000,
+      "operating_margin": 275000
+    },
+    "conversion_efficiency": 0.4,
+    "loops": [
+      {
+        "name": "Conversion",
+        "heat_W": 1800000.0,
+        "temperature_K": 600,
+        "area_factor": 1.25,
+        "emitting_area_m2": 340.19135301107747,
+        "two_sided_panel_area_m2": 170.09567650553873,
+        "kg_per_emitting_m2": 2,
+        "mass_kg": 680.3827060221549
+      },
+      {
+        "name": "Loads",
+        "heat_W": 1200000,
+        "temperature_K": 330,
+        "area_factor": 1.25,
+        "emitting_area_m2": 2478.456229391089,
+        "two_sided_panel_area_m2": 1239.2281146955445,
+        "kg_per_emitting_m2": 2,
+        "mass_kg": 4956.912458782178
+      },
+      {
+        "name": "Engine",
+        "heat_W": 938576589.2876084,
+        "temperature_K": 1500,
+        "area_factor": 1,
+        "emitting_area_m2": 3632.874835220183,
+        "two_sided_panel_area_m2": 1816.4374176100914,
+        "kg_per_emitting_m2": 3,
+        "mass_kg": 10898.624505660548
+      }
+    ],
+    "convention": "Area counts emitting faces. Specific masses cover panel/heat-pipe/coolant/deployment allocation; primary source areal conventions must be reconciled. No bare-panel figure treated as complete installed hardware.",
+    "status": "Loads and installed specific masses are targets. Cold cryogenic lifts, planetary view factors and engine/shield heat remain unclosed."
+  },
+  "items": [
+    {
+      "id": "membranes",
+      "item": "Habitat pressure membranes, insulation and restraint",
+      "kind": "hardware",
+      "baseline_kg": 35286.36868512056,
+      "target_kg": 5887.0933054149855,
+      "basis": "Vectran/aramid restraint, redundant gas liners, insulation and local impact layers; retain 6 kg/m2 assumption.",
+      "previous_kg": 5887.0933054149855
+    },
+    {
+      "id": "floors",
+      "item": "Folding composite floors",
+      "kind": "hardware",
+      "baseline_kg": 15268.140296446396,
+      "target_kg": 2016,
+      "basis": "CFRP sandwich panels, local metal inserts; 8 kg/m2 target needs load/fire/repair qualification.",
+      "previous_kg": 2016
+    },
+    {
+      "id": "habframes",
+      "item": "Habitat deployment frames, hatches and cabin partitions",
+      "kind": "hardware",
+      "baseline_kg": 24000.0,
+      "target_kg": 5000,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 8000
+    },
+    {
+      "id": "bearings",
+      "item": "Hubs, bearings, spin motors and balance equipment",
+      "kind": "hardware",
+      "baseline_kg": 12000,
+      "target_kg": 5000,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 6000
+    },
+    {
+      "id": "furnishings",
+      "item": "Cabins, wardrooms, lounge, hygiene and exercise fittings",
+      "kind": "hardware",
+      "baseline_kg": 10666.666666666666,
+      "target_kg": 2000,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 3000
+    },
+    {
+      "id": "structure",
+      "item": "Settlement delivery frame and surface services",
+      "kind": "hardware",
+      "baseline_kg": 10000,
+      "target_kg": 5000,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 8000
+    },
+    {
+      "id": "landing",
+      "item": "Landing supports, restraints and habitat transport covers",
+      "kind": "hardware",
+      "baseline_kg": 20000,
+      "target_kg": 6000,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 10000
+    },
+    {
+      "id": "dustshield",
+      "item": "Forward dust/gas shield stack and supports",
+      "kind": "hardware",
+      "baseline_kg": 31000.0,
+      "target_kg": 31000.0,
+      "basis": "Current allowance held; no additional reduction claimed.",
+      "previous_kg": 31000.0
+    },
+    {
+      "id": "radiationshield",
+      "item": "Total modular polyethylene berth/shelter shielding provision",
+      "kind": "hardware",
+      "baseline_kg": 11164.70588235294,
+      "target_kg": 40000,
+      "basis": "Replace the old 11.16 t refuge allowance with 40 t total modular polyethylene provision for two berth shelters; no qualified GCR or engine-dose result.",
+      "previous_kg": 40000
+    },
+    {
+      "id": "engine",
+      "item": "Hydrogen-heated touchdown assembly",
+      "kind": "hardware",
+      "baseline_kg": 10000,
+      "target_kg": 8000,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 10000
+    },
+    {
+      "id": "containment",
+      "item": "Touchdown antimatter isolation hardware",
+      "kind": "hardware",
+      "baseline_kg": 2000,
+      "target_kg": 1500,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 2000
+    },
+    {
+      "id": "refuge",
+      "item": "Rigid 32-person descent refuge and airlocks",
+      "kind": "hardware",
+      "baseline_kg": 9452.235294117647,
+      "target_kg": 4500,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 6000
+    },
+    {
+      "id": "eclss",
+      "item": "Redundant life support and water/waste processing",
+      "kind": "hardware",
+      "baseline_kg": 14000.0,
+      "target_kg": 8000,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 10000
+    },
+    {
+      "id": "medical",
+      "item": "32 torpor beds, medical systems and embryo storage",
+      "kind": "hardware",
+      "baseline_kg": 13000,
+      "target_kg": 9500,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 11000
+    },
+    {
+      "id": "power",
+      "item": "2 MWe conversion, distribution and backup allowance",
+      "kind": "hardware",
+      "baseline_kg": 6000,
+      "target_kg": 4500,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 6000
+    },
+    {
+      "id": "warmradiators",
+      "item": "Service/surface radiators and heat-recovery loops",
+      "kind": "hardware",
+      "baseline_kg": 11744.364926675697,
+      "target_kg": 5637.295164804333,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 11744.364926675697
+    },
+    {
+      "id": "avionics",
+      "item": "Avionics, navigation, communications and sensors",
+      "kind": "hardware",
+      "baseline_kg": 4000,
+      "target_kg": 750,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 2500
+    },
+    {
+      "id": "factory",
+      "item": "Advanced fabrication, chemistry and resource-processing seed",
+      "kind": "hardware",
+      "baseline_kg": 30000,
+      "target_kg": 12000,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 15000
+    },
+    {
+      "id": "rover",
+      "item": "Reused pressurised rover module, chassis and7-day stores",
+      "kind": "hardware",
+      "baseline_kg": 6000,
+      "target_kg": 2500,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 3500
+    },
+    {
+      "id": "spares",
+      "item": "Repair stock, tools, EVA suits and replacement units",
+      "kind": "hardware",
+      "baseline_kg": 15000,
+      "target_kg": 3000,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 10000
+    },
+    {
+      "id": "gas",
+      "item": "Initial habitat atmosphere and gas makeup",
+      "kind": "consumable",
+      "baseline_kg": 11014.157374046672,
+      "target_kg": 2000,
+      "basis": "About 1.3 t initial fill for pods/factory/refuge/tunnels plus about 0.7 t deployment/makeup reserve.",
+      "previous_kg": 2000
+    },
+    {
+      "id": "water",
+      "item": "Water/oxygen-cycle buffers and process starting inventory",
+      "kind": "consumable",
+      "baseline_kg": 16333.333333333332,
+      "target_kg": 5000,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 3000
+    },
+    {
+      "id": "food",
+      "item": "One tonne spare edible food plus packaging",
+      "kind": "consumable",
+      "baseline_kg": 1020,
+      "target_kg": 1020,
+      "basis": "Current allowance held; no additional reduction claimed.",
+      "previous_kg": 1020
+    },
+    {
+      "id": "consumables",
+      "item": "Medical, hygiene, nutrient and general consumables",
+      "kind": "consumable",
+      "baseline_kg": 12000,
+      "target_kg": 8000,
+      "basis": "Specialist medicines, hygiene and process chemicals; stretch target, not assumed 100% chemical recycling.",
+      "previous_kg": 8000
+    },
+    {
+      "id": "processtanks",
+      "item": "Atmosphere, water and process tank hardware",
+      "kind": "hardware",
+      "baseline_kg": 5000,
+      "target_kg": 1500,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 2000
+    },
+    {
+      "id": "crew",
+      "item": "32 crew and personal effects",
+      "kind": "crew",
+      "baseline_kg": 2880,
+      "target_kg": 2880,
+      "basis": "Current allowance held; no additional reduction claimed.",
+      "previous_kg": 2880
+    },
+    {
+      "id": "exploration",
+      "item": "Two surface micro-rovers",
+      "kind": "payload",
+      "baseline_kg": 30,
+      "target_kg": 30,
+      "basis": "Current allowance held; no additional reduction claimed.",
+      "previous_kg": 30
+    },
+    {
+      "id": "foodfactory",
+      "item": "Redundant microbial/chemical full-diet food factory and small garden",
+      "kind": "hardware",
+      "baseline_kg": 10000,
+      "target_kg": 3000,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 10000
+    },
+    {
+      "id": "foodloop_inventory",
+      "item": "Food-loop startup and circulating material inventory",
+      "kind": "consumable",
+      "baseline_kg": 1000,
+      "target_kg": 1000,
+      "basis": "Current allowance held; no additional reduction claimed.",
+      "previous_kg": 1000
+    },
+    {
+      "id": "flightstructure",
+      "item": "Cruise engine standoff and support frame",
+      "kind": "hardware",
+      "baseline_kg": 20000,
+      "target_kg": 8000,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 12000
+    },
+    {
+      "id": "cruiseengine",
+      "item": "Interstellar magnetic nozzle and cruise engine",
+      "kind": "hardware",
+      "baseline_kg": 25000,
+      "target_kg": 25000,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 25000
+    },
+    {
+      "id": "bulkcontainment",
+      "item": "Bulk cruise antimatter containment and cryogenics",
+      "kind": "hardware",
+      "baseline_kg": 38000,
+      "target_kg": 38000,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 38000
+    },
+    {
+      "id": "spacescouts",
+      "item": "Space scouts, microlanders and their support allocations",
+      "kind": "payload",
+      "baseline_kg": 420,
+      "target_kg": 420,
+      "basis": "Current allowance held; no additional reduction claimed.",
+      "previous_kg": 420
+    },
+    {
+      "id": "separation",
+      "item": "Separation interfaces and independent service isolation",
+      "kind": "hardware",
+      "baseline_kg": 2000,
+      "target_kg": 1500,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 2000
+    },
+    {
+      "id": "hotradiators",
+      "item": "Direct-engine hot radiators",
+      "kind": "hardware",
+      "baseline_kg": 18164.37417610091,
+      "target_kg": 10898.624505660548,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 18164.37417610091
+    },
+    {
+      "id": "hydrogentank",
+      "item": "Touchdown hydrogen tank hardware",
+      "kind": "hardware",
+      "baseline_kg": 1034.9364881639337,
+      "target_kg": 1034.9364881639337,
+      "basis": "Current allowance held; no additional reduction claimed.",
+      "previous_kg": 1034.9364881639337
+    },
+    {
+      "id": "spinbooms",
+      "item": "Spin booms and pod balance attachments",
+      "kind": "hardware",
+      "baseline_kg": 0,
+      "target_kg": 3000,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 4000
+    },
+    {
+      "id": "transfertunnels",
+      "item": "Pressurised transfer tunnels and flexible interfaces",
+      "kind": "hardware",
+      "baseline_kg": 0,
+      "target_kg": 1500,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 2000
+    },
+    {
+      "id": "surfacekit",
+      "item": "Packed surface expansion starter",
+      "kind": "hardware",
+      "baseline_kg": 0,
+      "target_kg": 3000,
+      "basis": "300 t design-to allocation; see MISSION_300_TRADE.md. Not a validated minimum or proven hardware estimate.",
+      "previous_kg": 4000
+    },
+    {
+      "id": "relaychain",
+      "item": "200-node relay dry hardware and dispenser",
+      "kind": "hardware",
+      "baseline_kg": 0,
+      "previous_kg": 0,
+      "target_kg": 57.182909239981036,
+      "basis": "Independent 100 kg all-up cap includes braking fuel and allowance; optical/power/containment feasibility unclosed."
+    },
+    {
+      "id": "margin",
+      "item": "Hardware development allowance (15%)",
+      "kind": "allowance",
+      "baseline_kg": 102445.44810391119,
+      "previous_kg": 79961.6922240889,
+      "target_kg": 38742.169855992564,
+      "basis": "Planning reserve on system hardware; scout payload remains fixed. Lower reserve is not a physical saving."
+    }
+  ],
+  "raw_system_hardware_kg": 258281.13237328376,
+  "hardware_margin_fraction": 0.15,
+  "margin_comparison": [
+    {
+      "margin_fraction": 0.25,
+      "dry_mass_kg": 323301.4154666047,
+      "dry_if_engine_and_containment_cut_to_20t_each_kg": 294551.4154666047
+    },
+    {
+      "margin_fraction": 0.2,
+      "dry_mass_kg": 310387.3588479405,
+      "dry_if_engine_and_containment_cut_to_20t_each_kg": 282787.3588479405
+    },
+    {
+      "margin_fraction": 0.15,
+      "dry_mass_kg": 297473.3022292763,
+      "dry_if_engine_and_containment_cut_to_20t_each_kg": 271023.30222927633
+    },
+    {
+      "margin_fraction": 0.1,
+      "dry_mass_kg": 284559.24561061215,
+      "dry_if_engine_and_containment_cut_to_20t_each_kg": 259259.24561061215
+    }
+  ],
+  "dry_mass_kg": 297473.30222927633,
+  "dry_mass_cap_kg": 300000,
+  "unallocated_headroom_kg": 2526.6977707236656,
+  "nonfuel_supplies_and_people_kg": 19900,
+  "total_without_fuels_kg": 317373.30222927633,
+  "dry_if_25_percent_allowance_kg": 323301.4154666047,
+  "spares_breakdown_kg": {
+    "suits_and_support": 600,
+    "tools": 400,
+    "critical_mechanical_spares": 700,
+    "repair_feedstock": 1000,
+    "hoses_seals_thermal_repairs": 300
+  },
+  "avionics_breakdown_kg": {
+    "flight_computers": 36,
+    "star_trackers": 8,
+    "inertial_units": 20,
+    "navigation_cameras": 16,
+    "docking_lidar": 20,
+    "optical_terminals": 70,
+    "local_backup_radios": 40,
+    "controllers": 120,
+    "harness": 150,
+    "displays_instrumentation": 100,
+    "electronic_spares": 70,
+    "enclosures_fault_isolation_EMI": 100
+  }
+}

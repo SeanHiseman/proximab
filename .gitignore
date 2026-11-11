@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+.env
+.env.*
+.aws/
+.codex/
+.agents/
+.openai/
+.preview-edge/
+verification/
+*.log
+.offline-check.mjs
+.source-workflow*

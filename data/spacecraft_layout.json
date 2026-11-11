@@ -1,0 +1,135 @@
+{
+  "status": "Selected lightweight two-disc design: two-deck quarter-g discs, propellant-sized tanks, shadow shield, wind screens and a burn acceleration set by the structure. Screening geometry; antimatter, shielding and pressure hardware remain unvalidated.",
+  "reference_design": "data/reference/ holds the superseded three-deck 19.5 m layout used by the earlier trade studies.",
+  "disc_radius_m": 9.5,
+  "disc_axial_depth_m": 4.5,
+  "disc_centres_x_m": [
+    0,
+    0
+  ],
+  "disc_centres_z_m": [
+    3.25,
+    12.75
+  ],
+  "cabin_floor_radius_m": 8.5,
+  "spin_gravity_g": 0.25,
+  "service_spine_z_offset_m_study": 8,
+  "spine_length_m": 110,
+  "tank_section_start_x_m": 55.5,
+  "cargo_centre_x_m": 46.7,
+  "rover_centre_x_m": 36.2,
+  "refuge_study": {
+    "radius_m": 2.05,
+    "length_m": 4.8,
+    "seat_rows": 4,
+    "seats_per_row": 4,
+    "centre_m": [
+      -10,
+      7,
+      8
+    ],
+    "cruise_centre_m": [
+      15,
+      0,
+      8
+    ],
+    "seating_tiers": 2
+  },
+  "food_factory_modules_study": {
+    "centres_m": [
+      [
+        -91,
+        -4,
+        8
+      ],
+      [
+        -91,
+        4,
+        8
+      ]
+    ],
+    "radius_m": 1.5,
+    "length_m": 6,
+    "production_trains": 2,
+    "target_hardware_kg": 3000,
+    "cruise_centres_m": [
+      [
+        21.8,
+        0,
+        8
+      ],
+      [
+        28.9,
+        0,
+        8
+      ]
+    ]
+  },
+  "hydrogen_tanks_study": {
+    "count": 2,
+    "hydrogen_density_kg_m3": 70.8,
+    "ullage_fraction": 0.05,
+    "capacity_margin_over_nominal_load": 0.05,
+    "semi_axis_x_m": 3.0,
+    "semi_axis_radial_m": 1.658405408611915
+  },
+  "storage_study": {
+    "tank_radius_m": 7.5,
+    "log_radius_m": 1.0,
+    "log_length_m": 4.0,
+    "lattice_pitch_m": 2.4,
+    "layer_pitch_m": 4.3,
+    "logs_per_layer": 31,
+    "logs_per_dome": 19,
+    "levitation_field_V_m": 1000000.0,
+    "surface_field_limit_V_m": 10000000.0
+  },
+  "shadow_shield_study": {
+    "source_radius_m": 0.5,
+    "shield_distance_m": 4.5,
+    "boom_length_m": 170,
+    "source_to_nearest_crew_m": 275,
+    "dose_allocation_Gy": 0.01,
+    "buildup_factor": 100,
+    "status": "Source size and buildup factor are assumptions; particle transport has not been run."
+  },
+  "wind_screen_study": {
+    "mast_length_m": 250,
+    "films": 3,
+    "film_thickness_m": 1e-07,
+    "field_T": 0.03,
+    "gap_m": 16,
+    "exposed_structure_area_m2": 1.5,
+    "hole_fraction_per_film": 0.01,
+    "silhouette_height_m": 15.6,
+    "catcher_kg_m2": 10,
+    "catcher_to_crew_m": 12,
+    "mast_kg_m": 2.5,
+    "coil_and_cryostat_kg": 500,
+    "films_and_frames_kg": 200,
+    "aft_screen_kg": 600,
+    "mast_radius_m": 1.5,
+    "mast_longeron_kg_m": 0.6
+  },
+  "surface_inflatables_study": {
+    "count": 2,
+    "radius_m": 3.75,
+    "cylinder_length_m": 12,
+    "lower_floor_y_m": -2.0,
+    "upper_floor_y_m": 0.55,
+    "packed_density_kg_m3": 250,
+    "bales": 8
+  },
+  "surface_disc_centres_x_m": [
+    -18,
+    18
+  ],
+  "surface_disc_centres_z_m": [
+    -45,
+    -45
+  ],
+  "landing_orientation": "Compare horizontal and upright; neither selected as flight-ready",
+  "surface_power_standoff": "Illustrative spacing only; dose and routing study required",
+  "main_acceleration_g": 0.2,
+  "main_acceleration_status": "Chosen in ship_design.py from the structural load checks; the reference studies in data/reference keep 1.2 g."
+}
