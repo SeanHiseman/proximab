@@ -1,0 +1,10 @@
+2026-11-10 18:10:27.776: [INFO] CurrentProfilePath: C:\Users\seanh\Desktop\interstellar\mission-viewer\verification\habitat-qa-profile\Default
+2026-11-10 18:10:27.776: [INFO] Profiles total count: 1
+2026-11-10 18:10:27.776: [INFO] Profile: name=Profile 1 path=C:\Users\seanh\Desktop\interstellar\mission-viewer\verification\habitat-qa-profile\Default lastActive=2026-11-10T18:10:27.751Z
+2026-11-10 18:10:27.776: [INFO] LastUsedProfileDir: C:\Users\seanh\Desktop\interstellar\mission-viewer\verification\habitat-qa-profile\Default
+2026-11-10 18:10:27.776: [INFO] MostRecentlyActiveProfile: name=Profile 1 path=C:\Users\seanh\Desktop\interstellar\mission-viewer\verification\habitat-qa-profile\Default lastActive=2026-11-10T18:10:27.751Z
+2026-11-10 18:10:27.776: [INFO] OnDoneLoading sync enabled: 0
+2026-11-10 18:10:27.776: [INFO] BookmarkModelLoaded, ids_reassigned: 0
+2026-11-10 18:10:27.776: [INFO] BookmarksLoadDropped droppedNodes=0
+2026-11-10 18:10:27.776: [INFO] BookmarksSnapshot Startup total=3 bar=3 other=0 mobile=0 showBar=0 showBarNTP=1
+2026-11-10 18:10:27.780: [INFO] RecordSyncInitDuration has_sync_been_enabled: 0 state: 0
