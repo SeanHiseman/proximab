@@ -1,4 +1,21 @@
-# Proxima Mission Design Lab
+# Current selected architecture
+
+Current frozen concept: S7 in `../docs/FINAL_MODEL_SPECIFICATION.md`. The viewer panel reports both ships;
+the earlier S1 figures below are historical. No health-qualified optimum is claimed.
+
+24 adults, 24 berths, 24 descent seats and two reproductive-bank locations.
+20 Earth-year crew flight; cargo departs 20 years earlier for a 40-year flight.
+Births after arrival. See `../data/mission_architecture.json` and
+`../docs/PROPULSION_ARCHITECTURE.md`. The new mission panel distinguishes these
+requirements from the historical engine/tank geometry and older mass studies below.
+No complete hybrid mass or radiation solution is claimed.
+
+Selected propulsion baseline S1 now adds explicit optimistic engine, hot-radiator,
+storage and retained-reserve accounting: see `../docs/STAGED_DESIGN_BASELINE.md`.
+The mission panel displays its conditional numbers; 3D propulsion geometry remains
+the historical reference, not a newly dimensioned staged engine.
+
+# Historical viewer engineering notes
 
 Dependency-free, reference-informed 3D design study. The selected hardware target
 uses two 19.5 m-radius discs and three decks each. Engineering, torpor and tonnes-scale

@@ -1,0 +1,254 @@
+{
+  "status": "Ideal propulsion comparisons at equal speed and post-braking mass.\n\nNo vehicle or infrastructure mass closure. Instantaneous burns are speed/fuel\nbenchmarks, not a finite-power 20-year trajectory. Effective fusion exhaust\nspeeds are sensitivity assumptions, not achieved engine performance.\n",
+  "normalization_retained_t": 100,
+  "cases": [
+    {
+      "years": 15,
+      "minimum_cruise_c": 0.2826666666666667,
+      "onboard": {
+        "antimatter_t": 28.761053127623565,
+        "ordinary_annihilation_reactant_t": 28.761053127623565,
+        "reaction_mass_t": 476.4214408373262,
+        "initial_t": 633.9435470925733,
+        "retained_t": 100,
+        "exhaust_c": 0.3326,
+        "efficiency": 0.5
+      },
+      "hybrid": {
+        "antimatter_t": 6.682850590243943,
+        "ordinary_annihilation_reactant_t": 6.682850590243943,
+        "reaction_mass_t": 412.2671113030766,
+        "initial_t": 525.6328124835645,
+        "retained_t": 100,
+        "exhaust_c": 0.1779,
+        "efficiency": 0.5,
+        "ideal_intercepted_launch_beam_J": 7.964922681092435e+21
+      },
+      "fusion": [
+        {
+          "effective_exhaust_c": 0.03,
+          "full_rocket_mass_ratio": 258876848.14560962,
+          "external_launch_braking_mass_ratio": 16089.650342552806
+        },
+        {
+          "effective_exhaust_c": 0.05,
+          "full_rocket_mass_ratio": 111649.28017357238,
+          "external_launch_braking_mass_ratio": 334.13961179957755
+        },
+        {
+          "effective_exhaust_c": 0.08,
+          "full_rocket_mass_ratio": 1428.59772649656,
+          "external_launch_braking_mass_ratio": 37.79679518817118
+        }
+      ]
+    },
+    {
+      "years": 20,
+      "minimum_cruise_c": 0.21200000000000002,
+      "onboard": {
+        "antimatter_t": 15.107802388091342,
+        "ordinary_annihilation_reactant_t": 15.107802388091342,
+        "reaction_mass_t": 437.1848351328854,
+        "initial_t": 567.400439909068,
+        "retained_t": 100,
+        "exhaust_c": 0.2563,
+        "efficiency": 0.5
+      },
+      "hybrid": {
+        "antimatter_t": 3.626849971461116,
+        "ordinary_annihilation_reactant_t": 3.626849971461116,
+        "reaction_mass_t": 403.3894980598659,
+        "initial_t": 510.64319800278815,
+        "retained_t": 100,
+        "exhaust_c": 0.1332,
+        "efficiency": 0.5,
+        "ideal_intercepted_launch_beam_J": 5.511677011109406e+21
+      },
+      "fusion": [
+        {
+          "effective_exhaust_c": 0.03,
+          "full_rocket_mass_ratio": 1708231.5733256403,
+          "external_launch_braking_mass_ratio": 1306.9933333133877
+        },
+        {
+          "effective_exhaust_c": 0.05,
+          "full_rocket_mass_ratio": 5489.440053630454,
+          "external_launch_braking_mass_ratio": 74.09075552071563
+        },
+        {
+          "effective_exhaust_c": 0.08,
+          "full_rocket_mass_ratio": 217.37271474164046,
+          "external_launch_braking_mass_ratio": 14.74356519779529
+        }
+      ]
+    },
+    {
+      "years": 25,
+      "minimum_cruise_c": 0.1696,
+      "onboard": {
+        "antimatter_t": 9.374614173668594,
+        "ordinary_annihilation_reactant_t": 9.374614173668594,
+        "reaction_mass_t": 420.50710464236386,
+        "initial_t": 539.256332989701,
+        "retained_t": 100,
+        "exhaust_c": 0.2077,
+        "efficiency": 0.5
+      },
+      "hybrid": {
+        "antimatter_t": 2.284006125688423,
+        "ordinary_annihilation_reactant_t": 2.284006125688423,
+        "reaction_mass_t": 399.31377461825,
+        "initial_t": 503.88178686962686,
+        "retained_t": 100,
+        "exhaust_c": 0.1065,
+        "efficiency": 0.5,
+        "ideal_intercepted_launch_beam_J": 4.2296154213910294e+21
+      },
+      "fusion": [
+        {
+          "effective_exhaust_c": 0.03,
+          "full_rocket_mass_ratio": 90851.89081761669,
+          "external_launch_braking_mass_ratio": 301.4164740315577
+        },
+        {
+          "effective_exhaust_c": 0.05,
+          "full_rocket_mass_ratio": 944.0617070792234,
+          "external_launch_braking_mass_ratio": 30.72558717224495
+        },
+        {
+          "effective_exhaust_c": 0.08,
+          "full_rocket_mass_ratio": 72.33945606128471,
+          "external_launch_braking_mass_ratio": 8.505260493440792
+        }
+      ]
+    },
+    {
+      "years": 30,
+      "minimum_cruise_c": 0.14133333333333334,
+      "onboard": {
+        "antimatter_t": 6.40295679969973,
+        "ordinary_annihilation_reactant_t": 6.40295679969973,
+        "reaction_mass_t": 411.40526856345366,
+        "initial_t": 524.2111821628531,
+        "retained_t": 100,
+        "exhaust_c": 0.1744,
+        "efficiency": 0.5
+      },
+      "hybrid": {
+        "antimatter_t": 1.5724373058445638,
+        "ordinary_annihilation_reactant_t": 1.5724373058445638,
+        "reaction_mass_t": 397.35999039729626,
+        "initial_t": 500.50486500898535,
+        "retained_t": 100,
+        "exhaust_c": 0.0887,
+        "efficiency": 0.5,
+        "ideal_intercepted_launch_beam_J": 3.439098482526654e+21
+      },
+      "fusion": [
+        {
+          "effective_exhaust_c": 0.03,
+          "full_rocket_mass_ratio": 13170.327583796961,
+          "external_launch_braking_mass_ratio": 114.76204766296635
+        },
+        {
+          "effective_exhaust_c": 0.05,
+          "full_rocket_mass_ratio": 296.3179403727575,
+          "external_launch_braking_mass_ratio": 17.21388800860391
+        },
+        {
+          "effective_exhaust_c": 0.08,
+          "full_rocket_mass_ratio": 35.06297131975973,
+          "external_launch_braking_mass_ratio": 5.921399439301467
+        }
+      ]
+    },
+    {
+      "years": 40,
+      "minimum_cruise_c": 0.10600000000000001,
+      "onboard": {
+        "antimatter_t": 3.5431601143188645,
+        "ordinary_annihilation_reactant_t": 3.5431601143188645,
+        "reaction_mass_t": 402.6115452907919,
+        "initial_t": 509.6978655194296,
+        "retained_t": 100,
+        "exhaust_c": 0.1318,
+        "efficiency": 0.5
+      },
+      "hybrid": {
+        "antimatter_t": 0.8769771797186733,
+        "ordinary_annihilation_reactant_t": 0.8769771797186733,
+        "reaction_mass_t": 395.30440214401574,
+        "initial_t": 497.05835650345307,
+        "retained_t": 100,
+        "exhaust_c": 0.0665,
+        "efficiency": 0.5,
+        "ideal_intercepted_launch_beam_J": 2.5076588215778757e+21
+      },
+      "fusion": [
+        {
+          "effective_exhaust_c": 0.03,
+          "full_rocket_mass_ratio": 1203.8903660509795,
+          "external_launch_braking_mass_ratio": 34.69712331088817
+        },
+        {
+          "effective_exhaust_c": 0.05,
+          "full_rocket_mass_ratio": 70.52647266815953,
+          "external_launch_braking_mass_ratio": 8.398004088362873
+        },
+        {
+          "effective_exhaust_c": 0.08,
+          "full_rocket_mass_ratio": 14.296183111523682,
+          "external_launch_braking_mass_ratio": 3.7810293719467034
+        }
+      ]
+    }
+  ],
+  "onboard_20y_efficiency_cases": [
+    {
+      "antimatter_t": 26.400094854439814,
+      "ordinary_annihilation_reactant_t": 26.400094854439814,
+      "reaction_mass_t": 486.66426011503114,
+      "initial_t": 639.4644498239109,
+      "retained_t": 100,
+      "exhaust_c": 0.2491,
+      "efficiency": 0.3
+    },
+    {
+      "antimatter_t": 15.107802388091342,
+      "ordinary_annihilation_reactant_t": 15.107802388091342,
+      "reaction_mass_t": 437.1848351328854,
+      "initial_t": 567.400439909068,
+      "retained_t": 100,
+      "exhaust_c": 0.2563,
+      "efficiency": 0.5
+    },
+    {
+      "antimatter_t": 9.19112275689287,
+      "ordinary_annihilation_reactant_t": 9.19112275689287,
+      "reaction_mass_t": 410.561344609077,
+      "initial_t": 528.9435901228628,
+      "retained_t": 100,
+      "exhaust_c": 0.2607,
+      "efficiency": 0.8
+    },
+    {
+      "antimatter_t": 7.286670251255252,
+      "ordinary_annihilation_reactant_t": 7.286670251255252,
+      "reaction_mass_t": 401.9691294357864,
+      "initial_t": 516.5424699382968,
+      "retained_t": 100,
+      "exhaust_c": 0.2622,
+      "efficiency": 1
+    }
+  ],
+  "recommendation": "External launch plus onboard antimatter reaction-mass braking: leading study candidate, not a proven minimum",
+  "complete_ship_mass_t": null,
+  "complete_fleet_antimatter_t": null,
+  "limitations": [
+    "Finite burns increase required peak speed for fixed arrival time",
+    "No sail, beam source, pointing, radiator, containment or shielding mass closure",
+    "Photon energy assumes perfect interception and reflection; source electricity is higher",
+    "Fusion ignition/antimatter catalyst requirements not specified; no numeric catalyst budget",
+    "Magnetic sail braking not credited within the 20-year crew schedule"
+  ]
+}

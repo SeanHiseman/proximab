@@ -1,0 +1,110 @@
+{
+  "status": "Screening calculations only; actual interstellar and child doses are undetermined",
+  "actual_ship_GCR_dose_sv": null,
+  "validated_GCR_reduction_fraction": null,
+  "source": {
+    "url": "https://ntrs.nasa.gov/api/citations/20220002905/downloads/NESC-RP-20-01589_NASA-TM-20220002905final.pdf",
+    "table": "8.4-1",
+    "pdf_page_index": 145,
+    "rates_mSv_day": {
+      "0": 1.52,
+      "20": 1.04,
+      "40": 1.03
+    },
+    "environment": "2009 solar-minimum heliospheric reference, NOT local interstellar spectrum",
+    "dose_quantity": "NASA adult-reference effective dose, NOT child organ dose"
+  },
+  "occupancy": {
+    "adult_proper_exposure_years": 39.764092721195645,
+    "awake_years": 14.882046360597823,
+    "torpor_years": 24.882046360597823,
+    "adult_awake_fraction": 0.3742584161279046,
+    "child_midpoint_exposure_years": 19.764092721195645
+  },
+  "scenarios": {
+    "20": {
+      "adult_reference_sv": 17.71390862901339,
+      "adult_average_mSv_day": 1.2196440397413943,
+      "reduction_against_no_shield_reference": 0.19760260543329333,
+      "child_20_years_unshielded_adult_reference_sv": 11.1036,
+      "child_midpoint_birth_adult_reference_sv": 10.972628996953398,
+      "child_midpoint_with_8h_sheltered_sleep_adult_reference_sv": 9.817615418326724,
+      "all_time_same_column_adult_reference_sv": 15.104788261073377
+    },
+    "40": {
+      "adult_reference_sv": 17.623026954681308,
+      "adult_average_mSv_day": 1.2133866239026734,
+      "reduction_against_no_shield_reference": 0.20171932637982015,
+      "child_20_years_unshielded_adult_reference_sv": 11.1036,
+      "child_midpoint_birth_adult_reference_sv": 10.972628996953398,
+      "child_midpoint_with_8h_sheltered_sleep_adult_reference_sv": 9.793552635438667,
+      "all_time_same_column_adult_reference_sv": 14.95954991240921
+    }
+  },
+  "limits": {
+    "no_shield_reference_adult_sv": 22.0762289969534,
+    "perfect_torpor_bay_adult_sv": 8.262214498476698,
+    "fixed_25_percent_awake_perfect_torpor_sv": 5.51905724923835,
+    "target_adult_flight_sv": 0.4,
+    "gcr_and_service_allocation_sv": 0.3,
+    "target_gcr_average_mSv_day": 0.020655701662767208,
+    "required_reduction_from_no_shield_reference_for_300mSv": 0.9864107225902847,
+    "maximum_awake_fraction_with_perfect_bay_for_300mSv": 0.013589277409715267
+  },
+  "shielding": {
+    "refuge_water_t": 44,
+    "refuge_area_m2": 215.13626491782904,
+    "refuge_thin_layer_mass_per_inner_area_g_cm2": 20.452153901995896,
+    "refuge_exact_uniform_water_thickness_cm": 19.324119545359665,
+    "refuge_exact_uniform_water_column_g_cm2": 19.324119545359665,
+    "refuge_water_needed_for_exact_20cm_t": 45.6284917007382,
+    "refuge_is_not_where_all_normal_torpor_occurs": true,
+    "envelope_area_m2": 1250.2552988958778,
+    "thin_nominal_12t_outer_layers_average_g_cm2": 0.9598039704848608,
+    "forward_disc_sky_fractions": {
+      "-16": 0.030828441591444933,
+      "0": 0.009709662154539944,
+      "16": 0.004644210197795318
+    },
+    "main_reaction_departure_t": 1709.7089356600402,
+    "main_reaction_coast_t": 690.6020687134596,
+    "main_reaction_after_nominal_braking_t": 81.41471122190667,
+    "full_envelope_20cm_water_mass_t": 258.8356924796049,
+    "full_envelope_25cm_water_mass_t": 326.3290832265599,
+    "main_reserve_thin_layer_average_g_cm2": 6.511846923888699,
+    "active_GCR_hardware_allowance_t": 30,
+    "active_GCR_dose_reduction_credit": null
+  },
+  "torpor_bay_screen": {
+    "bays": 2,
+    "berths_per_bay": 16,
+    "inner_side_m": 4,
+    "inner_volume_total_m3": 128,
+    "water_shells": [
+      {
+        "thickness_cm": 20.0,
+        "water_t": 42.36800000000005
+      },
+      {
+        "thickness_cm": 40.0,
+        "water_t": 93.18399999999997
+      },
+      {
+        "thickness_cm": 100,
+        "water_t": 304
+      }
+    ],
+    "full_envelope_to_two_bay_water_ratio_at_20cm": 6.109226125368311,
+    "extra_for_40cm_after_reallocating_existing_44t": 49.18399999999997,
+    "geometry_and_access_not_validated": true,
+    "cannot_also_credit_same_44t_to_central_refuge": true
+  },
+  "interstellar_sensitivity": {
+    "note": "Multipliers are arbitrary stress tests, not measured estimates or confidence bounds",
+    "scaled_20g_bay_adult_sv": {
+      "1": 17.71390862901339,
+      "1.5": 26.570862943520083,
+      "2": 35.42781725802678
+    }
+  }
+}

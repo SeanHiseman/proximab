@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#eaeae4">
-  <meta name="description" content="Explore the ship, the surface settlement and the engineering assumptions of a 32-person interstellar mission to Proxima b.">
+  <meta name="description" content="Explore a 24-adult Proxima settlement mission: 20-year crew flight, births after arrival and propulsion alternatives.">
   <title>Proxima — Mission Design Lab</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="detail.css">
@@ -34,6 +34,19 @@
 
 
   </main>
+
+  <section class="architecture-panel" aria-labelledby="architecture-title">
+    <h1 id="architecture-title">24 adults. A settlement before a family.</h1>
+    <p id="architecture-summary"></p>
+    <div class="architecture-grid">
+      <article><h2>Crew protection and space</h2><p id="architecture-habitat"></p><p id="architecture-health"></p></article>
+      <article><h2>Propulsion direction</h2><p id="architecture-propulsion"></p><p id="architecture-reference"></p></article>
+    </div>
+    <h2>Earlier external-launch comparison</h2>
+    <p>Tonnes per 100 tonnes remaining after braking. Ideal instantaneous burns, 50% conversion efficiency, optimized exhaust speed. These are propulsion benchmarks, not a complete ship or fleet budget.</p>
+    <div class="architecture-table"><table><thead><tr><th>Crew flight</th><th>Onboard launch + braking</th><th>External launch + onboard braking</th></tr></thead><tbody id="architecture-trade"></tbody></table></div>
+    <p>This earlier comparison is retained for context. The selected mission now uses fully onboard staged fusion–antimatter propulsion. The displayed engine and tanks remain a labeled geometry reference pending the staged layout.</p>
+  </section>
 
   <script type="module" src="app.js"></script>
 </body>

@@ -1,0 +1,2218 @@
+{
+  "status": "Conditional allocations, not engineering feasibility or a global minimum",
+  "scenarios": {
+    "optimistic": {
+      "assumptions": {
+        "efficiency": 0.8,
+        "engine_W_kg": 5000000000.0,
+        "absorbed_fraction": 1e-06,
+        "tank_fraction": 0.03,
+        "containment_kg_kg": 0.5
+      },
+      "cargo_base": {
+        "kind": "cargo",
+        "years": 60,
+        "hardware_rows": [
+          {
+            "name": "Surface industry, heavy exploration and habitat expansion",
+            "tonnes": 70,
+            "lands": true
+          },
+          {
+            "name": "Surface power, food and life-support backup hardware",
+            "tonnes": 15,
+            "lands": true
+          },
+          {
+            "name": "Landing frame, engine and cargo deployment",
+            "tonnes": 12,
+            "lands": true
+          },
+          {
+            "name": "Forward shield: 6 m diameter at 100 kg/m2 plus 2 t support",
+            "tonnes": 4.827433388230814,
+            "lands": false
+          },
+          {
+            "name": "Long spine, avionics, services and autonomous maintenance",
+            "tonnes": 10,
+            "lands": false
+          },
+          {
+            "name": "Main engine standoff, feed and fixed containment equipment",
+            "tonnes": 15,
+            "lands": false
+          }
+        ],
+        "fixed_dry_t": 158.53429173528852,
+        "supplies_t": 26.0,
+        "landing_hydrogen_t": 67.99198746568742,
+        "landing_isp_s": 1800,
+        "landing_tanks_t": 5.439358997254994,
+        "landing_am_t": 1.1786169866484788e-07,
+        "auxiliary_am_t": 1.8734899691107312e-06,
+        "landed_without_unused_reserves_t": 152.68936250851155,
+        "base_arrival_t": 257.9656419452109
+      },
+      "cargo": {
+        "exhaust_c": 0.13097777777777775,
+        "effective_exhaust_c": 0.1306963005655681,
+        "beta": 0.07147049228809627,
+        "acceleration_m_s2": 1.0074252931928636,
+        "proper_years": 59.84886498458597,
+        "burn_years": 0.6756825396825397,
+        "years": 60,
+        "mass_ratio": 2.9908451152593725,
+        "feedback_fraction": 0.20295903007516264,
+        "arrival_before_staging_t": 323.65418049907476,
+        "departure_t": 967.9995247789329,
+        "main_am_burned_t": 3.461818758214708,
+        "main_am_loaded_t": 3.6349096961254435,
+        "total_am_loaded_t": 3.6349115696154124,
+        "reaction_loaded_t": 669.2927921016003,
+        "main_reserve_t": 32.21726721399291,
+        "engine_t": 4.807187103957731,
+        "hot_radiator_t": 0.07359135682827525,
+        "tank_t": 20.078783763048005,
+        "containment_t": 1.8174548480627217,
+        "dry_t": 197.44492207241444,
+        "peak_annihilation_TW": 24.03593551978865,
+        "heat_rejected_GW": 0.02403593551978865,
+        "peak_thrust_MN": 0.9751872050609691
+      },
+      "missions": {
+        "40": {
+          "base": {
+            "kind": "crew",
+            "years": 40,
+            "hardware_rows": [
+              {
+                "name": "1600 m3 gravity rooms + 800 m3 common rooms: envelope/floors",
+                "tonnes": 60,
+                "lands": true
+              },
+              {
+                "name": "Spin structure, hubs, transfers and deployment",
+                "tonnes": 20,
+                "lands": true
+              },
+              {
+                "name": "64-person furnishings, school, play, hygiene and exercise",
+                "tonnes": 14,
+                "lands": true
+              },
+              {
+                "name": "Radiation material retained for surface refuge",
+                "tonnes": 40.0,
+                "lands": true
+              },
+              {
+                "name": "Removable cruise radiation material, discarded after braking",
+                "tonnes": 320.0,
+                "lands": false
+              },
+              {
+                "name": "Forward shield: 20 m diameter at 100 kg/m2 plus 5 t support",
+                "tonnes": 36.41592653589794,
+                "lands": false
+              },
+              {
+                "name": "64-person refuge, airlocks, descent frame and landing engine",
+                "tonnes": 28,
+                "lands": true
+              },
+              {
+                "name": "Life support and two independent full-population food trains",
+                "tonnes": 24,
+                "lands": true
+              },
+              {
+                "name": "Medical, embryo bank, maternity and 64 convertible berths",
+                "tonnes": 22,
+                "lands": true
+              },
+              {
+                "name": "Habitat power, service radiators and distribution",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Avionics, communications and autonomy",
+                "tonnes": 3,
+                "lands": true
+              },
+              {
+                "name": "Initial surface exploration, repair tools and suits",
+                "tonnes": 8,
+                "lands": true
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 20,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 763.0199081698725,
+            "supplies_t": 38.0,
+            "landing_hydrogen_t": 152.60681230626724,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 12.20854498450138,
+            "landing_am_t": 2.6453849632386856e-07,
+            "auxiliary_am_t": 1.3431750524667993e-05,
+            "landed_without_unused_reserves_t": 342.7085713189254,
+            "base_arrival_t": 965.8352923241421
+          },
+          "crew": {
+            "exhaust_c": 0.19835079365079364,
+            "effective_exhaust_c": 0.1973704101502026,
+            "beta": 0.1082456461184253,
+            "acceleration_m_s2": 1.2428367784064172,
+            "proper_years": 39.77147604445178,
+            "burn_years": 0.8322857142857141,
+            "years": 40,
+            "mass_ratio": 3.007750979324155,
+            "feedback_fraction": 0.22938763795766048,
+            "arrival_before_staging_t": 1253.334802162279,
+            "departure_t": 3769.7189786246404,
+            "main_am_burned_t": 31.094172631538694,
+            "main_am_loaded_t": 32.648881263115626,
+            "total_am_loaded_t": 32.64889469486615,
+            "reaction_loaded_t": 2576.9056227592487,
+            "main_reserve_t": 125.81920882311807,
+            "engine_t": 35.17416390917151,
+            "hot_radiator_t": 0.5384675885082509,
+            "tank_t": 77.30716868277746,
+            "containment_t": 16.324440631557813,
+            "dry_t": 936.9087541693926,
+            "peak_annihilation_TW": 175.87081954585756,
+            "heat_rejected_GW": 0.17587081954585754,
+            "peak_thrust_MN": 4.685145390891377
+          },
+          "cargo_base": {
+            "kind": "cargo",
+            "years": 60,
+            "hardware_rows": [
+              {
+                "name": "Surface industry, heavy exploration and habitat expansion",
+                "tonnes": 70,
+                "lands": true
+              },
+              {
+                "name": "Surface power, food and life-support backup hardware",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Landing frame, engine and cargo deployment",
+                "tonnes": 12,
+                "lands": true
+              },
+              {
+                "name": "Forward shield: 6 m diameter at 100 kg/m2 plus 2 t support",
+                "tonnes": 4.827433388230814,
+                "lands": false
+              },
+              {
+                "name": "Long spine, avionics, services and autonomous maintenance",
+                "tonnes": 10,
+                "lands": false
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 15,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 158.53429173528852,
+            "supplies_t": 26.0,
+            "landing_hydrogen_t": 67.99198746568742,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 5.439358997254994,
+            "landing_am_t": 1.1786169866484788e-07,
+            "auxiliary_am_t": 1.8734899691107312e-06,
+            "landed_without_unused_reserves_t": 152.68936250851155,
+            "base_arrival_t": 257.9656419452109
+          },
+          "cargo": {
+            "exhaust_c": 0.13097777777777775,
+            "effective_exhaust_c": 0.1306963005655681,
+            "beta": 0.07147049228809627,
+            "acceleration_m_s2": 1.0074252931928636,
+            "proper_years": 59.84886498458597,
+            "burn_years": 0.6756825396825397,
+            "years": 60,
+            "mass_ratio": 2.9908451152593725,
+            "feedback_fraction": 0.20295903007516264,
+            "arrival_before_staging_t": 323.65418049907476,
+            "departure_t": 967.9995247789329,
+            "main_am_burned_t": 3.461818758214708,
+            "main_am_loaded_t": 3.6349096961254435,
+            "total_am_loaded_t": 3.6349115696154124,
+            "reaction_loaded_t": 669.2927921016003,
+            "main_reserve_t": 32.21726721399291,
+            "engine_t": 4.807187103957731,
+            "hot_radiator_t": 0.07359135682827525,
+            "tank_t": 20.078783763048005,
+            "containment_t": 1.8174548480627217,
+            "dry_t": 197.44492207241444,
+            "peak_annihilation_TW": 24.03593551978865,
+            "heat_rejected_GW": 0.02403593551978865,
+            "peak_thrust_MN": 0.9751872050609691
+          },
+          "fleet_am_t": 36.28380626448156,
+          "fleet_departure_t": 4737.718503403574
+        },
+        "30": {
+          "base": {
+            "kind": "crew",
+            "years": 30,
+            "hardware_rows": [
+              {
+                "name": "1600 m3 gravity rooms + 800 m3 common rooms: envelope/floors",
+                "tonnes": 60,
+                "lands": true
+              },
+              {
+                "name": "Spin structure, hubs, transfers and deployment",
+                "tonnes": 20,
+                "lands": true
+              },
+              {
+                "name": "64-person furnishings, school, play, hygiene and exercise",
+                "tonnes": 14,
+                "lands": true
+              },
+              {
+                "name": "Radiation material retained for surface refuge",
+                "tonnes": 40.0,
+                "lands": true
+              },
+              {
+                "name": "Removable cruise radiation material, discarded after braking",
+                "tonnes": 320.0,
+                "lands": false
+              },
+              {
+                "name": "Forward shield: 20 m diameter at 100 kg/m2 plus 5 t support",
+                "tonnes": 36.41592653589794,
+                "lands": false
+              },
+              {
+                "name": "64-person refuge, airlocks, descent frame and landing engine",
+                "tonnes": 28,
+                "lands": true
+              },
+              {
+                "name": "Life support and two independent full-population food trains",
+                "tonnes": 24,
+                "lands": true
+              },
+              {
+                "name": "Medical, embryo bank, maternity and 64 convertible berths",
+                "tonnes": 22,
+                "lands": true
+              },
+              {
+                "name": "Habitat power, service radiators and distribution",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Avionics, communications and autonomy",
+                "tonnes": 3,
+                "lands": true
+              },
+              {
+                "name": "Initial surface exploration, repair tools and suits",
+                "tonnes": 8,
+                "lands": true
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 20,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 763.0199081698725,
+            "supplies_t": 35.5,
+            "landing_hydrogen_t": 151.45244719229385,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 12.116195775383508,
+            "landing_am_t": 2.6253744534295693e-07,
+            "auxiliary_am_t": 1.1235214135629728e-05,
+            "landed_without_unused_reserves_t": 340.11621772073687,
+            "base_arrival_t": 962.0885736079782
+          },
+          "crew": {
+            "exhaust_c": 0.2670952380952381,
+            "effective_exhaust_c": 0.2646911894615104,
+            "beta": 0.146026494367612,
+            "acceleration_m_s2": 1.4465294320372108,
+            "proper_years": 29.692230567624517,
+            "burn_years": 0.9693968253968254,
+            "years": 30,
+            "mass_ratio": 3.038357597909374,
+            "feedback_fraction": 0.26552959532798703,
+            "arrival_before_staging_t": 1309.90788395022,
+            "departure_t": 3979.968571761541,
+            "main_am_burned_t": 60.081151149295735,
+            "main_am_loaded_t": 63.08520870676052,
+            "total_am_loaded_t": 63.08521994197466,
+            "reaction_loaded_t": 2677.3933047883665,
+            "main_reserve_t": 133.50303439056606,
+            "engine_t": 58.69015255601859,
+            "hot_radiator_t": 0.8984647082906329,
+            "tank_t": 80.32179914365099,
+            "containment_t": 31.54260435338026,
+            "dry_t": 989.4523798969316,
+            "peak_annihilation_TW": 293.45076278009293,
+            "heat_rejected_GW": 0.2934507627800929,
+            "peak_thrust_MN": 5.757141677636172
+          },
+          "cargo_base": {
+            "kind": "cargo",
+            "years": 50,
+            "hardware_rows": [
+              {
+                "name": "Surface industry, heavy exploration and habitat expansion",
+                "tonnes": 70,
+                "lands": true
+              },
+              {
+                "name": "Surface power, food and life-support backup hardware",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Landing frame, engine and cargo deployment",
+                "tonnes": 12,
+                "lands": true
+              },
+              {
+                "name": "Forward shield: 6 m diameter at 100 kg/m2 plus 2 t support",
+                "tonnes": 4.827433388230814,
+                "lands": false
+              },
+              {
+                "name": "Long spine, avionics, services and autonomous maintenance",
+                "tonnes": 10,
+                "lands": false
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 15,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 158.53429173528852,
+            "supplies_t": 25.0,
+            "landing_hydrogen_t": 67.5302420280878,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 5.402419362247024,
+            "landing_am_t": 1.1706127932641186e-07,
+            "auxiliary_am_t": 1.6532360159665599e-06,
+            "landed_without_unused_reserves_t": 151.6524224345965,
+            "base_arrival_t": 256.4669564320954
+          },
+          "cargo": {
+            "exhaust_c": 0.1576968253968254,
+            "effective_exhaust_c": 0.15720507124050567,
+            "beta": 0.08607038277018927,
+            "acceleration_m_s2": 1.1100081675863624,
+            "proper_years": 49.81810719124417,
+            "burn_years": 0.7393650793650792,
+            "years": 50,
+            "mass_ratio": 2.997335643843546,
+            "feedback_fraction": 0.2126142433384916,
+            "arrival_before_staging_t": 325.719578062356,
+            "departure_t": 976.29090122398,
+            "main_am_burned_t": 5.0717754041986165,
+            "main_am_loaded_t": 5.3253641744085485,
+            "total_am_loaded_t": 5.325365827644564,
+            "reaction_loaded_t": 672.4491609708881,
+            "main_reserve_t": 32.528566158081205,
+            "engine_t": 6.4444321571409064,
+            "hot_radiator_t": 0.09865530427166376,
+            "tank_t": 20.173474829126643,
+            "containment_t": 2.6626820872042742,
+            "dry_t": 200.66076656971492,
+            "peak_annihilation_TW": 32.22216078570453,
+            "heat_rejected_GW": 0.03222216078570453,
+            "peak_thrust_MN": 1.0836908742988685
+          },
+          "fleet_am_t": 68.41058576961922,
+          "fleet_departure_t": 4956.259472985521
+        },
+        "20": {
+          "base": {
+            "kind": "crew",
+            "years": 20,
+            "hardware_rows": [
+              {
+                "name": "1600 m3 gravity rooms + 800 m3 common rooms: envelope/floors",
+                "tonnes": 60,
+                "lands": true
+              },
+              {
+                "name": "Spin structure, hubs, transfers and deployment",
+                "tonnes": 20,
+                "lands": true
+              },
+              {
+                "name": "64-person furnishings, school, play, hygiene and exercise",
+                "tonnes": 14,
+                "lands": true
+              },
+              {
+                "name": "Radiation material retained for surface refuge",
+                "tonnes": 40.0,
+                "lands": true
+              },
+              {
+                "name": "Removable cruise radiation material, discarded after braking",
+                "tonnes": 320.0,
+                "lands": false
+              },
+              {
+                "name": "Forward shield: 20 m diameter at 100 kg/m2 plus 5 t support",
+                "tonnes": 36.41592653589794,
+                "lands": false
+              },
+              {
+                "name": "64-person refuge, airlocks, descent frame and landing engine",
+                "tonnes": 28,
+                "lands": true
+              },
+              {
+                "name": "Life support and two independent full-population food trains",
+                "tonnes": 24,
+                "lands": true
+              },
+              {
+                "name": "Medical, embryo bank, maternity and 64 convertible berths",
+                "tonnes": 22,
+                "lands": true
+              },
+              {
+                "name": "Habitat power, service radiators and distribution",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Avionics, communications and autonomy",
+                "tonnes": 3,
+                "lands": true
+              },
+              {
+                "name": "Initial surface exploration, repair tools and suits",
+                "tonnes": 8,
+                "lands": true
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 20,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 763.0199081698725,
+            "supplies_t": 33.0,
+            "landing_hydrogen_t": 150.29808207832048,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 12.023846566265638,
+            "landing_am_t": 2.6053639436204536e-07,
+            "auxiliary_am_t": 9.038677746591463e-06,
+            "landed_without_unused_reserves_t": 337.5238641225484,
+            "base_arrival_t": 958.3418548918141
+          },
+          "crew": {
+            "exhaust_c": 0.4089349206349206,
+            "effective_exhaust_c": 0.4001871838468592,
+            "beta": 0.2256220690551079,
+            "acceleration_m_s2": 1.7982181918303903,
+            "proper_years": 19.526031252924604,
+            "burn_years": 1.2234920634920639,
+            "years": 20,
+            "mass_ratio": 3.1497482218128017,
+            "feedback_fraction": 0.37371936814946066,
+            "arrival_before_staging_t": 1530.2115475934445,
+            "departure_t": 4819.781101029867,
+            "main_am_burned_t": 175.9221770227151,
+            "main_am_loaded_t": 184.71828587385085,
+            "total_am_loaded_t": 184.7182949125286,
+            "reaction_loaded_t": 3084.611459360543,
+            "main_reserve_t": 164.47847767182114,
+            "engine_t": 138.88928331172082,
+            "hot_radiator_t": 2.1262019943848927,
+            "tank_t": 92.53834378081628,
+            "containment_t": 92.35914293692542,
+            "dry_t": 1182.4349697659475,
+            "peak_annihilation_TW": 694.4464165586041,
+            "heat_rejected_GW": 0.6944464165586042,
+            "peak_thrust_MN": 8.667018056512216
+          },
+          "cargo_base": {
+            "kind": "cargo",
+            "years": 40,
+            "hardware_rows": [
+              {
+                "name": "Surface industry, heavy exploration and habitat expansion",
+                "tonnes": 70,
+                "lands": true
+              },
+              {
+                "name": "Surface power, food and life-support backup hardware",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Landing frame, engine and cargo deployment",
+                "tonnes": 12,
+                "lands": true
+              },
+              {
+                "name": "Forward shield: 6 m diameter at 100 kg/m2 plus 2 t support",
+                "tonnes": 4.827433388230814,
+                "lands": false
+              },
+              {
+                "name": "Long spine, avionics, services and autonomous maintenance",
+                "tonnes": 10,
+                "lands": false
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 15,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 158.53429173528852,
+            "supplies_t": 24.0,
+            "landing_hydrogen_t": 67.06849659048817,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 5.3654797272390535,
+            "landing_am_t": 1.1626085998797586e-07,
+            "auxiliary_am_t": 1.4329820628223883e-06,
+            "landed_without_unused_reserves_t": 150.61548236068145,
+            "base_arrival_t": 254.96827091897987
+          },
+          "cargo": {
+            "exhaust_c": 0.19835079365079364,
+            "effective_exhaust_c": 0.1973704101502026,
+            "beta": 0.1082456461184253,
+            "acceleration_m_s2": 1.2428367784064172,
+            "proper_years": 39.77147604445178,
+            "burn_years": 0.8322857142857141,
+            "years": 40,
+            "mass_ratio": 3.007750979324155,
+            "feedback_fraction": 0.22938763795766048,
+            "arrival_before_staging_t": 330.8644961822858,
+            "departure_t": 995.1580124158631,
+            "main_am_burned_t": 8.208467317902665,
+            "main_am_loaded_t": 8.6188906837978,
+            "total_am_loaded_t": 8.618892116779863,
+            "reaction_loaded_t": 680.2704106776608,
+            "main_reserve_t": 33.21467581167887,
+            "engine_t": 9.285533283176418,
+            "hot_radiator_t": 0.14214861589649302,
+            "tank_t": 20.408112320329824,
+            "containment_t": 4.3094453418989,
+            "dry_t": 206.58132091415462,
+            "peak_annihilation_TW": 46.42766641588209,
+            "heat_rejected_GW": 0.046427666415882085,
+            "peak_thrust_MN": 1.2368189781562646
+          },
+          "fleet_am_t": 193.33718702930847,
+          "fleet_departure_t": 5814.939113445731
+        }
+      }
+    },
+    "reference": {
+      "assumptions": {
+        "efficiency": 0.5,
+        "engine_W_kg": 1000000000.0,
+        "absorbed_fraction": 1e-05,
+        "tank_fraction": 0.05,
+        "containment_kg_kg": 1
+      },
+      "cargo_base": {
+        "kind": "cargo",
+        "years": 60,
+        "hardware_rows": [
+          {
+            "name": "Surface industry, heavy exploration and habitat expansion",
+            "tonnes": 70,
+            "lands": true
+          },
+          {
+            "name": "Surface power, food and life-support backup hardware",
+            "tonnes": 15,
+            "lands": true
+          },
+          {
+            "name": "Landing frame, engine and cargo deployment",
+            "tonnes": 12,
+            "lands": true
+          },
+          {
+            "name": "Forward shield: 6 m diameter at 100 kg/m2 plus 2 t support",
+            "tonnes": 4.827433388230814,
+            "lands": false
+          },
+          {
+            "name": "Long spine, avionics, services and autonomous maintenance",
+            "tonnes": 10,
+            "lands": false
+          },
+          {
+            "name": "Main engine standoff, feed and fixed containment equipment",
+            "tonnes": 15,
+            "lands": false
+          }
+        ],
+        "fixed_dry_t": 158.53429173528852,
+        "supplies_t": 26.0,
+        "landing_hydrogen_t": 67.99198746568742,
+        "landing_isp_s": 1800,
+        "landing_tanks_t": 5.439358997254994,
+        "landing_am_t": 1.1786169866484788e-07,
+        "auxiliary_am_t": 1.8734899691107312e-06,
+        "landed_without_unused_reserves_t": 152.68936250851155,
+        "base_arrival_t": 257.9656419452109
+      },
+      "cargo": {
+        "exhaust_c": 0.14536190476190475,
+        "effective_exhaust_c": 0.1438341773439103,
+        "beta": 0.07306365386032548,
+        "acceleration_m_s2": 0.3530882846644417,
+        "proper_years": 59.846655209245846,
+        "burn_years": 1.9710476190476187,
+        "years": 60,
+        "mass_ratio": 2.766980047112256,
+        "feedback_fraction": 0.2813853976574872,
+        "arrival_before_staging_t": 358.97634295810883,
+        "departure_t": 993.2803783504133,
+        "main_am_burned_t": 6.66642108054781,
+        "main_am_loaded_t": 6.999742134575201,
+        "total_am_loaded_t": 6.9997440080651705,
+        "reaction_loaded_t": 652.0197528927694,
+        "main_reserve_t": 31.71520176961523,
+        "engine_t": 15.365228991808177,
+        "hot_radiator_t": 0.4704406236043433,
+        "tank_t": 32.60098764463847,
+        "containment_t": 6.999742134575201,
+        "dry_t": 233.26914997582625,
+        "peak_annihilation_TW": 15.365228991808177,
+        "heat_rejected_GW": 0.1536522899180818,
+        "peak_thrust_MN": 0.3507156649825951
+      },
+      "missions": {
+        "40": {
+          "base": {
+            "kind": "crew",
+            "years": 40,
+            "hardware_rows": [
+              {
+                "name": "1600 m3 gravity rooms + 800 m3 common rooms: envelope/floors",
+                "tonnes": 60,
+                "lands": true
+              },
+              {
+                "name": "Spin structure, hubs, transfers and deployment",
+                "tonnes": 20,
+                "lands": true
+              },
+              {
+                "name": "64-person furnishings, school, play, hygiene and exercise",
+                "tonnes": 14,
+                "lands": true
+              },
+              {
+                "name": "Radiation material retained for surface refuge",
+                "tonnes": 40.0,
+                "lands": true
+              },
+              {
+                "name": "Removable cruise radiation material, discarded after braking",
+                "tonnes": 320.0,
+                "lands": false
+              },
+              {
+                "name": "Forward shield: 20 m diameter at 100 kg/m2 plus 5 t support",
+                "tonnes": 36.41592653589794,
+                "lands": false
+              },
+              {
+                "name": "64-person refuge, airlocks, descent frame and landing engine",
+                "tonnes": 28,
+                "lands": true
+              },
+              {
+                "name": "Life support and two independent full-population food trains",
+                "tonnes": 24,
+                "lands": true
+              },
+              {
+                "name": "Medical, embryo bank, maternity and 64 convertible berths",
+                "tonnes": 22,
+                "lands": true
+              },
+              {
+                "name": "Habitat power, service radiators and distribution",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Avionics, communications and autonomy",
+                "tonnes": 3,
+                "lands": true
+              },
+              {
+                "name": "Initial surface exploration, repair tools and suits",
+                "tonnes": 8,
+                "lands": true
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 20,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 763.0199081698725,
+            "supplies_t": 38.0,
+            "landing_hydrogen_t": 152.60681230626724,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 12.20854498450138,
+            "landing_am_t": 2.6453849632386856e-07,
+            "auxiliary_am_t": 1.3431750524667993e-05,
+            "landed_without_unused_reserves_t": 342.7085713189254,
+            "base_arrival_t": 965.8352923241421
+          },
+          "crew": {
+            "exhaust_c": 0.22598412698412698,
+            "effective_exhaust_c": 0.2202855564409641,
+            "beta": 0.11292387638324461,
+            "acceleration_m_s2": 0.4388035900541961,
+            "proper_years": 39.76508938255344,
+            "burn_years": 2.4604761904761907,
+            "years": 40,
+            "mass_ratio": 2.8000618722866606,
+            "feedback_fraction": 0.37039300489084603,
+            "arrival_before_staging_t": 1534.0288462911642,
+            "departure_t": 4295.375683487783,
+            "main_am_burned_t": 69.63201334494592,
+            "main_am_loaded_t": 73.11361401219321,
+            "total_am_loaded_t": 73.11362744394374,
+            "reaction_loaded_t": 2753.1869510320635,
+            "main_reserve_t": 138.06734185983095,
+            "engine_t": 129.36714553716425,
+            "hot_radiator_t": 3.9608625847921997,
+            "tank_t": 137.6593475516032,
+            "containment_t": 73.11361401219321,
+            "dry_t": 1205.3546652615648,
+            "peak_annihilation_TW": 129.36714553716425,
+            "heat_rejected_GW": 1.2936714553716426,
+            "peak_thrust_MN": 1.8848262705459358
+          },
+          "cargo_base": {
+            "kind": "cargo",
+            "years": 60,
+            "hardware_rows": [
+              {
+                "name": "Surface industry, heavy exploration and habitat expansion",
+                "tonnes": 70,
+                "lands": true
+              },
+              {
+                "name": "Surface power, food and life-support backup hardware",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Landing frame, engine and cargo deployment",
+                "tonnes": 12,
+                "lands": true
+              },
+              {
+                "name": "Forward shield: 6 m diameter at 100 kg/m2 plus 2 t support",
+                "tonnes": 4.827433388230814,
+                "lands": false
+              },
+              {
+                "name": "Long spine, avionics, services and autonomous maintenance",
+                "tonnes": 10,
+                "lands": false
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 15,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 158.53429173528852,
+            "supplies_t": 26.0,
+            "landing_hydrogen_t": 67.99198746568742,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 5.439358997254994,
+            "landing_am_t": 1.1786169866484788e-07,
+            "auxiliary_am_t": 1.8734899691107312e-06,
+            "landed_without_unused_reserves_t": 152.68936250851155,
+            "base_arrival_t": 257.9656419452109
+          },
+          "cargo": {
+            "exhaust_c": 0.14536190476190475,
+            "effective_exhaust_c": 0.1438341773439103,
+            "beta": 0.07306365386032548,
+            "acceleration_m_s2": 0.3530882846644417,
+            "proper_years": 59.846655209245846,
+            "burn_years": 1.9710476190476187,
+            "years": 60,
+            "mass_ratio": 2.766980047112256,
+            "feedback_fraction": 0.2813853976574872,
+            "arrival_before_staging_t": 358.97634295810883,
+            "departure_t": 993.2803783504133,
+            "main_am_burned_t": 6.66642108054781,
+            "main_am_loaded_t": 6.999742134575201,
+            "total_am_loaded_t": 6.9997440080651705,
+            "reaction_loaded_t": 652.0197528927694,
+            "main_reserve_t": 31.71520176961523,
+            "engine_t": 15.365228991808177,
+            "hot_radiator_t": 0.4704406236043433,
+            "tank_t": 32.60098764463847,
+            "containment_t": 6.999742134575201,
+            "dry_t": 233.26914997582625,
+            "peak_annihilation_TW": 15.365228991808177,
+            "heat_rejected_GW": 0.1536522899180818,
+            "peak_thrust_MN": 0.3507156649825951
+          },
+          "fleet_am_t": 80.1133714520089,
+          "fleet_departure_t": 5288.656061838196
+        },
+        "30": {
+          "base": {
+            "kind": "crew",
+            "years": 30,
+            "hardware_rows": [
+              {
+                "name": "1600 m3 gravity rooms + 800 m3 common rooms: envelope/floors",
+                "tonnes": 60,
+                "lands": true
+              },
+              {
+                "name": "Spin structure, hubs, transfers and deployment",
+                "tonnes": 20,
+                "lands": true
+              },
+              {
+                "name": "64-person furnishings, school, play, hygiene and exercise",
+                "tonnes": 14,
+                "lands": true
+              },
+              {
+                "name": "Radiation material retained for surface refuge",
+                "tonnes": 40.0,
+                "lands": true
+              },
+              {
+                "name": "Removable cruise radiation material, discarded after braking",
+                "tonnes": 320.0,
+                "lands": false
+              },
+              {
+                "name": "Forward shield: 20 m diameter at 100 kg/m2 plus 5 t support",
+                "tonnes": 36.41592653589794,
+                "lands": false
+              },
+              {
+                "name": "64-person refuge, airlocks, descent frame and landing engine",
+                "tonnes": 28,
+                "lands": true
+              },
+              {
+                "name": "Life support and two independent full-population food trains",
+                "tonnes": 24,
+                "lands": true
+              },
+              {
+                "name": "Medical, embryo bank, maternity and 64 convertible berths",
+                "tonnes": 22,
+                "lands": true
+              },
+              {
+                "name": "Habitat power, service radiators and distribution",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Avionics, communications and autonomy",
+                "tonnes": 3,
+                "lands": true
+              },
+              {
+                "name": "Initial surface exploration, repair tools and suits",
+                "tonnes": 8,
+                "lands": true
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 20,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 763.0199081698725,
+            "supplies_t": 35.5,
+            "landing_hydrogen_t": 151.45244719229385,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 12.116195775383508,
+            "landing_am_t": 2.6253744534295693e-07,
+            "auxiliary_am_t": 1.1235214135629728e-05,
+            "landed_without_unused_reserves_t": 340.11621772073687,
+            "base_arrival_t": 962.0885736079782
+          },
+          "crew": {
+            "exhaust_c": 0.31414920634920634,
+            "effective_exhaust_c": 0.2990113452722422,
+            "beta": 0.15644601190706758,
+            "acceleration_m_s2": 0.5160183359330466,
+            "proper_years": 29.678293020868686,
+            "burn_years": 2.916063492063492,
+            "years": 30,
+            "mass_ratio": 2.8722241643138715,
+            "feedback_fraction": 0.5075383507544088,
+            "arrival_before_staging_t": 1953.631465682282,
+            "departure_t": 5611.267503896576,
+            "main_am_burned_t": 176.24996370367384,
+            "main_am_loaded_t": 185.06246188885754,
+            "total_am_loaded_t": 185.0624731240717,
+            "reaction_loaded_t": 3470.3929163472944,
+            "main_reserve_t": 182.8818019107147,
+            "engine_t": 279.7806579722762,
+            "hot_radiator_t": 8.566106452372633,
+            "tank_t": 173.51964581736473,
+            "containment_t": 185.06246188885754,
+            "dry_t": 1583.797194108845,
+            "peak_annihilation_TW": 279.7806579722762,
+            "heat_rejected_GW": 2.797806579722762,
+            "peak_thrust_MN": 2.895516919835891
+          },
+          "cargo_base": {
+            "kind": "cargo",
+            "years": 50,
+            "hardware_rows": [
+              {
+                "name": "Surface industry, heavy exploration and habitat expansion",
+                "tonnes": 70,
+                "lands": true
+              },
+              {
+                "name": "Surface power, food and life-support backup hardware",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Landing frame, engine and cargo deployment",
+                "tonnes": 12,
+                "lands": true
+              },
+              {
+                "name": "Forward shield: 6 m diameter at 100 kg/m2 plus 2 t support",
+                "tonnes": 4.827433388230814,
+                "lands": false
+              },
+              {
+                "name": "Long spine, avionics, services and autonomous maintenance",
+                "tonnes": 10,
+                "lands": false
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 15,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 158.53429173528852,
+            "supplies_t": 25.0,
+            "landing_hydrogen_t": 67.5302420280878,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 5.402419362247024,
+            "landing_am_t": 1.1706127932641186e-07,
+            "auxiliary_am_t": 1.6532360159665599e-06,
+            "landed_without_unused_reserves_t": 151.6524224345965,
+            "base_arrival_t": 256.4669564320954
+          },
+          "cargo": {
+            "exhaust_c": 0.17688095238095236,
+            "effective_exhaust_c": 0.1741352321705519,
+            "beta": 0.08865315892808578,
+            "acceleration_m_s2": 0.3883059874211711,
+            "proper_years": 49.8145458138461,
+            "burn_years": 2.177460317460317,
+            "years": 50,
+            "mass_ratio": 2.7756657522918062,
+            "feedback_fraction": 0.31208524815758676,
+            "arrival_before_staging_t": 372.8179338285895,
+            "departure_t": 1034.8179707682086,
+            "main_am_burned_t": 10.276216043863274,
+            "main_am_loaded_t": 10.790026846056438,
+            "total_am_loaded_t": 10.790028499292454,
+            "reaction_loaded_t": 673.5199850944873,
+            "main_reserve_t": 33.10000184698096,
+            "engine_t": 21.477182673887114,
+            "hot_radiator_t": 0.6575716649426157,
+            "tank_t": 33.67599925472437,
+            "containment_t": 10.790026846056438,
+            "dry_t": 247.1876866470487,
+            "peak_annihilation_TW": 21.477182673887114,
+            "heat_rejected_GW": 0.21477182673887116,
+            "peak_thrust_MN": 0.40182601394032186
+          },
+          "fleet_am_t": 195.85250162336413,
+          "fleet_departure_t": 6646.085474664785
+        },
+        "20": {
+          "base": {
+            "kind": "crew",
+            "years": 20,
+            "hardware_rows": [
+              {
+                "name": "1600 m3 gravity rooms + 800 m3 common rooms: envelope/floors",
+                "tonnes": 60,
+                "lands": true
+              },
+              {
+                "name": "Spin structure, hubs, transfers and deployment",
+                "tonnes": 20,
+                "lands": true
+              },
+              {
+                "name": "64-person furnishings, school, play, hygiene and exercise",
+                "tonnes": 14,
+                "lands": true
+              },
+              {
+                "name": "Radiation material retained for surface refuge",
+                "tonnes": 40.0,
+                "lands": true
+              },
+              {
+                "name": "Removable cruise radiation material, discarded after braking",
+                "tonnes": 320.0,
+                "lands": false
+              },
+              {
+                "name": "Forward shield: 20 m diameter at 100 kg/m2 plus 5 t support",
+                "tonnes": 36.41592653589794,
+                "lands": false
+              },
+              {
+                "name": "64-person refuge, airlocks, descent frame and landing engine",
+                "tonnes": 28,
+                "lands": true
+              },
+              {
+                "name": "Life support and two independent full-population food trains",
+                "tonnes": 24,
+                "lands": true
+              },
+              {
+                "name": "Medical, embryo bank, maternity and 64 convertible berths",
+                "tonnes": 22,
+                "lands": true
+              },
+              {
+                "name": "Habitat power, service radiators and distribution",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Avionics, communications and autonomy",
+                "tonnes": 3,
+                "lands": true
+              },
+              {
+                "name": "Initial surface exploration, repair tools and suits",
+                "tonnes": 8,
+                "lands": true
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 20,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 763.0199081698725,
+            "supplies_t": 33.0,
+            "landing_hydrogen_t": 150.29808207832048,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 12.023846566265638,
+            "landing_am_t": 2.6053639436204536e-07,
+            "auxiliary_am_t": 9.038677746591463e-06,
+            "landed_without_unused_reserves_t": 337.5238641225484,
+            "base_arrival_t": 958.3418548918141
+          },
+          "crew": null,
+          "cargo_base": {
+            "kind": "cargo",
+            "years": 40,
+            "hardware_rows": [
+              {
+                "name": "Surface industry, heavy exploration and habitat expansion",
+                "tonnes": 70,
+                "lands": true
+              },
+              {
+                "name": "Surface power, food and life-support backup hardware",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Landing frame, engine and cargo deployment",
+                "tonnes": 12,
+                "lands": true
+              },
+              {
+                "name": "Forward shield: 6 m diameter at 100 kg/m2 plus 2 t support",
+                "tonnes": 4.827433388230814,
+                "lands": false
+              },
+              {
+                "name": "Long spine, avionics, services and autonomous maintenance",
+                "tonnes": 10,
+                "lands": false
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 15,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 158.53429173528852,
+            "supplies_t": 24.0,
+            "landing_hydrogen_t": 67.06849659048817,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 5.3654797272390535,
+            "landing_am_t": 1.1626085998797586e-07,
+            "auxiliary_am_t": 1.4329820628223883e-06,
+            "landed_without_unused_reserves_t": 150.61548236068145,
+            "base_arrival_t": 254.96827091897987
+          },
+          "cargo": {
+            "exhaust_c": 0.22598412698412698,
+            "effective_exhaust_c": 0.2202855564409641,
+            "beta": 0.11292387638324461,
+            "acceleration_m_s2": 0.4388035900541961,
+            "proper_years": 39.76508938255344,
+            "burn_years": 2.4604761904761907,
+            "years": 40,
+            "mass_ratio": 2.8000618722866606,
+            "feedback_fraction": 0.37039300489084603,
+            "arrival_before_staging_t": 404.96416478787125,
+            "departure_t": 1133.9247174649306,
+            "main_am_burned_t": 18.381968627845318,
+            "main_am_loaded_t": 19.301067059237585,
+            "total_am_loaded_t": 19.30106849221965,
+            "reaction_loaded_t": 726.8064461924371,
+            "main_reserve_t": 36.448027633852966,
+            "engine_t": 34.15128611832184,
+            "hot_radiator_t": 1.0456175008494304,
+            "tank_t": 36.340322309621854,
+            "containment_t": 19.301067059237585,
+            "dry_t": 277.447637697566,
+            "peak_annihilation_TW": 34.15128611832184,
+            "heat_rejected_GW": 0.3415128611832185,
+            "peak_thrust_MN": 0.49757023687480156
+          },
+          "fleet_am_t": null,
+          "fleet_departure_t": null
+        }
+      }
+    },
+    "stress": {
+      "assumptions": {
+        "efficiency": 0.3,
+        "engine_W_kg": 200000000.0,
+        "absorbed_fraction": 0.0001,
+        "tank_fraction": 0.1,
+        "containment_kg_kg": 2
+      },
+      "cargo_base": {
+        "kind": "cargo",
+        "years": 60,
+        "hardware_rows": [
+          {
+            "name": "Surface industry, heavy exploration and habitat expansion",
+            "tonnes": 70,
+            "lands": true
+          },
+          {
+            "name": "Surface power, food and life-support backup hardware",
+            "tonnes": 15,
+            "lands": true
+          },
+          {
+            "name": "Landing frame, engine and cargo deployment",
+            "tonnes": 12,
+            "lands": true
+          },
+          {
+            "name": "Forward shield: 6 m diameter at 100 kg/m2 plus 2 t support",
+            "tonnes": 4.827433388230814,
+            "lands": false
+          },
+          {
+            "name": "Long spine, avionics, services and autonomous maintenance",
+            "tonnes": 10,
+            "lands": false
+          },
+          {
+            "name": "Main engine standoff, feed and fixed containment equipment",
+            "tonnes": 15,
+            "lands": false
+          }
+        ],
+        "fixed_dry_t": 158.53429173528852,
+        "supplies_t": 26.0,
+        "landing_hydrogen_t": 67.99198746568742,
+        "landing_isp_s": 1800,
+        "landing_tanks_t": 5.439358997254994,
+        "landing_am_t": 1.1786169866484788e-07,
+        "auxiliary_am_t": 1.8734899691107312e-06,
+        "landed_without_unused_reserves_t": 152.68936250851155,
+        "base_arrival_t": 257.9656419452109
+      },
+      "cargo": {
+        "exhaust_c": 0.18738730158730155,
+        "effective_exhaust_c": 0.17994955233486407,
+        "beta": 0.07882110082471383,
+        "acceleration_m_s2": 0.12081831276161327,
+        "proper_years": 59.83909241002527,
+        "burn_years": 6.2169841269841255,
+        "years": 60,
+        "mass_ratio": 2.4057375381365476,
+        "feedback_fraction": 0.5310611966746581,
+        "arrival_before_staging_t": 550.1051312365777,
+        "departure_t": 1323.4085641373667,
+        "main_am_burned_t": 21.92417591512641,
+        "main_am_loaded_t": 23.020384710882727,
+        "total_am_loaded_t": 23.020386584372694,
+        "reaction_loaded_t": 765.9278351240631,
+        "main_reserve_t": 38.66517164503946,
+        "engine_t": 75.52139083932649,
+        "hot_radiator_t": 4.624510343563596,
+        "tank_t": 76.59278351240631,
+        "containment_t": 46.040769421765454,
+        "dry_t": 417.4479683788709,
+        "peak_annihilation_TW": 15.104278167865298,
+        "heat_rejected_GW": 1.5104278167865297,
+        "peak_thrust_MN": 0.15989198981334593
+      },
+      "missions": {
+        "40": {
+          "base": {
+            "kind": "crew",
+            "years": 40,
+            "hardware_rows": [
+              {
+                "name": "1600 m3 gravity rooms + 800 m3 common rooms: envelope/floors",
+                "tonnes": 60,
+                "lands": true
+              },
+              {
+                "name": "Spin structure, hubs, transfers and deployment",
+                "tonnes": 20,
+                "lands": true
+              },
+              {
+                "name": "64-person furnishings, school, play, hygiene and exercise",
+                "tonnes": 14,
+                "lands": true
+              },
+              {
+                "name": "Radiation material retained for surface refuge",
+                "tonnes": 40.0,
+                "lands": true
+              },
+              {
+                "name": "Removable cruise radiation material, discarded after braking",
+                "tonnes": 320.0,
+                "lands": false
+              },
+              {
+                "name": "Forward shield: 20 m diameter at 100 kg/m2 plus 5 t support",
+                "tonnes": 36.41592653589794,
+                "lands": false
+              },
+              {
+                "name": "64-person refuge, airlocks, descent frame and landing engine",
+                "tonnes": 28,
+                "lands": true
+              },
+              {
+                "name": "Life support and two independent full-population food trains",
+                "tonnes": 24,
+                "lands": true
+              },
+              {
+                "name": "Medical, embryo bank, maternity and 64 convertible berths",
+                "tonnes": 22,
+                "lands": true
+              },
+              {
+                "name": "Habitat power, service radiators and distribution",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Avionics, communications and autonomy",
+                "tonnes": 3,
+                "lands": true
+              },
+              {
+                "name": "Initial surface exploration, repair tools and suits",
+                "tonnes": 8,
+                "lands": true
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 20,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 763.0199081698725,
+            "supplies_t": 38.0,
+            "landing_hydrogen_t": 152.60681230626724,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 12.20854498450138,
+            "landing_am_t": 2.6453849632386856e-07,
+            "auxiliary_am_t": 1.3431750524667993e-05,
+            "landed_without_unused_reserves_t": 342.7085713189254,
+            "base_arrival_t": 965.8352923241421
+          },
+          "crew": null,
+          "cargo_base": {
+            "kind": "cargo",
+            "years": 60,
+            "hardware_rows": [
+              {
+                "name": "Surface industry, heavy exploration and habitat expansion",
+                "tonnes": 70,
+                "lands": true
+              },
+              {
+                "name": "Surface power, food and life-support backup hardware",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Landing frame, engine and cargo deployment",
+                "tonnes": 12,
+                "lands": true
+              },
+              {
+                "name": "Forward shield: 6 m diameter at 100 kg/m2 plus 2 t support",
+                "tonnes": 4.827433388230814,
+                "lands": false
+              },
+              {
+                "name": "Long spine, avionics, services and autonomous maintenance",
+                "tonnes": 10,
+                "lands": false
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 15,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 158.53429173528852,
+            "supplies_t": 26.0,
+            "landing_hydrogen_t": 67.99198746568742,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 5.439358997254994,
+            "landing_am_t": 1.1786169866484788e-07,
+            "auxiliary_am_t": 1.8734899691107312e-06,
+            "landed_without_unused_reserves_t": 152.68936250851155,
+            "base_arrival_t": 257.9656419452109
+          },
+          "cargo": {
+            "exhaust_c": 0.18738730158730155,
+            "effective_exhaust_c": 0.17994955233486407,
+            "beta": 0.07882110082471383,
+            "acceleration_m_s2": 0.12081831276161327,
+            "proper_years": 59.83909241002527,
+            "burn_years": 6.2169841269841255,
+            "years": 60,
+            "mass_ratio": 2.4057375381365476,
+            "feedback_fraction": 0.5310611966746581,
+            "arrival_before_staging_t": 550.1051312365777,
+            "departure_t": 1323.4085641373667,
+            "main_am_burned_t": 21.92417591512641,
+            "main_am_loaded_t": 23.020384710882727,
+            "total_am_loaded_t": 23.020386584372694,
+            "reaction_loaded_t": 765.9278351240631,
+            "main_reserve_t": 38.66517164503946,
+            "engine_t": 75.52139083932649,
+            "hot_radiator_t": 4.624510343563596,
+            "tank_t": 76.59278351240631,
+            "containment_t": 46.040769421765454,
+            "dry_t": 417.4479683788709,
+            "peak_annihilation_TW": 15.104278167865298,
+            "heat_rejected_GW": 1.5104278167865297,
+            "peak_thrust_MN": 0.15989198981334593
+          },
+          "fleet_am_t": null,
+          "fleet_departure_t": null
+        },
+        "30": {
+          "base": {
+            "kind": "crew",
+            "years": 30,
+            "hardware_rows": [
+              {
+                "name": "1600 m3 gravity rooms + 800 m3 common rooms: envelope/floors",
+                "tonnes": 60,
+                "lands": true
+              },
+              {
+                "name": "Spin structure, hubs, transfers and deployment",
+                "tonnes": 20,
+                "lands": true
+              },
+              {
+                "name": "64-person furnishings, school, play, hygiene and exercise",
+                "tonnes": 14,
+                "lands": true
+              },
+              {
+                "name": "Radiation material retained for surface refuge",
+                "tonnes": 40.0,
+                "lands": true
+              },
+              {
+                "name": "Removable cruise radiation material, discarded after braking",
+                "tonnes": 320.0,
+                "lands": false
+              },
+              {
+                "name": "Forward shield: 20 m diameter at 100 kg/m2 plus 5 t support",
+                "tonnes": 36.41592653589794,
+                "lands": false
+              },
+              {
+                "name": "64-person refuge, airlocks, descent frame and landing engine",
+                "tonnes": 28,
+                "lands": true
+              },
+              {
+                "name": "Life support and two independent full-population food trains",
+                "tonnes": 24,
+                "lands": true
+              },
+              {
+                "name": "Medical, embryo bank, maternity and 64 convertible berths",
+                "tonnes": 22,
+                "lands": true
+              },
+              {
+                "name": "Habitat power, service radiators and distribution",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Avionics, communications and autonomy",
+                "tonnes": 3,
+                "lands": true
+              },
+              {
+                "name": "Initial surface exploration, repair tools and suits",
+                "tonnes": 8,
+                "lands": true
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 20,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 763.0199081698725,
+            "supplies_t": 35.5,
+            "landing_hydrogen_t": 151.45244719229385,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 12.116195775383508,
+            "landing_am_t": 2.6253744534295693e-07,
+            "auxiliary_am_t": 1.1235214135629728e-05,
+            "landed_without_unused_reserves_t": 340.11621772073687,
+            "base_arrival_t": 962.0885736079782
+          },
+          "crew": null,
+          "cargo_base": {
+            "kind": "cargo",
+            "years": 50,
+            "hardware_rows": [
+              {
+                "name": "Surface industry, heavy exploration and habitat expansion",
+                "tonnes": 70,
+                "lands": true
+              },
+              {
+                "name": "Surface power, food and life-support backup hardware",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Landing frame, engine and cargo deployment",
+                "tonnes": 12,
+                "lands": true
+              },
+              {
+                "name": "Forward shield: 6 m diameter at 100 kg/m2 plus 2 t support",
+                "tonnes": 4.827433388230814,
+                "lands": false
+              },
+              {
+                "name": "Long spine, avionics, services and autonomous maintenance",
+                "tonnes": 10,
+                "lands": false
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 15,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 158.53429173528852,
+            "supplies_t": 25.0,
+            "landing_hydrogen_t": 67.5302420280878,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 5.402419362247024,
+            "landing_am_t": 1.1706127932641186e-07,
+            "auxiliary_am_t": 1.6532360159665599e-06,
+            "landed_without_unused_reserves_t": 151.6524224345965,
+            "base_arrival_t": 256.4669564320954
+          },
+          "cargo": {
+            "exhaust_c": 0.23649047619047614,
+            "effective_exhaust_c": 0.2218094033255788,
+            "beta": 0.09848217920933083,
+            "acceleration_m_s2": 0.13500928431597997,
+            "proper_years": 49.802009144968,
+            "burn_years": 6.963492063492063,
+            "years": 50,
+            "mass_ratio": 2.437265786499894,
+            "feedback_fraction": 0.6726739734535897,
+            "arrival_before_staging_t": 783.5214301106971,
+            "departure_t": 1909.64997459827,
+            "main_am_burned_t": 49.93488678753643,
+            "main_am_loaded_t": 52.431631126913246,
+            "total_am_loaded_t": 52.431632780149265,
+            "reaction_loaded_t": 1077.571709458125,
+            "main_reserve_t": 56.306427224378645,
+            "engine_t": 154.51628522010998,
+            "hot_radiator_t": 9.46171874362946,
+            "tank_t": 107.7571709458125,
+            "containment_t": 104.86326225382649,
+            "dry_t": 634.6847575517586,
+            "peak_annihilation_TW": 30.903257044021995,
+            "heat_rejected_GW": 3.0903257044021997,
+            "peak_thrust_MN": 0.2578204763645418
+          },
+          "fleet_am_t": null,
+          "fleet_departure_t": null
+        },
+        "20": {
+          "base": {
+            "kind": "crew",
+            "years": 20,
+            "hardware_rows": [
+              {
+                "name": "1600 m3 gravity rooms + 800 m3 common rooms: envelope/floors",
+                "tonnes": 60,
+                "lands": true
+              },
+              {
+                "name": "Spin structure, hubs, transfers and deployment",
+                "tonnes": 20,
+                "lands": true
+              },
+              {
+                "name": "64-person furnishings, school, play, hygiene and exercise",
+                "tonnes": 14,
+                "lands": true
+              },
+              {
+                "name": "Radiation material retained for surface refuge",
+                "tonnes": 40.0,
+                "lands": true
+              },
+              {
+                "name": "Removable cruise radiation material, discarded after braking",
+                "tonnes": 320.0,
+                "lands": false
+              },
+              {
+                "name": "Forward shield: 20 m diameter at 100 kg/m2 plus 5 t support",
+                "tonnes": 36.41592653589794,
+                "lands": false
+              },
+              {
+                "name": "64-person refuge, airlocks, descent frame and landing engine",
+                "tonnes": 28,
+                "lands": true
+              },
+              {
+                "name": "Life support and two independent full-population food trains",
+                "tonnes": 24,
+                "lands": true
+              },
+              {
+                "name": "Medical, embryo bank, maternity and 64 convertible berths",
+                "tonnes": 22,
+                "lands": true
+              },
+              {
+                "name": "Habitat power, service radiators and distribution",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Avionics, communications and autonomy",
+                "tonnes": 3,
+                "lands": true
+              },
+              {
+                "name": "Initial surface exploration, repair tools and suits",
+                "tonnes": 8,
+                "lands": true
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 20,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 763.0199081698725,
+            "supplies_t": 33.0,
+            "landing_hydrogen_t": 150.29808207832048,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 12.023846566265638,
+            "landing_am_t": 2.6053639436204536e-07,
+            "auxiliary_am_t": 9.038677746591463e-06,
+            "landed_without_unused_reserves_t": 337.5238641225484,
+            "base_arrival_t": 958.3418548918141
+          },
+          "crew": null,
+          "cargo_base": {
+            "kind": "cargo",
+            "years": 40,
+            "hardware_rows": [
+              {
+                "name": "Surface industry, heavy exploration and habitat expansion",
+                "tonnes": 70,
+                "lands": true
+              },
+              {
+                "name": "Surface power, food and life-support backup hardware",
+                "tonnes": 15,
+                "lands": true
+              },
+              {
+                "name": "Landing frame, engine and cargo deployment",
+                "tonnes": 12,
+                "lands": true
+              },
+              {
+                "name": "Forward shield: 6 m diameter at 100 kg/m2 plus 2 t support",
+                "tonnes": 4.827433388230814,
+                "lands": false
+              },
+              {
+                "name": "Long spine, avionics, services and autonomous maintenance",
+                "tonnes": 10,
+                "lands": false
+              },
+              {
+                "name": "Main engine standoff, feed and fixed containment equipment",
+                "tonnes": 15,
+                "lands": false
+              }
+            ],
+            "fixed_dry_t": 158.53429173528852,
+            "supplies_t": 24.0,
+            "landing_hydrogen_t": 67.06849659048817,
+            "landing_isp_s": 1800,
+            "landing_tanks_t": 5.3654797272390535,
+            "landing_am_t": 1.1626085998797586e-07,
+            "auxiliary_am_t": 1.4329820628223883e-06,
+            "landed_without_unused_reserves_t": 150.61548236068145,
+            "base_arrival_t": 254.96827091897987
+          },
+          "cargo": null,
+          "fleet_am_t": null,
+          "fleet_departure_t": null
+        }
+      }
+    }
+  },
+  "crew_40_shield_mass_sensitivity": {
+    "0.5": {
+      "exhaust_c": 0.22598412698412698,
+      "effective_exhaust_c": 0.2202855564409641,
+      "beta": 0.11292387638324461,
+      "acceleration_m_s2": 0.4388035900541961,
+      "proper_years": 39.76508938255344,
+      "burn_years": 2.4604761904761907,
+      "years": 40,
+      "mass_ratio": 2.8000618722866606,
+      "feedback_fraction": 0.37039300489084603,
+      "arrival_before_staging_t": 1156.8616241542281,
+      "departure_t": 3239.284125305875,
+      "main_am_burned_t": 52.5117922300618,
+      "main_am_loaded_t": 55.13738184156489,
+      "total_am_loaded_t": 55.13739525330494,
+      "reaction_loaded_t": 2076.2688625260994,
+      "main_reserve_t": 104.12112505758236,
+      "engine_t": 97.56002076502952,
+      "hot_radiator_t": 2.987016791745979,
+      "tank_t": 103.81344312630497,
+      "containment_t": 55.13738184156489,
+      "dry_t": 873.6772908403078,
+      "peak_annihilation_TW": 97.56002076502952,
+      "heat_rejected_GW": 0.9756002076502952,
+      "peak_thrust_MN": 1.4214095033897847
+    },
+    "2": {
+      "exhaust_c": 0.22598412698412698,
+      "effective_exhaust_c": 0.2202855564409641,
+      "beta": 0.11292387638324461,
+      "acceleration_m_s2": 0.4388035900541961,
+      "proper_years": 39.76508938255344,
+      "burn_years": 2.4604761904761907,
+      "years": 40,
+      "mass_ratio": 2.8000618722866606,
+      "feedback_fraction": 0.37039300489084603,
+      "arrival_before_staging_t": 2288.3632905650366,
+      "departure_t": 6407.558799851599,
+      "main_am_burned_t": 103.87245557471417,
+      "main_am_loaded_t": 109.06607835344988,
+      "total_am_loaded_t": 109.06609182522135,
+      "reaction_loaded_t": 4107.023128043991,
+      "main_reserve_t": 205.95977546432817,
+      "engine_t": 192.98139508143376,
+      "hot_radiator_t": 5.908554170884643,
+      "tank_t": 205.3511564021996,
+      "containment_t": 109.06607835344988,
+      "dry_t": 1868.7094141040793,
+      "peak_annihilation_TW": 192.98139508143376,
+      "heat_rejected_GW": 1.9298139508143377,
+      "peak_thrust_MN": 2.811659804858238
+    }
+  },
+  "crew_40_thermal_sensitivity": {
+    "1e-06": {
+      "exhaust_c": 0.2255269841269841,
+      "effective_exhaust_c": 0.2198626455548003,
+      "beta": 0.11282806651049096,
+      "acceleration_m_s2": 0.44420362627945875,
+      "proper_years": 39.76521725804164,
+      "burn_years": 2.4284761904761907,
+      "years": 40,
+      "mass_ratio": 2.8031373242222766,
+      "feedback_fraction": 0.368917328727038,
+      "arrival_before_staging_t": 1530.4417888324326,
+      "departure_t": 4290.0385008257,
+      "main_am_burned_t": 69.31006575520799,
+      "main_am_loaded_t": 72.77556904296839,
+      "total_am_loaded_t": 72.77558247471892,
+      "reaction_loaded_t": 2752.025409506994,
+      "main_reserve_t": 137.97983559966337,
+      "engine_t": 130.52485835509512,
+      "hot_radiator_t": 0.39963085348859134,
+      "tank_t": 137.6012704753497,
+      "containment_t": 72.77556904296839,
+      "dry_t": 1201.855114063001,
+      "peak_annihilation_TW": 130.52485835509512,
+      "heat_rejected_GW": 0.1305248583550951,
+      "peak_thrust_MN": 1.9056506589452684
+    },
+    "0.0001": {
+      "exhaust_c": 0.22884126984126982,
+      "effective_exhaust_c": 0.2229256589000942,
+      "beta": 0.11388948430155599,
+      "acceleration_m_s2": 0.3917333703799526,
+      "proper_years": 39.763807434364836,
+      "burn_years": 2.7800000000000002,
+      "years": 40,
+      "mass_ratio": 2.7905073219490433,
+      "feedback_fraction": 0.3857926452527474,
+      "arrival_before_staging_t": 1572.4906008681464,
+      "departure_t": 4388.0465354186135,
+      "main_am_burned_t": 72.78290975867922,
+      "main_am_loaded_t": 76.42205524661318,
+      "total_am_loaded_t": 76.42206867836371,
+      "reaction_loaded_t": 2803.4896207847637,
+      "main_reserve_t": 140.77779672752334,
+      "engine_t": 119.5136989217421,
+      "hot_radiator_t": 36.5917742455914,
+      "tank_t": 140.1744810392382,
+      "containment_t": 76.42205524661318,
+      "dry_t": 1241.105964970855,
+      "peak_annihilation_TW": 119.5136989217421,
+      "heat_rejected_GW": 11.951369892174212,
+      "peak_thrust_MN": 1.7189442587036077
+    },
+    "0.001": {
+      "exhaust_c": 0.2511111111111112,
+      "effective_exhaust_c": 0.2433148810622565,
+      "beta": 0.12119282205267393,
+      "acceleration_m_s2": 0.23044943238085142,
+      "proper_years": 39.75451437602265,
+      "burn_years": 5.033047619047619,
+      "years": 40,
+      "mass_ratio": 2.7212778497587427,
+      "feedback_fraction": 0.5057448573037606,
+      "arrival_before_staging_t": 1954.122899066581,
+      "departure_t": 5317.711360936226,
+      "main_am_burned_t": 104.42910838304483,
+      "main_am_loaded_t": 109.65056380219708,
+      "total_am_loaded_t": 109.65057723394762,
+      "reaction_loaded_t": 3312.4667573587335,
+      "main_reserve_t": 168.17942309348228,
+      "engine_t": 93.75644828592237,
+      "hot_radiator_t": 287.0561969631094,
+      "tank_t": 165.6233378679367,
+      "containment_t": 109.65056380219708,
+      "dry_t": 1595.3366368033307,
+      "peak_annihilation_TW": 93.75644828592237,
+      "heat_rejected_GW": 93.75644828592237,
+      "peak_thrust_MN": 1.2254635646929584
+    },
+    "0.01": null
+  },
+  "direct_annihilation_40_60": {
+    "0.5": {
+      "crew": {
+        "exhaust_c": 0.5,
+        "effective_exhaust_c": 0.5,
+        "beta": 0.1254375760391394,
+        "acceleration_m_s2": 0.1930138508385898,
+        "proper_years": 39.74944088354957,
+        "burn_years": 6.223,
+        "years": 40,
+        "mass_ratio": 1.6560032892885013,
+        "feedback_fraction": 0.710194754926898,
+        "arrival_before_staging_t": 3332.704665440112,
+        "departure_t": 5518.969888195959,
+        "main_am_burned_t": 1093.1326113779237,
+        "main_am_loaded_t": 1147.78924194682,
+        "total_am_loaded_t": 1147.7892553785707,
+        "reaction_loaded_t": 0.0,
+        "main_reserve_t": 109.3132611377924,
+        "engine_t": 638.7004153730182,
+        "hot_radiator_t": 19.555232262703587,
+        "tank_t": 0.0,
+        "containment_t": 1147.78924194682,
+        "dry_t": 3032.7845651325515,
+        "peak_annihilation_TW": 638.7004153730182,
+        "heat_rejected_GW": 6.3870041537301825,
+        "peak_thrust_MN": 1.0652376307829234
+      },
+      "cargo": {
+        "exhaust_c": 0.5,
+        "effective_exhaust_c": 0.5,
+        "beta": 0.07853203137464573,
+        "acceleration_m_s2": 0.12434016546993482,
+        "proper_years": 59.83945631195281,
+        "burn_years": 6.018599999999999,
+        "years": 60,
+        "mass_ratio": 1.369952815081201,
+        "feedback_fraction": 0.3928547144207594,
+        "arrival_before_staging_t": 424.882887296245,
+        "departure_t": 582.0695075313195,
+        "main_am_burned_t": 78.59331011753724,
+        "main_am_loaded_t": 82.52297562341411,
+        "total_am_loaded_t": 82.52297749690408,
+        "reaction_loaded_t": 0.0,
+        "main_reserve_t": 7.859331011753725,
+        "engine_t": 43.394729782564845,
+        "hot_radiator_t": 1.3286260654452753,
+        "tank_t": 0.0,
+        "containment_t": 82.52297562341411,
+        "dry_t": 323.0315650718238,
+        "peak_annihilation_TW": 43.394729782564845,
+        "heat_rejected_GW": 0.4339472978256485,
+        "peak_thrust_MN": 0.07237461888144774
+      }
+    },
+    "0.7": {
+      "crew": {
+        "exhaust_c": 0.7,
+        "effective_exhaust_c": 0.7,
+        "beta": 0.12139640277717681,
+        "acceleration_m_s2": 0.22816976280234746,
+        "proper_years": 39.75426554162965,
+        "burn_years": 5.092,
+        "years": 40,
+        "mass_ratio": 1.4170339630467925,
+        "feedback_fraction": 0.47291938041392684,
+        "arrival_before_staging_t": 1832.4242182963048,
+        "departure_t": 2596.607352035334,
+        "main_am_burned_t": 382.09156686951445,
+        "main_am_loaded_t": 401.1961452129902,
+        "total_am_loaded_t": 401.1961586447407,
+        "reaction_loaded_t": 0.0,
+        "main_reserve_t": 38.209156686951445,
+        "engine_t": 253.7388903377803,
+        "hot_radiator_t": 7.768779877398502,
+        "tank_t": 0.0,
+        "containment_t": 401.1961452129902,
+        "dry_t": 1603.608222439585,
+        "peak_annihilation_TW": 253.73889033778028,
+        "heat_rejected_GW": 2.5373889033778028,
+        "peak_thrust_MN": 0.5924672836047337
+      },
+      "cargo": {
+        "exhaust_c": 0.7,
+        "effective_exhaust_c": 0.7,
+        "beta": 0.07702986610398185,
+        "acceleration_m_s2": 0.14786109116575466,
+        "proper_years": 59.8413742717425,
+        "burn_years": 4.963799999999999,
+        "years": 60,
+        "mass_ratio": 1.2467275862265375,
+        "feedback_fraction": 0.27595945914564024,
+        "arrival_before_staging_t": 356.28618480508607,
+        "departure_t": 444.19181518790697,
+        "main_am_burned_t": 43.952815191410465,
+        "main_am_loaded_t": 46.150455950980984,
+        "total_am_loaded_t": 46.150457824470955,
+        "reaction_loaded_t": 0.0,
+        "main_reserve_t": 4.395281519141047,
+        "engine_t": 28.12853551174971,
+        "hot_radiator_t": 0.8612176098566049,
+        "tank_t": 0.0,
+        "containment_t": 46.150455950980984,
+        "dry_t": 257.89891207327764,
+        "peak_annihilation_TW": 28.12853551174971,
+        "heat_rejected_GW": 0.28128535511749714,
+        "peak_thrust_MN": 0.06567868648058116
+      }
+    },
+    "1.0": {
+      "crew": {
+        "exhaust_c": 1.0,
+        "effective_exhaust_c": 1.0,
+        "beta": 0.11824211156613365,
+        "acceleration_m_s2": 0.27218912862499156,
+        "proper_years": 39.75818321970644,
+        "burn_years": 4.156,
+        "years": 40,
+        "mass_ratio": 1.2681963226348885,
+        "feedback_fraction": 0.3227306049046244,
+        "arrival_before_staging_t": 1426.0725485582136,
+        "departure_t": 1808.5399618920899,
+        "main_am_burned_t": 191.23370666693816,
+        "main_am_loaded_t": 200.79539200028506,
+        "total_am_loaded_t": 200.79540543203558,
+        "reaction_loaded_t": 0.0,
+        "main_reserve_t": 19.123370666693816,
+        "engine_t": 147.577309248004,
+        "hot_radiator_t": 4.518407205613142,
+        "tank_t": 0.0,
+        "containment_t": 200.79539200028506,
+        "dry_t": 1216.3423387217517,
+        "peak_annihilation_TW": 147.57730924800404,
+        "heat_rejected_GW": 1.4757730924800405,
+        "peak_thrust_MN": 0.49226491631088337
+      },
+      "cargo": {
+        "exhaust_c": 1.0,
+        "effective_exhaust_c": 1.0,
+        "beta": 0.07582112898388221,
+        "acceleration_m_s2": 0.17684310548936993,
+        "proper_years": 59.842950360561304,
+        "burn_years": 4.0847999999999995,
+        "years": 60,
+        "mass_ratio": 1.1640832340183633,
+        "feedback_fraction": 0.19538985248523902,
+        "arrival_before_staging_t": 320.609481177937,
+        "departure_t": 373.21612170656255,
+        "main_am_burned_t": 26.30332026431275,
+        "main_am_loaded_t": 27.618486277528387,
+        "total_am_loaded_t": 27.618488151018354,
+        "reaction_loaded_t": 0.0,
+        "main_reserve_t": 2.630332026431275,
+        "engine_t": 19.786511477525718,
+        "hot_radiator_t": 0.605808009981782,
+        "tank_t": 0.0,
+        "containment_t": 27.618486277528387,
+        "dry_t": 223.98715793883838,
+        "peak_annihilation_TW": 19.786511477525718,
+        "heat_rejected_GW": 0.1978651147752572,
+        "peak_thrust_MN": 0.06600069798128716
+      }
+    }
+  },
+  "landing_isp_sensitivity": {
+    "450": {
+      "crew": {
+        "exhaust_c": 0.22598412698412698,
+        "effective_exhaust_c": 0.2202855564409641,
+        "beta": 0.11292387638324461,
+        "acceleration_m_s2": 0.4388035900541961,
+        "proper_years": 39.76508938255344,
+        "burn_years": 2.4604761904761907,
+        "years": 40,
+        "mass_ratio": 2.8000618722866606,
+        "feedback_fraction": 0.37039300489084603,
+        "arrival_before_staging_t": 3694.477879309887,
+        "departure_t": 10344.766647862094,
+        "main_am_burned_t": 167.69823697688525,
+        "main_am_loaded_t": 176.08314882572952,
+        "total_am_loaded_t": 176.08316199294154,
+        "reaction_loaded_t": 6630.636909328357,
+        "main_reserve_t": 332.51443842761034,
+        "engine_t": 311.5613234079958,
+        "hot_radiator_t": 9.53914213404792,
+        "tank_t": 331.5318454664179,
+        "containment_t": 176.08314882572952,
+        "dry_t": 1911.8808390059628,
+        "peak_annihilation_TW": 311.5613234079958,
+        "heat_rejected_GW": 3.1156132340799583,
+        "peak_thrust_MN": 4.539320743354798
+      },
+      "cargo": {
+        "exhaust_c": 0.14536190476190475,
+        "effective_exhaust_c": 0.1438341773439103,
+        "beta": 0.07306365386032548,
+        "acceleration_m_s2": 0.3530882846644417,
+        "proper_years": 59.846655209245846,
+        "burn_years": 1.9710476190476187,
+        "years": 60,
+        "mass_ratio": 2.766980047112256,
+        "feedback_fraction": 0.2813853976574872,
+        "arrival_before_staging_t": 1202.3137171399196,
+        "departure_t": 3326.7780656955265,
+        "main_am_burned_t": 22.32773737490744,
+        "main_am_loaded_t": 23.444124243652812,
+        "total_am_loaded_t": 23.444125999281084,
+        "reaction_loaded_t": 2183.7993174960816,
+        "main_reserve_t": 106.22321742778036,
+        "engine_t": 51.462515417075196,
+        "hot_radiator_t": 1.5756392474179424,
+        "tank_t": 109.18996587480409,
+        "containment_t": 23.444124243652812,
+        "dry_t": 440.95540500930247,
+        "peak_annihilation_TW": 51.462515417075196,
+        "heat_rejected_GW": 0.5146251541707519,
+        "peak_thrust_MN": 1.174646360675723
+      }
+    },
+    "900": {
+      "crew": {
+        "exhaust_c": 0.22598412698412698,
+        "effective_exhaust_c": 0.2202855564409641,
+        "beta": 0.11292387638324461,
+        "acceleration_m_s2": 0.4388035900541961,
+        "proper_years": 39.76508938255344,
+        "burn_years": 2.4604761904761907,
+        "years": 40,
+        "mass_ratio": 2.8000618722866606,
+        "feedback_fraction": 0.37039300489084603,
+        "arrival_before_staging_t": 1936.2301131265074,
+        "departure_t": 5421.564115738821,
+        "main_am_burned_t": 87.88856963288231,
+        "main_am_loaded_t": 92.28299811452644,
+        "total_am_loaded_t": 92.2830114494849,
+        "reaction_loaded_t": 3475.0347065138762,
+        "main_reserve_t": 174.26670013061567,
+        "engine_t": 163.2854319812015,
+        "hot_radiator_t": 4.999346282941489,
+        "tank_t": 173.75173532569383,
+        "containment_t": 92.28299811452644,
+        "dry_t": 1336.8855265800041,
+        "peak_annihilation_TW": 163.2854319812015,
+        "heat_rejected_GW": 1.6328543198120151,
+        "peak_thrust_MN": 2.379001797695198
+      },
+      "cargo": {
+        "exhaust_c": 0.14536190476190475,
+        "effective_exhaust_c": 0.1438341773439103,
+        "beta": 0.07306365386032548,
+        "acceleration_m_s2": 0.3530882846644417,
+        "proper_years": 59.846655209245846,
+        "burn_years": 1.9710476190476187,
+        "years": 60,
+        "mass_ratio": 2.766980047112256,
+        "feedback_fraction": 0.2813853976574872,
+        "arrival_before_staging_t": 515.9767419869974,
+        "departure_t": 1427.6973498520103,
+        "main_am_burned_t": 9.582019253719734,
+        "main_am_loaded_t": 10.061120216405723,
+        "total_am_loaded_t": 10.061122046771244,
+        "reaction_loaded_t": 937.1843978254522,
+        "main_reserve_t": 45.58603039325065,
+        "engine_t": 22.085301582122693,
+        "hot_radiator_t": 0.6761905764192009,
+        "tank_t": 46.85921989127261,
+        "containment_t": 10.061120216405723,
+        "dry_t": 271.93318398398617,
+        "peak_annihilation_TW": 22.085301582122693,
+        "heat_rejected_GW": 0.22085301582122693,
+        "peak_thrust_MN": 0.5041032082792156
+      }
+    },
+    "1800": {
+      "crew": {
+        "exhaust_c": 0.22598412698412698,
+        "effective_exhaust_c": 0.2202855564409641,
+        "beta": 0.11292387638324461,
+        "acceleration_m_s2": 0.4388035900541961,
+        "proper_years": 39.76508938255344,
+        "burn_years": 2.4604761904761907,
+        "years": 40,
+        "mass_ratio": 2.8000618722866606,
+        "feedback_fraction": 0.37039300489084603,
+        "arrival_before_staging_t": 1534.0288462911642,
+        "departure_t": 4295.375683487783,
+        "main_am_burned_t": 69.63201334494592,
+        "main_am_loaded_t": 73.11361401219321,
+        "total_am_loaded_t": 73.11362744394374,
+        "reaction_loaded_t": 2753.1869510320635,
+        "main_reserve_t": 138.06734185983095,
+        "engine_t": 129.36714553716425,
+        "hot_radiator_t": 3.9608625847921997,
+        "tank_t": 137.6593475516032,
+        "containment_t": 73.11361401219321,
+        "dry_t": 1205.3546652615648,
+        "peak_annihilation_TW": 129.36714553716425,
+        "heat_rejected_GW": 1.2936714553716426,
+        "peak_thrust_MN": 1.8848262705459358
+      },
+      "cargo": {
+        "exhaust_c": 0.14536190476190475,
+        "effective_exhaust_c": 0.1438341773439103,
+        "beta": 0.07306365386032548,
+        "acceleration_m_s2": 0.3530882846644417,
+        "proper_years": 59.846655209245846,
+        "burn_years": 1.9710476190476187,
+        "years": 60,
+        "mass_ratio": 2.766980047112256,
+        "feedback_fraction": 0.2813853976574872,
+        "arrival_before_staging_t": 358.97634295810883,
+        "departure_t": 993.2803783504133,
+        "main_am_burned_t": 6.66642108054781,
+        "main_am_loaded_t": 6.999742134575201,
+        "total_am_loaded_t": 6.9997440080651705,
+        "reaction_loaded_t": 652.0197528927694,
+        "main_reserve_t": 31.71520176961523,
+        "engine_t": 15.365228991808177,
+        "hot_radiator_t": 0.4704406236043433,
+        "tank_t": 32.60098764463847,
+        "containment_t": 6.999742134575201,
+        "dry_t": 233.26914997582625,
+        "peak_annihilation_TW": 15.365228991808177,
+        "heat_rejected_GW": 0.1536522899180818,
+        "peak_thrust_MN": 0.3507156649825951
+      }
+    }
+  }
+}

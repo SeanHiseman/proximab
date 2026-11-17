@@ -428,7 +428,7 @@ export function createScene(state,data,time=0){
     crewModules.push({id:'refuge',select:'refuge',name:'Descent refuge',centre:[RX,0,8],r:refuge.radius_m,x0:RX-refugeHalf,x1:RX+refugeHalf});
     if(state.cutaway){
       for(const y of [5.6,7.45])box('refuge',[RX,y,8],[4.6,.1,2.8],'#c4cabb',[0,0,0],1,crewBody).role='refuge-tier-floor';
-      for(const tier of [0,1])for(let row=0;row<4;row++)for(const z of (tier?[-1.05,-.5,.5,1.05]:[-1.15,-.55,.55,1.15])){
+      for(const tier of [0,1])for(let row=0;row<refuge.seat_rows;row++)for(const z of (tier?[-1.05,-.5,.5,1.05]:[-1.15,-.55,.55,1.15])){
         const tr=q=>crewBody(add([RX-1.725+row*1.15,6.12+tier*1.86,8+z],rotate(q,[Math.PI,Math.PI/2,0])));
         seat('refuge',[0,0,0],tr);box('refuge',[0,-.2,-.16],[.035,.35,.04],'#c1a782',[0,0,0],1,tr).role='descent-seat-restraint';
       }
@@ -556,8 +556,8 @@ export function createScene(state,data,time=0){
       }
     }
     scene.labels.push(...[[[S.x,0,SPINE+11],`WIND SCREEN · ${S.films} STRIPPER FILMS + DEFLECTOR COILS`],[[bow,12,SPINE],'DUST CATCHER PLATE'],[[0,3,SPINE],'HUB TRANSFER TUBE'],
-      [[RX,0,11.5],'DESCENT REFUGE · 32 SEATS'],[[L.food_factory_modules_study.cruise_centres_m[0][0]+3.5,0,11],'FOOD FACTORY'],[[VX,0,11.5],'ROVER CABIN'],[[CX,0,12.5],'CARGO RACKS · SCOUTS'],[[TE,0,SPINE+9],'TOUCHDOWN ENGINES'],[[CX,0,SPINE+5],'PACKED SURFACE RESIDENCES'],
-      [[(TK.x0+TK.x1)/2,0,SPINE+9],`LIQUID HYDROGEN · ${Math.round(data.design.storage.matching_hydrogen_kg/1000)} t`],[[(ST.x0+ST.x1)/2,0,SPINE+9],`ANTIHYDROGEN ICE · ${Math.round(data.design.storage.antimatter_kg/1000)} t`],
+      [[RX,0,11.5],'DESCENT REFUGE · 24 SEATS'],[[L.food_factory_modules_study.cruise_centres_m[0][0]+3.5,0,11],'FOOD FACTORY'],[[VX,0,11.5],'ROVER CABIN'],[[CX,0,12.5],'CARGO RACKS · SCOUTS'],[[TE,0,SPINE+9],'TOUCHDOWN ENGINES'],[[CX,0,SPINE+5],'PACKED SURFACE RESIDENCES'],
+      [[(TK.x0+TK.x1)/2,0,SPINE+9],`REFERENCE LIQUID HYDROGEN · ${Math.round(data.design.storage.matching_hydrogen_kg/1000)} t`],[[(ST.x0+ST.x1)/2,0,SPINE+9],`REFERENCE ANTIHYDROGEN ICE · ${Math.round(data.design.storage.antimatter_kg/1000)} t`],
       [[30,9,SPINE+7],'SERVICE RADIATORS'],[[XS-80,0,SPINE+8],'ENGINE HOT FINS'],[[(GEO.boom.x0+GEO.boom.x1)/2,0,SPINE+4.5],`ENGINE BOOM · ${GEO.cone.boom_length_m} m`],
       [[SH.x,0,SPINE+3],`SHADOW SHIELD · ${Math.round(SH.thickness_m*100)} cm TUNGSTEN`],[[XS+6,0,SPINE+9.5],'MAGNETIC NOZZLE'],...(engine?[[[12,11,SPINE],'BURN BRACES'],[[XS+60,0,SPINE+6],'ANTIMATTER EXHAUST']]:[])].map(([p,text])=>({p:body(p),text})));
   }
@@ -815,7 +815,7 @@ export function createScene(state,data,time=0){
       surfaceRooms[d].push({deck:1,a0:0,a1:2*Math.PI,name:'Central hall',id:ids[0]});
       scene.zones.push({id:ids[0],habitat:H,deck:2,purpose:'Central hall',functions:programmes[1],status:'Proposed surface use of the disc centre; fit and services unvalidated'});
     }
-    // Four berth bays per disc, each with two two-tier convertible sleep/torpor berths.
+    // Four bays per disc; selected adult architecture has three convertible berths per bay.
     if(state.deck===undefined||state.deck==='all'||+state.deck===0)for(let cabin=0;cabin<data.habitats.couples_per_disc;cabin++){
       const placement=data.habitats.cabin_bay_layout[cabin],theta=(placement.cell+.5)*Math.PI/6+placement.offset_m/(floors[0]-1.3),cabinId=`cabin-${d*data.habitats.couples_per_disc+cabin+1}`,bc=engine?burnCabinFrame(placement,cabin):null,t=bc?bc.t:roomTransform(floors[0]-1.3,theta);
       {const entry=addEntry(cabinId,t,true);if(bc)entry.burn=bc.burn;}
@@ -827,17 +827,24 @@ export function createScene(state,data,time=0){
         // Bunks run front-to-back along the side partitions, heads at the hull, leaving the doorway clear.
         for(let side of [-1,1]){
           const tb=q=>t([side*1.4-q[2],q[1],-.35+q[0]]);
-          box(cabinId,[0,.9,0],[2.2,.4,.85],side<0?'#7eb6aa':'#d2a079',[0,0,0],1,tb);
+          box(cabinId,[0,.9,0],[2.2,.4,.85],side<0?'#7eb6aa':'#d2a079',[0,0,0],1,tb).role='lower-berth';
           box(cabinId,[-.7,.64,0],[.45,.12,.65],'#e6e6d5',[0,0,0],1,tb);
           box(cabinId,[.2,.64,0],[1.3,.07,.75],side<0?'#a3c0ae':'#c9af91',[0,0,0],1,tb);
           box(cabinId,[-1.08,.35,0],[.12,.8,.8],'#7199a0',[0,0,0],1,tb);
           box(cabinId,[-1.16,.25,0],[.04,.3,.45],'#b9ded6',[0,0,0],1,tb);
           for(let yy of [.95,.55])pipe(cabinId,[-1,yy,side*.35],[1,yy,side*.35],.02,'#d2d9cc',tb);
           // Upper berth on corner posts, with its own monitor and a guard rail on the open side.
+          if(side<0||data.habitats.berths_per_bay===4){
           box(cabinId,[0,-.28,0],[2.2,.12,.85],side<0?'#7eb6aa':'#d2a079',[0,0,0],1,tb).role='upper-berth';
           box(cabinId,[-.7,-.4,0],[.45,.12,.65],'#e6e6d5',[0,0,0],1,tb);box(cabinId,[.2,-.37,0],[1.3,.07,.75],side<0?'#a3c0ae':'#c9af91',[0,0,0],1,tb);
           for(const x of [-1.05,1.05])for(const z of [-.38,.38])pipe(cabinId,[x,-.3,z],[x,1.1,z],.025,'#b5beb1',tb);
           pipe(cabinId,[-.6,-.55,-side*.4],[1,-.55,-side*.4],.02,'#d2d9cc',tb);box(cabinId,[-1.16,-.75,0],[.04,.3,.45],'#b9ded6',[0,0,0],1,tb);
+          }
+        }
+        if(data.architecture&&cabin===0){
+          box(cabinId,[1.4,-.35,-.35],[.9,.65,1.5],COLORS.shield,[0,0,0],1,t).role='reproductive-bank-protection';
+          box(cabinId,[1.4,-.35,.42],[.65,.4,.06],'#7eb6aa',[0,0,0],1,t).role='reproductive-bank';
+          wallSign(cabinId,`BANK ${d?'B':'A'}`,[1.4,-.35,.46],t,.4);
         }
         // Low cabinet sits under the porthole so the window stays clear.
         box(cabinId,[0,.72,-1.22],[1,.9,.5],'#a6b1a2',[0,0,0],1,t).role='cabin-wardrobe';
@@ -951,7 +958,7 @@ export function createScene(state,data,time=0){
     scene.powerIsland={thermalMW:P.source_power_MW_at_reference_load,electricalMW:P.working_operating_load_MW_not_selected_generator_rating,standoffM:stand,radiatorPanels:panels,hotLoopAreaM2:panels*panelArea};
     for(let i=0;i<2;i++)cargoModule([44,4,-55-i*12],p=>p);
     // ---- Inflatable residences: two closed two-storey cylinders unpacked from the disc lofts, one behind each disc.
-    // Together with the discs' berth bays they house all 32 people awake; each joins its disc through a short tunnel.
+    // Surface expansion provides room for the adult crew and later families; each joins its disc through a short tunnel.
     const SI=data.design.surface_inflatables,IS=L.surface_inflatables_study,IR=SI.radius_m,IL=SI.cylinder_length_m,resRects=[];
     for(const [k,cx] of DISC_X.entries()){
       const cz=SURF_Z[k]+ROUT+5.5+IR,cy=LINK_FLOOR-IS.lower_floor_y_m,z0=SURF_Z[k]+Math.sqrt(ROUT*ROUT-RES_X*RES_X),skin=state.cutaway?.16:1,id='inflatable';

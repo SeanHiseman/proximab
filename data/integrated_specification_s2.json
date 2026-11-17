@@ -1,0 +1,240 @@
+{
+  "revision": "S2-integrated-conditional",
+  "status": "Conditional concept specification; no feasible healthy-arrival optimum established",
+  "hardware_allowance": 0.25,
+  "crew_hardware": [
+    [
+      "Pressure envelopes, floors and frames",
+      50,
+      true
+    ],
+    [
+      "Spin, bearings and transfers",
+      12,
+      true
+    ],
+    [
+      "Adult furnishings and exercise",
+      8,
+      true
+    ],
+    [
+      "Life support and two food-production trains",
+      22,
+      true
+    ],
+    [
+      "Medical, 24 berths and two reproductive banks",
+      10,
+      true
+    ],
+    [
+      "Two service fission-electric units",
+      30,
+      true
+    ],
+    [
+      "Service thermal management and distribution",
+      10,
+      true
+    ],
+    [
+      "Avionics, communication and autonomy",
+      4,
+      true
+    ],
+    [
+      "Independent initial exploration and repair",
+      8,
+      true
+    ],
+    [
+      "Landing cradle and chemical engines",
+      18,
+      true
+    ],
+    [
+      "Deployable aeroshell and fresh TPS",
+      12,
+      true
+    ],
+    [
+      "Arrival separation and power transfer",
+      8,
+      true
+    ],
+    [
+      "Water storage and plumbing",
+      6,
+      true
+    ],
+    [
+      "Forward shield face and supports",
+      33.4824,
+      true
+    ],
+    [
+      "Remote engine tow assembly",
+      27,
+      false
+    ],
+    [
+      "Fixed main-feed and deployment services",
+      8,
+      false
+    ],
+    [
+      "Engine shadow shields and neutron-layer allowance",
+      42.8,
+      false
+    ],
+    [
+      "Unresolved GCR equipment allowance, no dose credit",
+      30,
+      false
+    ]
+  ],
+  "crew_inventories": [
+    [
+      "Crew body mass",
+      1.92
+    ],
+    [
+      "Working water plus retained protection water",
+      44
+    ],
+    [
+      "Cabin and reserve gases",
+      3
+    ],
+    [
+      "Emergency food",
+      4
+    ],
+    [
+      "Food-loop inventory",
+      1
+    ],
+    [
+      "Twenty-year makeup supplies and replaceable spares",
+      12
+    ],
+    [
+      "Service reactor fuel",
+      1
+    ]
+  ],
+  "cargo_hardware": [
+    [
+      "Industry and resource processing",
+      30,
+      true
+    ],
+    [
+      "Heavy exploration",
+      10,
+      true
+    ],
+    [
+      "Surface habitat expansion",
+      15,
+      true
+    ],
+    [
+      "Food and life-support backup",
+      15,
+      true
+    ],
+    [
+      "Surface power and services",
+      15,
+      true
+    ],
+    [
+      "Landing structure, engines and aeroshell",
+      24,
+      true
+    ],
+    [
+      "Spine, autonomy and maintenance equipment",
+      10,
+      false
+    ],
+    [
+      "Forward shield and support",
+      5,
+      false
+    ],
+    [
+      "Remote propulsion support",
+      10,
+      false
+    ],
+    [
+      "Feed, electronics and source protection",
+      8,
+      false
+    ]
+  ],
+  "cargo_inventories": [
+    [
+      "Startup supplies, spares and process inventories",
+      25
+    ]
+  ],
+  "landing": {
+    "atmosphere": "Mars-like entry performance assumed; not measured at Proxima b",
+    "terminal_delta_v_m_s": 1000,
+    "vacuum_comparison_delta_v_m_s": 6000,
+    "specific_impulse_s": 450,
+    "reserve_fraction_of_burned": 0.1,
+    "tank_mass_fraction_of_loaded": 0.08,
+    "crew_aeroshell_diameter_m": 50,
+    "cargo_aeroshell_diameter_m": 35,
+    "crew_engines": 4,
+    "crew_thrust_MN_each": 3,
+    "cargo_engines": 4,
+    "cargo_thrust_MN_each": 1.5,
+    "oxygen_to_hydrogen_ratio": 6,
+    "capture_and_approach_delta_v_m_s": 12000,
+    "planet_gravity_screen_m_s2": 11.67,
+    "powered_handover_speed_m_s": 350,
+    "powered_handover_minimum_altitude_m": 12000
+  },
+  "source_shadow": {
+    "distance_from_source_m": 50,
+    "radius_m": 0.8,
+    "escaping_isotropic_source_fraction": 0.2,
+    "intercepted_energy_deposited_fraction": 1,
+    "status": "Geometric heat allowance only; scattering, source extent and dose attenuation unresolved"
+  },
+  "dose": {
+    "adult_lifetime_planning_mSv": 1200,
+    "transit_GCR_mSv": 600,
+    "engine_and_service_mSv": 20,
+    "forward_collision_secondaries_mSv": 50,
+    "stellar_event_mSv": 30,
+    "surface_and_other_remainder_mSv": 500,
+    "actual_transport_result_mSv": null
+  },
+  "mass_status": "Component allocations with margins, not detailed structural or reliability sizing",
+  "healthy_arrival_demonstrated": false,
+  "final_optimal_design": false,
+  "geometry": {
+    "gravity_modules": 2,
+    "crew_per_module": 12,
+    "floor_radii_m": [
+      8.5,
+      5.4
+    ],
+    "envelope_radius_m": 9.5,
+    "axial_depth_m": 4.5,
+    "usable_volume_allocation_m3": 750,
+    "crew_forward_shield_width_m": 19.54,
+    "crew_forward_shield_height_m": 15.6,
+    "forward_shield_areal_mass_kg_m2": 100,
+    "shield_areal_mass_is_allocation_not_transport_result": true,
+    "main_engine_standoff_target_m": 2000,
+    "final_tank_dimensions": null
+  }
+}

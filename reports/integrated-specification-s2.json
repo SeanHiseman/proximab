@@ -1,0 +1,958 @@
+{
+  "revision": "S2-integrated-conditional",
+  "status": "Conditional concept specification; no feasible healthy-arrival optimum established",
+  "crew": {
+    "ledger": {
+      "hardware_rows": [
+        [
+          "Pressure envelopes, floors and frames",
+          50,
+          true
+        ],
+        [
+          "Spin, bearings and transfers",
+          12,
+          true
+        ],
+        [
+          "Adult furnishings and exercise",
+          8,
+          true
+        ],
+        [
+          "Life support and two food-production trains",
+          22,
+          true
+        ],
+        [
+          "Medical, 24 berths and two reproductive banks",
+          10,
+          true
+        ],
+        [
+          "Two service fission-electric units",
+          30,
+          true
+        ],
+        [
+          "Service thermal management and distribution",
+          10,
+          true
+        ],
+        [
+          "Avionics, communication and autonomy",
+          4,
+          true
+        ],
+        [
+          "Independent initial exploration and repair",
+          8,
+          true
+        ],
+        [
+          "Landing cradle and chemical engines",
+          18,
+          true
+        ],
+        [
+          "Deployable aeroshell and fresh TPS",
+          12,
+          true
+        ],
+        [
+          "Arrival separation and power transfer",
+          8,
+          true
+        ],
+        [
+          "Water storage and plumbing",
+          6,
+          true
+        ],
+        [
+          "Forward shield face and supports",
+          33.4824,
+          true
+        ],
+        [
+          "Remote engine tow assembly",
+          27,
+          false
+        ],
+        [
+          "Fixed main-feed and deployment services",
+          8,
+          false
+        ],
+        [
+          "Engine shadow shields and neutron-layer allowance",
+          42.8,
+          false
+        ],
+        [
+          "Unresolved GCR equipment allowance, no dose credit",
+          30,
+          false
+        ]
+      ],
+      "inventory_rows": [
+        [
+          "Crew body mass",
+          1.92
+        ],
+        [
+          "Working water plus retained protection water",
+          44
+        ],
+        [
+          "Cabin and reserve gases",
+          3
+        ],
+        [
+          "Emergency food",
+          4
+        ],
+        [
+          "Food-loop inventory",
+          1
+        ],
+        [
+          "Twenty-year makeup supplies and replaceable spares",
+          12
+        ],
+        [
+          "Service reactor fuel",
+          1
+        ]
+      ],
+      "fixed_dry_with_margin_t": 434.6326894780814,
+      "fixed_inventory_t": 66.92,
+      "nonpropulsion_core_t": 606.8495842588953,
+      "landing": {
+        "base_t": 356.27299999999997,
+        "burned_t": 95.72444980073986,
+        "loaded_t": 105.29689478081386,
+        "tank_with_margin_t": 10.529689478081387,
+        "touchdown_t": 376.37513445815534,
+        "entry_t": 472.0995842588952,
+        "oxygen_t": 90.25448124069759,
+        "hydrogen_t": 15.042413540116266,
+        "delta_v_m_s": 1000
+      }
+    },
+    "coefficients": {
+      "fusion_coupling": 0.8,
+      "annihilation_coupling": 0.8,
+      "manufacturing_efficiency": 0.5,
+      "tank_fraction": 0.01,
+      "containment_kg_kg": 0.5,
+      "engine_W_kg": 5000000000.0,
+      "absorbed_power_fraction": 2.2800000000000005e-05,
+      "radiator_temperature_K": 2000,
+      "radiator_emissivity": 0.9,
+      "radiator_kg_m2": 5,
+      "hardware_margin": 0.25,
+      "reserve_fraction": 0.05,
+      "nonpropulsion_allocation_t": 606.8495842588953,
+      "separation_kit_t": 5
+    },
+    "selected": {
+      "staged": true,
+      "base_t": 871.4519851530633,
+      "departure_t": 3931.8683754092035,
+      "arrival_t": 904.6314509653738,
+      "fusion_t": 2795.724899427755,
+      "antimatter_t": 84.73741406086754,
+      "ordinary_annihilation_reactant_t": 84.73741406086754,
+      "retained_storage_t": 33.17946581231047,
+      "discarded_t": 62.03719689433961,
+      "all_storage_t": 88.96666270665008,
+      "feedback": 0.036677329510159236,
+      "fusion_energy_ZJ": 0.9849675148201923,
+      "manufacturing_ZJ": 30.463275887988292,
+      "primary_energy_ZJ": 31.448243402808483,
+      "phases": [
+        {
+          "kind": "hybrid",
+          "annihilated_mass_per_fusion_mass": 0.036917670496761125,
+          "effective_exhaust_c": 0.24803005813965934,
+          "exhaust_c": 0.24999999999999956,
+          "tank_per_spent": 0.023403504599566385,
+          "fusion_tank_per_spent": 0.009643967196748853,
+          "ordinary_reactant_tank_per_spent": 0.00017801640162557362,
+          "containment_per_spent": 0.00890082008127868,
+          "spent_t": 2383.7112367937075,
+          "fusion_t": 2298.8432974160155,
+          "antimatter_t": 42.43396968884599,
+          "tank_hardware_t": 55.78719689433961
+        },
+        {
+          "kind": "hybrid",
+          "annihilated_mass_per_fusion_mass": 0.17027575261690628,
+          "effective_exhaust_c": 0.46570909677157274,
+          "exhaust_c": 0.48000000000000004,
+          "tank_per_spent": 0.05705954002492097,
+          "fusion_tank_per_spent": 0.008544994611431152,
+          "ordinary_reactant_tank_per_spent": 0.000727502694284424,
+          "containment_per_spent": 0.0363751347142212,
+          "spent_t": 581.4884907557828,
+          "fusion_t": 496.8816020117397,
+          "antimatter_t": 42.303444372021545,
+          "tank_hardware_t": 33.179465812310475
+        }
+      ],
+      "hardware": {
+        "engine_t": 66.35497001421254,
+        "radiator_t": 23.1602950908762,
+        "radiator_planform_m2": 4632.0590181752395,
+        "phase_peak_source_power_W": [
+          331774850071062.7,
+          252418171300870.16
+        ],
+        "peak_power_TW": 331.7748500710627,
+        "peak_absorbed_heat_GW": 7.564466581620231,
+        "retained_reserve_t": 148.25998637747452,
+        "retained_reserve_storage_with_margin_t": 4.448333135332504
+      },
+      "trajectory": {
+        "beta": 0.22714423863745942,
+        "acceleration_m_s2": 1.7726027461005402,
+        "proper_years": 19.423053974813076,
+        "burn_years": 1.25,
+        "years": 19.9
+      },
+      "closure_feedback": 0.30251002820823863,
+      "loaded_antimatter_t": 88.97428476391092,
+      "loaded_fusion_t": 2935.511144399143,
+      "loaded_ordinary_annihilation_reactant_t": 88.97428476391092,
+      "manufacture_loaded_antimatter_ZJ": 31.986439682387708,
+      "primary_energy_loaded_fuel_ZJ": 32.9714071972079,
+      "dry_hardware_and_nonpropulsion_allocation_t": 818.4086614822388,
+      "departure_phase_thrust_MN": 6.969640679556225
+    },
+    "dry_departure_t": 646.191766701425,
+    "extra_source_heat_fraction": 1.2800000000000003e-05,
+    "sampled_optimum": {
+      "staged": true,
+      "base_t": 876.3451930433033,
+      "departure_t": 4019.92134783261,
+      "arrival_t": 909.6253429283478,
+      "fusion_t": 2878.101319691369,
+      "antimatter_t": 84.64400705281355,
+      "ordinary_annihilation_reactant_t": 84.64400705281355,
+      "retained_storage_t": 33.280149885044466,
+      "discarded_t": 62.90667110726632,
+      "all_storage_t": 89.9368209923108,
+      "feedback": 0.03658665641164529,
+      "fusion_energy_ZJ": 1.01398971867274,
+      "manufacturing_ZJ": 30.429695875100762,
+      "primary_energy_ZJ": 31.443685593773502,
+      "phases": [
+        {
+          "kind": "hybrid",
+          "annihilated_mass_per_fusion_mass": 0.035643278187417714,
+          "effective_exhaust_c": 0.24436782325846573,
+          "exhaust_c": 0.24624999999999966,
+          "tank_per_spent": 0.023040071253106982,
+          "fusion_tank_per_spent": 0.009655834408061814,
+          "ordinary_reactant_tank_per_spent": 0.00017208279596909356,
+          "containment_per_spent": 0.008604139798454678,
+          "spent_t": 2459.0493008838284,
+          "fusion_t": 2374.417285059442,
+          "antimatter_t": 42.3160079121933,
+          "tank_hardware_t": 56.65667110726632
+        },
+        {
+          "kind": "hybrid",
+          "annihilated_mass_per_fusion_mass": 0.16807361849994665,
+          "effective_exhaust_c": 0.4634367699547565,
+          "exhaust_c": 0.4775000000000001,
+          "tank_per_spent": 0.056566182859013873,
+          "fusion_tank_per_spent": 0.008561104233175057,
+          "ordinary_reactant_tank_per_spent": 0.0007194478834124713,
+          "containment_per_spent": 0.03597239417062357,
+          "spent_t": 588.3400329131676,
+          "fusion_t": 503.68403463192715,
+          "antimatter_t": 42.32799914062025,
+          "tank_hardware_t": 33.28014988504448
+        }
+      ],
+      "hardware": {
+        "engine_t": 66.79096696890883,
+        "radiator_t": 23.312473867045142,
+        "radiator_planform_m2": 4662.494773409028,
+        "phase_peak_source_power_W": [
+          333954834844544.2,
+          252921369949393.72
+        ],
+        "peak_power_TW": 333.95483484454417,
+        "peak_absorbed_heat_GW": 7.614170234455609,
+        "retained_reserve_t": 152.36946668984982,
+        "retained_reserve_storage_with_margin_t": 4.49684104961554
+      },
+      "trajectory": {
+        "beta": 0.22714423863745942,
+        "acceleration_m_s2": 1.7726027461005402,
+        "proper_years": 19.423053974813076,
+        "burn_years": 1.25,
+        "years": 19.9
+      },
+      "closure_feedback": 0.3063918198146741,
+      "loaded_antimatter_t": 88.87620740545422,
+      "loaded_fusion_t": 3022.0063856759375,
+      "loaded_ordinary_annihilation_reactant_t": 88.87620740545422,
+      "manufacture_loaded_antimatter_ZJ": 31.9511806688558,
+      "primary_energy_loaded_fuel_ZJ": 32.965170387528545,
+      "dry_hardware_and_nonpropulsion_allocation_t": 820.1625473457643,
+      "departure_phase_thrust_MN": 7.125723620276269
+    },
+    "retained_storage_comparator": {
+      "staged": false,
+      "base_t": 872.6801700530231,
+      "departure_t": 3914.966300007648,
+      "arrival_t": 964.463908887889,
+      "fusion_t": 2771.229055786309,
+      "antimatter_t": 89.63666766672492,
+      "ordinary_annihilation_reactant_t": 89.63666766672492,
+      "retained_storage_t": 91.78373883486597,
+      "discarded_t": 0.0,
+      "all_storage_t": 91.78373883486591,
+      "feedback": 0.09516555050846906,
+      "fusion_energy_ZJ": 0.9763373344187234,
+      "manufacturing_ZJ": 32.22456770807203,
+      "primary_energy_ZJ": 33.20090504249075,
+      "phases": [
+        {
+          "kind": "hybrid",
+          "annihilated_mass_per_fusion_mass": 0.038652900566613975,
+          "effective_exhaust_c": 0.25290881284044703,
+          "exhaust_c": 0.255,
+          "tank_per_spent": 0.023896926530574236,
+          "fusion_tank_per_spent": 0.009627855460226147,
+          "ordinary_reactant_tank_per_spent": 0.00018607226988692633,
+          "containment_per_spent": 0.009303613494346316,
+          "spent_t": 2345.4977809843613,
+          "fusion_t": 2258.2113617598593,
+          "antimatter_t": 43.643209612250985,
+          "tank_hardware_t": 56.05018814980818
+        },
+        {
+          "kind": "hybrid",
+          "annihilated_mass_per_fusion_mass": 0.17930554283027358,
+          "effective_exhaust_c": 0.4747726995378405,
+          "exhaust_c": 0.4900000000000001,
+          "tank_per_spent": 0.059063270075017604,
+          "fusion_tank_per_spent": 0.008479566691427996,
+          "ordinary_reactant_tank_per_spent": 0.0007602166542860019,
+          "containment_per_spent": 0.03801083271430009,
+          "spent_t": 605.0046101353977,
+          "fusion_t": 513.0176940264498,
+          "antimatter_t": 45.99345805447393,
+          "tank_hardware_t": 35.73355068505773
+        }
+      ],
+      "hardware": {
+        "engine_t": 67.4355623611844,
+        "radiator_t": 23.537461075932786,
+        "radiator_planform_m2": 4707.492215186557,
+        "phase_peak_source_power_W": [
+          337177811805921.94,
+          272934646457073.0
+        ],
+        "peak_power_TW": 337.1778118059219,
+        "peak_absorbed_heat_GW": 7.687654109175022,
+        "retained_reserve_t": 147.52511955598797,
+        "retained_reserve_storage_with_margin_t": 4.5891869417432956
+      },
+      "trajectory": {
+        "beta": 0.22714423863745942,
+        "acceleration_m_s2": 1.7726027461005402,
+        "proper_years": 19.423053974813076,
+        "burn_years": 1.25,
+        "years": 19.9
+      },
+      "closure_feedback": 0.3046139867919494,
+      "loaded_antimatter_t": 94.11850105006117,
+      "loaded_fusion_t": 2909.7905085756242,
+      "loaded_ordinary_annihilation_reactant_t": 94.11850105006117,
+      "manufacture_loaded_antimatter_ZJ": 33.835796093475636,
+      "primary_energy_loaded_fuel_ZJ": 34.81213342789436,
+      "dry_hardware_and_nonpropulsion_allocation_t": 816.938789331901,
+      "departure_phase_thrust_MN": 6.939680014284629
+    },
+    "rounding_energy_penalty_fraction": 0.000189193916064756,
+    "arrival_checks": {
+      "capture_propellant_from_braking_reserve_t": 0.0777497213359509,
+      "braking_reserve_t": 29.07442453778914,
+      "capture_fits_reserve": true,
+      "one_engine_out_initial_net_acceleration_m_s2": 7.393774466415289,
+      "one_engine_out_stop_distance_m": 8283.996256339116,
+      "constant_mass_propulsive_delta_v_for_stop": 902.424207494157
+    },
+    "vacuum_core_comparison": {
+      "hardware_rows": [
+        [
+          "Pressure envelopes, floors and frames",
+          50,
+          true
+        ],
+        [
+          "Spin, bearings and transfers",
+          12,
+          true
+        ],
+        [
+          "Adult furnishings and exercise",
+          8,
+          true
+        ],
+        [
+          "Life support and two food-production trains",
+          22,
+          true
+        ],
+        [
+          "Medical, 24 berths and two reproductive banks",
+          10,
+          true
+        ],
+        [
+          "Two service fission-electric units",
+          30,
+          true
+        ],
+        [
+          "Service thermal management and distribution",
+          10,
+          true
+        ],
+        [
+          "Avionics, communication and autonomy",
+          4,
+          true
+        ],
+        [
+          "Independent initial exploration and repair",
+          8,
+          true
+        ],
+        [
+          "Landing cradle and chemical engines",
+          18,
+          true
+        ],
+        [
+          "Deployable aeroshell and fresh TPS",
+          12,
+          true
+        ],
+        [
+          "Arrival separation and power transfer",
+          8,
+          true
+        ],
+        [
+          "Water storage and plumbing",
+          6,
+          true
+        ],
+        [
+          "Forward shield face and supports",
+          33.4824,
+          true
+        ],
+        [
+          "Remote engine tow assembly",
+          27,
+          false
+        ],
+        [
+          "Fixed main-feed and deployment services",
+          8,
+          false
+        ],
+        [
+          "Engine shadow shields and neutron-layer allowance",
+          42.8,
+          false
+        ],
+        [
+          "Unresolved GCR equipment allowance, no dose credit",
+          30,
+          false
+        ]
+      ],
+      "inventory_rows": [
+        [
+          "Crew body mass",
+          1.92
+        ],
+        [
+          "Working water plus retained protection water",
+          44
+        ],
+        [
+          "Cabin and reserve gases",
+          3
+        ],
+        [
+          "Emergency food",
+          4
+        ],
+        [
+          "Food-loop inventory",
+          1
+        ],
+        [
+          "Twenty-year makeup supplies and replaceable spares",
+          12
+        ],
+        [
+          "Service reactor fuel",
+          1
+        ]
+      ],
+      "fixed_dry_with_margin_t": 713.4209049598024,
+      "fixed_inventory_t": 66.92,
+      "nonpropulsion_core_t": 3673.519954557827,
+      "landing": {
+        "base_t": 356.27299999999997,
+        "burned_t": 2630.1627723618403,
+        "loaded_t": 2893.1790495980244,
+        "tank_with_margin_t": 289.31790495980243,
+        "touchdown_t": 908.6071821959865,
+        "entry_t": 3538.769954557827,
+        "oxygen_t": 2479.867756798307,
+        "hydrogen_t": 413.31129279971776,
+        "delta_v_m_s": 6000
+      }
+    },
+    "surface_delivery_of_orbital_engine_and_storage_not_included": true
+  },
+  "cargo": {
+    "ledger": {
+      "hardware_rows": [
+        [
+          "Industry and resource processing",
+          30,
+          true
+        ],
+        [
+          "Heavy exploration",
+          10,
+          true
+        ],
+        [
+          "Surface habitat expansion",
+          15,
+          true
+        ],
+        [
+          "Food and life-support backup",
+          15,
+          true
+        ],
+        [
+          "Surface power and services",
+          15,
+          true
+        ],
+        [
+          "Landing structure, engines and aeroshell",
+          24,
+          true
+        ],
+        [
+          "Spine, autonomy and maintenance equipment",
+          10,
+          false
+        ],
+        [
+          "Forward shield and support",
+          5,
+          false
+        ],
+        [
+          "Remote propulsion support",
+          10,
+          false
+        ],
+        [
+          "Feed, electronics and source protection",
+          8,
+          false
+        ]
+      ],
+      "inventory_rows": [
+        [
+          "Startup supplies, spares and process inventories",
+          25
+        ]
+      ],
+      "fixed_dry_with_margin_t": 182.26576228998724,
+      "fixed_inventory_t": 25,
+      "nonpropulsion_core_t": 254.92338518985963,
+      "landing": {
+        "base_t": 161.25,
+        "burned_t": 43.32511172715672,
+        "loaded_t": 47.65762289987239,
+        "tank_with_margin_t": 4.765762289987239,
+        "touchdown_t": 170.3482734627029,
+        "entry_t": 213.67338518985963,
+        "oxygen_t": 40.84939105703348,
+        "hydrogen_t": 6.8082318428389135,
+        "delta_v_m_s": 1000
+      }
+    },
+    "coefficients": {
+      "fusion_coupling": 0.8,
+      "annihilation_coupling": 0.8,
+      "manufacturing_efficiency": 0.5,
+      "tank_fraction": 0.01,
+      "containment_kg_kg": 0.5,
+      "engine_W_kg": 5000000000.0,
+      "absorbed_power_fraction": 2.2800000000000005e-05,
+      "radiator_temperature_K": 2000,
+      "radiator_emissivity": 0.9,
+      "radiator_kg_m2": 5,
+      "hardware_margin": 0.25,
+      "reserve_fraction": 0.05,
+      "nonpropulsion_allocation_t": 254.92338518985963,
+      "separation_kit_t": 5
+    },
+    "selected": {
+      "staged": true,
+      "base_t": 396.0868250930074,
+      "departure_t": 2829.7948359492275,
+      "arrival_t": 401.6406386896915,
+      "fusion_t": 2389.151442952186,
+      "antimatter_t": 3.20082459417344,
+      "ordinary_annihilation_reactant_t": 3.20082459417344,
+      "retained_storage_t": 5.553813596684108,
+      "discarded_t": 32.60110511900368,
+      "all_storage_t": 31.904918715687792,
+      "feedback": 0.036285597336572516,
+      "fusion_energy_ZJ": 0.8417267949988084,
+      "manufacturing_ZJ": 1.150703072096621,
+      "primary_energy_ZJ": 1.9924298670954292,
+      "phases": [
+        {
+          "kind": "hybrid",
+          "annihilated_mass_per_fusion_mass": 8.746730909348692e-05,
+          "effective_exhaust_c": 0.07993563527286278,
+          "exhaust_c": 0.07999999999999906,
+          "tank_per_spent": 0.012526784520639933,
+          "fusion_tank_per_spent": 0.009999125403407675,
+          "ordinary_reactant_tank_per_spent": 4.372982961621981e-07,
+          "containment_per_spent": 2.1864914808109906e-05,
+          "spent_t": 2103.580936958396,
+          "fusion_t": 2103.3969584864813,
+          "antimatter_t": 0.09198923595727138,
+          "tank_hardware_t": 26.35110511900368
+        },
+        {
+          "kind": "hybrid",
+          "annihilated_mass_per_fusion_mass": 0.021758786141389673,
+          "effective_exhaust_c": 0.19899410833594416,
+          "exhaust_c": 0.2000000000000001,
+          "tank_per_spent": 0.019021723469553293,
+          "fusion_tank_per_spent": 0.009787045764259483,
+          "ordinary_reactant_tank_per_spent": 0.00010647711787025788,
+          "containment_per_spent": 0.005323855893512894,
+          "spent_t": 291.972155182137,
+          "fusion_t": 285.75448446570465,
+          "antimatter_t": 3.1088353582161687,
+          "tank_hardware_t": 5.553813596684111
+        }
+      ],
+      "hardware": {
+        "engine_t": 11.736104623304833,
+        "radiator_t": 4.096326864964556,
+        "radiator_planform_m2": 819.2653729929112,
+        "phase_peak_source_power_W": [
+          58680523116524.164,
+          36236850214570.664
+        ],
+        "peak_power_TW": 58.680523116524164,
+        "peak_absorbed_heat_GW": 1.3379159270567513,
+        "retained_reserve_t": 119.77765460702665,
+        "retained_reserve_storage_with_margin_t": 1.5952459357843898
+      },
+      "trajectory": {
+        "beta": 0.1082952861960492,
+        "acceleration_m_s2": 1.3798337124601783,
+        "proper_years": 39.67120977992735,
+        "burn_years": 0.75,
+        "years": 39.9
+      },
+      "closure_feedback": 0.35354787438712265,
+      "loaded_antimatter_t": 3.3608658238821123,
+      "loaded_fusion_t": 2508.609015099795,
+      "loaded_ordinary_annihilation_reactant_t": 3.3608658238821123,
+      "manufacture_loaded_antimatter_ZJ": 1.2082382257014521,
+      "primary_energy_loaded_fuel_ZJ": 2.0499650207002604,
+      "dry_hardware_and_nonpropulsion_allocation_t": 314.46408920166857,
+      "departure_phase_thrust_MN": 3.9046463139884637
+    },
+    "dry_departure_t": 241.80646630179618,
+    "extra_source_heat_fraction": 1.2800000000000003e-05,
+    "sampled_optimum": {
+      "staged": true,
+      "base_t": 396.94144134005415,
+      "departure_t": 2845.539526227001,
+      "arrival_t": 402.5239775581592,
+      "fusion_t": 2403.8942504190873,
+      "antimatter_t": 3.1867891327475206,
+      "ordinary_annihilation_reactant_t": 3.1867891327475206,
+      "retained_storage_t": 5.5825362181050195,
+      "discarded_t": 32.747719984260016,
+      "all_storage_t": 32.08025620236508,
+      "feedback": 0.036285597336572516,
+      "fusion_energy_ZJ": 0.8469208634263273,
+      "manufacturing_ZJ": 1.1456572946396186,
+      "primary_energy_ZJ": 1.9925781580659458,
+      "phases": [
+        {
+          "kind": "hybrid",
+          "annihilated_mass_per_fusion_mass": 8.746730909348692e-05,
+          "effective_exhaust_c": 0.07993563527286278,
+          "exhaust_c": 0.07999999999999906,
+          "tank_per_spent": 0.012526784520639933,
+          "fusion_tank_per_spent": 0.009999125403407675,
+          "ordinary_reactant_tank_per_spent": 4.372982961621981e-07,
+          "containment_per_spent": 2.1864914808109906e-05,
+          "spent_t": 2115.285047060614,
+          "fusion_t": 2115.1000449512185,
+          "antimatter_t": 0.09250105469777736,
+          "tank_hardware_t": 26.497719984260012
+        },
+        {
+          "kind": "hybrid",
+          "annihilated_mass_per_fusion_mass": 0.021429017753571325,
+          "effective_exhaust_c": 0.19776290572503774,
+          "exhaust_c": 0.1987499999999995,
+          "tank_per_spent": 0.01892495618683756,
+          "fusion_tank_per_spent": 0.009790205512266528,
+          "ordinary_reactant_tank_per_spent": 0.00010489724386673564,
+          "containment_per_spent": 0.005244862193336782,
+          "spent_t": 294.98278162396804,
+          "fusion_t": 288.79420546786855,
+          "antimatter_t": 3.0942880780497433,
+          "tank_hardware_t": 5.582536218105067
+        }
+      ],
+      "hardware": {
+        "engine_t": 11.801403114210974,
+        "radiator_t": 4.119118410466743,
+        "radiator_planform_m2": 823.8236820933486,
+        "phase_peak_source_power_W": [
+          59007015571054.875,
+          36207953963791.47
+        ],
+        "peak_power_TW": 59.00701557105487,
+        "peak_absorbed_heat_GW": 1.3453599550200515,
+        "retained_reserve_t": 120.5133914342291,
+        "retained_reserve_storage_with_margin_t": 1.604012810118254
+      },
+      "trajectory": {
+        "beta": 0.1082952861960492,
+        "acceleration_m_s2": 1.3798337124601783,
+        "proper_years": 39.67120977992735,
+        "burn_years": 0.75,
+        "years": 39.9
+      },
+      "closure_feedback": 0.3549396879695532,
+      "loaded_antimatter_t": 3.3461285893848967,
+      "loaded_fusion_t": 2524.0889629400417,
+      "loaded_ordinary_annihilation_reactant_t": 3.3461285893848967,
+      "manufacture_loaded_antimatter_ZJ": 1.2029401593715996,
+      "primary_energy_loaded_fuel_ZJ": 2.049861022797927,
+      "dry_hardware_and_nonpropulsion_allocation_t": 314.7583061081901,
+      "departure_phase_thrust_MN": 3.926371368425979
+    },
+    "retained_storage_comparator": {
+      "staged": false,
+      "base_t": 368.4472974174934,
+      "departure_t": 2284.3881116918697,
+      "arrival_t": 394.50695787884365,
+      "fusion_t": 1881.9263912377203,
+      "antimatter_t": 3.977381287652804,
+      "ordinary_annihilation_reactant_t": 3.977381287652804,
+      "retained_storage_t": 26.059660461350234,
+      "discarded_t": 0.0,
+      "all_storage_t": 26.059660461350184,
+      "feedback": 0.0660562759183409,
+      "fusion_energy_ZJ": 0.6630253073295455,
+      "manufacturing_ZJ": 1.429876812035548,
+      "primary_energy_ZJ": 2.0929021193650934,
+      "phases": [
+        {
+          "kind": "hybrid",
+          "annihilated_mass_per_fusion_mass": 0.0010166328022522973,
+          "effective_exhaust_c": 0.08866218572263725,
+          "exhaust_c": 0.0887500000000026,
+          "tank_per_spent": 0.01281102759483445,
+          "fusion_tank_per_spent": 0.009989843996903365,
+          "ordinary_reactant_tank_per_spent": 5.078001548317579e-06,
+          "containment_per_spent": 0.00025390007741587893,
+          "spent_t": 1614.16711014093,
+          "fusion_t": 1612.5277615240223,
+          "antimatter_t": 0.8196743084538411,
+          "tank_hardware_t": 20.67913939068963
+        },
+        {
+          "kind": "hybrid",
+          "annihilated_mass_per_fusion_mass": 0.02344263578886631,
+          "effective_exhaust_c": 0.20514651311485577,
+          "exhaust_c": 0.2062500000000004,
+          "tank_per_spent": 0.019514860393036605,
+          "fusion_tank_per_spent": 0.009770943334104927,
+          "ordinary_reactant_tank_per_spent": 0.00011452833294753643,
+          "containment_per_spent": 0.005726416647376821,
+          "spent_t": 275.714043672096,
+          "fusion_t": 269.3986297136981,
+          "antimatter_t": 3.157706979198963,
+          "tank_hardware_t": 5.380521070660551
+        }
+      ],
+      "hardware": {
+        "engine_t": 10.512316766269704,
+        "radiator_t": 3.669180444862282,
+        "radiator_planform_m2": 733.8360889724564,
+        "phase_peak_source_power_W": [
+          52561583831348.516,
+          36132313665303.29
+        ],
+        "peak_power_TW": 52.561583831348514,
+        "peak_absorbed_heat_GW": 1.1984041113547463,
+        "retained_reserve_t": 94.4940576906513,
+        "retained_reserve_storage_with_margin_t": 1.3029830230675092
+      },
+      "trajectory": {
+        "beta": 0.1082952861960492,
+        "acceleration_m_s2": 1.3798337124601783,
+        "proper_years": 39.67120977992735,
+        "burn_years": 0.75,
+        "years": 39.9
+      },
+      "closure_feedback": 0.3081143843999975,
+      "loaded_antimatter_t": 4.176250352035445,
+      "loaded_fusion_t": 1976.0227107996063,
+      "loaded_ordinary_annihilation_reactant_t": 4.176250352035445,
+      "manufacture_loaded_antimatter_ZJ": 1.5013706526373256,
+      "primary_energy_loaded_fuel_ZJ": 2.164395959966871,
+      "dry_hardware_and_nonpropulsion_allocation_t": 300.01290018819236,
+      "departure_phase_thrust_MN": 3.1520757288556887
+    },
+    "rounding_energy_penalty_fraction": 5.0734123521856134e-05,
+    "arrival_checks": {
+      "capture_propellant_from_braking_reserve_t": 0.0807819431448644,
+      "braking_reserve_t": 14.59860775910685,
+      "capture_fits_reserve": true,
+      "one_engine_out_initial_net_acceleration_m_s2": 9.39018021852147,
+      "one_engine_out_stop_distance_m": 6522.771509665883,
+      "constant_mass_propulsive_delta_v_for_stop": 784.9756772445762
+    },
+    "vacuum_core_comparison": {
+      "hardware_rows": [
+        [
+          "Industry and resource processing",
+          30,
+          true
+        ],
+        [
+          "Heavy exploration",
+          10,
+          true
+        ],
+        [
+          "Surface habitat expansion",
+          15,
+          true
+        ],
+        [
+          "Food and life-support backup",
+          15,
+          true
+        ],
+        [
+          "Surface power and services",
+          15,
+          true
+        ],
+        [
+          "Landing structure, engines and aeroshell",
+          24,
+          true
+        ],
+        [
+          "Spine, autonomy and maintenance equipment",
+          10,
+          false
+        ],
+        [
+          "Forward shield and support",
+          5,
+          false
+        ],
+        [
+          "Remote propulsion support",
+          10,
+          false
+        ],
+        [
+          "Feed, electronics and source protection",
+          8,
+          false
+        ]
+      ],
+      "inventory_rows": [
+        [
+          "Startup supplies, spares and process inventories",
+          25
+        ]
+      ],
+      "fixed_dry_with_margin_t": 308.44596608434586,
+      "fixed_inventory_t": 25,
+      "nonpropulsion_core_t": 1642.9056269278044,
+      "landing": {
+        "base_t": 161.25,
+        "burned_t": 1190.417873494053,
+        "loaded_t": 1309.4596608434586,
+        "tank_with_margin_t": 130.94596608434586,
+        "touchdown_t": 411.23775343375115,
+        "entry_t": 1601.6556269278044,
+        "oxygen_t": 1122.3939950086788,
+        "hydrogen_t": 187.0656658347798,
+        "delta_v_m_s": 6000
+      }
+    },
+    "surface_delivery_of_orbital_engine_and_storage_not_included": true
+  },
+  "fleet": {
+    "departure_t": 6761.663211358431,
+    "loaded_fusion_t": 5444.120159498938,
+    "loaded_antimatter_t": 92.33515058779302,
+    "primary_energy_loaded_fuel_ZJ": 35.021372217908166,
+    "manufacture_loaded_antimatter_ZJ": 33.19467790808916,
+    "dry_departure_t": 887.9982330032211,
+    "antimatter_factory_average_TW_over_20_years": 52.593793425496806
+  },
+  "radiation": {
+    "proper_exposure_years": 19.523053974813077,
+    "required_average_GCR_mSv_day": 0.08414208526998598,
+    "adult_reference_at_20g_polyethylene_proxy_Sv": 7.416027282872497,
+    "proxy_to_target_ratio": 12.36004547145416,
+    "actual_interstellar_dose_Sv": null,
+    "health_requirement_verified": false
+  },
+  "feasible_health_constrained_optimum": null,
+  "acceptance": {
+    "mass_and_rocket_accounting": "checked",
+    "engine_and_thermal_coefficients": "assumed",
+    "radiation": "unverified; proxy exceeds allocation",
+    "landing": "conditional atmosphere and trajectory",
+    "structural_and_reliability": "unqualified",
+    "fuel_manufacturing_and_storage": "hypothetical"
+  }
+}

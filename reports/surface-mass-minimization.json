@@ -1,0 +1,92 @@
+{
+  "status": "Conditional sensitivities against S3 component ledger, not adopted or closed against the selected 500 t retained target",
+  "assumptions": [
+    "Two service units assumed equal mass; one remains on habitat for landing and surface transition",
+    "44 t water split into 8 t landing working inventory and 36 t retained orbital shielding water; working inventory not sized",
+    "Cargo power, water and protected surface site verified before crew descent",
+    "No new transfer, isolation or water-tank relocation hardware added; gross savings only",
+    "Chemical descent 1 km/s, 450 s Isp, 10% burn reserve unchanged"
+  ],
+  "cases": [
+    {
+      "label": "S3 surface reference",
+      "dry_hardware_landed_t": 216.15090415011682,
+      "inventory_landed_t": 66.92,
+      "landing": {
+        "base_t": 275.92,
+        "burned_t": 73.87297675740487,
+        "loaded_t": 81.26027443314537,
+        "tank_with_margin_t": 7.150904150116793,
+        "touchdown_t": 290.4582018258573,
+        "entry_t": 364.33117858326216,
+        "oxygen_t": 69.65166379983889,
+        "hydrogen_t": 11.608610633306482,
+        "delta_v_m_s": 1000
+      }
+    },
+    {
+      "label": "One of two service units left in orbit",
+      "dry_hardware_landed_t": 199.22328049660518,
+      "inventory_landed_t": 66.92,
+      "landing": {
+        "base_t": 259.42,
+        "burned_t": 69.45537703104513,
+        "loaded_t": 76.40091473414965,
+        "tank_with_margin_t": 6.72328049660517,
+        "touchdown_t": 273.0888181997097,
+        "entry_t": 342.54419523075484,
+        "oxygen_t": 65.48649834355685,
+        "hydrogen_t": 10.914416390592807,
+        "delta_v_m_s": 1000
+      }
+    },
+    {
+      "label": "36 t water left in orbit",
+      "dry_hardware_landed_t": 215.21790708790965,
+      "inventory_landed_t": 30.92,
+      "landing": {
+        "base_t": 239.92000000000002,
+        "burned_t": 64.23457735443816,
+        "loaded_t": 70.65803508988198,
+        "tank_with_margin_t": 6.217907087909615,
+        "touchdown_t": 252.56136482335344,
+        "entry_t": 316.79594217779163,
+        "oxygen_t": 60.56403007704169,
+        "hydrogen_t": 10.094005012840283,
+        "delta_v_m_s": 1000
+      }
+    },
+    {
+      "label": "Both orbital transfers",
+      "dry_hardware_landed_t": 198.29028343439802,
+      "inventory_landed_t": 30.92,
+      "landing": {
+        "base_t": 223.42000000000002,
+        "burned_t": 59.81697762807842,
+        "loaded_t": 65.79867539088626,
+        "tank_with_margin_t": 5.790283434397991,
+        "touchdown_t": 235.19198119720585,
+        "entry_t": 295.00895882528425,
+        "oxygen_t": 56.398864620759646,
+        "hydrogen_t": 9.399810770126608,
+        "delta_v_m_s": 1000
+      }
+    },
+    {
+      "label": "Both plus hypothetical 10 t structural reduction",
+      "dry_hardware_landed_t": 188.03111758378492,
+      "inventory_landed_t": 30.92,
+      "landing": {
+        "base_t": 213.42000000000002,
+        "burned_t": 57.13964446058766,
+        "loaded_t": 62.853608906646436,
+        "tank_with_margin_t": 5.531117583784887,
+        "touchdown_t": 224.66508202984366,
+        "entry_t": 281.80472649043134,
+        "oxygen_t": 53.87452191998266,
+        "hydrogen_t": 8.979086986663777,
+        "delta_v_m_s": 1000
+      }
+    }
+  ]
+}

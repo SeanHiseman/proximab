@@ -1,0 +1,951 @@
+{
+  "revision": "concept-v1-2026-11-12",
+  "status": "Concept mass closure only; GCR, propulsion, structure and EDL remain unqualified",
+  "cases": {
+    "reference": {
+      "crew_base": {
+        "kind": "crew",
+        "years": 39.9,
+        "total_flight_years": 40,
+        "hardware_rows": [
+          {
+            "id": "habitat_shells_floors",
+            "target_t": 30,
+            "lands": true
+          },
+          {
+            "id": "spin_and_transfers",
+            "target_t": 12,
+            "lands": true
+          },
+          {
+            "id": "furnishings_and_school",
+            "target_t": 12,
+            "lands": true
+          },
+          {
+            "id": "life_support_and_food",
+            "target_t": 24,
+            "lands": true
+          },
+          {
+            "id": "medical_and_convertible_berths",
+            "target_t": 18,
+            "lands": true
+          },
+          {
+            "id": "service_fission_power",
+            "target_t": 30,
+            "lands": true
+          },
+          {
+            "id": "avionics_communications",
+            "target_t": 3,
+            "lands": true
+          },
+          {
+            "id": "exploration_tools_suits",
+            "target_t": 10,
+            "lands": true
+          },
+          {
+            "id": "landing_cradle_and_chemical_engines",
+            "target_t": 34,
+            "lands": true
+          },
+          {
+            "id": "deployable_aeroshell_and_fresh_TPS",
+            "target_t": 12,
+            "lands": true
+          },
+          {
+            "id": "separation_and_power_transfer",
+            "target_t": 8,
+            "lands": true
+          },
+          {
+            "id": "water_cells_plumbing",
+            "target_t": 8,
+            "lands": true
+          },
+          {
+            "id": "tow_assembly",
+            "target_t": 27,
+            "lands": false
+          },
+          {
+            "id": "gcr_unresolved_allowance",
+            "target_t": 30,
+            "lands": false
+          },
+          {
+            "id": "forward_shield_support",
+            "target_t": 3,
+            "lands": true
+          },
+          {
+            "id": "fixed_main_feed_services",
+            "target_t": 8,
+            "lands": false
+          },
+          {
+            "id": "tug_dust_protection",
+            "target_t": 3,
+            "lands": false
+          },
+          {
+            "id": "source_shadow_shields",
+            "target_t": 42.804952457141134,
+            "lands": false
+          },
+          {
+            "id": "forward_shield_face",
+            "target_t": 15.393804002589986,
+            "lands": true
+          }
+        ],
+        "fixed_dry_t": 412.74844557466395,
+        "supplies_t": 75.0,
+        "landing_tanks_t": 7.995431285662852,
+        "auxiliary_am_t": 0.0,
+        "base_arrival_t": 595.6867679311125,
+        "terminal": {
+          "propellant_t": 99.94289107078565,
+          "tank_t": 7.995431285662852,
+          "dry_landed_t": 274.24225500323746,
+          "landed_inventory_t": 75.0,
+          "touchdown_without_unused_propellant_t": 357.2376862889003
+        },
+        "terminal_delta_v_m_s": 1000,
+        "terminal_Isp_s": 450
+      },
+      "cargo_base": {
+        "kind": "cargo",
+        "years": 59.9,
+        "total_flight_years": 60,
+        "hardware_rows": [
+          {
+            "id": "industry_and_resource_processing",
+            "target_t": 30,
+            "lands": true
+          },
+          {
+            "id": "heavy_exploration",
+            "target_t": 10,
+            "lands": true
+          },
+          {
+            "id": "surface_habitat_expansion",
+            "target_t": 15,
+            "lands": true
+          },
+          {
+            "id": "food_and_life_support_backup",
+            "target_t": 15,
+            "lands": true
+          },
+          {
+            "id": "power_and_services",
+            "target_t": 15,
+            "lands": true
+          },
+          {
+            "id": "landing_and_aeroshell",
+            "target_t": 24,
+            "lands": true
+          },
+          {
+            "id": "forward_shield",
+            "target_t": 4.827433388230814,
+            "lands": false
+          },
+          {
+            "id": "spine_avionics_services",
+            "target_t": 10,
+            "lands": false
+          },
+          {
+            "id": "tow_assembly",
+            "target_t": 10,
+            "lands": false
+          },
+          {
+            "id": "main_feed_and_electronics_protection",
+            "target_t": 8,
+            "lands": false
+          }
+        ],
+        "fixed_dry_t": 177.28429173528852,
+        "supplies_t": 26.5,
+        "landing_tanks_t": 3.7259421593460003,
+        "auxiliary_am_t": 0.0,
+        "base_arrival_t": 254.08451088645953,
+        "terminal": {
+          "propellant_t": 46.574276991825,
+          "tank_t": 3.7259421593460003,
+          "dry_landed_t": 136.25,
+          "landed_inventory_t": 26.5,
+          "touchdown_without_unused_propellant_t": 166.475942159346
+        },
+        "terminal_delta_v_m_s": 1000,
+        "terminal_Isp_s": 450
+      },
+      "crew": {
+        "exhaust_c": 0.22735555555555553,
+        "effective_exhaust_c": 0.221553472273179,
+        "beta": 0.11351036017978305,
+        "acceleration_m_s2": 0.4248155564562444,
+        "proper_years": 39.664092721195644,
+        "burn_years": 2.554864444444444,
+        "years": 39.9,
+        "mass_ratio": 2.7985797819952656,
+        "feedback_fraction": 0.37560012514174945,
+        "arrival_before_staging_t": 954.0148739881532,
+        "departure_t": 2669.8867380660067,
+        "main_am_burned_t": 43.78881981985994,
+        "main_am_loaded_t": 45.97826081085294,
+        "total_am_loaded_t": 45.97826081085294,
+        "reaction_loaded_t": 1709.7089356600402,
+        "main_reserve_t": 85.79359320389267,
+        "engine_t": 78.3328224685538,
+        "hot_radiator_t": 8.231080220109648,
+        "tank_t": 85.48544678300202,
+        "containment_t": 45.97826081085294,
+        "dry_t": 693.2783897134748,
+        "peak_annihilation_TW": 78.3328224685538,
+        "heat_rejected_GW": 2.688382467120767,
+        "peak_thrust_MN": 1.134209420306658
+      },
+      "cargo": {
+        "exhaust_c": 0.14559047619047616,
+        "effective_exhaust_c": 0.14405555581391696,
+        "beta": 0.07319445142589456,
+        "acceleration_m_s2": 0.3530581283897212,
+        "proper_years": 59.74638643799607,
+        "burn_years": 1.9747638095238094,
+        "years": 59.9,
+        "mass_ratio": 2.7677041243979428,
+        "feedback_fraction": 0.2816441922227646,
+        "arrival_before_staging_t": 353.70286999232,
+        "departure_t": 978.9448920891334,
+        "main_am_burned_t": 6.591754798177196,
+        "main_am_loaded_t": 6.921342538086056,
+        "total_am_loaded_t": 6.921342538086056,
+        "reaction_loaded_t": 642.661438125482,
+        "main_reserve_t": 31.262101104840678,
+        "engine_t": 15.166243709372838,
+        "hot_radiator_t": 0.46434824708285594,
+        "tank_t": 32.133071906274104,
+        "containment_t": 6.921342538086056,
+        "dry_t": 249.36649189565435,
+        "peak_annihilation_TW": 15.166243709372836,
+        "heat_rejected_GW": 0.15166243709372837,
+        "peak_thrust_MN": 0.34562445139766707
+      },
+      "fleet_am_t": 52.899603348938996,
+      "fleet_departure_t": 3648.8316301551404
+    },
+    "optimistic": {
+      "crew_base": {
+        "kind": "crew",
+        "years": 39.9,
+        "total_flight_years": 40,
+        "hardware_rows": [
+          {
+            "id": "habitat_shells_floors",
+            "target_t": 30,
+            "lands": true
+          },
+          {
+            "id": "spin_and_transfers",
+            "target_t": 12,
+            "lands": true
+          },
+          {
+            "id": "furnishings_and_school",
+            "target_t": 12,
+            "lands": true
+          },
+          {
+            "id": "life_support_and_food",
+            "target_t": 24,
+            "lands": true
+          },
+          {
+            "id": "medical_and_convertible_berths",
+            "target_t": 18,
+            "lands": true
+          },
+          {
+            "id": "service_fission_power",
+            "target_t": 30,
+            "lands": true
+          },
+          {
+            "id": "avionics_communications",
+            "target_t": 3,
+            "lands": true
+          },
+          {
+            "id": "exploration_tools_suits",
+            "target_t": 10,
+            "lands": true
+          },
+          {
+            "id": "landing_cradle_and_chemical_engines",
+            "target_t": 34,
+            "lands": true
+          },
+          {
+            "id": "deployable_aeroshell_and_fresh_TPS",
+            "target_t": 12,
+            "lands": true
+          },
+          {
+            "id": "separation_and_power_transfer",
+            "target_t": 8,
+            "lands": true
+          },
+          {
+            "id": "water_cells_plumbing",
+            "target_t": 8,
+            "lands": true
+          },
+          {
+            "id": "tow_assembly",
+            "target_t": 27,
+            "lands": false
+          },
+          {
+            "id": "gcr_unresolved_allowance",
+            "target_t": 30,
+            "lands": false
+          },
+          {
+            "id": "forward_shield_support",
+            "target_t": 3,
+            "lands": true
+          },
+          {
+            "id": "fixed_main_feed_services",
+            "target_t": 8,
+            "lands": false
+          },
+          {
+            "id": "tug_dust_protection",
+            "target_t": 3,
+            "lands": false
+          },
+          {
+            "id": "source_shadow_shields",
+            "target_t": 42.804952457141134,
+            "lands": false
+          },
+          {
+            "id": "forward_shield_face",
+            "target_t": 15.393804002589986,
+            "lands": true
+          }
+        ],
+        "fixed_dry_t": 412.74844557466395,
+        "supplies_t": 75.0,
+        "landing_tanks_t": 7.995431285662852,
+        "auxiliary_am_t": 0.0,
+        "base_arrival_t": 595.6867679311125,
+        "terminal": {
+          "propellant_t": 99.94289107078565,
+          "tank_t": 7.995431285662852,
+          "dry_landed_t": 274.24225500323746,
+          "landed_inventory_t": 75.0,
+          "touchdown_without_unused_propellant_t": 357.2376862889003
+        },
+        "terminal_delta_v_m_s": 1000,
+        "terminal_Isp_s": 450
+      },
+      "cargo_base": {
+        "kind": "cargo",
+        "years": 59.9,
+        "total_flight_years": 60,
+        "hardware_rows": [
+          {
+            "id": "industry_and_resource_processing",
+            "target_t": 30,
+            "lands": true
+          },
+          {
+            "id": "heavy_exploration",
+            "target_t": 10,
+            "lands": true
+          },
+          {
+            "id": "surface_habitat_expansion",
+            "target_t": 15,
+            "lands": true
+          },
+          {
+            "id": "food_and_life_support_backup",
+            "target_t": 15,
+            "lands": true
+          },
+          {
+            "id": "power_and_services",
+            "target_t": 15,
+            "lands": true
+          },
+          {
+            "id": "landing_and_aeroshell",
+            "target_t": 24,
+            "lands": true
+          },
+          {
+            "id": "forward_shield",
+            "target_t": 4.827433388230814,
+            "lands": false
+          },
+          {
+            "id": "spine_avionics_services",
+            "target_t": 10,
+            "lands": false
+          },
+          {
+            "id": "tow_assembly",
+            "target_t": 10,
+            "lands": false
+          },
+          {
+            "id": "main_feed_and_electronics_protection",
+            "target_t": 8,
+            "lands": false
+          }
+        ],
+        "fixed_dry_t": 177.28429173528852,
+        "supplies_t": 26.5,
+        "landing_tanks_t": 3.7259421593460003,
+        "auxiliary_am_t": 0.0,
+        "base_arrival_t": 254.08451088645953,
+        "terminal": {
+          "propellant_t": 46.574276991825,
+          "tank_t": 3.7259421593460003,
+          "dry_landed_t": 136.25,
+          "landed_inventory_t": 26.5,
+          "touchdown_without_unused_propellant_t": 166.475942159346
+        },
+        "terminal_delta_v_m_s": 1000,
+        "terminal_Isp_s": 450
+      },
+      "crew": {
+        "exhaust_c": 0.19995079365079366,
+        "effective_exhaust_c": 0.19894640971863387,
+        "beta": 0.10892812405410224,
+        "acceleration_m_s2": 1.0642284067865877,
+        "proper_years": 39.67032689417394,
+        "burn_years": 0.9781688888888889,
+        "years": 39.9,
+        "mass_ratio": 3.002400251829635,
+        "feedback_fraction": 0.23543739087828408,
+        "arrival_before_staging_t": 779.1209782223094,
+        "departure_t": 2339.2330212204133,
+        "main_am_burned_t": 19.591713537942947,
+        "main_am_loaded_t": 20.5712992148401,
+        "total_am_loaded_t": 20.5712992148401,
+        "reaction_loaded_t": 1596.9750467183292,
+        "main_reserve_t": 78.0056021499052,
+        "engine_t": 18.84384633160297,
+        "hot_radiator_t": 7.304139172460473,
+        "tank_t": 47.90925140154988,
+        "containment_t": 10.28564960742005,
+        "dry_t": 526.1724850016185,
+        "peak_annihilation_TW": 94.21923165801483,
+        "heat_rejected_GW": 2.385630945580936,
+        "peak_thrust_MN": 2.4894782312759767
+      },
+      "cargo": {
+        "exhaust_c": 0.1312063492063492,
+        "effective_exhaust_c": 0.13092339362855276,
+        "beta": 0.071590001861781,
+        "acceleration_m_s2": 1.0105590686168482,
+        "proper_years": 59.748611756729325,
+        "burn_years": 0.6747193650793649,
+        "years": 59.9,
+        "mass_ratio": 2.9906499228816963,
+        "feedback_fraction": 0.2030532888999397,
+        "arrival_before_staging_t": 318.82245995561686,
+        "departure_t": 953.4863652792183,
+        "main_am_burned_t": 3.421741652054881,
+        "main_am_loaded_t": 3.5928287346576258,
+        "total_am_loaded_t": 3.5928287346576258,
+        "reaction_loaded_t": 659.2114431204662,
+        "main_reserve_t": 31.733195266180076,
+        "engine_t": 4.758203889579566,
+        "hot_radiator_t": 0.07284149185943899,
+        "tank_t": 19.776343293613984,
+        "containment_t": 1.7964143673288129,
+        "dry_t": 214.0149876976118,
+        "peak_annihilation_TW": 23.791019447897835,
+        "heat_rejected_GW": 0.023791019447897837,
+        "peak_thrust_MN": 0.9635542932354307
+      },
+      "fleet_am_t": 24.164127949497725,
+      "fleet_departure_t": 3292.7193864996316
+    }
+  },
+  "landing_options": {
+    "chemical_500m_s": {
+      "base": {
+        "kind": "crew",
+        "years": 39.9,
+        "total_flight_years": 40,
+        "hardware_rows": [
+          {
+            "id": "habitat_shells_floors",
+            "target_t": 30,
+            "lands": true
+          },
+          {
+            "id": "spin_and_transfers",
+            "target_t": 12,
+            "lands": true
+          },
+          {
+            "id": "furnishings_and_school",
+            "target_t": 12,
+            "lands": true
+          },
+          {
+            "id": "life_support_and_food",
+            "target_t": 24,
+            "lands": true
+          },
+          {
+            "id": "medical_and_convertible_berths",
+            "target_t": 18,
+            "lands": true
+          },
+          {
+            "id": "service_fission_power",
+            "target_t": 30,
+            "lands": true
+          },
+          {
+            "id": "avionics_communications",
+            "target_t": 3,
+            "lands": true
+          },
+          {
+            "id": "exploration_tools_suits",
+            "target_t": 10,
+            "lands": true
+          },
+          {
+            "id": "landing_cradle_and_chemical_engines",
+            "target_t": 34,
+            "lands": true
+          },
+          {
+            "id": "deployable_aeroshell_and_fresh_TPS",
+            "target_t": 12,
+            "lands": true
+          },
+          {
+            "id": "separation_and_power_transfer",
+            "target_t": 8,
+            "lands": true
+          },
+          {
+            "id": "water_cells_plumbing",
+            "target_t": 8,
+            "lands": true
+          },
+          {
+            "id": "tow_assembly",
+            "target_t": 27,
+            "lands": false
+          },
+          {
+            "id": "gcr_unresolved_allowance",
+            "target_t": 30,
+            "lands": false
+          },
+          {
+            "id": "forward_shield_support",
+            "target_t": 3,
+            "lands": true
+          },
+          {
+            "id": "fixed_main_feed_services",
+            "target_t": 8,
+            "lands": false
+          },
+          {
+            "id": "tug_dust_protection",
+            "target_t": 3,
+            "lands": false
+          },
+          {
+            "id": "source_shadow_shields",
+            "target_t": 42.804952457141134,
+            "lands": false
+          },
+          {
+            "id": "forward_shield_face",
+            "target_t": 15.393804002589986,
+            "lands": true
+          }
+        ],
+        "fixed_dry_t": 412.74844557466395,
+        "supplies_t": 75.0,
+        "landing_tanks_t": 3.7264139044249367,
+        "auxiliary_am_t": 0.0,
+        "base_arrival_t": 538.0550332844006,
+        "terminal": {
+          "propellant_t": 46.58017380531171,
+          "tank_t": 3.7264139044249367,
+          "dry_landed_t": 274.24225500323746,
+          "landed_inventory_t": 75.0,
+          "touchdown_without_unused_propellant_t": 352.9686689076624
+        },
+        "terminal_delta_v_m_s": 500,
+        "terminal_Isp_s": 450
+      },
+      "crew": {
+        "exhaust_c": 0.22735555555555553,
+        "effective_exhaust_c": 0.221553472273179,
+        "beta": 0.11351036017978305,
+        "acceleration_m_s2": 0.4248155564562444,
+        "proper_years": 39.664092721195644,
+        "burn_years": 2.554864444444444,
+        "years": 39.9,
+        "mass_ratio": 2.7985797819952656,
+        "feedback_fraction": 0.37560012514174945,
+        "arrival_before_staging_t": 861.7154726473132,
+        "departure_t": 2411.579499583265,
+        "main_am_burned_t": 39.55232208277626,
+        "main_am_loaded_t": 41.529938186915075,
+        "total_am_loaded_t": 41.529938186915075,
+        "reaction_loaded_t": 1544.2973519089192,
+        "main_reserve_t": 77.49320134679759,
+        "engine_t": 70.7542481545483,
+        "hot_radiator_t": 7.4347364759826755,
+        "tank_t": 77.21486759544597,
+        "containment_t": 41.529938186915075,
+        "dry_t": 662.6420974952039,
+        "peak_annihilation_TW": 70.75424815454829,
+        "heat_rejected_GW": 2.4282857966640976,
+        "peak_thrust_MN": 1.024476487053936
+      }
+    },
+    "thermal_1000m_s": {
+      "base": {
+        "kind": "crew",
+        "years": 39.9,
+        "total_flight_years": 40,
+        "hardware_rows": [
+          {
+            "id": "habitat_shells_floors",
+            "target_t": 30,
+            "lands": true
+          },
+          {
+            "id": "spin_and_transfers",
+            "target_t": 12,
+            "lands": true
+          },
+          {
+            "id": "furnishings_and_school",
+            "target_t": 12,
+            "lands": true
+          },
+          {
+            "id": "life_support_and_food",
+            "target_t": 24,
+            "lands": true
+          },
+          {
+            "id": "medical_and_convertible_berths",
+            "target_t": 18,
+            "lands": true
+          },
+          {
+            "id": "service_fission_power",
+            "target_t": 30,
+            "lands": true
+          },
+          {
+            "id": "avionics_communications",
+            "target_t": 3,
+            "lands": true
+          },
+          {
+            "id": "exploration_tools_suits",
+            "target_t": 10,
+            "lands": true
+          },
+          {
+            "id": "landing_cradle_and_chemical_engines",
+            "target_t": 34,
+            "lands": true
+          },
+          {
+            "id": "deployable_aeroshell_and_fresh_TPS",
+            "target_t": 12,
+            "lands": true
+          },
+          {
+            "id": "separation_and_power_transfer",
+            "target_t": 8,
+            "lands": true
+          },
+          {
+            "id": "water_cells_plumbing",
+            "target_t": 8,
+            "lands": true
+          },
+          {
+            "id": "tow_assembly",
+            "target_t": 27,
+            "lands": false
+          },
+          {
+            "id": "gcr_unresolved_allowance",
+            "target_t": 30,
+            "lands": false
+          },
+          {
+            "id": "forward_shield_support",
+            "target_t": 3,
+            "lands": true
+          },
+          {
+            "id": "fixed_main_feed_services",
+            "target_t": 8,
+            "lands": false
+          },
+          {
+            "id": "tug_dust_protection",
+            "target_t": 3,
+            "lands": false
+          },
+          {
+            "id": "source_shadow_shields",
+            "target_t": 42.804952457141134,
+            "lands": false
+          },
+          {
+            "id": "forward_shield_face",
+            "target_t": 15.393804002589986,
+            "lands": true
+          }
+        ],
+        "fixed_dry_t": 412.74844557466395,
+        "supplies_t": 75.0,
+        "landing_tanks_t": 1.800566842522657,
+        "auxiliary_am_t": 3.901523446538812e-08,
+        "base_arrival_t": 512.0560980267503,
+        "terminal": {
+          "propellant_t": 22.507085531533214,
+          "tank_t": 1.800566842522657,
+          "dry_landed_t": 274.24225500323746,
+          "landed_inventory_t": 75.0,
+          "touchdown_without_unused_propellant_t": 351.0428218457601
+        },
+        "terminal_delta_v_m_s": 1000,
+        "terminal_Isp_s": 1800
+      },
+      "crew": {
+        "exhaust_c": 0.22735555555555553,
+        "effective_exhaust_c": 0.221553472273179,
+        "beta": 0.11351036017978305,
+        "acceleration_m_s2": 0.4248155564562444,
+        "proper_years": 39.664092721195644,
+        "burn_years": 2.554864444444444,
+        "years": 39.9,
+        "mass_ratio": 2.7985797819952656,
+        "feedback_fraction": 0.37560012514174945,
+        "arrival_before_staging_t": 820.0771951515778,
+        "departure_t": 2295.0514580265917,
+        "main_am_burned_t": 37.64114534897124,
+        "main_am_loaded_t": 39.5232026164198,
+        "total_am_loaded_t": 39.523202655435036,
+        "reaction_loaded_t": 1469.676570785925,
+        "main_reserve_t": 73.74871314375069,
+        "engine_t": 67.33538762322881,
+        "hot_radiator_t": 7.075488405916589,
+        "tank_t": 73.48382853929624,
+        "containment_t": 39.5232026164198,
+        "dry_t": 648.8213963982635,
+        "peak_annihilation_TW": 67.33538762322883,
+        "heat_rejected_GW": 2.310950503229213,
+        "peak_thrust_MN": 0.9749735622372816
+      }
+    },
+    "vacuum_chemical": {
+      "base": {
+        "kind": "crew",
+        "years": 39.9,
+        "total_flight_years": 40,
+        "hardware_rows": [
+          {
+            "id": "habitat_shells_floors",
+            "target_t": 30,
+            "lands": true
+          },
+          {
+            "id": "spin_and_transfers",
+            "target_t": 12,
+            "lands": true
+          },
+          {
+            "id": "furnishings_and_school",
+            "target_t": 12,
+            "lands": true
+          },
+          {
+            "id": "life_support_and_food",
+            "target_t": 24,
+            "lands": true
+          },
+          {
+            "id": "medical_and_convertible_berths",
+            "target_t": 18,
+            "lands": true
+          },
+          {
+            "id": "service_fission_power",
+            "target_t": 30,
+            "lands": true
+          },
+          {
+            "id": "avionics_communications",
+            "target_t": 3,
+            "lands": true
+          },
+          {
+            "id": "exploration_tools_suits",
+            "target_t": 10,
+            "lands": true
+          },
+          {
+            "id": "landing_cradle_and_chemical_engines",
+            "target_t": 34,
+            "lands": true
+          },
+          {
+            "id": "deployable_aeroshell_and_fresh_TPS",
+            "target_t": 12,
+            "lands": true
+          },
+          {
+            "id": "separation_and_power_transfer",
+            "target_t": 8,
+            "lands": true
+          },
+          {
+            "id": "water_cells_plumbing",
+            "target_t": 8,
+            "lands": true
+          },
+          {
+            "id": "tow_assembly",
+            "target_t": 27,
+            "lands": false
+          },
+          {
+            "id": "gcr_unresolved_allowance",
+            "target_t": 30,
+            "lands": false
+          },
+          {
+            "id": "forward_shield_support",
+            "target_t": 3,
+            "lands": true
+          },
+          {
+            "id": "fixed_main_feed_services",
+            "target_t": 8,
+            "lands": false
+          },
+          {
+            "id": "tug_dust_protection",
+            "target_t": 3,
+            "lands": false
+          },
+          {
+            "id": "source_shadow_shields",
+            "target_t": 42.804952457141134,
+            "lands": false
+          },
+          {
+            "id": "forward_shield_face",
+            "target_t": 15.393804002589986,
+            "lands": true
+          }
+        ],
+        "fixed_dry_t": 412.74844557466395,
+        "supplies_t": 75.0,
+        "landing_tanks_t": 119.3727960394206,
+        "auxiliary_am_t": 0.0,
+        "base_arrival_t": 2099.2811921068424,
+        "terminal": {
+          "propellant_t": 1492.1599504927576,
+          "tank_t": 119.3727960394206,
+          "dry_landed_t": 274.24225500323746,
+          "landed_inventory_t": 75.0,
+          "touchdown_without_unused_propellant_t": 468.6150510426581
+        },
+        "terminal_delta_v_m_s": 6000,
+        "terminal_Isp_s": 450
+      },
+      "crew": {
+        "exhaust_c": 0.22735555555555553,
+        "effective_exhaust_c": 0.221553472273179,
+        "beta": 0.11351036017978305,
+        "acceleration_m_s2": 0.4248155564562444,
+        "proper_years": 39.664092721195644,
+        "burn_years": 2.554864444444444,
+        "years": 39.9,
+        "mass_ratio": 2.7985797819952656,
+        "feedback_fraction": 0.37560012514174945,
+        "arrival_before_staging_t": 3362.078175597673,
+        "departure_t": 9409.044007715176,
+        "main_am_burned_t": 154.31775695077695,
+        "main_am_loaded_t": 162.0336447983158,
+        "total_am_loaded_t": 162.0336447983158,
+        "reaction_loaded_t": 6025.246834126747,
+        "main_reserve_t": 302.34829160587515,
+        "engine_t": 276.05552076304645,
+        "hot_radiator_t": 29.00744624026479,
+        "tank_t": 301.2623417063374,
+        "containment_t": 162.0336447983158,
+        "dry_t": 1492.56993349904,
+        "peak_annihilation_TW": 276.05552076304645,
+        "heat_rejected_GW": 9.474225472587754,
+        "peak_thrust_MN": 3.997108265858815
+      }
+    }
+  },
+  "geometry": {
+    "total_volume_m3": 2400.0000000378554,
+    "total_envelope_area_m2": 1250.2552988958778,
+    "gravity_rpm": 11.96166708789051,
+    "per_gravity_module_gross_floor_area_m2": 356.5939492119366,
+    "refuge_volume_m3": 241.27431579569614,
+    "refuge_area_m2": 215.13626491782904,
+    "refuge_column_kg_m2": 204.52153901995896
+  },
+  "additional_shadow_absorbed_fraction": 2.4320000000000004e-05,
+  "landing_screen": {
+    "entry_mass_t": 457.18057735968597,
+    "one_engine_out_thrust_MN": 9,
+    "initial_net_deceleration_m_s2": 8.015875659847348,
+    "conservative_stop_distance_m": 9980.194727911174,
+    "conservative_propulsive_delta_v_m_s": 982.344362373617,
+    "column_target_not_entry_simulation": true
+  },
+  "tow_screen": {
+    "total_tether_t_at_1GPa_allowable": 7.277087640687518,
+    "crossbeam_compression_kN": 28.355235507666446,
+    "primary_plume_radius_at_bus_m": 34.91012985643517,
+    "plume_to_habitat_clearance_m": 58.08987014356484,
+    "source_shadow_radius_needed_m": 0.6625
+  }
+}

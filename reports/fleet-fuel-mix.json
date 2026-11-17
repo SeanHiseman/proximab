@@ -1,0 +1,3273 @@
+{
+  "ships": {
+    "crew": {
+      "fusion_only": null,
+      "cap_trade": [
+        {
+          "cap_t": 0,
+          "best": null
+        },
+        {
+          "cap_t": 0.005,
+          "best": null
+        },
+        {
+          "cap_t": 0.01,
+          "best": null
+        },
+        {
+          "cap_t": 0.02,
+          "best": null
+        },
+        {
+          "cap_t": 0.03,
+          "best": null
+        },
+        {
+          "cap_t": 0.05,
+          "best": null
+        },
+        {
+          "cap_t": 0.075,
+          "best": null
+        },
+        {
+          "cap_t": 0.1,
+          "best": null
+        },
+        {
+          "cap_t": 0.25,
+          "best": null
+        },
+        {
+          "cap_t": 0.5,
+          "best": null
+        },
+        {
+          "cap_t": 1,
+          "best": null
+        },
+        {
+          "cap_t": 2,
+          "best": null
+        },
+        {
+          "cap_t": 3,
+          "best": null
+        },
+        {
+          "cap_t": 5,
+          "best": null
+        },
+        {
+          "cap_t": 10,
+          "best": null
+        },
+        {
+          "cap_t": 15,
+          "best": null
+        },
+        {
+          "cap_t": 17,
+          "best": null
+        },
+        {
+          "cap_t": 18,
+          "best": {
+            "fusion_t": 38815.00945875836,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 17.99999993998616,
+            "ordinary_annihilation_reactant_t": 17.99999993998616,
+            "tank_and_separation_t": 438.8231040126743,
+            "retained_core_t": 637.2750754926312,
+            "nonpropulsion_core_t": 428.18496891430857,
+            "departure_t": 39927.10763814363,
+            "engine_t": 154.99219866002935,
+            "radiator_t": 54.097907918293316,
+            "primary_ZJ": 20.14603204473082,
+            "trajectory": {
+              "beta": 0.23574535899703486,
+              "acceleration_m_s2": 1.1865065854581074,
+              "proper_years": 19.41147790396272,
+              "burn_years": 1.942254776584364,
+              "years": 19.9
+            },
+            "effective_exhaust_c": [
+              0.0791024601640159,
+              0.23166975587198474
+            ],
+            "parameters": [
+              1.942254776584364,
+              -5.406713616052001,
+              -1.5029628985877839
+            ],
+            "mode": "hybrid"
+          }
+        },
+        {
+          "cap_t": 19,
+          "best": {
+            "fusion_t": 29963.56307880774,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 18.999999963781914,
+            "ordinary_annihilation_reactant_t": 18.999999963781914,
+            "tank_and_separation_t": 342.0181938465669,
+            "retained_core_t": 604.9262111418335,
+            "nonpropulsion_core_t": 428.18496891430857,
+            "departure_t": 30948.507483723708,
+            "engine_t": 131.01295979533893,
+            "radiator_t": 45.728282432186035,
+            "primary_ZJ": 17.387063081649753,
+            "trajectory": {
+              "beta": 0.23345495277619255,
+              "acceleration_m_s2": 1.2939059574643859,
+              "proper_years": 19.41451255020758,
+              "burn_years": 1.7627333767089803,
+              "years": 19.9
+            },
+            "effective_exhaust_c": [
+              0.07910246027126923,
+              0.2747688776604341
+            ],
+            "parameters": [
+              1.7627333767089803,
+              -5.406712430925628,
+              -1.328173326702361
+            ],
+            "mode": "hybrid"
+          }
+        },
+        {
+          "cap_t": 19.5,
+          "best": {
+            "fusion_t": 27818.395035658075,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 19.499999839550437,
+            "ordinary_annihilation_reactant_t": 19.499999839550437,
+            "tank_and_separation_t": 318.7018453022266,
+            "retained_core_t": 597.0431442720895,
+            "nonpropulsion_core_t": 428.18496891430857,
+            "departure_t": 28773.14002491149,
+            "engine_t": 125.16947974589912,
+            "radiator_t": 43.688695611881755,
+            "primary_ZJ": 16.81104556462338,
+            "trajectory": {
+              "beta": 0.23279275121921483,
+              "acceleration_m_s2": 1.329656166352128,
+              "proper_years": 19.41539642650352,
+              "burn_years": 1.7101942898900018,
+              "years": 19.9
+            },
+            "effective_exhaust_c": [
+              0.07910246025519671,
+              0.29109044093462105
+            ],
+            "parameters": [
+              1.7101942898900018,
+              -5.406712608530416,
+              -1.2693230441721388
+            ],
+            "mode": "hybrid"
+          }
+        },
+        {
+          "cap_t": 19.75,
+          "best": {
+            "fusion_t": 26957.223575564836,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 19.749999676045828,
+            "ordinary_annihilation_reactant_t": 19.749999676045828,
+            "tank_and_separation_t": 309.36920914947495,
+            "retained_core_t": 593.8877074663701,
+            "nonpropulsion_core_t": 428.18496891430857,
+            "departure_t": 27899.980491532773,
+            "engine_t": 122.83044947682215,
+            "radiator_t": 42.87228907523935,
+            "primary_ZJ": 16.59751995837747,
+            "trajectory": {
+              "beta": 0.23251044559883788,
+              "acceleration_m_s2": 1.345644379954026,
+              "proper_years": 19.415774120616724,
+              "burn_years": 1.6877082034553457,
+              "years": 19.9
+            },
+            "effective_exhaust_c": [
+              0.07910246091146501,
+              0.2987130065194475
+            ],
+            "parameters": [
+              1.6877082034553457,
+              -5.406705356966298,
+              -1.2429299830267033
+            ],
+            "mode": "hybrid"
+          }
+        },
+        {
+          "cap_t": 19.9,
+          "best": {
+            "fusion_t": 26490.306207595437,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 19.899999970604938,
+            "ordinary_annihilation_reactant_t": 19.899999970604938,
+            "tank_and_separation_t": 304.31726826705915,
+            "retained_core_t": 592.1546004110302,
+            "nonpropulsion_core_t": 428.18496891430857,
+            "departure_t": 27426.578076214737,
+            "engine_t": 121.54574941417377,
+            "radiator_t": 42.42388208254795,
+            "primary_ZJ": 16.486944769214467,
+            "trajectory": {
+              "beta": 0.23235663696797387,
+              "acceleration_m_s2": 1.3545539704898677,
+              "proper_years": 19.415980122464692,
+              "burn_years": 1.6754348716551335,
+              "years": 19.9
+            },
+            "effective_exhaust_c": [
+              0.07910246037020513,
+              0.3031613940437449
+            ],
+            "parameters": [
+              1.6754348716551335,
+              -5.406711337689321,
+              -1.2278205615498974
+            ],
+            "mode": "hybrid"
+          }
+        },
+        {
+          "cap_t": 19.925,
+          "best": {
+            "fusion_t": 26415.688119512262,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 19.924999504108815,
+            "ordinary_annihilation_reactant_t": 19.924999504108815,
+            "tank_and_separation_t": 303.51049403644004,
+            "retained_core_t": 591.8897216719344,
+            "nonpropulsion_core_t": 428.18496891430857,
+            "departure_t": 27350.938334228857,
+            "engine_t": 121.34940278246265,
+            "radiator_t": 42.355349975163136,
+            "primary_ZJ": 16.46964330320337,
+            "trajectory": {
+              "beta": 0.2323300977868304,
+              "acceleration_m_s2": 1.3561058120703016,
+              "proper_years": 19.416015683303378,
+              "burn_years": 1.6733155584005868,
+              "years": 19.9
+            },
+            "effective_exhaust_c": [
+              0.07910246020312575,
+              0.30389047622112286
+            ],
+            "parameters": [
+              1.6733155584005868,
+              -5.406713183887289,
+              -1.2253639494842856
+            ],
+            "mode": "hybrid"
+          }
+        },
+        {
+          "cap_t": 19.95,
+          "best": {
+            "fusion_t": 26341.931456139682,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 19.94999994415822,
+            "ordinary_annihilation_reactant_t": 19.94999994415822,
+            "tank_and_separation_t": 302.7131959862093,
+            "retained_core_t": 591.6001498986701,
+            "nonpropulsion_core_t": 428.18496891430857,
+            "departure_t": 27276.144801912877,
+            "engine_t": 121.13475194822392,
+            "radiator_t": 42.28042903613765,
+            "primary_ZJ": 16.452645653385808,
+            "trajectory": {
+              "beta": 0.2323076970892996,
+              "acceleration_m_s2": 1.3574190225470335,
+              "proper_years": 19.416045702472132,
+              "burn_years": 1.6715263635384257,
+              "years": 19.9
+            },
+            "effective_exhaust_c": [
+              0.07910246026410545,
+              0.3046255702697006
+            ],
+            "parameters": [
+              1.6715263635384257,
+              -5.406712510076692,
+              -1.2228926218726404
+            ],
+            "mode": "hybrid"
+          }
+        },
+        {
+          "cap_t": 19.97,
+          "best": {
+            "fusion_t": 26283.54062544324,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 19.969999129083025,
+            "ordinary_annihilation_reactant_t": 19.969999129083025,
+            "tank_and_separation_t": 302.08211639129127,
+            "retained_core_t": 591.397068562182,
+            "nonpropulsion_core_t": 428.18496891430857,
+            "departure_t": 27216.95980865488,
+            "engine_t": 120.98421386986045,
+            "radiator_t": 42.227885778012975,
+            "primary_ZJ": 16.43926360969465,
+            "trajectory": {
+              "beta": 0.2322862327379872,
+              "acceleration_m_s2": 1.358680238086984,
+              "proper_years": 19.416074469968503,
+              "burn_years": 1.6698116437134267,
+              "years": 19.9
+            },
+            "effective_exhaust_c": [
+              0.07910246030808281,
+              0.30520403162499493
+            ],
+            "parameters": [
+              1.6698116437134267,
+              -5.40671202414906,
+              -1.2209517683222515
+            ],
+            "mode": "hybrid"
+          }
+        },
+        {
+          "cap_t": 19.98,
+          "best": {
+            "fusion_t": 26254.541805856188,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 19.979999990945522,
+            "ordinary_annihilation_reactant_t": 19.979999990945522,
+            "tank_and_separation_t": 301.7687398593385,
+            "retained_core_t": 591.291822212531,
+            "nonpropulsion_core_t": 428.18496891430857,
+            "departure_t": 27187.562367909944,
+            "engine_t": 120.9061979206589,
+            "radiator_t": 42.20065537756345,
+            "primary_ZJ": 16.43264230725275,
+            "trajectory": {
+              "beta": 0.23227617367555053,
+              "acceleration_m_s2": 1.3592722730952707,
+              "proper_years": 19.416087952632257,
+              "burn_years": 1.6690079512448701,
+              "years": 19.9
+            },
+            "effective_exhaust_c": [
+              0.07910246020466626,
+              0.3054940803790534
+            ],
+            "parameters": [
+              1.6690079512448701,
+              -5.406713166857624,
+              -1.219979879204683
+            ],
+            "mode": "hybrid"
+          }
+        },
+        {
+          "cap_t": 19.99,
+          "best": {
+            "fusion_t": 26225.678557930303,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 19.98999995464519,
+            "ordinary_annihilation_reactant_t": 19.98999995464519,
+            "tank_and_separation_t": 301.4568541117893,
+            "retained_core_t": 591.1871416139446,
+            "nonpropulsion_core_t": 428.18496891430857,
+            "departure_t": 27158.30255356533,
+            "engine_t": 120.8286013456824,
+            "radiator_t": 42.17357135395362,
+            "primary_ZJ": 16.42606844544662,
+            "trajectory": {
+              "beta": 0.2322661404294178,
+              "acceleration_m_s2": 1.359863412042265,
+              "proper_years": 19.416101401362184,
+              "burn_years": 1.6682062543707619,
+              "years": 19.9
+            },
+            "effective_exhaust_c": [
+              0.07910246047225523,
+              0.30578370517481757
+            ],
+            "parameters": [
+              1.6682062543707619,
+              -5.4067102100852615,
+              -1.2190102623582493
+            ],
+            "mode": "hybrid"
+          }
+        },
+        {
+          "cap_t": 19.995,
+          "best": {
+            "fusion_t": 26211.29516448194,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 19.99499997654614,
+            "ordinary_annihilation_reactant_t": 19.99499997654614,
+            "tank_and_separation_t": 301.30144179614376,
+            "retained_core_t": 591.1110859429766,
+            "nonpropulsion_core_t": 428.18496891430857,
+            "departure_t": 27143.697692174155,
+            "engine_t": 120.7722235674279,
+            "radiator_t": 42.15389346124017,
+            "primary_ZJ": 16.422798521132517,
+            "trajectory": {
+              "beta": 0.23226449771996183,
+              "acceleration_m_s2": 1.359960256600851,
+              "proper_years": 19.41610360334091,
+              "burn_years": 1.6680749888720148,
+              "years": 19.9
+            },
+            "effective_exhaust_c": [
+              0.07910246021580776,
+              0.30593561159754923
+            ],
+            "parameters": [
+              1.6680749888720148,
+              -5.406713043754941,
+              -1.2185020437759997
+            ],
+            "mode": "hybrid"
+          }
+        },
+        {
+          "cap_t": 20,
+          "best": {
+            "fusion_t": 26196.9456554196,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 19.999999786434987,
+            "ordinary_annihilation_reactant_t": 19.999999786434987,
+            "tank_and_separation_t": 301.14640208980563,
+            "retained_core_t": 591.0613955986526,
+            "nonpropulsion_core_t": 428.18496891430857,
+            "departure_t": 27129.15345268093,
+            "engine_t": 120.73538961174722,
+            "radiator_t": 42.14103707259673,
+            "primary_ZJ": 16.419540458476455,
+            "trajectory": {
+              "beta": 0.2322591718493544,
+              "acceleration_m_s2": 1.3602743538354094,
+              "proper_years": 19.416110742555972,
+              "burn_years": 1.6676493972718767,
+              "years": 19.9
+            },
+            "effective_exhaust_c": [
+              0.07910246021466515,
+              0.3060794912537319
+            ],
+            "parameters": [
+              1.6676493972718767,
+              -5.4067130563867325,
+              -1.2180208945896263
+            ],
+            "mode": "hybrid"
+          }
+        },
+        {
+          "cap_t": 25,
+          "best": {
+            "fusion_t": 18471.347244806835,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 24.999999989971013,
+            "ordinary_annihilation_reactant_t": 24.999999989971013,
+            "tank_and_separation_t": 218.96981968724896,
+            "retained_core_t": 562.7235079791645,
+            "nonpropulsion_core_t": 428.18496891430857,
+            "departure_t": 19303.04057245319,
+            "engine_t": 99.72936699594254,
+            "radiator_t": 34.809172068913455,
+            "primary_ZJ": 15.495229629613082,
+            "trajectory": {
+              "beta": 0.2299401817235342,
+              "acceleration_m_s2": 1.5160418433371763,
+              "proper_years": 19.4192371739878,
+              "burn_years": 1.4805265219739017,
+              "years": 19.9
+            },
+            "effective_exhaust_c": [
+              0.08238562215788617,
+              0.37090642029727783
+            ],
+            "parameters": [
+              1.4805265219739017,
+              -3.4706368825014353,
+              -1.0189256201868209
+            ],
+            "mode": "hybrid"
+          }
+        },
+        {
+          "cap_t": 30,
+          "best": {
+            "fusion_t": 12046.21483448008,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 29.999998021096367,
+            "ordinary_annihilation_reactant_t": 29.999998021096367,
+            "tank_and_separation_t": 151.09836206911598,
+            "retained_core_t": 537.3241555282923,
+            "nonpropulsion_core_t": 428.18496891430857,
+            "departure_t": 12794.637348119682,
+            "engine_t": 80.90159199824289,
+            "radiator_t": 28.237594615740832,
+            "primary_ZJ": 15.029087836354634,
+            "trajectory": {
+              "beta": 0.22859465219133873,
+              "acceleration_m_s2": 1.627913364116402,
+              "proper_years": 19.421067531064036,
+              "burn_years": 1.3702691512331189,
+              "years": 19.9
+            },
+            "effective_exhaust_c": [
+              0.0938476736407327,
+              0.3675306256710072
+            ],
+            "parameters": [
+              1.3702691512331189,
+              -2.791616868746294,
+              -1.0285650407629563
+            ],
+            "mode": "hybrid"
+          }
+        },
+        {
+          "cap_t": 50,
+          "best": {
+            "fusion_t": 5521.2226515424745,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 35.20067300126554,
+            "ordinary_annihilation_reactant_t": 35.20067300126554,
+            "tank_and_separation_t": 82.24102672067718,
+            "retained_core_t": 506.9157467939333,
+            "nonpropulsion_core_t": 428.18496891430857,
+            "departure_t": 6180.780771059615,
+            "engine_t": 58.36075443964856,
+            "radiator_t": 20.370023439976137,
+            "primary_ZJ": 14.599908022768343,
+            "trajectory": {
+              "beta": 0.22679553191522334,
+              "acceleration_m_s2": 1.8119705667746655,
+              "proper_years": 19.423533625844733,
+              "burn_years": 1.2208626879891487,
+              "years": 19.9
+            },
+            "effective_exhaust_c": [
+              0.12561395981086781,
+              0.3765612594346335
+            ],
+            "parameters": [
+              1.2208626879891487,
+              -2.2171710023485196,
+              -1.002923631389146
+            ],
+            "mode": "hybrid"
+          }
+        },
+        {
+          "cap_t": 100,
+          "best": {
+            "fusion_t": 5521.31138689456,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 35.20058604100752,
+            "ordinary_annihilation_reactant_t": 35.20058604100752,
+            "tank_and_separation_t": 82.2419540248454,
+            "retained_core_t": 506.91489244399116,
+            "nonpropulsion_core_t": 428.18496891430857,
+            "departure_t": 6180.869405445412,
+            "engine_t": 58.360121135767685,
+            "radiator_t": 20.369802393914924,
+            "primary_ZJ": 14.599908022907474,
+            "trajectory": {
+              "beta": 0.22679580899376156,
+              "acceleration_m_s2": 1.8119384880984941,
+              "proper_years": 19.423533244400527,
+              "burn_years": 1.2208858746695401,
+              "years": 19.9
+            },
+            "effective_exhaust_c": [
+              0.12561302969304586,
+              0.37656181171250297
+            ],
+            "parameters": [
+              1.2208858746695401,
+              -2.2171817571900485,
+              -1.0029220772085268,
+              1.0,
+              1.0
+            ],
+            "mode": "mixed"
+          }
+        }
+      ],
+      "unconstrained": {
+        "hybrid": {
+          "fusion_t": 5521.265185279251,
+          "inert_reaction_mass_t": 0.0,
+          "antimatter_t": 35.20063132116616,
+          "ordinary_annihilation_reactant_t": 35.20063132116616,
+          "tank_and_separation_t": 82.24147120924599,
+          "retained_core_t": 506.917647163725,
+          "nonpropulsion_core_t": 428.18496891430857,
+          "departure_t": 6180.825566294555,
+          "engine_t": 58.36216312654009,
+          "radiator_t": 20.37051512287632,
+          "primary_ZJ": 14.599908023833423,
+          "trajectory": {
+            "beta": 0.22679519836815765,
+            "acceleration_m_s2": 1.8120091848010231,
+            "proper_years": 19.423534085027836,
+            "burn_years": 1.2208347757969993,
+            "years": 19.9
+          },
+          "effective_exhaust_c": [
+            0.1256134104407949,
+            0.3765617583030026
+          ],
+          "parameters": [
+            1.2208347757969993,
+            -2.2171773546272395,
+            -1.0029222275096255
+          ],
+          "mode": "hybrid"
+        },
+        "mixed": {
+          "fusion_t": 5521.373714458918,
+          "inert_reaction_mass_t": 0.0,
+          "antimatter_t": 35.20052496222186,
+          "ordinary_annihilation_reactant_t": 35.20052496222186,
+          "tank_and_separation_t": 82.24260536285459,
+          "retained_core_t": 506.9183366933395,
+          "nonpropulsion_core_t": 428.18496891430857,
+          "departure_t": 6180.9357064395535,
+          "engine_t": 58.36267425407615,
+          "radiator_t": 20.370693524954753,
+          "primary_ZJ": 14.599908023708233,
+          "trajectory": {
+            "beta": 0.22679521222264432,
+            "acceleration_m_s2": 1.8120075806932348,
+            "proper_years": 19.42353406595481,
+            "burn_years": 1.220835935182475,
+            "years": 19.9
+          },
+          "effective_exhaust_c": [
+            0.12561239480504238,
+            0.37656094259522294
+          ],
+          "parameters": [
+            1.220835935182475,
+            -2.2171890984286344,
+            -1.0029245230165529,
+            1.0,
+            1.0
+          ],
+          "mode": "mixed"
+        },
+        "antimatter": {
+          "fusion_t": 0.0,
+          "inert_reaction_mass_t": 3249.51231162732,
+          "antimatter_t": 44.645629126663884,
+          "ordinary_annihilation_reactant_t": 44.645629126663884,
+          "tank_and_separation_t": 62.550833367958965,
+          "retained_core_t": 494.47925905927906,
+          "nonpropulsion_core_t": 428.18496891430857,
+          "departure_t": 3895.833662307885,
+          "engine_t": 49.14196064234133,
+          "radiator_t": 17.15232950262913,
+          "primary_ZJ": 16.05019615422099,
+          "trajectory": {
+            "beta": 0.2261386847606235,
+            "acceleration_m_s2": 1.8918563048204025,
+            "proper_years": 19.424439308725884,
+            "burn_years": 1.165741037649354,
+            "years": 19.9
+          },
+          "effective_exhaust_c": [
+            0.16017710432905946,
+            0.3983761522057135
+          ],
+          "parameters": [
+            1.165741037649354,
+            -1.783589030816363,
+            -0.9263923557694093
+          ],
+          "mode": "antimatter"
+        },
+        "photon": {
+          "fusion_t": 0.0,
+          "inert_reaction_mass_t": 0.0,
+          "antimatter_t": 267.90888390619375,
+          "ordinary_annihilation_reactant_t": 267.90888390619375,
+          "tank_and_separation_t": 152.05688387137468,
+          "retained_core_t": 557.7636408701444,
+          "nonpropulsion_core_t": 428.18496891430857,
+          "departure_t": 1245.6382925539065,
+          "engine_t": 96.05276688860727,
+          "radiator_t": 33.525905067228535,
+          "primary_ZJ": 96.313798736117,
+          "trajectory": {
+            "beta": 0.24388960410577143,
+            "acceleration_m_s2": 0.9353292851764113,
+            "proper_years": 19.40097089298985,
+            "burn_years": 2.554241568766957,
+            "years": 19.9
+          },
+          "effective_exhaust_c": [
+            0.8,
+            0.8
+          ],
+          "parameters": [
+            2.554241568766957
+          ],
+          "mode": "photon"
+        }
+      }
+    },
+    "cargo": {
+      "fusion_only": {
+        "fusion_t": 4067.227536617766,
+        "inert_reaction_mass_t": 0.0,
+        "antimatter_t": 0.0,
+        "ordinary_annihilation_reactant_t": 0.0,
+        "tank_and_separation_t": 46.49950290279543,
+        "retained_core_t": 259.67374144419546,
+        "nonpropulsion_core_t": 239.24905098668958,
+        "departure_t": 4373.400780964756,
+        "engine_t": 15.140207888188787,
+        "radiator_t": 5.284482569317078,
+        "primary_ZJ": 1.432933190161393,
+        "trajectory": {
+          "beta": 0.10896373225380251,
+          "acceleration_m_s2": 1.0508718472648795,
+          "proper_years": 39.67027737428213,
+          "burn_years": 0.9909291095764416,
+          "years": 39.9
+        },
+        "effective_exhaust_c": [
+          0.0784813830726757,
+          0.0784813830726757
+        ],
+        "parameters": [
+          0.9909291095764416
+        ],
+        "mode": "fusion"
+      },
+      "cap_trade": [
+        {
+          "cap_t": 0,
+          "best": {
+            "fusion_t": 4067.227536617766,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 0.0,
+            "ordinary_annihilation_reactant_t": 0.0,
+            "tank_and_separation_t": 46.49950290279543,
+            "retained_core_t": 259.67374144419546,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 4373.400780964756,
+            "engine_t": 15.140207888188787,
+            "radiator_t": 5.284482569317078,
+            "primary_ZJ": 1.432933190161393,
+            "trajectory": {
+              "beta": 0.10896373225380251,
+              "acceleration_m_s2": 1.0508718472648795,
+              "proper_years": 39.67027737428213,
+              "burn_years": 0.9909291095764416,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.0784813830726757,
+              0.0784813830726757
+            ],
+            "parameters": [
+              0.9909291095764416
+            ],
+            "mode": "fusion"
+          }
+        },
+        {
+          "cap_t": 0.005,
+          "best": {
+            "fusion_t": 4067.227536617766,
+            "inert_reaction_mass_t": 0.0,
+            "antimatter_t": 0.0,
+            "ordinary_annihilation_reactant_t": 0.0,
+            "tank_and_separation_t": 46.49950290279543,
+            "retained_core_t": 259.67374144419546,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 4373.400780964756,
+            "engine_t": 15.140207888188787,
+            "radiator_t": 5.284482569317078,
+            "primary_ZJ": 1.432933190161393,
+            "trajectory": {
+              "beta": 0.10896373225380251,
+              "acceleration_m_s2": 1.0508718472648795,
+              "proper_years": 39.67027737428213,
+              "burn_years": 0.9909291095764416,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.0784813830726757,
+              0.0784813830726757
+            ],
+            "parameters": [
+              0.9909291095764416
+            ],
+            "mode": "fusion"
+          }
+        },
+        {
+          "cap_t": 0.01,
+          "best": {
+            "fusion_t": 3944.121811645877,
+            "inert_reaction_mass_t": 570.030295891949,
+            "antimatter_t": 0.009999964320562405,
+            "ordinary_annihilation_reactant_t": 0.009999964320562405,
+            "tank_and_separation_t": 51.42128316289991,
+            "retained_core_t": 259.9352515008161,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 4825.528642130182,
+            "engine_t": 15.334057417038498,
+            "radiator_t": 5.352143097088021,
+            "primary_ZJ": 1.3931565701720596,
+            "trajectory": {
+              "beta": 0.10895139714156507,
+              "acceleration_m_s2": 1.0554586016124838,
+              "proper_years": 39.67029452666893,
+              "burn_years": 0.9865097526861124,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07281919615156036,
+              0.07916040529093063
+            ],
+            "parameters": [
+              0.9865097526861124,
+              -5.4787562843378605,
+              -5.013161167848217,
+              0.8471391938340268,
+              0.9999999887251485
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 0.02,
+          "best": {
+            "fusion_t": 3923.571000343695,
+            "inert_reaction_mass_t": 567.8083278458571,
+            "antimatter_t": 0.019999958724688842,
+            "ordinary_annihilation_reactant_t": 0.019999958724688842,
+            "tank_and_separation_t": 51.17639258692962,
+            "retained_core_t": 259.84988744790553,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 4802.445608141837,
+            "engine_t": 15.270779615598437,
+            "radiator_t": 5.33005684561749,
+            "primary_ZJ": 1.3895112908259275,
+            "trajectory": {
+              "beta": 0.10894931261357979,
+              "acceleration_m_s2": 1.0562378912485355,
+              "proper_years": 39.67029742547433,
+              "burn_years": 0.9857628211161877,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07281352290280076,
+              0.07941825825910191
+            ],
+            "parameters": [
+              0.9857628211161877,
+              -5.478819926942875,
+              -4.449999586863444,
+              0.8470069269606264,
+              0.9999999733978351
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 0.03,
+          "best": {
+            "fusion_t": 3903.0669331517247,
+            "inert_reaction_mass_t": 565.5326404953595,
+            "antimatter_t": 0.029999995944765375,
+            "ordinary_annihilation_reactant_t": 0.029999995944765375,
+            "tank_and_separation_t": 50.93142530784294,
+            "retained_core_t": 259.75729603332843,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 4779.3482949801455,
+            "engine_t": 15.202144388627685,
+            "radiator_t": 5.30610065801117,
+            "primary_ZJ": 1.3858824953845807,
+            "trajectory": {
+              "beta": 0.1089482201690622,
+              "acceleration_m_s2": 1.0566467797777437,
+              "proper_years": 39.67029894468254,
+              "burn_years": 0.9853713632178671,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.0728084009662077,
+              0.07967858396129489
+            ],
+            "parameters": [
+              0.9853713632178671,
+              -5.47888645411099,
+              -4.210450186748594,
+              0.8468875400122392,
+              0.9999999748046404
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 0.05,
+          "best": {
+            "fusion_t": 3862.203033435143,
+            "inert_reaction_mass_t": 559.8797015105116,
+            "antimatter_t": 0.04999989094554143,
+            "ordinary_annihilation_reactant_t": 0.04999989094554143,
+            "tank_and_separation_t": 50.43096002322267,
+            "retained_core_t": 259.6013517553098,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 4732.215046506078,
+            "engine_t": 15.08654759204035,
+            "radiator_t": 5.265753176579874,
+            "primary_ZJ": 1.378675655601522,
+            "trajectory": {
+              "beta": 0.10894182732195687,
+              "acceleration_m_s2": 1.0590462406712722,
+              "proper_years": 39.670307835214246,
+              "burn_years": 0.9830804447107866,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07280909120986132,
+              0.08020669425373163
+            ],
+            "parameters": [
+              0.9830804447107866,
+              -5.478877659957267,
+              -3.939899857785314,
+              0.846903628705064,
+              0.9999999254665343
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 0.075,
+          "best": {
+            "fusion_t": 3811.3982019925365,
+            "inert_reaction_mass_t": 552.7570001209455,
+            "antimatter_t": 0.0749999720378713,
+            "ordinary_annihilation_reactant_t": 0.0749999720378713,
+            "tank_and_separation_t": 49.80778220756156,
+            "retained_core_t": 259.3744324442888,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 4673.4874167094085,
+            "engine_t": 14.918339141104447,
+            "radiator_t": 5.207042316494785,
+            "primary_ZJ": 1.3697640832391045,
+            "trajectory": {
+              "beta": 0.10893831275143032,
+              "acceleration_m_s2": 1.0603702760668254,
+              "proper_years": 39.67031272315804,
+              "burn_years": 0.9818208615851205,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07281099159854842,
+              0.08088125160724881
+            ],
+            "parameters": [
+              0.9818208615851205,
+              -5.47885198079223,
+              -3.7366524433092043,
+              0.8469479222632442,
+              0.9999999269901415
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 0.1,
+          "best": {
+            "fusion_t": 3760.9097046976945,
+            "inert_reaction_mass_t": 544.9342637897021,
+            "antimatter_t": 0.09999986657068687,
+            "ordinary_annihilation_reactant_t": 0.09999986657068687,
+            "tank_and_separation_t": 49.18038357850752,
+            "retained_core_t": 259.1595261155507,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 4614.383877914596,
+            "engine_t": 14.7590355521295,
+            "radiator_t": 5.151439576731587,
+            "primary_ZJ": 1.3609638921339327,
+            "trajectory": {
+              "beta": 0.10893308861305623,
+              "acceleration_m_s2": 1.0623448044316046,
+              "proper_years": 39.67031998901282,
+              "burn_years": 0.9799484390332136,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.0728204947023426,
+              0.08157217773042587
+            ],
+            "parameters": [
+              0.9799484390332136,
+              -5.4787355140770275,
+              -3.5948447083197324,
+              0.8471694578064991,
+              0.9999999868975258
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 0.25,
+          "best": {
+            "fusion_t": 3465.2187422975435,
+            "inert_reaction_mass_t": 505.19453122893856,
+            "antimatter_t": 0.24999985893560123,
+            "ordinary_annihilation_reactant_t": 0.24999985893560123,
+            "tank_and_separation_t": 45.57479592965418,
+            "retained_core_t": 257.89480816944905,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 4274.382877343457,
+            "engine_t": 13.821538229281945,
+            "radiator_t": 4.824218953477512,
+            "primary_ZJ": 1.3107137168782914,
+            "trajectory": {
+              "beta": 0.10890243539220204,
+              "acceleration_m_s2": 1.0740883156359273,
+              "proper_years": 39.67036262952991,
+              "burn_years": 0.9689581917487846,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07281451719239312,
+              0.08608813188155168
+            ],
+            "parameters": [
+              0.9689581917487846,
+              -5.478814309913519,
+              -3.1353323059468603,
+              0.8470301179838318,
+              0.9999999560597255
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 0.5,
+          "best": {
+            "fusion_t": 3005.2966446566697,
+            "inert_reaction_mass_t": 444.6010272775677,
+            "antimatter_t": 0.4999999598104593,
+            "ordinary_annihilation_reactant_t": 0.4999999598104593,
+            "tank_and_separation_t": 39.989374368730296,
+            "retained_core_t": 255.94777073045577,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 3746.834816953045,
+            "engine_t": 12.378258016356519,
+            "radiator_t": 4.320461727409658,
+            "primary_ZJ": 1.2385531831251613,
+            "trajectory": {
+              "beta": 0.10884271338170448,
+              "acceleration_m_s2": 1.0977712218836309,
+              "proper_years": 39.67044574232522,
+              "burn_years": 0.9475281026473859,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07278783273734754,
+              0.09524971852971831
+            ],
+            "parameters": [
+              0.9475281026473859,
+              -5.4791333620772456,
+              -2.748645529879655,
+              0.8464081620421163,
+              0.9999999557123433
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 1,
+          "best": {
+            "fusion_t": 2250.523459247276,
+            "inert_reaction_mass_t": 356.1185328620487,
+            "antimatter_t": 0.9999999943691237,
+            "ordinary_annihilation_reactant_t": 0.9999999943691237,
+            "tank_and_separation_t": 30.994061910043655,
+            "retained_core_t": 252.77821543442573,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2892.4142694425313,
+            "engine_t": 10.028762135630979,
+            "radiator_t": 3.5004023121051766,
+            "primary_ZJ": 1.1523885581063527,
+            "trajectory": {
+              "beta": 0.10870677511851415,
+              "acceleration_m_s2": 1.1560012395608739,
+              "proper_years": 39.670635098735026,
+              "burn_years": 0.8986620352342172,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07254541401015853,
+              0.12131328368908724
+            ],
+            "parameters": [
+              0.8986620352342172,
+              -5.482020098027482,
+              -2.2689635956903733,
+              0.8407684083129908,
+              0.9999999699327612
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 2,
+          "best": {
+            "fusion_t": 1995.43700423859,
+            "inert_reaction_mass_t": 329.26566154209365,
+            "antimatter_t": 1.224494816380358,
+            "ordinary_annihilation_reactant_t": 1.224494816380358,
+            "tank_and_separation_t": 28.018670915576916,
+            "retained_core_t": 251.74313771961081,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2606.9134640486322,
+            "engine_t": 9.26149019996399,
+            "radiator_t": 3.232596532957224,
+            "primary_ZJ": 1.1432248848530795,
+            "trajectory": {
+              "beta": 0.10863945990659385,
+              "acceleration_m_s2": 1.1873064890856897,
+              "proper_years": 39.67072895680768,
+              "burn_years": 0.8744190770757747,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07237306107098872,
+              0.13671533499233127
+            ],
+            "parameters": [
+              0.8744190770757747,
+              -5.484106941548516,
+              -2.1000490368123255,
+              0.8367702909097824,
+              0.9999996919996414
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 3,
+          "best": {
+            "fusion_t": 1995.639158348209,
+            "inert_reaction_mass_t": 330.7935220768242,
+            "antimatter_t": 1.2242966410123282,
+            "ordinary_annihilation_reactant_t": 1.2242966410123282,
+            "tank_and_separation_t": 28.037589900283283,
+            "retained_core_t": 251.73915195407383,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2608.6580155614147,
+            "engine_t": 9.258535672014174,
+            "radiator_t": 3.2315652953700855,
+            "primary_ZJ": 1.1432248617224994,
+            "trajectory": {
+              "beta": 0.10864098997182309,
+              "acceleration_m_s2": 1.1865752080178231,
+              "proper_years": 39.67072682275937,
+              "burn_years": 0.8749704476813349,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07234625402429377,
+              0.13670070125314474
+            ],
+            "parameters": [
+              0.8749704476813349,
+              -5.484429003719202,
+              -2.1001905507229153,
+              0.836149296346399,
+              0.9999998201666647
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 5,
+          "best": {
+            "fusion_t": 1995.9467484903203,
+            "inert_reaction_mass_t": 330.0345783496358,
+            "antimatter_t": 1.2239953004026436,
+            "ordinary_annihilation_reactant_t": 1.2239953004026436,
+            "tank_and_separation_t": 28.032455958765404,
+            "retained_core_t": 251.73375269045266,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2608.19552608998,
+            "engine_t": 9.254533360506054,
+            "radiator_t": 3.230168343257022,
+            "primary_ZJ": 1.1432248968564875,
+            "trajectory": {
+              "beta": 0.1086421207600273,
+              "acceleration_m_s2": 1.1860353632870269,
+              "proper_years": 39.67072524562,
+              "burn_years": 0.8753779258654291,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07236066718704036,
+              0.13667962251006865
+            ],
+            "parameters": [
+              0.8753779258654291,
+              -5.484244121704371,
+              -2.1003944025378862,
+              0.8364831309584713,
+              0.9999998195277399
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 10,
+          "best": {
+            "fusion_t": 1995.5039176424266,
+            "inert_reaction_mass_t": 329.9190839923142,
+            "antimatter_t": 1.2244292321401702,
+            "ordinary_annihilation_reactant_t": 1.2244292321401702,
+            "tank_and_separation_t": 28.02655781721279,
+            "retained_core_t": 251.73487548342493,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2607.633293399658,
+            "engine_t": 9.255365653120291,
+            "radiator_t": 3.230458843615075,
+            "primary_ZJ": 1.143224881580019,
+            "trajectory": {
+              "beta": 0.10864139229146602,
+              "acceleration_m_s2": 1.186383079404111,
+              "proper_years": 39.670726261631884,
+              "burn_years": 0.8751154240521117,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.0723615598049687,
+              0.1367111989244831
+            ],
+            "parameters": [
+              0.8751154240521117,
+              -5.484207596102569,
+              -2.100089076588817,
+              0.8365037595950471,
+              0.9999999378416399
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 15,
+          "best": {
+            "fusion_t": 1995.191966763634,
+            "inert_reaction_mass_t": 330.4289891010154,
+            "antimatter_t": 1.2247350198131843,
+            "ordinary_annihilation_reactant_t": 1.2247350198131843,
+            "tank_and_separation_t": 28.028906860626343,
+            "retained_core_t": 251.73804549524525,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2607.837378260147,
+            "engine_t": 9.25771548740872,
+            "radiator_t": 3.2312790211469604,
+            "primary_ZJ": 1.143224908834517,
+            "trajectory": {
+              "beta": 0.10864061260957533,
+              "acceleration_m_s2": 1.1867554773655844,
+              "proper_years": 39.67072734907998,
+              "burn_years": 0.8748344637682859,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07235159600488936,
+              0.13673295175314032
+            ],
+            "parameters": [
+              0.8748344637682859,
+              -5.484327409740029,
+              -2.099878800075144,
+              0.8362729548181124,
+              0.9999999283875444
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 17,
+          "best": {
+            "fusion_t": 1995.191966763634,
+            "inert_reaction_mass_t": 330.4289891010154,
+            "antimatter_t": 1.2247350198131843,
+            "ordinary_annihilation_reactant_t": 1.2247350198131843,
+            "tank_and_separation_t": 28.028906860626343,
+            "retained_core_t": 251.73804549524525,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2607.837378260147,
+            "engine_t": 9.25771548740872,
+            "radiator_t": 3.2312790211469604,
+            "primary_ZJ": 1.143224908834517,
+            "trajectory": {
+              "beta": 0.10864061260957533,
+              "acceleration_m_s2": 1.1867554773655844,
+              "proper_years": 39.67072734907998,
+              "burn_years": 0.8748344637682859,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07235159600488936,
+              0.13673295175314032
+            ],
+            "parameters": [
+              0.8748344637682859,
+              -5.484327409740029,
+              -2.099878800075144,
+              0.8362729548181124,
+              0.9999999283875444
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 18,
+          "best": {
+            "fusion_t": 1995.703211503508,
+            "inert_reaction_mass_t": 329.61210884802205,
+            "antimatter_t": 1.2242339358851155,
+            "ordinary_annihilation_reactant_t": 1.2242339358851155,
+            "tank_and_separation_t": 28.02526376189838,
+            "retained_core_t": 251.73188665362417,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2607.520938638822,
+            "engine_t": 9.253150123606135,
+            "radiator_t": 3.2296855433284577,
+            "primary_ZJ": 1.1432248857965486,
+            "trajectory": {
+              "beta": 0.10864208812008941,
+              "acceleration_m_s2": 1.186050938574975,
+              "proper_years": 39.67072529114352,
+              "burn_years": 0.8753661642207984,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07236759149579981,
+              0.13669741280959105
+            ],
+            "parameters": [
+              0.8753661642207984,
+              -5.4841656829141066,
+              -2.1002223171088583,
+              0.8366435540882896,
+              0.9999996725790843
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 19,
+          "best": {
+            "fusion_t": 1995.8461651772077,
+            "inert_reaction_mass_t": 330.02124106804223,
+            "antimatter_t": 1.224093862718799,
+            "ordinary_annihilation_reactant_t": 1.224093862718799,
+            "tank_and_separation_t": 28.031258125682996,
+            "retained_core_t": 251.73973271011957,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2608.08658480649,
+            "engine_t": 9.258966168979752,
+            "radiator_t": 3.231715554450247,
+            "primary_ZJ": 1.1432248935020832,
+            "trajectory": {
+              "beta": 0.1086408255901922,
+              "acceleration_m_s2": 1.1866537275598021,
+              "proper_years": 39.67072705202807,
+              "burn_years": 0.8749112122543998,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07236062450949626,
+              0.1366861414491501
+            ],
+            "parameters": [
+              0.8749112122543998,
+              -5.484223030830193,
+              -2.100331371111236,
+              0.8364821007872141,
+              0.9999999102098149
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 19.5,
+          "best": {
+            "fusion_t": 1995.8461651772077,
+            "inert_reaction_mass_t": 330.02124106804223,
+            "antimatter_t": 1.224093862718799,
+            "ordinary_annihilation_reactant_t": 1.224093862718799,
+            "tank_and_separation_t": 28.031258125682996,
+            "retained_core_t": 251.73973271011957,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2608.08658480649,
+            "engine_t": 9.258966168979752,
+            "radiator_t": 3.231715554450247,
+            "primary_ZJ": 1.1432248935020832,
+            "trajectory": {
+              "beta": 0.1086408255901922,
+              "acceleration_m_s2": 1.1866537275598021,
+              "proper_years": 39.67072705202807,
+              "burn_years": 0.8749112122543998,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07236062450949626,
+              0.1366861414491501
+            ],
+            "parameters": [
+              0.8749112122543998,
+              -5.484223030830193,
+              -2.100331371111236,
+              0.8364821007872141,
+              0.9999999102098149
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 19.75,
+          "best": {
+            "fusion_t": 1995.8461651772077,
+            "inert_reaction_mass_t": 330.02124106804223,
+            "antimatter_t": 1.224093862718799,
+            "ordinary_annihilation_reactant_t": 1.224093862718799,
+            "tank_and_separation_t": 28.031258125682996,
+            "retained_core_t": 251.73973271011957,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2608.08658480649,
+            "engine_t": 9.258966168979752,
+            "radiator_t": 3.231715554450247,
+            "primary_ZJ": 1.1432248935020832,
+            "trajectory": {
+              "beta": 0.1086408255901922,
+              "acceleration_m_s2": 1.1866537275598021,
+              "proper_years": 39.67072705202807,
+              "burn_years": 0.8749112122543998,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07236062450949626,
+              0.1366861414491501
+            ],
+            "parameters": [
+              0.8749112122543998,
+              -5.484223030830193,
+              -2.100331371111236,
+              0.8364821007872141,
+              0.9999999102098149
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 19.9,
+          "best": {
+            "fusion_t": 1995.8461651772077,
+            "inert_reaction_mass_t": 330.02124106804223,
+            "antimatter_t": 1.224093862718799,
+            "ordinary_annihilation_reactant_t": 1.224093862718799,
+            "tank_and_separation_t": 28.031258125682996,
+            "retained_core_t": 251.73973271011957,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2608.08658480649,
+            "engine_t": 9.258966168979752,
+            "radiator_t": 3.231715554450247,
+            "primary_ZJ": 1.1432248935020832,
+            "trajectory": {
+              "beta": 0.1086408255901922,
+              "acceleration_m_s2": 1.1866537275598021,
+              "proper_years": 39.67072705202807,
+              "burn_years": 0.8749112122543998,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07236062450949626,
+              0.1366861414491501
+            ],
+            "parameters": [
+              0.8749112122543998,
+              -5.484223030830193,
+              -2.100331371111236,
+              0.8364821007872141,
+              0.9999999102098149
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 19.925,
+          "best": {
+            "fusion_t": 1995.8461651772077,
+            "inert_reaction_mass_t": 330.02124106804223,
+            "antimatter_t": 1.224093862718799,
+            "ordinary_annihilation_reactant_t": 1.224093862718799,
+            "tank_and_separation_t": 28.031258125682996,
+            "retained_core_t": 251.73973271011957,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2608.08658480649,
+            "engine_t": 9.258966168979752,
+            "radiator_t": 3.231715554450247,
+            "primary_ZJ": 1.1432248935020832,
+            "trajectory": {
+              "beta": 0.1086408255901922,
+              "acceleration_m_s2": 1.1866537275598021,
+              "proper_years": 39.67072705202807,
+              "burn_years": 0.8749112122543998,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07236062450949626,
+              0.1366861414491501
+            ],
+            "parameters": [
+              0.8749112122543998,
+              -5.484223030830193,
+              -2.100331371111236,
+              0.8364821007872141,
+              0.9999999102098149
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 19.95,
+          "best": {
+            "fusion_t": 1995.8461651772077,
+            "inert_reaction_mass_t": 330.02124106804223,
+            "antimatter_t": 1.224093862718799,
+            "ordinary_annihilation_reactant_t": 1.224093862718799,
+            "tank_and_separation_t": 28.031258125682996,
+            "retained_core_t": 251.73973271011957,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2608.08658480649,
+            "engine_t": 9.258966168979752,
+            "radiator_t": 3.231715554450247,
+            "primary_ZJ": 1.1432248935020832,
+            "trajectory": {
+              "beta": 0.1086408255901922,
+              "acceleration_m_s2": 1.1866537275598021,
+              "proper_years": 39.67072705202807,
+              "burn_years": 0.8749112122543998,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07236062450949626,
+              0.1366861414491501
+            ],
+            "parameters": [
+              0.8749112122543998,
+              -5.484223030830193,
+              -2.100331371111236,
+              0.8364821007872141,
+              0.9999999102098149
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 19.97,
+          "best": {
+            "fusion_t": 1995.8461651772077,
+            "inert_reaction_mass_t": 330.02124106804223,
+            "antimatter_t": 1.224093862718799,
+            "ordinary_annihilation_reactant_t": 1.224093862718799,
+            "tank_and_separation_t": 28.031258125682996,
+            "retained_core_t": 251.73973271011957,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2608.08658480649,
+            "engine_t": 9.258966168979752,
+            "radiator_t": 3.231715554450247,
+            "primary_ZJ": 1.1432248935020832,
+            "trajectory": {
+              "beta": 0.1086408255901922,
+              "acceleration_m_s2": 1.1866537275598021,
+              "proper_years": 39.67072705202807,
+              "burn_years": 0.8749112122543998,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07236062450949626,
+              0.1366861414491501
+            ],
+            "parameters": [
+              0.8749112122543998,
+              -5.484223030830193,
+              -2.100331371111236,
+              0.8364821007872141,
+              0.9999999102098149
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 19.98,
+          "best": {
+            "fusion_t": 1995.8461651772077,
+            "inert_reaction_mass_t": 330.02124106804223,
+            "antimatter_t": 1.224093862718799,
+            "ordinary_annihilation_reactant_t": 1.224093862718799,
+            "tank_and_separation_t": 28.031258125682996,
+            "retained_core_t": 251.73973271011957,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2608.08658480649,
+            "engine_t": 9.258966168979752,
+            "radiator_t": 3.231715554450247,
+            "primary_ZJ": 1.1432248935020832,
+            "trajectory": {
+              "beta": 0.1086408255901922,
+              "acceleration_m_s2": 1.1866537275598021,
+              "proper_years": 39.67072705202807,
+              "burn_years": 0.8749112122543998,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07236062450949626,
+              0.1366861414491501
+            ],
+            "parameters": [
+              0.8749112122543998,
+              -5.484223030830193,
+              -2.100331371111236,
+              0.8364821007872141,
+              0.9999999102098149
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 19.99,
+          "best": {
+            "fusion_t": 1995.8461651772077,
+            "inert_reaction_mass_t": 330.02124106804223,
+            "antimatter_t": 1.224093862718799,
+            "ordinary_annihilation_reactant_t": 1.224093862718799,
+            "tank_and_separation_t": 28.031258125682996,
+            "retained_core_t": 251.73973271011957,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2608.08658480649,
+            "engine_t": 9.258966168979752,
+            "radiator_t": 3.231715554450247,
+            "primary_ZJ": 1.1432248935020832,
+            "trajectory": {
+              "beta": 0.1086408255901922,
+              "acceleration_m_s2": 1.1866537275598021,
+              "proper_years": 39.67072705202807,
+              "burn_years": 0.8749112122543998,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07236062450949626,
+              0.1366861414491501
+            ],
+            "parameters": [
+              0.8749112122543998,
+              -5.484223030830193,
+              -2.100331371111236,
+              0.8364821007872141,
+              0.9999999102098149
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 19.995,
+          "best": {
+            "fusion_t": 1995.8461651772077,
+            "inert_reaction_mass_t": 330.02124106804223,
+            "antimatter_t": 1.224093862718799,
+            "ordinary_annihilation_reactant_t": 1.224093862718799,
+            "tank_and_separation_t": 28.031258125682996,
+            "retained_core_t": 251.73973271011957,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2608.08658480649,
+            "engine_t": 9.258966168979752,
+            "radiator_t": 3.231715554450247,
+            "primary_ZJ": 1.1432248935020832,
+            "trajectory": {
+              "beta": 0.1086408255901922,
+              "acceleration_m_s2": 1.1866537275598021,
+              "proper_years": 39.67072705202807,
+              "burn_years": 0.8749112122543998,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07236062450949626,
+              0.1366861414491501
+            ],
+            "parameters": [
+              0.8749112122543998,
+              -5.484223030830193,
+              -2.100331371111236,
+              0.8364821007872141,
+              0.9999999102098149
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 20,
+          "best": {
+            "fusion_t": 1995.8461651772077,
+            "inert_reaction_mass_t": 330.02124106804223,
+            "antimatter_t": 1.224093862718799,
+            "ordinary_annihilation_reactant_t": 1.224093862718799,
+            "tank_and_separation_t": 28.031258125682996,
+            "retained_core_t": 251.73973271011957,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2608.08658480649,
+            "engine_t": 9.258966168979752,
+            "radiator_t": 3.231715554450247,
+            "primary_ZJ": 1.1432248935020832,
+            "trajectory": {
+              "beta": 0.1086408255901922,
+              "acceleration_m_s2": 1.1866537275598021,
+              "proper_years": 39.67072705202807,
+              "burn_years": 0.8749112122543998,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07236062450949626,
+              0.1366861414491501
+            ],
+            "parameters": [
+              0.8749112122543998,
+              -5.484223030830193,
+              -2.100331371111236,
+              0.8364821007872141,
+              0.9999999102098149
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 25,
+          "best": {
+            "fusion_t": 1995.8461651772077,
+            "inert_reaction_mass_t": 330.02124106804223,
+            "antimatter_t": 1.224093862718799,
+            "ordinary_annihilation_reactant_t": 1.224093862718799,
+            "tank_and_separation_t": 28.031258125682996,
+            "retained_core_t": 251.73973271011957,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2608.08658480649,
+            "engine_t": 9.258966168979752,
+            "radiator_t": 3.231715554450247,
+            "primary_ZJ": 1.1432248935020832,
+            "trajectory": {
+              "beta": 0.1086408255901922,
+              "acceleration_m_s2": 1.1866537275598021,
+              "proper_years": 39.67072705202807,
+              "burn_years": 0.8749112122543998,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07236062450949626,
+              0.1366861414491501
+            ],
+            "parameters": [
+              0.8749112122543998,
+              -5.484223030830193,
+              -2.100331371111236,
+              0.8364821007872141,
+              0.9999999102098149
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 30,
+          "best": {
+            "fusion_t": 1995.4732553837212,
+            "inert_reaction_mass_t": 330.1749432366606,
+            "antimatter_t": 1.224459553615044,
+            "ordinary_annihilation_reactant_t": 1.224459553615044,
+            "tank_and_separation_t": 28.029051994402238,
+            "retained_core_t": 251.7257809993042,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2607.851950721318,
+            "engine_t": 9.24862418594796,
+            "radiator_t": 3.228105826666635,
+            "primary_ZJ": 1.143224979530436,
+            "trajectory": {
+              "beta": 0.10864325210700834,
+              "acceleration_m_s2": 1.1854957659382135,
+              "proper_years": 39.67072366771825,
+              "burn_years": 0.8757855969680826,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07235692509691614,
+              0.1367143064493921
+            ],
+            "parameters": [
+              0.8757855969680826,
+              -5.4842675609680205,
+              -2.1000589328402373,
+              0.8363964038304555,
+              0.9999994730002396
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 50,
+          "best": {
+            "fusion_t": 1995.4732553837212,
+            "inert_reaction_mass_t": 330.1749432366606,
+            "antimatter_t": 1.224459553615044,
+            "ordinary_annihilation_reactant_t": 1.224459553615044,
+            "tank_and_separation_t": 28.029051994402238,
+            "retained_core_t": 251.7257809993042,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2607.851950721318,
+            "engine_t": 9.24862418594796,
+            "radiator_t": 3.228105826666635,
+            "primary_ZJ": 1.143224979530436,
+            "trajectory": {
+              "beta": 0.10864325210700834,
+              "acceleration_m_s2": 1.1854957659382135,
+              "proper_years": 39.67072366771825,
+              "burn_years": 0.8757855969680826,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07235692509691614,
+              0.1367143064493921
+            ],
+            "parameters": [
+              0.8757855969680826,
+              -5.4842675609680205,
+              -2.1000589328402373,
+              0.8363964038304555,
+              0.9999994730002396
+            ],
+            "mode": "mixed"
+          }
+        },
+        {
+          "cap_t": 100,
+          "best": {
+            "fusion_t": 1995.4732553837212,
+            "inert_reaction_mass_t": 330.1749432366606,
+            "antimatter_t": 1.224459553615044,
+            "ordinary_annihilation_reactant_t": 1.224459553615044,
+            "tank_and_separation_t": 28.029051994402238,
+            "retained_core_t": 251.7257809993042,
+            "nonpropulsion_core_t": 239.24905098668958,
+            "departure_t": 2607.851950721318,
+            "engine_t": 9.24862418594796,
+            "radiator_t": 3.228105826666635,
+            "primary_ZJ": 1.143224979530436,
+            "trajectory": {
+              "beta": 0.10864325210700834,
+              "acceleration_m_s2": 1.1854957659382135,
+              "proper_years": 39.67072366771825,
+              "burn_years": 0.8757855969680826,
+              "years": 39.9
+            },
+            "effective_exhaust_c": [
+              0.07235692509691614,
+              0.1367143064493921
+            ],
+            "parameters": [
+              0.8757855969680826,
+              -5.4842675609680205,
+              -2.1000589328402373,
+              0.8363964038304555,
+              0.9999994730002396
+            ],
+            "mode": "mixed"
+          }
+        }
+      ],
+      "unconstrained": {
+        "hybrid": {
+          "fusion_t": 2002.3996931525492,
+          "inert_reaction_mass_t": 0.0,
+          "antimatter_t": 1.2260164285027297,
+          "ordinary_annihilation_reactant_t": 1.2260164285027297,
+          "tank_and_separation_t": 24.474191841068077,
+          "retained_core_t": 251.29498390042775,
+          "nonpropulsion_core_t": 239.24905098668958,
+          "departure_t": 2280.6209017510505,
+          "engine_t": 8.929287271237433,
+          "radiator_t": 3.1166456425007514,
+          "primary_ZJ": 1.1462249466290706,
+          "trajectory": {
+            "beta": 0.108619942493834,
+            "acceleration_m_s2": 1.1967181000003477,
+            "proper_years": 39.670756181314,
+            "burn_years": 0.8673844750093089,
+            "years": 39.9
+          },
+          "effective_exhaust_c": [
+            0.07910246013533462,
+            0.1370024198009214
+          ],
+          "parameters": [
+            0.8673844750093089,
+            -5.406713932979542,
+            -2.0972794314547607
+          ],
+          "mode": "hybrid"
+        },
+        "mixed": {
+          "fusion_t": 1995.4732553837212,
+          "inert_reaction_mass_t": 330.1749432366606,
+          "antimatter_t": 1.224459553615044,
+          "ordinary_annihilation_reactant_t": 1.224459553615044,
+          "tank_and_separation_t": 28.029051994402238,
+          "retained_core_t": 251.7257809993042,
+          "nonpropulsion_core_t": 239.24905098668958,
+          "departure_t": 2607.851950721318,
+          "engine_t": 9.24862418594796,
+          "radiator_t": 3.228105826666635,
+          "primary_ZJ": 1.143224979530436,
+          "trajectory": {
+            "beta": 0.10864325210700834,
+            "acceleration_m_s2": 1.1854957659382135,
+            "proper_years": 39.67072366771825,
+            "burn_years": 0.8757855969680826,
+            "years": 39.9
+          },
+          "effective_exhaust_c": [
+            0.07235692509691614,
+            0.1367143064493921
+          ],
+          "parameters": [
+            0.8757855969680826,
+            -5.4842675609680205,
+            -2.1000589328402373,
+            0.8363964038304555,
+            0.9999994730002396
+          ],
+          "mode": "mixed"
+        },
+        "antimatter": {
+          "fusion_t": 0.0,
+          "inert_reaction_mass_t": 1800.5958799596724,
+          "antimatter_t": 4.845606293021172,
+          "ordinary_annihilation_reactant_t": 4.845606293021172,
+          "tank_and_separation_t": 24.284939809941278,
+          "retained_core_t": 249.85203969140676,
+          "nonpropulsion_core_t": 239.24905098668958,
+          "departure_t": 2084.4240720470625,
+          "engine_t": 7.859676187481314,
+          "radiator_t": 2.743312517235868,
+          "primary_ZJ": 1.7420054999889967,
+          "trajectory": {
+            "beta": 0.10847161320694415,
+            "acceleration_m_s2": 1.2736899510905844,
+            "proper_years": 39.670963248432486,
+            "burn_years": 0.813840384522569,
+            "years": 39.9
+          },
+          "effective_exhaust_c": [
+            0.0716790537006559,
+            0.19166670246537235
+          ],
+          "parameters": [
+            0.813840384522569,
+            -2.4910967217030686,
+            -1.6226838996615238
+          ],
+          "mode": "antimatter"
+        },
+        "photon": {
+          "fusion_t": 0.0,
+          "inert_reaction_mass_t": 0.0,
+          "antimatter_t": 44.4223967341216,
+          "ordinary_annihilation_reactant_t": 44.4223967341216,
+          "tank_and_separation_t": 26.680964567842224,
+          "retained_core_t": 258.6464685576632,
+          "nonpropulsion_core_t": 239.24905098668958,
+          "departure_t": 374.1722265937486,
+          "engine_t": 14.378721436663003,
+          "radiator_t": 5.01869613431057,
+          "primary_ZJ": 15.969943646677313,
+          "trajectory": {
+            "beta": 0.11278390637440824,
+            "acceleration_m_s2": 0.466117410427315,
+            "proper_years": 39.665062465530816,
+            "burn_years": 2.3133876883076594,
+            "years": 39.9
+          },
+          "effective_exhaust_c": [
+            0.8,
+            0.8
+          ],
+          "parameters": [
+            2.3133876883076594
+          ],
+          "mode": "photon"
+        }
+      }
+    }
+  },
+  "splits_20t": [
+    {
+      "cargo_cap_t": 0,
+      "crew": {
+        "fusion_t": 26196.9456554196,
+        "inert_reaction_mass_t": 0.0,
+        "antimatter_t": 19.999999786434987,
+        "ordinary_annihilation_reactant_t": 19.999999786434987,
+        "tank_and_separation_t": 301.14640208980563,
+        "retained_core_t": 591.0613955986526,
+        "nonpropulsion_core_t": 428.18496891430857,
+        "departure_t": 27129.15345268093,
+        "engine_t": 120.73538961174722,
+        "radiator_t": 42.14103707259673,
+        "primary_ZJ": 16.419540458476455,
+        "trajectory": {
+          "beta": 0.2322591718493544,
+          "acceleration_m_s2": 1.3602743538354094,
+          "proper_years": 19.416110742555972,
+          "burn_years": 1.6676493972718767,
+          "years": 19.9
+        },
+        "effective_exhaust_c": [
+          0.07910246021466515,
+          0.3060794912537319
+        ],
+        "parameters": [
+          1.6676493972718767,
+          -5.4067130563867325,
+          -1.2180208945896263
+        ],
+        "mode": "hybrid"
+      },
+      "cargo": {
+        "fusion_t": 4067.227536617766,
+        "inert_reaction_mass_t": 0.0,
+        "antimatter_t": 0.0,
+        "ordinary_annihilation_reactant_t": 0.0,
+        "tank_and_separation_t": 46.49950290279543,
+        "retained_core_t": 259.67374144419546,
+        "nonpropulsion_core_t": 239.24905098668958,
+        "departure_t": 4373.400780964756,
+        "engine_t": 15.140207888188787,
+        "radiator_t": 5.284482569317078,
+        "primary_ZJ": 1.432933190161393,
+        "trajectory": {
+          "beta": 0.10896373225380251,
+          "acceleration_m_s2": 1.0508718472648795,
+          "proper_years": 39.67027737428213,
+          "burn_years": 0.9909291095764416,
+          "years": 39.9
+        },
+        "effective_exhaust_c": [
+          0.0784813830726757,
+          0.0784813830726757
+        ],
+        "parameters": [
+          0.9909291095764416
+        ],
+        "mode": "fusion"
+      },
+      "fleet": {
+        "antimatter_t": 19.999999786434987,
+        "fusion_t": 30264.173192037368,
+        "inert_reaction_mass_t": 0.0,
+        "departure_t": 31502.554233645686,
+        "primary_ZJ": 17.852473648637847
+      }
+    },
+    {
+      "cargo_cap_t": 0.005,
+      "crew": {
+        "fusion_t": 26211.29516448194,
+        "inert_reaction_mass_t": 0.0,
+        "antimatter_t": 19.99499997654614,
+        "ordinary_annihilation_reactant_t": 19.99499997654614,
+        "tank_and_separation_t": 301.30144179614376,
+        "retained_core_t": 591.1110859429766,
+        "nonpropulsion_core_t": 428.18496891430857,
+        "departure_t": 27143.697692174155,
+        "engine_t": 120.7722235674279,
+        "radiator_t": 42.15389346124017,
+        "primary_ZJ": 16.422798521132517,
+        "trajectory": {
+          "beta": 0.23226449771996183,
+          "acceleration_m_s2": 1.359960256600851,
+          "proper_years": 19.41610360334091,
+          "burn_years": 1.6680749888720148,
+          "years": 19.9
+        },
+        "effective_exhaust_c": [
+          0.07910246021580776,
+          0.30593561159754923
+        ],
+        "parameters": [
+          1.6680749888720148,
+          -5.406713043754941,
+          -1.2185020437759997
+        ],
+        "mode": "hybrid"
+      },
+      "cargo": {
+        "fusion_t": 4067.227536617766,
+        "inert_reaction_mass_t": 0.0,
+        "antimatter_t": 0.0,
+        "ordinary_annihilation_reactant_t": 0.0,
+        "tank_and_separation_t": 46.49950290279543,
+        "retained_core_t": 259.67374144419546,
+        "nonpropulsion_core_t": 239.24905098668958,
+        "departure_t": 4373.400780964756,
+        "engine_t": 15.140207888188787,
+        "radiator_t": 5.284482569317078,
+        "primary_ZJ": 1.432933190161393,
+        "trajectory": {
+          "beta": 0.10896373225380251,
+          "acceleration_m_s2": 1.0508718472648795,
+          "proper_years": 39.67027737428213,
+          "burn_years": 0.9909291095764416,
+          "years": 39.9
+        },
+        "effective_exhaust_c": [
+          0.0784813830726757,
+          0.0784813830726757
+        ],
+        "parameters": [
+          0.9909291095764416
+        ],
+        "mode": "fusion"
+      },
+      "fleet": {
+        "antimatter_t": 19.99499997654614,
+        "fusion_t": 30278.522701099708,
+        "inert_reaction_mass_t": 0.0,
+        "departure_t": 31517.09847313891,
+        "primary_ZJ": 17.85573171129391
+      }
+    },
+    {
+      "cargo_cap_t": 0.01,
+      "crew": {
+        "fusion_t": 26225.678557930303,
+        "inert_reaction_mass_t": 0.0,
+        "antimatter_t": 19.98999995464519,
+        "ordinary_annihilation_reactant_t": 19.98999995464519,
+        "tank_and_separation_t": 301.4568541117893,
+        "retained_core_t": 591.1871416139446,
+        "nonpropulsion_core_t": 428.18496891430857,
+        "departure_t": 27158.30255356533,
+        "engine_t": 120.8286013456824,
+        "radiator_t": 42.17357135395362,
+        "primary_ZJ": 16.42606844544662,
+        "trajectory": {
+          "beta": 0.2322661404294178,
+          "acceleration_m_s2": 1.359863412042265,
+          "proper_years": 19.416101401362184,
+          "burn_years": 1.6682062543707619,
+          "years": 19.9
+        },
+        "effective_exhaust_c": [
+          0.07910246047225523,
+          0.30578370517481757
+        ],
+        "parameters": [
+          1.6682062543707619,
+          -5.4067102100852615,
+          -1.2190102623582493
+        ],
+        "mode": "hybrid"
+      },
+      "cargo": {
+        "fusion_t": 3944.121811645877,
+        "inert_reaction_mass_t": 570.030295891949,
+        "antimatter_t": 0.009999964320562405,
+        "ordinary_annihilation_reactant_t": 0.009999964320562405,
+        "tank_and_separation_t": 51.42128316289991,
+        "retained_core_t": 259.9352515008161,
+        "nonpropulsion_core_t": 239.24905098668958,
+        "departure_t": 4825.528642130182,
+        "engine_t": 15.334057417038498,
+        "radiator_t": 5.352143097088021,
+        "primary_ZJ": 1.3931565701720596,
+        "trajectory": {
+          "beta": 0.10895139714156507,
+          "acceleration_m_s2": 1.0554586016124838,
+          "proper_years": 39.67029452666893,
+          "burn_years": 0.9865097526861124,
+          "years": 39.9
+        },
+        "effective_exhaust_c": [
+          0.07281919615156036,
+          0.07916040529093063
+        ],
+        "parameters": [
+          0.9865097526861124,
+          -5.4787562843378605,
+          -5.013161167848217,
+          0.8471391938340268,
+          0.9999999887251485
+        ],
+        "mode": "mixed"
+      },
+      "fleet": {
+        "antimatter_t": 19.999999918965752,
+        "fusion_t": 30169.80036957618,
+        "inert_reaction_mass_t": 570.030295891949,
+        "departure_t": 31983.83119569551,
+        "primary_ZJ": 17.81922501561868
+      }
+    },
+    {
+      "cargo_cap_t": 0.02,
+      "crew": {
+        "fusion_t": 26254.541805856188,
+        "inert_reaction_mass_t": 0.0,
+        "antimatter_t": 19.979999990945522,
+        "ordinary_annihilation_reactant_t": 19.979999990945522,
+        "tank_and_separation_t": 301.7687398593385,
+        "retained_core_t": 591.291822212531,
+        "nonpropulsion_core_t": 428.18496891430857,
+        "departure_t": 27187.562367909944,
+        "engine_t": 120.9061979206589,
+        "radiator_t": 42.20065537756345,
+        "primary_ZJ": 16.43264230725275,
+        "trajectory": {
+          "beta": 0.23227617367555053,
+          "acceleration_m_s2": 1.3592722730952707,
+          "proper_years": 19.416087952632257,
+          "burn_years": 1.6690079512448701,
+          "years": 19.9
+        },
+        "effective_exhaust_c": [
+          0.07910246020466626,
+          0.3054940803790534
+        ],
+        "parameters": [
+          1.6690079512448701,
+          -5.406713166857624,
+          -1.219979879204683
+        ],
+        "mode": "hybrid"
+      },
+      "cargo": {
+        "fusion_t": 3923.571000343695,
+        "inert_reaction_mass_t": 567.8083278458571,
+        "antimatter_t": 0.019999958724688842,
+        "ordinary_annihilation_reactant_t": 0.019999958724688842,
+        "tank_and_separation_t": 51.17639258692962,
+        "retained_core_t": 259.84988744790553,
+        "nonpropulsion_core_t": 239.24905098668958,
+        "departure_t": 4802.445608141837,
+        "engine_t": 15.270779615598437,
+        "radiator_t": 5.33005684561749,
+        "primary_ZJ": 1.3895112908259275,
+        "trajectory": {
+          "beta": 0.10894931261357979,
+          "acceleration_m_s2": 1.0562378912485355,
+          "proper_years": 39.67029742547433,
+          "burn_years": 0.9857628211161877,
+          "years": 39.9
+        },
+        "effective_exhaust_c": [
+          0.07281352290280076,
+          0.07941825825910191
+        ],
+        "parameters": [
+          0.9857628211161877,
+          -5.478819926942875,
+          -4.449999586863444,
+          0.8470069269606264,
+          0.9999999733978351
+        ],
+        "mode": "mixed"
+      },
+      "fleet": {
+        "antimatter_t": 19.99999994967021,
+        "fusion_t": 30178.112806199882,
+        "inert_reaction_mass_t": 567.8083278458571,
+        "departure_t": 31990.00797605178,
+        "primary_ZJ": 17.82215359807868
+      }
+    },
+    {
+      "cargo_cap_t": 0.03,
+      "crew": {
+        "fusion_t": 26283.54062544324,
+        "inert_reaction_mass_t": 0.0,
+        "antimatter_t": 19.969999129083025,
+        "ordinary_annihilation_reactant_t": 19.969999129083025,
+        "tank_and_separation_t": 302.08211639129127,
+        "retained_core_t": 591.397068562182,
+        "nonpropulsion_core_t": 428.18496891430857,
+        "departure_t": 27216.95980865488,
+        "engine_t": 120.98421386986045,
+        "radiator_t": 42.227885778012975,
+        "primary_ZJ": 16.43926360969465,
+        "trajectory": {
+          "beta": 0.2322862327379872,
+          "acceleration_m_s2": 1.358680238086984,
+          "proper_years": 19.416074469968503,
+          "burn_years": 1.6698116437134267,
+          "years": 19.9
+        },
+        "effective_exhaust_c": [
+          0.07910246030808281,
+          0.30520403162499493
+        ],
+        "parameters": [
+          1.6698116437134267,
+          -5.40671202414906,
+          -1.2209517683222515
+        ],
+        "mode": "hybrid"
+      },
+      "cargo": {
+        "fusion_t": 3903.0669331517247,
+        "inert_reaction_mass_t": 565.5326404953595,
+        "antimatter_t": 0.029999995944765375,
+        "ordinary_annihilation_reactant_t": 0.029999995944765375,
+        "tank_and_separation_t": 50.93142530784294,
+        "retained_core_t": 259.75729603332843,
+        "nonpropulsion_core_t": 239.24905098668958,
+        "departure_t": 4779.3482949801455,
+        "engine_t": 15.202144388627685,
+        "radiator_t": 5.30610065801117,
+        "primary_ZJ": 1.3858824953845807,
+        "trajectory": {
+          "beta": 0.1089482201690622,
+          "acceleration_m_s2": 1.0566467797777437,
+          "proper_years": 39.67029894468254,
+          "burn_years": 0.9853713632178671,
+          "years": 39.9
+        },
+        "effective_exhaust_c": [
+          0.0728084009662077,
+          0.07967858396129489
+        ],
+        "parameters": [
+          0.9853713632178671,
+          -5.47888645411099,
+          -4.210450186748594,
+          0.8468875400122392,
+          0.9999999748046404
+        ],
+        "mode": "mixed"
+      },
+      "fleet": {
+        "antimatter_t": 19.99999912502779,
+        "fusion_t": 30186.607558594962,
+        "inert_reaction_mass_t": 565.5326404953595,
+        "departure_t": 31996.308103635027,
+        "primary_ZJ": 17.82514610507923
+      }
+    },
+    {
+      "cargo_cap_t": 0.05,
+      "crew": {
+        "fusion_t": 26341.931456139682,
+        "inert_reaction_mass_t": 0.0,
+        "antimatter_t": 19.94999994415822,
+        "ordinary_annihilation_reactant_t": 19.94999994415822,
+        "tank_and_separation_t": 302.7131959862093,
+        "retained_core_t": 591.6001498986701,
+        "nonpropulsion_core_t": 428.18496891430857,
+        "departure_t": 27276.144801912877,
+        "engine_t": 121.13475194822392,
+        "radiator_t": 42.28042903613765,
+        "primary_ZJ": 16.452645653385808,
+        "trajectory": {
+          "beta": 0.2323076970892996,
+          "acceleration_m_s2": 1.3574190225470335,
+          "proper_years": 19.416045702472132,
+          "burn_years": 1.6715263635384257,
+          "years": 19.9
+        },
+        "effective_exhaust_c": [
+          0.07910246026410545,
+          0.3046255702697006
+        ],
+        "parameters": [
+          1.6715263635384257,
+          -5.406712510076692,
+          -1.2228926218726404
+        ],
+        "mode": "hybrid"
+      },
+      "cargo": {
+        "fusion_t": 3862.203033435143,
+        "inert_reaction_mass_t": 559.8797015105116,
+        "antimatter_t": 0.04999989094554143,
+        "ordinary_annihilation_reactant_t": 0.04999989094554143,
+        "tank_and_separation_t": 50.43096002322267,
+        "retained_core_t": 259.6013517553098,
+        "nonpropulsion_core_t": 239.24905098668958,
+        "departure_t": 4732.215046506078,
+        "engine_t": 15.08654759204035,
+        "radiator_t": 5.265753176579874,
+        "primary_ZJ": 1.378675655601522,
+        "trajectory": {
+          "beta": 0.10894182732195687,
+          "acceleration_m_s2": 1.0590462406712722,
+          "proper_years": 39.670307835214246,
+          "burn_years": 0.9830804447107866,
+          "years": 39.9
+        },
+        "effective_exhaust_c": [
+          0.07280909120986132,
+          0.08020669425373163
+        ],
+        "parameters": [
+          0.9830804447107866,
+          -5.478877659957267,
+          -3.939899857785314,
+          0.846903628705064,
+          0.9999999254665343
+        ],
+        "mode": "mixed"
+      },
+      "fleet": {
+        "antimatter_t": 19.99999983510376,
+        "fusion_t": 30204.134489574826,
+        "inert_reaction_mass_t": 559.8797015105116,
+        "departure_t": 32008.359848418953,
+        "primary_ZJ": 17.83132130898733
+      }
+    },
+    {
+      "cargo_cap_t": 0.075,
+      "crew": {
+        "fusion_t": 26415.688119512262,
+        "inert_reaction_mass_t": 0.0,
+        "antimatter_t": 19.924999504108815,
+        "ordinary_annihilation_reactant_t": 19.924999504108815,
+        "tank_and_separation_t": 303.51049403644004,
+        "retained_core_t": 591.8897216719344,
+        "nonpropulsion_core_t": 428.18496891430857,
+        "departure_t": 27350.938334228857,
+        "engine_t": 121.34940278246265,
+        "radiator_t": 42.355349975163136,
+        "primary_ZJ": 16.46964330320337,
+        "trajectory": {
+          "beta": 0.2323300977868304,
+          "acceleration_m_s2": 1.3561058120703016,
+          "proper_years": 19.416015683303378,
+          "burn_years": 1.6733155584005868,
+          "years": 19.9
+        },
+        "effective_exhaust_c": [
+          0.07910246020312575,
+          0.30389047622112286
+        ],
+        "parameters": [
+          1.6733155584005868,
+          -5.406713183887289,
+          -1.2253639494842856
+        ],
+        "mode": "hybrid"
+      },
+      "cargo": {
+        "fusion_t": 3811.3982019925365,
+        "inert_reaction_mass_t": 552.7570001209455,
+        "antimatter_t": 0.0749999720378713,
+        "ordinary_annihilation_reactant_t": 0.0749999720378713,
+        "tank_and_separation_t": 49.80778220756156,
+        "retained_core_t": 259.3744324442888,
+        "nonpropulsion_core_t": 239.24905098668958,
+        "departure_t": 4673.4874167094085,
+        "engine_t": 14.918339141104447,
+        "radiator_t": 5.207042316494785,
+        "primary_ZJ": 1.3697640832391045,
+        "trajectory": {
+          "beta": 0.10893831275143032,
+          "acceleration_m_s2": 1.0603702760668254,
+          "proper_years": 39.67031272315804,
+          "burn_years": 0.9818208615851205,
+          "years": 39.9
+        },
+        "effective_exhaust_c": [
+          0.07281099159854842,
+          0.08088125160724881
+        ],
+        "parameters": [
+          0.9818208615851205,
+          -5.47885198079223,
+          -3.7366524433092043,
+          0.8469479222632442,
+          0.9999999269901415
+        ],
+        "mode": "mixed"
+      },
+      "fleet": {
+        "antimatter_t": 19.999999476146687,
+        "fusion_t": 30227.086321504798,
+        "inert_reaction_mass_t": 552.7570001209455,
+        "departure_t": 32024.425750938266,
+        "primary_ZJ": 17.839407386442474
+      }
+    },
+    {
+      "cargo_cap_t": 0.1,
+      "crew": {
+        "fusion_t": 26490.306207595437,
+        "inert_reaction_mass_t": 0.0,
+        "antimatter_t": 19.899999970604938,
+        "ordinary_annihilation_reactant_t": 19.899999970604938,
+        "tank_and_separation_t": 304.31726826705915,
+        "retained_core_t": 592.1546004110302,
+        "nonpropulsion_core_t": 428.18496891430857,
+        "departure_t": 27426.578076214737,
+        "engine_t": 121.54574941417377,
+        "radiator_t": 42.42388208254795,
+        "primary_ZJ": 16.486944769214467,
+        "trajectory": {
+          "beta": 0.23235663696797387,
+          "acceleration_m_s2": 1.3545539704898677,
+          "proper_years": 19.415980122464692,
+          "burn_years": 1.6754348716551335,
+          "years": 19.9
+        },
+        "effective_exhaust_c": [
+          0.07910246037020513,
+          0.3031613940437449
+        ],
+        "parameters": [
+          1.6754348716551335,
+          -5.406711337689321,
+          -1.2278205615498974
+        ],
+        "mode": "hybrid"
+      },
+      "cargo": {
+        "fusion_t": 3760.9097046976945,
+        "inert_reaction_mass_t": 544.9342637897021,
+        "antimatter_t": 0.09999986657068687,
+        "ordinary_annihilation_reactant_t": 0.09999986657068687,
+        "tank_and_separation_t": 49.18038357850752,
+        "retained_core_t": 259.1595261155507,
+        "nonpropulsion_core_t": 239.24905098668958,
+        "departure_t": 4614.383877914596,
+        "engine_t": 14.7590355521295,
+        "radiator_t": 5.151439576731587,
+        "primary_ZJ": 1.3609638921339327,
+        "trajectory": {
+          "beta": 0.10893308861305623,
+          "acceleration_m_s2": 1.0623448044316046,
+          "proper_years": 39.67031998901282,
+          "burn_years": 0.9799484390332136,
+          "years": 39.9
+        },
+        "effective_exhaust_c": [
+          0.0728204947023426,
+          0.08157217773042587
+        ],
+        "parameters": [
+          0.9799484390332136,
+          -5.4787355140770275,
+          -3.5948447083197324,
+          0.8471694578064991,
+          0.9999999868975258
+        ],
+        "mode": "mixed"
+      },
+      "fleet": {
+        "antimatter_t": 19.999999837175626,
+        "fusion_t": 30251.21591229313,
+        "inert_reaction_mass_t": 544.9342637897021,
+        "departure_t": 32040.961954129332,
+        "primary_ZJ": 17.8479086613484
+      }
+    },
+    {
+      "cargo_cap_t": 0.25,
+      "crew": {
+        "fusion_t": 26957.223575564836,
+        "inert_reaction_mass_t": 0.0,
+        "antimatter_t": 19.749999676045828,
+        "ordinary_annihilation_reactant_t": 19.749999676045828,
+        "tank_and_separation_t": 309.36920914947495,
+        "retained_core_t": 593.8877074663701,
+        "nonpropulsion_core_t": 428.18496891430857,
+        "departure_t": 27899.980491532773,
+        "engine_t": 122.83044947682215,
+        "radiator_t": 42.87228907523935,
+        "primary_ZJ": 16.59751995837747,
+        "trajectory": {
+          "beta": 0.23251044559883788,
+          "acceleration_m_s2": 1.345644379954026,
+          "proper_years": 19.415774120616724,
+          "burn_years": 1.6877082034553457,
+          "years": 19.9
+        },
+        "effective_exhaust_c": [
+          0.07910246091146501,
+          0.2987130065194475
+        ],
+        "parameters": [
+          1.6877082034553457,
+          -5.406705356966298,
+          -1.2429299830267033
+        ],
+        "mode": "hybrid"
+      },
+      "cargo": {
+        "fusion_t": 3465.2187422975435,
+        "inert_reaction_mass_t": 505.19453122893856,
+        "antimatter_t": 0.24999985893560123,
+        "ordinary_annihilation_reactant_t": 0.24999985893560123,
+        "tank_and_separation_t": 45.57479592965418,
+        "retained_core_t": 257.89480816944905,
+        "nonpropulsion_core_t": 239.24905098668958,
+        "departure_t": 4274.382877343457,
+        "engine_t": 13.821538229281945,
+        "radiator_t": 4.824218953477512,
+        "primary_ZJ": 1.3107137168782914,
+        "trajectory": {
+          "beta": 0.10890243539220204,
+          "acceleration_m_s2": 1.0740883156359273,
+          "proper_years": 39.67036262952991,
+          "burn_years": 0.9689581917487846,
+          "years": 39.9
+        },
+        "effective_exhaust_c": [
+          0.07281451719239312,
+          0.08608813188155168
+        ],
+        "parameters": [
+          0.9689581917487846,
+          -5.478814309913519,
+          -3.1353323059468603,
+          0.8470301179838318,
+          0.9999999560597255
+        ],
+        "mode": "mixed"
+      },
+      "fleet": {
+        "antimatter_t": 19.99999953498143,
+        "fusion_t": 30422.44231786238,
+        "inert_reaction_mass_t": 505.19453122893856,
+        "departure_t": 32174.36336887623,
+        "primary_ZJ": 17.90823367525576
+      }
+    },
+    {
+      "cargo_cap_t": 0.5,
+      "crew": {
+        "fusion_t": 27818.395035658075,
+        "inert_reaction_mass_t": 0.0,
+        "antimatter_t": 19.499999839550437,
+        "ordinary_annihilation_reactant_t": 19.499999839550437,
+        "tank_and_separation_t": 318.7018453022266,
+        "retained_core_t": 597.0431442720895,
+        "nonpropulsion_core_t": 428.18496891430857,
+        "departure_t": 28773.14002491149,
+        "engine_t": 125.16947974589912,
+        "radiator_t": 43.688695611881755,
+        "primary_ZJ": 16.81104556462338,
+        "trajectory": {
+          "beta": 0.23279275121921483,
+          "acceleration_m_s2": 1.329656166352128,
+          "proper_years": 19.41539642650352,
+          "burn_years": 1.7101942898900018,
+          "years": 19.9
+        },
+        "effective_exhaust_c": [
+          0.07910246025519671,
+          0.29109044093462105
+        ],
+        "parameters": [
+          1.7101942898900018,
+          -5.406712608530416,
+          -1.2693230441721388
+        ],
+        "mode": "hybrid"
+      },
+      "cargo": {
+        "fusion_t": 3005.2966446566697,
+        "inert_reaction_mass_t": 444.6010272775677,
+        "antimatter_t": 0.4999999598104593,
+        "ordinary_annihilation_reactant_t": 0.4999999598104593,
+        "tank_and_separation_t": 39.989374368730296,
+        "retained_core_t": 255.94777073045577,
+        "nonpropulsion_core_t": 239.24905098668958,
+        "departure_t": 3746.834816953045,
+        "engine_t": 12.378258016356519,
+        "radiator_t": 4.320461727409658,
+        "primary_ZJ": 1.2385531831251613,
+        "trajectory": {
+          "beta": 0.10884271338170448,
+          "acceleration_m_s2": 1.0977712218836309,
+          "proper_years": 39.67044574232522,
+          "burn_years": 0.9475281026473859,
+          "years": 39.9
+        },
+        "effective_exhaust_c": [
+          0.07278783273734754,
+          0.09524971852971831
+        ],
+        "parameters": [
+          0.9475281026473859,
+          -5.4791333620772456,
+          -2.748645529879655,
+          0.8464081620421163,
+          0.9999999557123433
+        ],
+        "mode": "mixed"
+      },
+      "fleet": {
+        "antimatter_t": 19.999999799360896,
+        "fusion_t": 30823.691680314747,
+        "inert_reaction_mass_t": 444.6010272775677,
+        "departure_t": 32519.974841864532,
+        "primary_ZJ": 18.049598747748544
+      }
+    },
+    {
+      "cargo_cap_t": 1,
+      "crew": {
+        "fusion_t": 29963.56307880774,
+        "inert_reaction_mass_t": 0.0,
+        "antimatter_t": 18.999999963781914,
+        "ordinary_annihilation_reactant_t": 18.999999963781914,
+        "tank_and_separation_t": 342.0181938465669,
+        "retained_core_t": 604.9262111418335,
+        "nonpropulsion_core_t": 428.18496891430857,
+        "departure_t": 30948.507483723708,
+        "engine_t": 131.01295979533893,
+        "radiator_t": 45.728282432186035,
+        "primary_ZJ": 17.387063081649753,
+        "trajectory": {
+          "beta": 0.23345495277619255,
+          "acceleration_m_s2": 1.2939059574643859,
+          "proper_years": 19.41451255020758,
+          "burn_years": 1.7627333767089803,
+          "years": 19.9
+        },
+        "effective_exhaust_c": [
+          0.07910246027126923,
+          0.2747688776604341
+        ],
+        "parameters": [
+          1.7627333767089803,
+          -5.406712430925628,
+          -1.328173326702361
+        ],
+        "mode": "hybrid"
+      },
+      "cargo": {
+        "fusion_t": 2250.523459247276,
+        "inert_reaction_mass_t": 356.1185328620487,
+        "antimatter_t": 0.9999999943691237,
+        "ordinary_annihilation_reactant_t": 0.9999999943691237,
+        "tank_and_separation_t": 30.994061910043655,
+        "retained_core_t": 252.77821543442573,
+        "nonpropulsion_core_t": 239.24905098668958,
+        "departure_t": 2892.4142694425313,
+        "engine_t": 10.028762135630979,
+        "radiator_t": 3.5004023121051766,
+        "primary_ZJ": 1.1523885581063527,
+        "trajectory": {
+          "beta": 0.10870677511851415,
+          "acceleration_m_s2": 1.1560012395608739,
+          "proper_years": 39.670635098735026,
+          "burn_years": 0.8986620352342172,
+          "years": 39.9
+        },
+        "effective_exhaust_c": [
+          0.07254541401015853,
+          0.12131328368908724
+        ],
+        "parameters": [
+          0.8986620352342172,
+          -5.482020098027482,
+          -2.2689635956903733,
+          0.8407684083129908,
+          0.9999999699327612
+        ],
+        "mode": "mixed"
+      },
+      "fleet": {
+        "antimatter_t": 19.999999958151037,
+        "fusion_t": 32214.086538055017,
+        "inert_reaction_mass_t": 356.1185328620487,
+        "departure_t": 33840.921753166236,
+        "primary_ZJ": 18.539451639756106
+      }
+    },
+    {
+      "cargo_cap_t": 2,
+      "crew": {
+        "fusion_t": 38815.00945875836,
+        "inert_reaction_mass_t": 0.0,
+        "antimatter_t": 17.99999993998616,
+        "ordinary_annihilation_reactant_t": 17.99999993998616,
+        "tank_and_separation_t": 438.8231040126743,
+        "retained_core_t": 637.2750754926312,
+        "nonpropulsion_core_t": 428.18496891430857,
+        "departure_t": 39927.10763814363,
+        "engine_t": 154.99219866002935,
+        "radiator_t": 54.097907918293316,
+        "primary_ZJ": 20.14603204473082,
+        "trajectory": {
+          "beta": 0.23574535899703486,
+          "acceleration_m_s2": 1.1865065854581074,
+          "proper_years": 19.41147790396272,
+          "burn_years": 1.942254776584364,
+          "years": 19.9
+        },
+        "effective_exhaust_c": [
+          0.0791024601640159,
+          0.23166975587198474
+        ],
+        "parameters": [
+          1.942254776584364,
+          -5.406713616052001,
+          -1.5029628985877839
+        ],
+        "mode": "hybrid"
+      },
+      "cargo": {
+        "fusion_t": 1995.43700423859,
+        "inert_reaction_mass_t": 329.26566154209365,
+        "antimatter_t": 1.224494816380358,
+        "ordinary_annihilation_reactant_t": 1.224494816380358,
+        "tank_and_separation_t": 28.018670915576916,
+        "retained_core_t": 251.74313771961081,
+        "nonpropulsion_core_t": 239.24905098668958,
+        "departure_t": 2606.9134640486322,
+        "engine_t": 9.26149019996399,
+        "radiator_t": 3.232596532957224,
+        "primary_ZJ": 1.1432248848530795,
+        "trajectory": {
+          "beta": 0.10863945990659385,
+          "acceleration_m_s2": 1.1873064890856897,
+          "proper_years": 39.67072895680768,
+          "burn_years": 0.8744190770757747,
+          "years": 39.9
+        },
+        "effective_exhaust_c": [
+          0.07237306107098872,
+          0.13671533499233127
+        ],
+        "parameters": [
+          0.8744190770757747,
+          -5.484106941548516,
+          -2.1000490368123255,
+          0.8367702909097824,
+          0.9999996919996414
+        ],
+        "mode": "mixed"
+      },
+      "fleet": {
+        "antimatter_t": 19.224494756366518,
+        "fusion_t": 40810.44646299695,
+        "inert_reaction_mass_t": 329.26566154209365,
+        "departure_t": 42534.02110219226,
+        "primary_ZJ": 21.2892569295839
+      }
+    }
+  ],
+  "manufacturing_sensitivity": [
+    {
+      "efficiency": 0.1,
+      "ships": {
+        "crew": {
+          "fusion_t": 30060.08627142918,
+          "inert_reaction_mass_t": 0.0,
+          "antimatter_t": 18.98094957704909,
+          "ordinary_annihilation_reactant_t": 18.98094957704909,
+          "tank_and_separation_t": 343.06926169844553,
+          "retained_core_t": 605.2950615698138,
+          "nonpropulsion_core_t": 428.18496891430857,
+          "departure_t": 31046.412493851534,
+          "engine_t": 131.28637750861526,
+          "radiator_t": 45.823715146889924,
+          "primary_ZJ": 44.70898347764177,
+          "trajectory": {
+            "beta": 0.23348157959104504,
+            "acceleration_m_s2": 1.2925174247828555,
+            "proper_years": 19.41447707088604,
+            "burn_years": 1.764839924527211,
+            "years": 19.9
+          },
+          "effective_exhaust_c": [
+            0.07910246013533462,
+            0.27410708229098213
+          ],
+          "parameters": [
+            1.764839924527211,
+            -5.406713932979542,
+            -1.3306323422810982
+          ],
+          "mode": "hybrid"
+        },
+        "cargo": {
+          "fusion_t": 3948.7734555076963,
+          "inert_reaction_mass_t": 572.5461994918854,
+          "antimatter_t": 0.007739627439428825,
+          "ordinary_annihilation_reactant_t": 0.007739627439428825,
+          "tank_and_separation_t": 51.49885813598892,
+          "retained_core_t": 259.95971703728947,
+          "nonpropulsion_core_t": 239.24905098668958,
+          "departure_t": 4832.7937094277395,
+          "engine_t": 15.352192982376605,
+          "radiator_t": 5.358473068223274,
+          "primary_ZJ": 1.4051124528614005,
+          "trajectory": {
+            "beta": 0.10895159396406892,
+            "acceleration_m_s2": 1.0553850831104317,
+            "proper_years": 39.67029425296481,
+            "burn_years": 0.9865802769888727,
+            "years": 39.9
+          },
+          "effective_exhaust_c": [
+            0.07280086621727276,
+            0.07910245870072773
+          ],
+          "parameters": [
+            0.9865802769888727,
+            -5.478977297542695,
+            -5.406708964757276,
+            0.8467119146565152,
+            0.9999999521992181
+          ],
+          "mode": "mixed"
+        }
+      },
+      "fleet": {
+        "antimatter_t": 18.988689204488516,
+        "fusion_t": 34008.85972693688,
+        "inert_reaction_mass_t": 572.5461994918854,
+        "departure_t": 35879.206203279275,
+        "primary_ZJ": 46.114095930503176
+      }
+    },
+    {
+      "efficiency": 0.5,
+      "ships": {
+        "crew": {
+          "fusion_t": 5521.373714458918,
+          "inert_reaction_mass_t": 0.0,
+          "antimatter_t": 35.20052496222186,
+          "ordinary_annihilation_reactant_t": 35.20052496222186,
+          "tank_and_separation_t": 82.24260536285459,
+          "retained_core_t": 506.9183366933395,
+          "nonpropulsion_core_t": 428.18496891430857,
+          "departure_t": 6180.9357064395535,
+          "engine_t": 58.36267425407615,
+          "radiator_t": 20.370693524954753,
+          "primary_ZJ": 14.599908023708233,
+          "trajectory": {
+            "beta": 0.22679521222264432,
+            "acceleration_m_s2": 1.8120075806932348,
+            "proper_years": 19.42353406595481,
+            "burn_years": 1.220835935182475,
+            "years": 19.9
+          },
+          "effective_exhaust_c": [
+            0.12561239480504238,
+            0.37656094259522294
+          ],
+          "parameters": [
+            1.220835935182475,
+            -2.2171890984286344,
+            -1.0029245230165529,
+            1.0,
+            1.0
+          ],
+          "mode": "mixed"
+        },
+        "cargo": {
+          "fusion_t": 1995.4732553837212,
+          "inert_reaction_mass_t": 330.1749432366606,
+          "antimatter_t": 1.224459553615044,
+          "ordinary_annihilation_reactant_t": 1.224459553615044,
+          "tank_and_separation_t": 28.029051994402238,
+          "retained_core_t": 251.7257809993042,
+          "nonpropulsion_core_t": 239.24905098668958,
+          "departure_t": 2607.851950721318,
+          "engine_t": 9.24862418594796,
+          "radiator_t": 3.228105826666635,
+          "primary_ZJ": 1.143224979530436,
+          "trajectory": {
+            "beta": 0.10864325210700834,
+            "acceleration_m_s2": 1.1854957659382135,
+            "proper_years": 39.67072366771825,
+            "burn_years": 0.8757855969680826,
+            "years": 39.9
+          },
+          "effective_exhaust_c": [
+            0.07235692509691614,
+            0.1367143064493921
+          ],
+          "parameters": [
+            0.8757855969680826,
+            -5.4842675609680205,
+            -2.1000589328402373,
+            0.8363964038304555,
+            0.9999994730002396
+          ],
+          "mode": "mixed"
+        }
+      },
+      "fleet": {
+        "antimatter_t": 36.424984515836904,
+        "fusion_t": 7516.846969842639,
+        "inert_reaction_mass_t": 330.1749432366606,
+        "departure_t": 8788.787657160872,
+        "primary_ZJ": 15.743133003238668
+      }
+    },
+    {
+      "efficiency": 1.0,
+      "ships": {
+        "crew": {
+          "fusion_t": 3264.1726948417636,
+          "inert_reaction_mass_t": 0.0,
+          "antimatter_t": 38.19343081989239,
+          "ordinary_annihilation_reactant_t": 38.19343081989239,
+          "tank_and_separation_t": 59.09241433321904,
+          "retained_core_t": 494.4349966282984,
+          "nonpropulsion_core_t": 428.18496891430857,
+          "departure_t": 3894.0869674430646,
+          "engine_t": 49.10915023534507,
+          "radiator_t": 17.140877478644754,
+          "primary_ZJ": 8.01531605722283,
+          "trajectory": {
+            "beta": 0.22613114928366723,
+            "acceleration_m_s2": 1.8928195685225442,
+            "proper_years": 19.424449715415424,
+            "burn_years": 1.1651068693488429,
+            "years": 19.9
+          },
+          "effective_exhaust_c": [
+            0.16002451369717421,
+            0.39799128820125473
+          ],
+          "parameters": [
+            1.1651068693488429,
+            -1.9049434587481302,
+            -0.9437929985400867,
+            1.0,
+            1.0
+          ],
+          "mode": "mixed"
+        },
+        "cargo": {
+          "fusion_t": 1507.642520528869,
+          "inert_reaction_mass_t": 295.0469835268867,
+          "antimatter_t": 1.8883850200033148,
+          "ordinary_annihilation_reactant_t": 1.8883850200033148,
+          "tank_and_separation_t": 22.648968540835174,
+          "retained_core_t": 249.84211162390176,
+          "nonpropulsion_core_t": 239.24905098668958,
+          "departure_t": 2078.9573542604994,
+          "engine_t": 7.852316810051991,
+          "radiator_t": 2.740743827160176,
+          "primary_ZJ": 0.8705997602549884,
+          "trajectory": {
+            "beta": 0.10847135064159841,
+            "acceleration_m_s2": 1.2738353861974412,
+            "proper_years": 39.670963615231464,
+            "burn_years": 0.8137454743206003,
+            "years": 39.9
+          },
+          "effective_exhaust_c": [
+            0.07172033442090914,
+            0.19154645627343633
+          ],
+          "parameters": [
+            0.8137454743206003,
+            -4.6751350780359004,
+            -1.7033290851935952,
+            0.8171575619896725,
+            1.0
+          ],
+          "mode": "mixed"
+        }
+      },
+      "fleet": {
+        "antimatter_t": 40.081815839895704,
+        "fusion_t": 4771.815215370632,
+        "inert_reaction_mass_t": 295.0469835268867,
+        "departure_t": 5973.0443217035645,
+        "primary_ZJ": 8.885915817477818
+      }
+    }
+  ],
+  "best_20t_split": {
+    "cargo_cap_t": 0.01,
+    "crew": {
+      "fusion_t": 26225.678557930303,
+      "inert_reaction_mass_t": 0.0,
+      "antimatter_t": 19.98999995464519,
+      "ordinary_annihilation_reactant_t": 19.98999995464519,
+      "tank_and_separation_t": 301.4568541117893,
+      "retained_core_t": 591.1871416139446,
+      "nonpropulsion_core_t": 428.18496891430857,
+      "departure_t": 27158.30255356533,
+      "engine_t": 120.8286013456824,
+      "radiator_t": 42.17357135395362,
+      "primary_ZJ": 16.42606844544662,
+      "trajectory": {
+        "beta": 0.2322661404294178,
+        "acceleration_m_s2": 1.359863412042265,
+        "proper_years": 19.416101401362184,
+        "burn_years": 1.6682062543707619,
+        "years": 19.9
+      },
+      "effective_exhaust_c": [
+        0.07910246047225523,
+        0.30578370517481757
+      ],
+      "parameters": [
+        1.6682062543707619,
+        -5.4067102100852615,
+        -1.2190102623582493
+      ],
+      "mode": "hybrid"
+    },
+    "cargo": {
+      "fusion_t": 3944.121811645877,
+      "inert_reaction_mass_t": 570.030295891949,
+      "antimatter_t": 0.009999964320562405,
+      "ordinary_annihilation_reactant_t": 0.009999964320562405,
+      "tank_and_separation_t": 51.42128316289991,
+      "retained_core_t": 259.9352515008161,
+      "nonpropulsion_core_t": 239.24905098668958,
+      "departure_t": 4825.528642130182,
+      "engine_t": 15.334057417038498,
+      "radiator_t": 5.352143097088021,
+      "primary_ZJ": 1.3931565701720596,
+      "trajectory": {
+        "beta": 0.10895139714156507,
+        "acceleration_m_s2": 1.0554586016124838,
+        "proper_years": 39.67029452666893,
+        "burn_years": 0.9865097526861124,
+        "years": 39.9
+      },
+      "effective_exhaust_c": [
+        0.07281919615156036,
+        0.07916040529093063
+      ],
+      "parameters": [
+        0.9865097526861124,
+        -5.4787562843378605,
+        -5.013161167848217,
+        0.8471391938340268,
+        0.9999999887251485
+      ],
+      "mode": "mixed"
+    },
+    "fleet": {
+      "antimatter_t": 19.999999918965752,
+      "fusion_t": 30169.80036957618,
+      "inert_reaction_mass_t": 570.030295891949,
+      "departure_t": 31983.83119569551,
+      "primary_ZJ": 17.81922501561868
+    }
+  },
+  "assumptions": {
+    "hardware_allowance": 0.1,
+    "ordinary_tank_fraction": 0.01,
+    "AM_containment_kg_kg": 0.5,
+    "stages_per_burn": 8,
+    "fusion_coupling": 0.8,
+    "annihilation_coupling": 0.8,
+    "AM_manufacturing_efficiency": 0.5,
+    "engine_W_kg": 5000000000.0,
+    "absorbed_heat_fraction": 2.28e-05,
+    "main_reserve": 0,
+    "capture_fuel_included": false,
+    "shielding_geometry_verified": false,
+    "photon_endpoint": "Ideal 80% directed photon energy, no inert feed; not an engineered beamed-core model"
+  },
+  "status": "Numerical comparative search, not a global optimum or health-qualified mission; S6 baseline unchanged",
+  "simple_20t_comparator": {
+    "crew": {
+      "fusion_t": 26225.678557930303,
+      "inert_reaction_mass_t": 0.0,
+      "antimatter_t": 19.98999995464519,
+      "ordinary_annihilation_reactant_t": 19.98999995464519,
+      "tank_and_separation_t": 301.4568541117893,
+      "retained_core_t": 591.1871416139446,
+      "nonpropulsion_core_t": 428.18496891430857,
+      "departure_t": 27158.30255356533,
+      "engine_t": 120.8286013456824,
+      "radiator_t": 42.17357135395362,
+      "primary_ZJ": 16.42606844544662,
+      "trajectory": {
+        "beta": 0.2322661404294178,
+        "acceleration_m_s2": 1.359863412042265,
+        "proper_years": 19.416101401362184,
+        "burn_years": 1.6682062543707619,
+        "years": 19.9
+      },
+      "effective_exhaust_c": [
+        0.07910246047225523,
+        0.30578370517481757
+      ],
+      "parameters": [
+        1.6682062543707619,
+        -5.4067102100852615,
+        -1.2190102623582493
+      ],
+      "mode": "hybrid"
+    },
+    "cargo": {
+      "fusion_t": 3958.093443831107,
+      "inert_reaction_mass_t": 0.0,
+      "antimatter_t": 0.009999977231405898,
+      "ordinary_annihilation_reactant_t": 0.009999977231405898,
+      "tank_and_separation_t": 45.304637869369,
+      "retained_core_t": 259.24907146552925,
+      "nonpropulsion_core_t": 239.24905098668958,
+      "departure_t": 4262.667153120468,
+      "engine_t": 14.825412823154371,
+      "radiator_t": 5.174607655685337,
+      "primary_ZJ": 1.3980789489120318,
+      "trajectory": {
+        "beta": 0.10893122878430711,
+        "acceleration_m_s2": 1.063049619278763,
+        "proper_years": 39.67032257579386,
+        "burn_years": 0.9792818008065112,
+        "years": 39.9
+      },
+      "effective_exhaust_c": [
+        0.07910246039125014,
+        0.0791598775552366
+      ],
+      "parameters": [
+        0.9792818008065112,
+        -5.40671110515692,
+        -5.015527585671239
+      ],
+      "mode": "hybrid"
+    },
+    "fleet": {
+      "antimatter_t": 19.999999931876594,
+      "fusion_t": 30183.772001761412,
+      "inert_reaction_mass_t": 0.0,
+      "departure_t": 31420.9697066858,
+      "primary_ZJ": 17.824147394358654
+    }
+  }
+}

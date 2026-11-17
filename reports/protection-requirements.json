@@ -1,0 +1,134 @@
+{
+  "baseline_revision": "S2-integrated-conditional",
+  "proper_days": 7130.795464300477,
+  "target_mSv_day": 0.08414208526998598,
+  "target_mSv_year": 30.73289664486238,
+  "reference_proxy_mSv_day": 1.04,
+  "reference_proxy_transit_mSv": 7416.0272828724965,
+  "actual_transport_result_mSv": null,
+  "perfect_shelter_max_awake_fraction": 0.08090585122114036,
+  "occupancy_requirements": [
+    {
+      "awake_mSv_day": 1.04,
+      "awake_fraction": 0.25,
+      "awake_only_mSv": 1854.0068207181241,
+      "maximum_shelter_mSv_day": null,
+      "possible_with_perfect_shelter": false
+    },
+    {
+      "awake_mSv_day": 1.04,
+      "awake_fraction": 0.1,
+      "awake_only_mSv": 741.6027282872496,
+      "maximum_shelter_mSv_day": null,
+      "possible_with_perfect_shelter": false
+    },
+    {
+      "awake_mSv_day": 1.04,
+      "awake_fraction": 0.05,
+      "awake_only_mSv": 370.8013641436248,
+      "maximum_shelter_mSv_day": 0.0338337739684063,
+      "possible_with_perfect_shelter": true
+    },
+    {
+      "awake_mSv_day": 0.52,
+      "awake_fraction": 0.25,
+      "awake_only_mSv": 927.0034103590621,
+      "maximum_shelter_mSv_day": null,
+      "possible_with_perfect_shelter": false
+    },
+    {
+      "awake_mSv_day": 0.52,
+      "awake_fraction": 0.1,
+      "awake_only_mSv": 370.8013641436248,
+      "maximum_shelter_mSv_day": 0.0357134280777622,
+      "possible_with_perfect_shelter": true
+    },
+    {
+      "awake_mSv_day": 0.52,
+      "awake_fraction": 0.05,
+      "awake_only_mSv": 185.4006820718124,
+      "maximum_shelter_mSv_day": 0.06120219502103788,
+      "possible_with_perfect_shelter": true
+    }
+  ],
+  "ideal_spherical_water_shells": [
+    {
+      "volume_each_m3": 64,
+      "count": 2,
+      "thickness_m": 0.2,
+      "water_mass_t": 33.51184349781411
+    },
+    {
+      "volume_each_m3": 64,
+      "count": 2,
+      "thickness_m": 0.4,
+      "water_mass_t": 72.41496553013019
+    },
+    {
+      "volume_each_m3": 64,
+      "count": 2,
+      "thickness_m": 1.0,
+      "water_mass_t": 225.49324143068588
+    },
+    {
+      "volume_each_m3": 750,
+      "count": 1,
+      "thickness_m": 0.2,
+      "water_mass_t": 82.70680509752677
+    },
+    {
+      "volume_each_m3": 750,
+      "count": 1,
+      "thickness_m": 0.4,
+      "water_mass_t": 171.28085693768415
+    },
+    {
+      "volume_each_m3": 750,
+      "count": 1,
+      "thickness_m": 1.0,
+      "water_mass_t": 474.2171122122359
+    }
+  ],
+  "two_4m_cube_water_thickness_m": {
+    "36": 0.17224074288430558,
+    "44": 0.20700248122105158
+  },
+  "fixed_profile_mass_sensitivity": [
+    {
+      "extra_retained_orbital_mass_t": 0,
+      "crew_departure_t": 3931.8683754092035,
+      "crew_antimatter_t": 88.97428476391092,
+      "fleet_antimatter_t": 92.33515058779302,
+      "fleet_primary_ZJ": 35.021372217908166
+    },
+    {
+      "extra_retained_orbital_mass_t": 50,
+      "crew_departure_t": 4253.949231844068,
+      "crew_antimatter_t": 96.27795767009464,
+      "fleet_antimatter_t": 99.63882349397674,
+      "fleet_primary_ZJ": 37.72780214440015
+    },
+    {
+      "extra_retained_orbital_mass_t": 100,
+      "crew_departure_t": 4576.030088278932,
+      "crew_antimatter_t": 103.58163057627841,
+      "fleet_antimatter_t": 106.94249640016052,
+      "fleet_primary_ZJ": 40.434232070892165
+    },
+    {
+      "extra_retained_orbital_mass_t": 200,
+      "crew_departure_t": 5220.191801148661,
+      "crew_antimatter_t": 118.18897638864584,
+      "fleet_antimatter_t": 121.54984221252795,
+      "fleet_primary_ZJ": 45.84709192387615
+    },
+    {
+      "extra_retained_orbital_mass_t": 500,
+      "crew_departure_t": 7152.67693975785,
+      "crew_antimatter_t": 162.0110138257483,
+      "fleet_antimatter_t": 165.37187964963042,
+      "fleet_primary_ZJ": 62.0856714828282
+    }
+  ],
+  "scope": "Geometry and arithmetic requirements only; no dose assigned to water, magnets or torpor. Extra mass includes its margin, stays in orbit and adds no new service power; propulsion mass feedback included."
+}

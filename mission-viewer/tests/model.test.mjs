@@ -6,6 +6,16 @@ import {createScene,exportOBJ,scenarioMass,poseScene} from '../dist/model.js';
 const data=JSON.parse(fs.readFileSync(new URL('../dist/design-data.json',import.meta.url),'utf8'));
 const active=data.viewer_design?.nominal??data.mass_budget.nominal;
 const base={mode:'cruise',selected:'habA',cutaway:true,dimensions:true,spin:false};
+test('selected mission requirements stay distinct from historical propulsion sizing',()=>{
+  assert.equal(data.architecture.crew,24);
+  assert.equal(data.mission_config.crew,24);
+  assert.equal(data.architecture.children_in_transit,0);
+  assert.equal(data.architecture.crew_departure_year+data.architecture.crew_flight_earth_years,data.architecture.arrival_year);
+  assert.equal(data.architecture.cargo_flight_earth_years,40);
+  assert.equal(data.architecture.complete_fleet_antimatter_t,null);
+  assert.equal(data.roster.schedule,null);
+  assert.match(data.viewer_design.status,/reference/i);
+});
 test('all three views have finite metre-based geometry and the touchdown view is gone',()=>{
   for(const mode of ['cruise','engine','settlement']){
     const s=createScene({...base,mode},data,0);
@@ -14,8 +24,8 @@ test('all three views have finite metre-based geometry and the touchdown view is
     assert.ok(!s.meshes.some(m=>['transport-cover','local-landing-strut'].includes(m.role)));
   }
 });
-test('all eight berth bays keep two two-tier bunks in every view',()=>{
-  for(const mode of ['cruise','engine','settlement']){const s=createScene({...base,mode},data);const ids=new Set(s.meshes.map(m=>m.id).filter(x=>x.startsWith('cabin-')));assert.equal(ids.size,8);assert.equal(s.meshes.filter(m=>m.role==='upper-berth').length,16,mode+': 16 upper berths over 16 lower ones');}
+test('24-adult architecture has three berths per bay and two reproductive banks',()=>{
+  for(const mode of ['cruise','engine','settlement']){const s=createScene({...base,mode},data);const ids=new Set(s.meshes.map(m=>m.id).filter(x=>x.startsWith('cabin-')));assert.equal(ids.size,8);assert.equal(s.meshes.filter(m=>m.role==='upper-berth').length,8);assert.equal(s.meshes.filter(m=>m.role==='lower-berth').length,16);assert.equal(s.meshes.filter(m=>m.role==='reproductive-bank').length,2);if(mode!=='settlement')assert.equal(s.meshes.filter(m=>m.role==='descent-seat-restraint').length,24);}
 });
 test('service spine clears both rotating habitat pressure volumes',()=>{
   assert.ok(data.layout.service_spine_z_offset_m_study-1.35>data.layout.disc_axial_depth_m/2);
@@ -93,9 +103,9 @@ test('spin posing rotates cabins around habitat hubs and preserves fixed structu
   const scene=createScene(base,data),posed=poseScene(scene,Math.PI/2),index=scene.meshes.findIndex(m=>m.id==='cabin-1'),a=scene.meshes[index].vertices[0],b=posed.meshes[index].vertices[0],cx=data.layout.disc_centres_x_m[0];assert.ok(Math.abs(b[0]-cx-a[1])<1e-8);assert.ok(Math.abs(b[1]+a[0]-cx)<1e-8);assert.equal(b[2],a[2]);assert.deepEqual(posed.meshes[0].vertices,scene.meshes[0].vertices);
 });
 
-test('both discs provide living, clinical and plant rooms for eight awake and 32 berths',()=>{
+test('both discs retain living, clinical and plant rooms for the 24-adult architecture',()=>{
   const scene=createScene(base,data);for(const habitat of ['A','B']){const zones=scene.zones.filter(z=>z.habitat===habitat);for(const purpose of ['Shared lounge','Mission control','Galley and dining','Exercise and rehabilitation','Hygiene and laundry','Medical and torpor service','Life support','Fresh-food garden','Clean workshop','Food reserve'])assert.ok(zones.some(z=>z.functions.includes(purpose)),purpose);}
-  assert.equal(scene.meshes.filter(m=>m.id==='refuge'&&m.role==='seat').length,32);for(const disc of ['A','B'])assert.ok(scene.meshes.filter(m=>m.role==='seat'&&m.id.startsWith('bay-'+disc+'-')).length>=8);for(const role of ['treadmill','resistive-exercise-device','cycle-ergometer','science-glovebox','waste-management-toilet'])assert.ok(scene.meshes.some(m=>m.role===role),role);
+  assert.equal(scene.meshes.filter(m=>m.id==='refuge'&&m.role==='seat').length,data.architecture.descent_places);for(const disc of ['A','B'])assert.ok(scene.meshes.filter(m=>m.role==='seat'&&m.id.startsWith('bay-'+disc+'-')).length>=8);for(const role of ['treadmill','resistive-exercise-device','cycle-ergometer','science-glovebox','waste-management-toilet'])assert.ok(scene.meshes.some(m=>m.role===role),role);
 });
 
 test('selected cabin floors fit inside the outer pressure radius and adjacent cabins do not overlap',()=>{
@@ -425,9 +435,9 @@ test('dining seat backs face away from the nearest table on both sides',()=>{
 });
 
 
-test('refuge retains 32 seats in two compact tiers directly aft of the habitats',()=>{
+test('refuge retains 24 seats in two compact tiers directly aft of the habitats',()=>{
  const scene=createScene({...base,detail:'medium'},data),hull=scene.meshes.find(m=>m.role==='refuge-pressure-hull'),seats=scene.meshes.filter(m=>m.id==='refuge'&&m.role==='seat');
- assert.equal(seats.length,32);assert.equal(scene.meshes.filter(m=>m.role==='refuge-tier-floor').length,2);
+ assert.equal(seats.length,data.architecture.descent_places);assert.equal(scene.meshes.filter(m=>m.role==='refuge-tier-floor').length,2);
  const xs=hull.vertices.map(p=>p[0]);assert.ok(Math.min(...xs)>data.layout.disc_radius_m);assert.ok(Math.max(...xs)-Math.min(...xs)<5);
 });
 

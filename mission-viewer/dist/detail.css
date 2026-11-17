@@ -65,3 +65,8 @@ html,body{height:100%;overflow:hidden}
 @media(max-width:650px){.app{grid-template-columns:minmax(0,1fr)}.room-controls{top:90px;right:8px;width:185px;max-width:48vw}}
 
 #room-hud{position:absolute;top:14px;left:16px;z-index:3;pointer-events:none;padding:7px 11px;border-radius:4px;background:#0a1216d9;border:1px solid #2f4148;color:#e3ece7;font-size:12px;letter-spacing:.2px}
+.architecture-panel{padding:30px clamp(18px,5vw,80px);border-top:1px solid #34464c;background:#172630;color:#e3ece7;font:15px/1.65 Arial,sans-serif}
+.architecture-panel h1{font-size:28px;margin:0 0 12px}.architecture-panel h2{font-size:19px;margin:18px 0 8px}
+.architecture-panel p{max-width:1050px;color:#bdcfcc}.architecture-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.architecture-table{overflow-x:auto}.architecture-panel table{border-collapse:collapse;width:100%;max-width:1050px}.architecture-panel th,.architecture-panel td{text-align:left;padding:12px;border-bottom:1px solid #3b5055}
+@media(max-width:650px){.architecture-grid{grid-template-columns:1fr;gap:0}.architecture-panel h1{font-size:23px}}

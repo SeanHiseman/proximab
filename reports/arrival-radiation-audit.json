@@ -1,0 +1,138 @@
+{
+  "status": "Screens only: no trajectory, dose or qualified hardware mass closure",
+  "landed_without_tanks_t": 344.3841265244864,
+  "terminal_thermal": [
+    {
+      "delta_v_m_s": 6000,
+      "isp_s": 1800,
+      "propellant_t": 159.0177294104078,
+      "tanks_t": 12.721418352832625
+    },
+    {
+      "delta_v_m_s": 2000,
+      "isp_s": 1800,
+      "propellant_t": 45.932221085768475,
+      "tanks_t": 3.674577686861478
+    },
+    {
+      "delta_v_m_s": 1000,
+      "isp_s": 1800,
+      "propellant_t": 22.194001099085565,
+      "tanks_t": 1.7755200879268451
+    },
+    {
+      "delta_v_m_s": 500,
+      "isp_s": 1800,
+      "propellant_t": 10.911321538365987,
+      "tanks_t": 0.872905723069279
+    },
+    {
+      "delta_v_m_s": 200,
+      "isp_s": 1800,
+      "propellant_t": 4.320867638832797,
+      "tanks_t": 0.3456694111066238
+    }
+  ],
+  "terminal_chemical": [
+    {
+      "delta_v_m_s": 1000,
+      "isp_s": 450,
+      "propellant_t": 98.55263717566292,
+      "tanks_t": 7.884210974053034
+    },
+    {
+      "delta_v_m_s": 500,
+      "isp_s": 450,
+      "propellant_t": 45.932221085768475,
+      "tanks_t": 3.674577686861478
+    }
+  ],
+  "main_engine_low_speed_burns": [
+    {
+      "delta_v_m_s": 6000,
+      "final_mass_t": 1000,
+      "antimatter_kg": 2.1625355327214955,
+      "ordinary_reaction_kg": 91.53973511784487
+    },
+    {
+      "delta_v_m_s": 12000,
+      "final_mass_t": 1000,
+      "antimatter_kg": 4.325278378222853,
+      "ordinary_reaction_kg": 183.08824574789193
+    }
+  ],
+  "atmosphere": [
+    {
+      "diameter_m": 17.5,
+      "area_m2": 240.52818754046854,
+      "ballistic_coefficient_kg_m2": 970.0872721791716,
+      "surface_density_kg_m3": 0.01512516070483249,
+      "atmospheric_vertical_column_kg_m2": 51.41388174807198,
+      "local_terminal_speed_m_s": 1223.5052303945984,
+      "weight_MN": 4.0845
+    },
+    {
+      "diameter_m": 30,
+      "area_m2": 706.8583470577034,
+      "ballistic_coefficient_kg_m2": 330.09914122763473,
+      "surface_density_kg_m3": 0.01512516070483249,
+      "atmospheric_vertical_column_kg_m2": 51.41388174807198,
+      "local_terminal_speed_m_s": 713.711384396849,
+      "weight_MN": 4.0845
+    },
+    {
+      "diameter_m": 50,
+      "area_m2": 1963.4954084936207,
+      "ballistic_coefficient_kg_m2": 118.83569084194852,
+      "surface_density_kg_m3": 0.01512516070483249,
+      "atmospheric_vertical_column_kg_m2": 51.41388174807198,
+      "local_terminal_speed_m_s": 428.2268306381094,
+      "weight_MN": 4.0845
+    }
+  ],
+  "crew_peak_thrust_MN": 1.2326899628846675,
+  "pressure_shell_bounds": [
+    {
+      "allowable_MPa": 100,
+      "ideal_spherical_restraint_t": 5.4
+    },
+    {
+      "allowable_MPa": 250,
+      "ideal_spherical_restraint_t": 2.16
+    },
+    {
+      "allowable_MPa": 500,
+      "ideal_spherical_restraint_t": 1.08
+    }
+  ],
+  "forward_gas": {
+    "speed_c": 0.11288821396333715,
+    "proton_energy_MeV": 6.036307475163944,
+    "hydrogen_kinetic_flux_W_m2": 6.546076071687193,
+    "assumed_density_cm3": 0.2
+  },
+  "lifetime_reference": [
+    {
+      "years": 20,
+      "average_mSv_day": 0.08213552361396304
+    },
+    {
+      "years": 30,
+      "average_mSv_day": 0.05475701574264202
+    },
+    {
+      "years": 40,
+      "average_mSv_day": 0.04106776180698152
+    }
+  ],
+  "thermal_only_shadow_distance_m": 852.8445051707844,
+  "dry_t": 614.3287446133522,
+  "dry_components": {
+    "fixed_hardware_t": 327.79209724675457,
+    "landing_tanks_t": 12.721418352832627,
+    "scalable_main_engine_t": 99.82204436711359,
+    "scalable_main_tanks_t": 116.08774986247447,
+    "scalable_containment_t": 54.84916111415472,
+    "main_hot_radiators_t": 3.0562736700222164
+  }
+}

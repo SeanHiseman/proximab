@@ -1,0 +1,125 @@
+{
+  "assumption": "Scale crew 12 t spares/makeup and 1 t service fuel linearly with Earth mission years; resize landing fuel. No shielding, power redundancy or cargo lifetime increment. Screening only.",
+  "cases": [
+    {
+      "crew_years": 32,
+      "cargo_years": 52,
+      "ships": {
+        "crew": {
+          "departure_t": 8237.397513353557,
+          "fusion_t": 7545.034511832556,
+          "antimatter_t": 9.197048910130261,
+          "primary_ZJ": 5.912442865980103,
+          "proper_years": 31.71123066435105,
+          "beta": 0.1369752452569707,
+          "burn_years": 0.95,
+          "exhaust_c": [
+            0.07916483554797016,
+            0.22849999999999943
+          ]
+        },
+        "cargo": {
+          "departure_t": 1784.3372955047357,
+          "fusion_t": 1513.1711201390071,
+          "antimatter_t": 0.5759427801671905,
+          "primary_ZJ": 0.729707906034155,
+          "proper_years": 51.824828666702295,
+          "beta": 0.08289135565850828,
+          "burn_years": 0.75,
+          "exhaust_c": [
+            0.07916483554797016,
+            0.10849999999999814
+          ]
+        }
+      },
+      "totals": {
+        "departure_t": 10021.734808858293,
+        "fusion_t": 9058.205631971563,
+        "antimatter_t": 9.772991690297452,
+        "primary_ZJ": 6.642150772014258
+      },
+      "extra_crew_core_t": 10.299301221185146,
+      "GCR_required_mSv_day": 0.051802167177508934
+    },
+    {
+      "crew_years": 33,
+      "cargo_years": 53,
+      "ships": {
+        "crew": {
+          "departure_t": 7697.562165393114,
+          "fusion_t": 7016.282275865094,
+          "antimatter_t": 8.210637978053699,
+          "primary_ZJ": 5.3751929811270465,
+          "proper_years": 32.7203994986062,
+          "beta": 0.13258659014838342,
+          "burn_years": 0.925,
+          "exhaust_c": [
+            0.07916483554797016,
+            0.2170000000000001
+          ]
+        },
+        "cargo": {
+          "departure_t": 1753.2577057763506,
+          "fusion_t": 1482.8862463100245,
+          "antimatter_t": 0.5135884528399635,
+          "primary_ZJ": 0.6968308811159584,
+          "proper_years": 52.82818244873209,
+          "beta": 0.08130199236285465,
+          "burn_years": 0.75,
+          "exhaust_c": [
+            0.07916483554797016,
+            0.10550000000000004
+          ]
+        }
+      },
+      "totals": {
+        "departure_t": 9450.819871169464,
+        "fusion_t": 8499.168522175118,
+        "antimatter_t": 8.724226430893662,
+        "primary_ZJ": 6.072023862243005
+      },
+      "extra_crew_core_t": 11.157576322950604,
+      "GCR_required_mSv_day": 0.05020447480628211
+    },
+    {
+      "crew_years": 35,
+      "cargo_years": 55,
+      "ships": {
+        "crew": {
+          "departure_t": 6845.47156914942,
+          "fusion_t": 6182.284652784469,
+          "antimatter_t": 6.632860756330337,
+          "primary_ZJ": 4.5199127273869895,
+          "proper_years": 34.736962198812044,
+          "beta": 0.12469295155125268,
+          "burn_years": 0.9,
+          "exhaust_c": [
+            0.07916483554797016,
+            0.19699999999999968
+          ]
+        },
+        "cargo": {
+          "departure_t": 1696.101723290582,
+          "fusion_t": 1426.9280814239908,
+          "antimatter_t": 0.4013642081486586,
+          "primary_ZJ": 0.6371578614326981,
+          "proper_years": 54.83456895099293,
+          "beta": 0.07826327358436508,
+          "burn_years": 0.725,
+          "exhaust_c": [
+            0.07916483554797016,
+            0.10000000000000005
+          ]
+        }
+      },
+      "totals": {
+        "departure_t": 8541.573292440002,
+        "fusion_t": 7609.21273420846,
+        "antimatter_t": 7.034224964478995,
+        "primary_ZJ": 5.157070588819687
+      },
+      "extra_crew_core_t": 12.874126526481632,
+      "GCR_required_mSv_day": 0.04728998646679125
+    }
+  ]
+}

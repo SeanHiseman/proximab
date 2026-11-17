@@ -1,0 +1,234 @@
+{
+  "current": {
+    "departure_t": 5096.697544119195,
+    "fusion_t": 4280.338284212686,
+    "antimatter_t": 58.42579255818758,
+    "primary_ZJ": 22.482639208561398,
+    "proper_years": 19.524697530676193,
+    "beta": 0.22595178650077558,
+    "burn_years": 1.15,
+    "exhaust_c": [
+      0.17250000000000043,
+      0.4150000000000001
+    ]
+  },
+  "perfect_coupling": {
+    "departure_t": 6135.408549847839,
+    "fusion_t": 5356.294224966212,
+    "antimatter_t": 41.99213006036726,
+    "primary_ZJ": 16.946342931435268,
+    "proper_years": 19.52633366584924,
+    "beta": 0.2247714216232377,
+    "burn_years": 1.05,
+    "exhaust_c": [
+      0.1524999999999992,
+      0.39899999999999974
+    ]
+  },
+  "tenfold_engine": {
+    "departure_t": 5592.44832329658,
+    "fusion_t": 4833.616581430394,
+    "antimatter_t": 50.39451535602026,
+    "primary_ZJ": 19.786482927519742,
+    "proper_years": 19.532402301511947,
+    "beta": 0.22044976829586144,
+    "burn_years": 0.675,
+    "exhaust_c": [
+      0.15499999999999917,
+      0.386
+    ]
+  },
+  "no_main_reserve": {
+    "departure_t": 66923.91708078174,
+    "fusion_t": 65277.90397520122,
+    "antimatter_t": 25.36177302186718,
+    "primary_ZJ": 32.11580080602068,
+    "proper_years": 19.510071712135392,
+    "beta": 0.2368157241197008,
+    "burn_years": 2.025,
+    "exhaust_c": [
+      0.07916483554797016,
+      0.23899999999999927
+    ]
+  },
+  "advanced_hardware": {
+    "departure_t": 5808.695552118792,
+    "fusion_t": 5093.793167581424,
+    "antimatter_t": 48.48080548968402,
+    "primary_ZJ": 19.18836628715766,
+    "proper_years": 19.532402301511947,
+    "beta": 0.22044976829586144,
+    "burn_years": 0.675,
+    "exhaust_c": [
+      0.14849999999999924,
+      0.3819999999999998
+    ]
+  },
+  "core_for_10": {
+    "core_t": 87.44910431280563,
+    "crew": {
+      "departure_t": 882.5883169407705,
+      "fusion_t": 739.8682948274878,
+      "antimatter_t": 9.999999999999957,
+      "primary_ZJ": 3.8505741472328223,
+      "proper_years": 19.524287335388205,
+      "beta": 0.2262487594823822,
+      "burn_years": 1.1749999999999998,
+      "exhaust_c": [
+        0.17250000000000043,
+        0.4144999999999999
+      ]
+    },
+    "hardware_plus_core_excluding_reserve_t": 122.72002211328268
+  },
+  "core_for_8.094972094951855": {
+    "core_t": 70.44356083619465,
+    "crew": {
+      "departure_t": 716.6006871727161,
+      "fusion_t": 600.3134015987042,
+      "antimatter_t": 8.094972094951856,
+      "primary_ZJ": 3.11750985760403,
+      "proper_years": 19.524287335388205,
+      "beta": 0.2262487594823822,
+      "burn_years": 1.1749999999999998,
+      "exhaust_c": [
+        0.17250000000000043,
+        0.4144999999999999
+      ]
+    },
+    "hardware_plus_core_excluding_reserve_t": 100.09734138410815
+  },
+  "zero_fixed_hardware_core": {
+    "hardware_rows": [
+      [
+        "Pressure envelopes, floors and frames",
+        0,
+        true
+      ],
+      [
+        "Spin, bearings and transfers",
+        0,
+        true
+      ],
+      [
+        "Adult furnishings and exercise",
+        0,
+        true
+      ],
+      [
+        "Life support and two food-production trains",
+        0,
+        true
+      ],
+      [
+        "Medical, 24 berths and two reproductive banks",
+        0,
+        true
+      ],
+      [
+        "Two service fission-electric units",
+        0,
+        true
+      ],
+      [
+        "Service thermal management and distribution",
+        0,
+        true
+      ],
+      [
+        "Avionics, communication and autonomy",
+        0,
+        true
+      ],
+      [
+        "Landing cradle and chemical engines",
+        0,
+        true
+      ],
+      [
+        "Deployable aeroshell and fresh TPS",
+        0,
+        true
+      ],
+      [
+        "Arrival separation and power transfer",
+        0,
+        true
+      ],
+      [
+        "Water storage and plumbing",
+        0,
+        true
+      ],
+      [
+        "Forward shield face and supports",
+        0,
+        false
+      ],
+      [
+        "Remote engine tow assembly",
+        0,
+        false
+      ],
+      [
+        "Fixed main-feed and deployment services",
+        0,
+        false
+      ],
+      [
+        "Engine shadow shields and neutron-layer allowance",
+        0,
+        false
+      ],
+      [
+        "Unresolved GCR equipment allowance, no dose credit",
+        0,
+        false
+      ]
+    ],
+    "inventory_rows": [
+      [
+        "Crew body mass",
+        1.92
+      ],
+      [
+        "Working water plus retained protection water",
+        44
+      ],
+      [
+        "Cabin and reserve gases",
+        3
+      ],
+      [
+        "Emergency food",
+        4
+      ],
+      [
+        "Food-loop inventory",
+        1
+      ],
+      [
+        "Twenty-year makeup supplies and replaceable spares",
+        12
+      ],
+      [
+        "Service reactor fuel",
+        1
+      ]
+    ],
+    "fixed_dry_with_margin_t": 1.7343378723028984,
+    "fixed_inventory_t": 66.92,
+    "nonpropulsion_core_t": 88.36272278483584,
+    "landing": {
+      "base_t": 66.92,
+      "burned_t": 17.916713556848123,
+      "loaded_t": 19.708384912532935,
+      "tank_with_margin_t": 1.7343378723028984,
+      "touchdown_t": 70.44600922798772,
+      "entry_t": 88.36272278483584,
+      "oxygen_t": 16.892901353599658,
+      "hydrogen_t": 2.8154835589332765,
+      "delta_v_m_s": 1000
+    }
+  }
+}

@@ -66,5 +66,34 @@ canopy = data["settlement"]["food_factory"]["fresh_food_canopy_m2"]
 lighting_kWh = canopy * greenhouse["daily_light_integral_mol_m2_day_study"] / (greenhouse["fixture_photon_efficacy_umol_J_study"] * greenhouse["fixture_to_canopy_delivery_fraction_study"] * 3.6)
 data["farm"]["selected"] = {"canopy_m2": canopy, "average_lighting_kW": lighting_kWh/24, "lighting_kW_when_on": lighting_kWh/greenhouse["photoperiod_hours_study"]}
 data["continuous_descent"] = calc["continuous_terminal_sensitivity"]()
+
+# The new architecture is authoritative for population and mission requirements.
+# Preserve the old solved vehicle as an explicitly labeled geometry/mass reference:
+# changing crew count alone must not masquerade as a closed propulsion redesign.
+from calculations.propulsion_architecture_trade import build_trade
+data["architecture"] = json.loads((root / "data/mission_architecture.json").read_text())
+data["propulsion_trade"] = build_trade()
+from calculations.staged_baseline import build_baseline
+data["staged_baseline"] = build_baseline()
+from calculations.integrated_specification import build_specification
+data["integrated_specification"] = build_specification()
+from calculations.fusion_efficiency import build_trade as build_efficiency_trade
+data["fusion_efficiency"] = build_efficiency_trade()
+from calculations.arrival_redesign import build_redesign
+data["arrival_redesign"] = build_redesign()
+data["lean_landing_plan"] = json.loads((root / "reports/lean-landing-plan.json").read_text())
+data["final_model_specification"] = json.loads((root / "reports/final-model-specification.json").read_text())
+a = data["architecture"]
+data["legacy_mission_config"] = data["mission_config"]
+data["mission_config"] = dict(data["mission_config"], crew=a["crew"],
+    couples=None, men=None, women=None, flight_occupancy=None,
+    selected_architecture=a["revision"])
+data["habitats"].update(people_per_disc=12, berths_per_bay=a["berths_per_bay"],
+    status=a["status"])
+data["habitats"]["common_space_programme"].update(design_occupancy_per_disc=12,
+    normal_awake_shipwide=a["torpor_policy"], flight_occupancy_policy="24 adults; all-awake emergency capacity; births after arrival")
+data["layout"]["refuge_study"]["seat_rows"] = 3
+data["viewer_design"]["status"] = a["displayed_propulsion_geometry"]
+data["roster"] = {"status": a["torpor_policy"], "schedule": None}
 (project / "dist" / "design-data.json").write_text(json.dumps(data, indent=2), encoding="utf-8")
 print("Synchronized design sources and calculated mission data.")

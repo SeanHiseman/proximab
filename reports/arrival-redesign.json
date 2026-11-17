@@ -1,0 +1,976 @@
+{
+  "revision": "S5-minimum-surface-package",
+  "crew_ledger_before": {
+    "hardware_rows": [
+      [
+        "Pressure envelopes, floors and frames",
+        50,
+        true
+      ],
+      [
+        "Spin, bearings and transfers",
+        12,
+        true
+      ],
+      [
+        "Adult furnishings and exercise",
+        8,
+        true
+      ],
+      [
+        "Life support and two food-production trains",
+        22,
+        true
+      ],
+      [
+        "Medical, 24 berths and two reproductive banks",
+        10,
+        true
+      ],
+      [
+        "Two service fission-electric units",
+        30,
+        true
+      ],
+      [
+        "Service thermal management and distribution",
+        10,
+        true
+      ],
+      [
+        "Avionics, communication and autonomy",
+        4,
+        true
+      ],
+      [
+        "Landing cradle and chemical engines",
+        18,
+        true
+      ],
+      [
+        "Deployable aeroshell and fresh TPS",
+        12,
+        true
+      ],
+      [
+        "Arrival separation and power transfer",
+        8,
+        true
+      ],
+      [
+        "Water storage and plumbing",
+        6,
+        true
+      ],
+      [
+        "Forward shield face and supports",
+        33.4824,
+        false
+      ],
+      [
+        "Remote engine tow assembly",
+        27,
+        false
+      ],
+      [
+        "Fixed main-feed and deployment services",
+        8,
+        false
+      ],
+      [
+        "Engine shadow shields and neutron-layer allowance",
+        42.8,
+        false
+      ],
+      [
+        "Unresolved GCR equipment allowance, no dose credit",
+        30,
+        false
+      ]
+    ],
+    "inventory_rows": [
+      [
+        "Crew body mass",
+        1.92
+      ],
+      [
+        "Working water plus retained protection water",
+        44
+      ],
+      [
+        "Cabin and reserve gases",
+        3
+      ],
+      [
+        "Emergency food",
+        4
+      ],
+      [
+        "Food-loop inventory",
+        1
+      ],
+      [
+        "Twenty-year makeup supplies and replaceable spares",
+        12
+      ],
+      [
+        "Service reactor fuel",
+        1
+      ]
+    ],
+    "fixed_dry_with_margin_t": 371.5615441501168,
+    "fixed_inventory_t": 66.92,
+    "nonpropulsion_core_t": 519.7418185832622,
+    "landing": {
+      "base_t": 275.92,
+      "burned_t": 73.87297675740487,
+      "loaded_t": 81.26027443314537,
+      "tank_with_margin_t": 7.150904150116793,
+      "touchdown_t": 290.4582018258573,
+      "entry_t": 364.33117858326216,
+      "oxygen_t": 69.65166379983889,
+      "hydrogen_t": 11.608610633306482,
+      "delta_v_m_s": 1000
+    }
+  },
+  "crew_ledger_after": {
+    "hardware_rows": [
+      [
+        "Pressure envelopes, floors and frames",
+        50,
+        true
+      ],
+      [
+        "Spin, bearings and transfers",
+        12,
+        true
+      ],
+      [
+        "Adult furnishings and exercise",
+        8,
+        true
+      ],
+      [
+        "Life support and two food-production trains",
+        22,
+        true
+      ],
+      [
+        "Medical, 24 berths and two reproductive banks",
+        10,
+        true
+      ],
+      [
+        "Habitat service fission-electric unit",
+        15,
+        true
+      ],
+      [
+        "Transit backup fission-electric unit retained in orbit",
+        15,
+        false
+      ],
+      [
+        "Service thermal management and distribution",
+        10,
+        true
+      ],
+      [
+        "Avionics, communication and autonomy",
+        4,
+        true
+      ],
+      [
+        "Landing cradle and chemical engines",
+        18,
+        true
+      ],
+      [
+        "Deployable aeroshell and fresh TPS",
+        12,
+        true
+      ],
+      [
+        "Arrival separation and power transfer",
+        8,
+        true
+      ],
+      [
+        "Water storage and plumbing",
+        6,
+        true
+      ],
+      [
+        "Forward shield face and supports",
+        33.4824,
+        false
+      ],
+      [
+        "Remote engine tow assembly",
+        27,
+        false
+      ],
+      [
+        "Fixed main-feed and deployment services",
+        8,
+        false
+      ],
+      [
+        "Engine shadow shields and neutron-layer allowance",
+        42.8,
+        false
+      ],
+      [
+        "Unresolved GCR equipment allowance, no dose credit",
+        30,
+        false
+      ]
+    ],
+    "inventory_rows": [
+      [
+        "Crew body mass",
+        1.92
+      ],
+      [
+        "Habitat working and landing water",
+        8,
+        true
+      ],
+      [
+        "Transit protection water retained in orbit",
+        36,
+        false
+      ],
+      [
+        "Cabin and reserve gases",
+        3
+      ],
+      [
+        "Emergency food",
+        4
+      ],
+      [
+        "Food-loop inventory",
+        1
+      ],
+      [
+        "Twenty-year makeup supplies and replaceable spares",
+        12
+      ],
+      [
+        "Service reactor fuel",
+        1
+      ]
+    ],
+    "fixed_dry_with_margin_t": 370.20092343439796,
+    "fixed_inventory_t": 66.92,
+    "nonpropulsion_core_t": 502.91959882528425,
+    "landing": {
+      "base_t": 223.42000000000002,
+      "burned_t": 59.81697762807842,
+      "loaded_t": 65.79867539088626,
+      "tank_with_margin_t": 5.790283434397991,
+      "touchdown_t": 235.19198119720585,
+      "entry_t": 295.00895882528425,
+      "oxygen_t": 56.398864620759646,
+      "hydrogen_t": 9.399810770126608,
+      "delta_v_m_s": 1000
+    }
+  },
+  "nonpropulsion_core_saving_t": 16.82221975797796,
+  "fixed_allocation_comparator": {
+    "retained_core_t": 483.17778024202204,
+    "departure_t": 16618.1013738338,
+    "fusion_t": 15906.966957064149,
+    "antimatter_t": 19.999999999968974,
+    "ordinary_annihilation_matter_t": 19.999999999968974,
+    "departure_dry_t": 671.1344167697104,
+    "tank_and_separation_t": 187.95663652768835,
+    "stages_per_burn": 8,
+    "trajectory": {
+      "beta": 0.22714423863745942,
+      "acceleration_m_s2": 1.7726027461005402,
+      "proper_years": 19.423053974813076,
+      "burn_years": 1.25,
+      "years": 19.9
+    },
+    "exhaust_c": [
+      0.08219783554797165,
+      0.35490506053710047
+    ],
+    "segments": [
+      {
+        "phase": 0,
+        "index": 0,
+        "before_t": 16618.1013738338,
+        "after_burn_t": 11688.892851561364,
+        "after_drop_t": 11634.147744537298,
+        "spent_t": 4929.208522272436,
+        "tank_and_separation_t": 54.74510702406541,
+        "fusion_t": 4927.673037006875,
+        "antimatter_t": 0.7677426327804824,
+        "source_W": 454874787734394.3
+      },
+      {
+        "phase": 0,
+        "index": 1,
+        "before_t": 11634.147744537298,
+        "after_burn_t": 8183.263740300423,
+        "after_drop_t": 8144.904310184572,
+        "spent_t": 3450.8840042368747,
+        "tank_and_separation_t": 38.35943011585106,
+        "fusion_t": 3449.809028098673,
+        "antimatter_t": 0.5374880691008457,
+        "source_W": 318452774280200.5
+      },
+      {
+        "phase": 0,
+        "index": 2,
+        "before_t": 8144.904310184572,
+        "after_burn_t": 5728.988626695565,
+        "after_drop_t": 5702.100735005219,
+        "spent_t": 2415.915683489007,
+        "tank_and_separation_t": 26.887891690345647,
+        "fusion_t": 2415.1631077117654,
+        "antimatter_t": 0.37628788862070905,
+        "source_W": 222944338578037.97
+      },
+      {
+        "phase": 0,
+        "index": 3,
+        "before_t": 5702.100735005219,
+        "after_burn_t": 4010.761700204314,
+        "after_drop_t": 3991.904980774046,
+        "spent_t": 1691.339034800905,
+        "tank_and_separation_t": 18.856719430267926,
+        "fusion_t": 1690.8121700608012,
+        "antimatter_t": 0.2634323700518735,
+        "source_W": 156079313943747.8
+      },
+      {
+        "phase": 0,
+        "index": 4,
+        "before_t": 3991.904980774046,
+        "after_burn_t": 2807.838786406275,
+        "after_drop_t": 2794.604654416209,
+        "spent_t": 1184.066194367771,
+        "tank_and_separation_t": 13.23413199006587,
+        "fusion_t": 1183.6973489057289,
+        "antimatter_t": 0.18442273102107265,
+        "source_W": 109267412079010.34
+      },
+      {
+        "phase": 0,
+        "index": 5,
+        "before_t": 2794.604654416209,
+        "after_burn_t": 1965.6778854039283,
+        "after_drop_t": 1956.3801014959308,
+        "spent_t": 828.9267690122807,
+        "tank_and_separation_t": 9.297783907997474,
+        "fusion_t": 828.6685521333851,
+        "antimatter_t": 0.1291084394478048,
+        "source_W": 76494610929543.17
+      },
+      {
+        "phase": 0,
+        "index": 6,
+        "before_t": 1956.3801014959308,
+        "after_burn_t": 1376.084840794123,
+        "after_drop_t": 1369.5428764065857,
+        "spent_t": 580.2952607018078,
+        "tank_and_separation_t": 6.541964387537207,
+        "fusion_t": 580.1144943945079,
+        "antimatter_t": 0.09038315364995242,
+        "source_W": 53550520807206.53
+      },
+      {
+        "phase": 0,
+        "index": 7,
+        "before_t": 1369.5428764065857,
+        "after_burn_t": 963.3134121532065,
+        "after_drop_t": 958.7007845699895,
+        "spent_t": 406.2294642533791,
+        "tank_and_separation_t": 4.612627583216988,
+        "fusion_t": 406.10292074158014,
+        "antimatter_t": 0.06327175589947842,
+        "source_W": 37487466900370.59
+      },
+      {
+        "phase": 1,
+        "index": 0,
+        "before_t": 958.7007845699895,
+        "after_burn_t": 882.5643929272335,
+        "after_drop_t": 880.0481923002025,
+        "spent_t": 76.13639164275601,
+        "tank_and_separation_t": 2.516200627031022,
+        "fusion_t": 70.31561123844912,
+        "antimatter_t": 2.910390202153444,
+        "source_W": 116814833219520.5
+      },
+      {
+        "phase": 1,
+        "index": 1,
+        "before_t": 880.0481923002025,
+        "after_burn_t": 810.1580921648185,
+        "after_drop_t": 807.8392981946748,
+        "spent_t": 69.89010013538389,
+        "tank_and_separation_t": 2.318793970143739,
+        "fusion_t": 64.5468612906547,
+        "antimatter_t": 2.671619422364593,
+        "source_W": 107231249273253.92
+      },
+      {
+        "phase": 1,
+        "index": 2,
+        "before_t": 807.8392981946748,
+        "after_burn_t": 743.6837554208713,
+        "after_drop_t": 741.5461953550597,
+        "spent_t": 64.15554277380348,
+        "tank_and_separation_t": 2.137560065811565,
+        "fusion_t": 59.250722383080934,
+        "antimatter_t": 2.4524101953612707,
+        "source_W": 98432810743043.84
+      },
+      {
+        "phase": 1,
+        "index": 3,
+        "before_t": 741.5461953550597,
+        "after_burn_t": 682.6554001669947,
+        "after_drop_t": 680.6842262230971,
+        "spent_t": 58.890795188065006,
+        "tank_and_separation_t": 1.9711739438975615,
+        "fusion_t": 54.38847534825482,
+        "antimatter_t": 2.251159919905092,
+        "source_W": 90355193746738.14
+      },
+      {
+        "phase": 1,
+        "index": 4,
+        "before_t": 680.6842262230971,
+        "after_burn_t": 626.6268585158064,
+        "after_drop_t": 624.8084393319389,
+        "spent_t": 54.057367707290744,
+        "tank_and_separation_t": 1.818419183867447,
+        "fusion_t": 49.92457312811728,
+        "antimatter_t": 2.0663972895867317,
+        "source_W": 82939344205370.84
+      },
+      {
+        "phase": 1,
+        "index": 5,
+        "before_t": 624.8084393319389,
+        "after_burn_t": 575.1885153636772,
+        "after_drop_t": 573.5103363419305,
+        "spent_t": 49.61992396826164,
+        "tank_and_separation_t": 1.6781790217467272,
+        "fusion_t": 45.82638089554977,
+        "antimatter_t": 1.896771536355935,
+        "source_W": 76131046108871.67
+      },
+      {
+        "phase": 1,
+        "index": 6,
+        "before_t": 573.5103363419305,
+        "after_burn_t": 527.9643137646326,
+        "after_drop_t": 526.4148855789826,
+        "spent_t": 45.54602257729789,
+        "tank_and_separation_t": 1.5494281856499106,
+        "fusion_t": 42.06393746672411,
+        "antimatter_t": 1.7410425552868887,
+        "source_W": 69880525152071.38
+      },
+      {
+        "phase": 1,
+        "index": 7,
+        "before_t": 526.4148855789826,
+        "after_burn_t": 484.6090056422148,
+        "after_drop_t": 483.17778024202204,
+        "spent_t": 41.80587993676773,
+        "tank_and_separation_t": 1.431225400192775,
+        "fusion_t": 38.60973626000213,
+        "antimatter_t": 1.5980718383828005,
+        "source_W": 64142084843253.35
+      }
+    ],
+    "retained_propulsion_fuel_t": 0,
+    "peak_source_TW": 454.8747877343943,
+    "engine_with_allowance_t": 100.07245330156677,
+    "hot_radiator_with_allowance_t": 34.92892165328061,
+    "core_left_after_engine_and_hot_radiator_t": 348.17640528717465,
+    "effective_exhaust_c": [
+      0.08212803377937179,
+      0.34922041824984107
+    ],
+    "ignition_antimatter_t": 0.03117765523584573,
+    "manufacture_ZJ": 7.1900414298833875,
+    "primary_ZJ": 12.794257250700868
+  },
+  "component_closed_crew": null,
+  "component_closed_cargo": {
+    "retained_core_t": 266.2713764814259,
+    "departure_t": 4406.659779412651,
+    "fusion_t": 4093.598815955713,
+    "antimatter_t": 0.0,
+    "ordinary_annihilation_matter_t": 0.0,
+    "departure_dry_t": 313.06096345693874,
+    "tank_and_separation_t": 46.78958697551285,
+    "stages_per_burn": 8,
+    "trajectory": {
+      "beta": 0.1082952861960492,
+      "acceleration_m_s2": 1.3798337124601783,
+      "proper_years": 39.67120977992735,
+      "burn_years": 0.75,
+      "years": 39.9
+    },
+    "exhaust_c": [
+      0.07854681256754453,
+      0.07854681256754453
+    ],
+    "segments": [
+      {
+        "phase": 0,
+        "index": 0,
+        "before_t": 4406.659779412651,
+        "after_burn_t": 3705.9968280074972,
+        "after_drop_t": 3698.1795355420404,
+        "spent_t": 700.6629514051541,
+        "tank_and_separation_t": 7.817292465456696,
+        "fusion_t": 700.6629514051541,
+        "antimatter_t": 0.0,
+        "source_W": 91049254702916.89
+      },
+      {
+        "phase": 0,
+        "index": 1,
+        "before_t": 3698.1795355420404,
+        "after_burn_t": 3110.1655934844584,
+        "after_drop_t": 3103.5874401218252,
+        "spent_t": 588.0139420575821,
+        "tank_and_separation_t": 6.578153362633404,
+        "fusion_t": 588.0139420575821,
+        "antimatter_t": 0.0,
+        "source_W": 76410820740411.69
+      },
+      {
+        "phase": 0,
+        "index": 2,
+        "before_t": 3103.5874401218252,
+        "after_burn_t": 2610.1141872287767,
+        "after_drop_t": 2604.575981446953,
+        "spent_t": 493.47325289304865,
+        "tank_and_separation_t": 5.538205781823536,
+        "fusion_t": 493.47325289304865,
+        "antimatter_t": 0.0,
+        "source_W": 64125513988758.61
+      },
+      {
+        "phase": 0,
+        "index": 3,
+        "before_t": 2604.575981446953,
+        "after_burn_t": 2190.4460087076377,
+        "after_drop_t": 2185.7805790075054,
+        "spent_t": 414.12997273931524,
+        "tank_and_separation_t": 4.665429700132468,
+        "fusion_t": 414.12997273931524,
+        "antimatter_t": 0.0,
+        "source_W": 53815069417378.89
+      },
+      {
+        "phase": 0,
+        "index": 4,
+        "before_t": 2185.7805790075054,
+        "after_burn_t": 1838.2394598209469,
+        "after_drop_t": 1834.3065075098948,
+        "spent_t": 347.5411191865584,
+        "tank_and_separation_t": 3.9329523110521425,
+        "fusion_t": 347.5411191865584,
+        "antimatter_t": 0.0,
+        "source_W": 45162028072262.336
+      },
+      {
+        "phase": 0,
+        "index": 5,
+        "before_t": 1834.3065075098948,
+        "after_burn_t": 1542.6500884375635,
+        "after_drop_t": 1539.3318678277678,
+        "spent_t": 291.65641907233135,
+        "tank_and_separation_t": 3.318220609795645,
+        "fusion_t": 291.65641907233135,
+        "antimatter_t": 0.0,
+        "source_W": 37899962503514.81
+      },
+      {
+        "phase": 0,
+        "index": 6,
+        "before_t": 1539.3318678277678,
+        "after_burn_t": 1294.5766873295881,
+        "after_drop_t": 1291.774380344108,
+        "spent_t": 244.75518049817973,
+        "tank_and_separation_t": 2.802306985479977,
+        "fusion_t": 244.75518049817973,
+        "antimatter_t": 0.0,
+        "source_W": 31805273454727.207
+      },
+      {
+        "phase": 0,
+        "index": 7,
+        "before_t": 1291.774380344108,
+        "after_burn_t": 1086.3810676790436,
+        "after_drop_t": 1084.0117412397278,
+        "spent_t": 205.39331266506449,
+        "tank_and_separation_t": 2.3693264393157096,
+        "fusion_t": 205.39331266506449,
+        "antimatter_t": 0.0,
+        "source_W": 26690305233940.67
+      },
+      {
+        "phase": 1,
+        "index": 0,
+        "before_t": 1084.0117412397278,
+        "after_burn_t": 911.6528789732829,
+        "after_drop_t": 909.646931488352,
+        "spent_t": 172.358862266445,
+        "tank_and_separation_t": 2.005947484930895,
+        "fusion_t": 172.358862266445,
+        "antimatter_t": 0.0,
+        "source_W": 22397567788236.11
+      },
+      {
+        "phase": 1,
+        "index": 1,
+        "before_t": 909.646931488352,
+        "after_burn_t": 765.012234085363,
+        "after_drop_t": 763.3112524139302,
+        "spent_t": 144.63469740298893,
+        "tank_and_separation_t": 1.7009816714328785,
+        "fusion_t": 144.63469740298893,
+        "antimatter_t": 0.0,
+        "source_W": 18794887579419.375
+      },
+      {
+        "phase": 1,
+        "index": 2,
+        "before_t": 763.3112524139302,
+        "after_burn_t": 641.9440623586104,
+        "after_drop_t": 640.4990232680019,
+        "spent_t": 121.36719005531981,
+        "tank_and_separation_t": 1.4450390906085182,
+        "fusion_t": 121.36719005531981,
+        "antimatter_t": 0.0,
+        "source_W": 15771337956092.838
+      },
+      {
+        "phase": 1,
+        "index": 3,
+        "before_t": 640.4990232680019,
+        "after_burn_t": 538.6590904209754,
+        "after_drop_t": 537.4288511596582,
+        "spent_t": 101.83993284702643,
+        "tank_and_separation_t": 1.230239261317291,
+        "fusion_t": 101.83993284702643,
+        "antimatter_t": 0.0,
+        "source_W": 13233823718124.812
+      },
+      {
+        "phase": 1,
+        "index": 4,
+        "before_t": 537.4288511596582,
+        "after_burn_t": 451.9771703235222,
+        "after_drop_t": 450.9272018343247,
+        "spent_t": 85.45168083613602,
+        "tank_and_separation_t": 1.0499684891974963,
+        "fusion_t": 85.45168083613602,
+        "antimatter_t": 0.0,
+        "source_W": 11104214712135.951
+      },
+      {
+        "phase": 1,
+        "index": 5,
+        "before_t": 450.9272018343247,
+        "after_burn_t": 379.2293626722968,
+        "after_drop_t": 378.3306864415145,
+        "spent_t": 71.69783916202789,
+        "tank_and_separation_t": 0.8986762307823069,
+        "fusion_t": 71.69783916202789,
+        "antimatter_t": 0.0,
+        "source_W": 9316940201305.791
+      },
+      {
+        "phase": 1,
+        "index": 6,
+        "before_t": 378.3306864415145,
+        "after_burn_t": 318.1757598897349,
+        "after_drop_t": 317.4040556976653,
+        "spent_t": 60.15492655177963,
+        "tank_and_separation_t": 0.771704192069576,
+        "fusion_t": 60.15492655177963,
+        "antimatter_t": 0.0,
+        "source_W": 7816969940060.617
+      },
+      {
+        "phase": 1,
+        "index": 7,
+        "before_t": 317.4040556976653,
+        "after_burn_t": 266.93651938091017,
+        "after_drop_t": 266.2713764814259,
+        "spent_t": 50.46753631675513,
+        "tank_and_separation_t": 0.6651428994843065,
+        "fusion_t": 50.46753631675513,
+        "antimatter_t": 0.0,
+        "source_W": 6558119790860.607
+      }
+    ],
+    "retained_propulsion_fuel_t": 0,
+    "peak_source_TW": 91.0492547029169,
+    "engine_with_allowance_t": 20.030836034641716,
+    "hot_radiator_with_allowance_t": 6.991489460094575,
+    "core_left_after_engine_and_hot_radiator_t": 239.24905098668958,
+    "effective_exhaust_c": [
+      0.0784813830726757,
+      0.0784813830726757
+    ],
+    "ignition_antimatter_t": 0,
+    "manufacture_ZJ": 0.0,
+    "primary_ZJ": 1.4422241091203518,
+    "nonpropulsion_core_t": 239.24905098668958
+  },
+  "sampled_minimum_AM_component_closed_crew": {
+    "retained_core_t": 787.9210355902072,
+    "departure_t": 57695.996501784175,
+    "fusion_t": 56234.250976787174,
+    "antimatter_t": 20.88548561582354,
+    "ordinary_annihilation_matter_t": 20.88548561582354,
+    "departure_dry_t": 1419.974553765343,
+    "tank_and_separation_t": 632.0535181751358,
+    "stages_per_burn": 8,
+    "trajectory": {
+      "beta": 0.23746706408967377,
+      "acceleration_m_s2": 1.1191953315052183,
+      "proper_years": 19.409219752877863,
+      "burn_years": 2.075,
+      "years": 19.9
+    },
+    "exhaust_c": [
+      0.07916483554797016,
+      0.208164835547969
+    ],
+    "segments": [
+      {
+        "phase": 0,
+        "index": 0,
+        "before_t": 57695.996501784175,
+        "after_burn_t": 39355.399131572674,
+        "after_drop_t": 39153.523184786434,
+        "spent_t": 18340.597370211497,
+        "tank_and_separation_t": 201.87594678624188,
+        "fusion_t": 18340.52547516914,
+        "antimatter_t": 0.0359475211789686,
+        "source_W": 960286279275312.8
+      },
+      {
+        "phase": 0,
+        "index": 1,
+        "before_t": 39153.523184786434,
+        "after_burn_t": 26707.26958146748,
+        "after_drop_t": 26570.23764312898,
+        "spent_t": 12446.253603318952,
+        "tank_and_separation_t": 137.03193833849832,
+        "fusion_t": 12446.204814072236,
+        "antimatter_t": 0.02439462335769349,
+        "source_W": 651667245204362.9
+      },
+      {
+        "phase": 0,
+        "index": 2,
+        "before_t": 26570.23764312898,
+        "after_burn_t": 18124.00115896675,
+        "after_drop_t": 18030.97363471122,
+        "spent_t": 8446.236484162231,
+        "tank_and_separation_t": 93.02752425552754,
+        "fusion_t": 8446.203374960958,
+        "antimatter_t": 0.016554600636482064,
+        "source_W": 442232324473192.2
+      },
+      {
+        "phase": 0,
+        "index": 3,
+        "before_t": 18030.97363471122,
+        "after_burn_t": 12299.227106736596,
+        "after_drop_t": 12236.06183969094,
+        "spent_t": 5731.746527974624,
+        "tank_and_separation_t": 63.165267045656684,
+        "fusion_t": 5731.7240595592775,
+        "antimatter_t": 0.011234207673169294,
+        "source_W": 300105685545316.06
+      },
+      {
+        "phase": 0,
+        "index": 4,
+        "before_t": 12236.06183969094,
+        "after_burn_t": 8346.421358451636,
+        "after_drop_t": 8303.521203991892,
+        "spent_t": 3889.6404812393025,
+        "tank_and_separation_t": 42.90015445974492,
+        "fusion_t": 3889.6252338696822,
+        "antimatter_t": 0.00762368481014164,
+        "source_W": 203655764861537.53
+      },
+      {
+        "phase": 0,
+        "index": 5,
+        "before_t": 8303.521203991892,
+        "after_burn_t": 5663.969963158054,
+        "after_drop_t": 5634.822110985222,
+        "spent_t": 2639.551240833836,
+        "tank_and_separation_t": 29.14785217283231,
+        "fusion_t": 2639.540893807268,
+        "antimatter_t": 0.005173513284034925,
+        "source_W": 138202959742942.67
+      },
+      {
+        "phase": 0,
+        "index": 6,
+        "before_t": 5634.822110985222,
+        "after_burn_t": 3843.6059113109636,
+        "after_drop_t": 3823.7906408047193,
+        "spent_t": 1791.2161996742586,
+        "tank_and_separation_t": 19.815270506244328,
+        "fusion_t": 1791.2091781164572,
+        "antimatter_t": 0.003510778900704281,
+        "source_W": 93785404316033.14
+      },
+      {
+        "phase": 0,
+        "index": 7,
+        "before_t": 3823.7906408047193,
+        "after_burn_t": 2608.2712144470574,
+        "after_drop_t": 2594.7892166355546,
+        "spent_t": 1215.519426357662,
+        "tank_and_separation_t": 13.481997811502863,
+        "fusion_t": 1215.514661528094,
+        "antimatter_t": 0.0023824147840514343,
+        "source_W": 63642781298916.945
+      },
+      {
+        "phase": 1,
+        "index": 0,
+        "before_t": 2594.7892166355546,
+        "after_burn_t": 2241.9323941968446,
+        "after_drop_t": 2235.7148787735214,
+        "spent_t": 352.85682243870974,
+        "tank_and_separation_t": 6.2175154233231815,
+        "fusion_t": 344.59674683018517,
+        "antimatter_t": 4.130037804262287,
+        "source_W": 114540804741456.6
+      },
+      {
+        "phase": 1,
+        "index": 1,
+        "before_t": 2235.7148787735214,
+        "after_burn_t": 1931.6873905500836,
+        "after_drop_t": 1926.3150505431495,
+        "spent_t": 304.02748822343796,
+        "tank_and_separation_t": 5.372340006934071,
+        "fusion_t": 296.9104654535817,
+        "antimatter_t": 3.5585113849281242,
+        "source_W": 98690321258235.16
+      },
+      {
+        "phase": 1,
+        "index": 2,
+        "before_t": 1926.3150505431495,
+        "after_burn_t": 1664.3618239023183,
+        "after_drop_t": 1659.717737354577,
+        "spent_t": 261.9532266408312,
+        "tank_and_separation_t": 4.644086547741456,
+        "fusion_t": 255.8211262523625,
+        "antimatter_t": 3.06605019423435,
+        "source_W": 85032600975920.33
+      },
+      {
+        "phase": 1,
+        "index": 3,
+        "before_t": 1659.717737354577,
+        "after_burn_t": 1434.0181995295143,
+        "after_drop_t": 1430.0016195212932,
+        "spent_t": 225.69953782506263,
+        "tank_and_separation_t": 4.016580008221094,
+        "fusion_t": 220.41610520114648,
+        "antimatter_t": 2.6417163119580778,
+        "source_W": 73264296021222.28
+      },
+      {
+        "phase": 1,
+        "index": 4,
+        "before_t": 1430.0016195212932,
+        "after_burn_t": 1235.540418468228,
+        "after_drop_t": 1232.0645354552225,
+        "spent_t": 194.46120105306528,
+        "tank_and_separation_t": 3.475883013005486,
+        "fusion_t": 189.90903110344834,
+        "antimatter_t": 2.2760849748084695,
+        "source_W": 63124023805653.26
+      },
+      {
+        "phase": 1,
+        "index": 5,
+        "before_t": 1232.0645354552225,
+        "after_burn_t": 1064.5201452469694,
+        "after_drop_t": 1061.510158957301,
+        "spent_t": 167.5443902082531,
+        "tank_and_separation_t": 3.009986289668309,
+        "fusion_t": 163.62231971705634,
+        "antimatter_t": 1.9610352455983815,
+        "source_W": 54386561528658.84
+      },
+      {
+        "phase": 1,
+        "index": 6,
+        "before_t": 1061.510158957301,
+        "after_burn_t": 917.1588955580546,
+        "after_drop_t": 914.550353623981,
+        "spent_t": 144.3512633992463,
+        "tank_and_separation_t": 2.6085419340736142,
+        "fusion_t": 140.9721241165676,
+        "antimatter_t": 1.6895696413393466,
+        "source_W": 46857843815865.48
+      },
+      {
+        "phase": 1,
+        "index": 7,
+        "before_t": 914.550353623981,
+        "after_burn_t": 790.183669166127,
+        "after_drop_t": 787.9210355902072,
+        "spent_t": 124.36668445785403,
+        "tank_and_separation_t": 2.262633575919724,
+        "fusion_t": 121.45536702971552,
+        "antimatter_t": 1.4556587140692585,
+        "source_W": 40370652386361.984
+      }
+    ],
+    "retained_propulsion_fuel_t": 0,
+    "peak_source_TW": 960.2862792753127,
+    "engine_with_allowance_t": 211.26298144056884,
+    "hot_radiator_with_allowance_t": 73.73845532435422,
+    "core_left_after_engine_and_hot_radiator_t": 502.91959882528414,
+    "effective_exhaust_c": [
+      0.07910246023509948,
+      0.20703022513821695
+    ],
+    "ignition_antimatter_t": 0.11021913191450285,
+    "manufacture_ZJ": 7.508375343061888,
+    "primary_ZJ": 27.320378463869066,
+    "nonpropulsion_core_t": 502.91959882528425
+  },
+  "component_closed_20t_candidate_found": false,
+  "fixed_allocation_comparator_fleet": {
+    "fusion_t": 20000.56577301986,
+    "antimatter_t": 19.999999999968974,
+    "departure_t": 21024.76115324645,
+    "primary_ZJ": 14.23648135982122
+  },
+  "main_fuel_reserve_fraction": 0,
+  "chemical_landing_reserve_fraction": 0.1,
+  "fleet": null,
+  "status": "Orbital disposition adopted. Component closure includes engine/radiator feedback; 80% annihilation coupling and health/landing performance unverified. No structural saving credited."
+}

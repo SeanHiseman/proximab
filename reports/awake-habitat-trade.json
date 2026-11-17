@@ -1,0 +1,82 @@
+{
+  "status": "No feasible passive solution among examined dose-rate cases",
+  "actual_interstellar_dose_sv": null,
+  "source": "https://ntrs.nasa.gov/api/citations/20220002905/downloads/NESC-RP-20-01589_NASA-TM-20220002905final.pdf",
+  "proper_years": 39.764092721195645,
+  "children": "Remain awake for baseline; adult dose factors are not child dosimetry",
+  "adult_budget_sv": 1.2,
+  "budget_assumption": "Optimistic: entire lifetime budget assigned to transit GCR",
+  "required_average_mSv_day": 0.08262280665106883,
+  "required_average_with_0_6Sv_transit_budget_mSv_day": 0.041311403325534415,
+  "max_awake_fraction_perfect_torpor": 0.0794450063952585,
+  "occupancy_cases": [
+    {
+      "awake_fraction": 0.5,
+      "mean_awake_adults": 16.0,
+      "passive_reference_sv": 15.032169086741296,
+      "perfect_torpor_reference_sv": 7.552394130536689,
+      "max_torpor_rate_mSv_day_for_1_2Sv": -0.8747543866978624
+    },
+    {
+      "awake_fraction": 0.25,
+      "mean_awake_adults": 8.0,
+      "passive_reference_sv": 14.995859499575252,
+      "perfect_torpor_reference_sv": 3.7761970652683443,
+      "max_torpor_rate_mSv_day_for_1_2Sv": -0.23650292446524157
+    },
+    {
+      "awake_fraction": 0.125,
+      "mean_awake_adults": 4.0,
+      "passive_reference_sv": 14.977704705992231,
+      "perfect_torpor_reference_sv": 1.8880985326341722,
+      "max_torpor_rate_mSv_day_for_1_2Sv": -0.05414536382734991
+    },
+    {
+      "awake_fraction": 0.0625,
+      "mean_awake_adults": 2.0,
+      "passive_reference_sv": 14.968627309200723,
+      "perfect_torpor_reference_sv": 0.9440492663170861,
+      "max_torpor_rate_mSv_day_for_1_2Sv": 0.01879766042780675
+    },
+    {
+      "awake_fraction": 0,
+      "mean_awake_adults": 0,
+      "passive_reference_sv": 14.95954991240921,
+      "perfect_torpor_reference_sv": 0.0,
+      "max_torpor_rate_mSv_day_for_1_2Sv": 0.08262280665106883
+    }
+  ],
+  "water_shell_geometry_lower_bounds": [
+    {
+      "count": 1,
+      "internal_volume_each_m3": 400,
+      "water_10cm_t": 26.83228627988237,
+      "water_20cm_t": 54.83846798685059,
+      "water_40cm_t": 114.47304864695815
+    },
+    {
+      "count": 2,
+      "internal_volume_each_m3": 200,
+      "water_10cm_t": 33.99776073965945,
+      "water_20cm_t": 69.86933405776725,
+      "water_40cm_t": 147.4349803591574
+    },
+    {
+      "count": 2,
+      "internal_volume_each_m3": 300,
+      "water_10cm_t": 44.39602811163137,
+      "water_20cm_t": 90.92976203846823,
+      "water_40cm_t": 190.61140926758614
+    },
+    {
+      "count": 2,
+      "internal_volume_each_m3": 800,
+      "water_10cm_t": 84.80608112850285,
+      "water_20cm_t": 172.5571283179532,
+      "water_40cm_t": 357.095182809524
+    }
+  ],
+  "child_20_year_adult_reference_at_20g_sv": 7.5972,
+  "material_caveat": "Water geometry masses cannot be assigned polyethylene dose rates without transport",
+  "geometry_caveat": "Spheres minimize area at fixed volume; fit, gravity floors, access and tanks are unvalidated"
+}

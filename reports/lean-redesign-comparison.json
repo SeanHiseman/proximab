@@ -1,0 +1,42 @@
+{
+  "baseline_revision": "S2-integrated-conditional",
+  "selected_revision": "S3-lean-cargo-first",
+  "old_fleet": {
+    "departure_t": 6761.663211358431,
+    "loaded_fusion_t": 5444.120159498938,
+    "loaded_antimatter_t": 92.33515058779302,
+    "primary_energy_loaded_fuel_ZJ": 35.021372217908166,
+    "manufacture_loaded_antimatter_ZJ": 33.19467790808916,
+    "dry_departure_t": 887.9982330032211,
+    "antimatter_factory_average_TW_over_20_years": 52.593793425496806
+  },
+  "selected_fleet": {
+    "departure_t": 6681.037129530843,
+    "loaded_fusion_t": 5598.465628660311,
+    "loaded_antimatter_t": 60.70949781139538,
+    "primary_energy_loaded_fuel_ZJ": 23.758922370524274,
+    "manufacture_loaded_antimatter_ZJ": 21.825190222601236,
+    "dry_departure_t": 742.7065589518304,
+    "antimatter_factory_average_TW_over_20_years": 34.5799272165837
+  },
+  "prior_profile_alternative": {
+    "crew": {
+      "departure_t": 2841.449338353338,
+      "loaded_fusion_t": 2062.1131618033914,
+      "loaded_antimatter_t": 62.57398131284906,
+      "primary_energy_loaded_fuel_ZJ": 23.207737937228206
+    },
+    "cargo": {
+      "departure_t": 2040.0353680119865,
+      "loaded_fusion_t": 1757.3574154327205,
+      "loaded_antimatter_t": 2.3595419571484078,
+      "primary_energy_loaded_fuel_ZJ": 1.4552584160604267
+    }
+  },
+  "prior_profile_alternative_fleet": {
+    "departure_t": 4881.484706365325,
+    "loaded_fusion_t": 3819.470577236112,
+    "loaded_antimatter_t": 64.93352326999747,
+    "primary_energy_loaded_fuel_ZJ": 24.662996353288634
+  }
+}
