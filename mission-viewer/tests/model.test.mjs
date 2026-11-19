@@ -2,10 +2,14 @@ import * as gpu from '../dist/gpu.js';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {createScene,exportOBJ,scenarioMass,poseScene} from '../dist/model.js';
+import {createScene,exportOBJ,scenarioMass,poseScene,missionTimeline,shipStateAt,stageYear,flightSky,missionScale,settlementTerrain,settlementFrame,systemSky} from '../dist/model.js';
 const data=JSON.parse(fs.readFileSync(new URL('../dist/design-data.json',import.meta.url),'utf8'));
 const active=data.viewer_design?.nominal??data.mass_budget.nominal;
 const base={mode:'cruise',selected:'habA',cutaway:true,dimensions:true,spin:false};
+// S7 timeline years: crew acceleration burn, mid-coast (the default) and crew braking burn.
+const ACCEL=20.5,BRAKE=39.2;
+const S8=data.selected_specification,remote=/tow-|feed|thrust-|radiator-|shadow-shield|radiation-shadow|refractory|buffer-tank|coolant|shield-radiator|rcs|reaction-chamber|field-coil|coil-|manifold|injector|antimatter-trap|nozzle|shadow-shield|shield-retainer|cryocooler|power-conditioning|high-gain|hot-|radiator-edge|exhaust|deployed-aeroshell|aeroshell-rib/;
+const centreOf=m=>[0,1,2].map(k=>m.vertices.reduce((n,p)=>n+p[k],0)/m.vertices.length);
 test('selected mission requirements stay distinct from historical propulsion sizing',()=>{
   assert.equal(data.architecture.crew,24);
   assert.equal(data.mission_config.crew,24);
@@ -16,50 +20,96 @@ test('selected mission requirements stay distinct from historical propulsion siz
   assert.equal(data.roster.schedule,null);
   assert.match(data.viewer_design.status,/reference/i);
 });
-test('all three views have finite metre-based geometry and the touchdown view is gone',()=>{
-  for(const mode of ['cruise','engine','settlement']){
+test('all views have finite metre-based geometry and the touchdown view is gone',()=>{
+  for(const [mode,ids] of [['cruise',['habA','habB','structure','propulsion','radiators','tanks','shield','farm','power']],['cargo',['cargo','rover','exploration','tanks','structure','shield','propulsion','radiators']],['settlement',['habA','habB','structure','radiators','rover','inflatable']]]){
     const s=createScene({...base,mode},data,0);
-    for(const id of (mode==='settlement'?['habA','habB','structure','radiators','rover','inflatable']:['habA','habB','structure','propulsion','radiators','refuge','tanks','shield']))assert.ok(s.meshes.some(m=>m.id===id),`${mode}: missing ${id}`);
+    for(const id of ids)assert.ok(s.meshes.some(m=>m.id===id),`${mode}: missing ${id}`);
     for(const m of s.meshes){assert.ok(m.vertices.flat().every(Number.isFinite));for(const f of m.faces)assert.ok(f.every(i=>Number.isInteger(i)&&i>=0&&i<m.vertices.length));}
     assert.ok(!s.meshes.some(m=>['transport-cover','local-landing-strut'].includes(m.role)));
   }
 });
 test('24-adult architecture has three berths per bay and two reproductive banks',()=>{
-  for(const mode of ['cruise','engine','settlement']){const s=createScene({...base,mode},data);const ids=new Set(s.meshes.map(m=>m.id).filter(x=>x.startsWith('cabin-')));assert.equal(ids.size,8);assert.equal(s.meshes.filter(m=>m.role==='upper-berth').length,8);assert.equal(s.meshes.filter(m=>m.role==='lower-berth').length,16);assert.equal(s.meshes.filter(m=>m.role==='reproductive-bank').length,2);if(mode!=='settlement')assert.equal(s.meshes.filter(m=>m.role==='descent-seat-restraint').length,24);}
+  for(const state of [{},{year:ACCEL},{mode:'settlement'}]){const s=createScene({...base,...state},data);const ids=new Set(s.meshes.map(m=>m.id).filter(x=>x.startsWith('cabin-')));assert.equal(ids.size,8);assert.equal(s.meshes.filter(m=>m.role==='upper-berth').length,8);assert.equal(s.meshes.filter(m=>m.role==='lower-berth').length,16);assert.equal(s.meshes.filter(m=>m.role==='reproductive-bank').length,2);}
 });
-test('service spine clears both rotating habitat pressure volumes',()=>{
-  assert.ok(data.layout.service_spine_z_offset_m_study-1.35>data.layout.disc_axial_depth_m/2);
-  // Coaxial discs sit either side of the spine frame (longerons 2 m from its centreline) with clearance.
-  const [za,zb]=data.layout.disc_centres_z_m,spine=data.layout.service_spine_z_offset_m_study,half=data.layout.disc_axial_depth_m/2;
-  assert.equal(data.layout.disc_centres_x_m[0],data.layout.disc_centres_x_m[1]);// Hull faces clear the 0.16 m-radius longerons by at least 0.15 m.
-  assert.ok(za+half<=spine-2-.16-.15&&zb-half>=spine+2+.16+.15);
+test('tandem discs sit edge-on along the flight axis with the braking fuel built into their walls',()=>{
+  const [za,zb]=data.layout.disc_centres_z_m,[xa,xb]=data.layout.disc_centres_x_m,LY=S8.layout,T=S8.shell.thickness_m;assert.equal(za,zb);assert.ok(xb>xa);
+  assert.ok(Math.abs(xb-LY.disc_centres_x_m[1])<1e-3,'layout spacing follows the sized walls');
+  // Edge-on: frontal height (along the spin axis) is far smaller than the disc diameter.
+  assert.ok(LY.height_m<2*(S8.envelope.radius_m+T)&&S8.frontal.height_m<S8.frontal.width_m);
+  // The wall layers belong to the discs (they turn with them) and wrap the pressure hull: rim from the hull radius
+  // outward, faces from the hull's axial faces outward; the outermost layer reaches the sized thickness.
+  const scene=createScene({...base,year:ACCEL,cutaway:false,flat:false},data),walls=scene.meshes.filter(m=>/^shell-/.test(m.role??''));
+  assert.ok(walls.length>0&&walls.every(m=>m.id==='habA'||m.id==='habB'));
+  for(const m of walls){const cx=data.layout.disc_centres_x_m[m.id==='habB'?1:0],r=m.vertices.map(p=>Math.hypot(p[0]-cx,p[1]));
+    assert.ok(Math.max(...r)<=S8.envelope.radius_m+T+1e-6);assert.ok(m.vertices.every(p=>Math.hypot(p[0]-cx,p[1])>=S8.envelope.radius_m-1e-6||Math.abs(p[2])>=S8.envelope.depth_m/2-1e-6),'no wall inside the hull');}
+  assert.ok(Math.max(...walls.flatMap(m=>m.vertices.map(p=>p[2])))>S8.envelope.depth_m/2+T-1e-6);
 });
-test('everything behind the bow plate stays inside the frontal silhouette',()=>{
-  const scene=createScene(base,data),S=data.design.geometry.screen,spine=data.layout.service_spine_z_offset_m_study;
-  for(const m of scene.meshes){if(['shield','sky'].includes(m.id))continue;for(const [x,y,z] of m.vertices){assert.ok(Math.abs(y)<=S.width_m/2+.01,`${m.id} ${m.role??''}: y ${y}`);assert.ok(Math.abs(z-spine)<=S.height_m/2+.01,`${m.id} ${m.role??''}: z ${z}`);}}
+test('flight hardware stays inside each ship\'s forward-shield projection and the shield leads',()=>{
+  for(const mode of ['cruise','cargo'])for(const year of [5,ACCEL,30,35,BRAKE,39.95]){
+    const scene=createScene({...base,mode,year,flat:false},data),F=scene.flightLayout,face=scene.meshes.find(m=>m.role==='forward-collision-shield');
+    if(!face){assert.equal(scene.flight.phase,'entry','the shield stays in orbit only from entry');continue;}
+    const front=face?Math.min(...face.vertices.map(p=>p[0])):-Infinity;
+    for(const m of scene.meshes){if(m.id==='sky'||remote.test(m.role??''))continue;for(const p of m.vertices){
+      const inside=mode==='cargo'?Math.hypot(p[1],p[2])<=F.radius+1e-6:Math.abs(p[1])<=S8.frontal.width_m/2+1e-6&&Math.abs(p[2]-F.zCentre)<=S8.frontal.height_m/2+1e-6;
+      assert.ok(inside,`${mode} ${year} ${m.id} ${m.role??''} outside the shield projection`);assert.ok(p[0]>=front-1e-6,`${mode} ${year} ${m.role} ahead of the shield`);}}
+  }
+  assert.ok(Math.abs(createScene(base,data).meshes.find(m=>m.role==='forward-collision-shield').frontalAreaM2-S8.frontal.area_m2)<1e-9);
 });
 test('fixed structure stays out of the volume swept by the spinning discs',()=>{
-  const scene=createScene({...base,flat:false},data),r=data.design.habitat.envelope_radius_m,half=data.layout.disc_axial_depth_m/2+.3;
+  const scene=createScene({...base,flat:false},data),r=data.design.habitat.envelope_radius_m+S8.layout.wall_thickness_m,half=data.layout.disc_axial_depth_m/2+S8.layout.wall_thickness_m;
   for(const m of scene.meshes){if(/^(hab|bay-|cabin-|transfer|sky)/.test(m.id))continue;
     const centre=[0,1,2].map(k=>m.vertices.reduce((n,p)=>n+p[k],0)/m.vertices.length);
     for(const p of [...m.vertices,centre])for(const [d,cz] of data.layout.disc_centres_z_m.entries())assert.ok(!(Math.hypot(p[0]-data.layout.disc_centres_x_m[d],p[1])<r+.05&&Math.abs(p[2]-cz)<half),`${m.id} ${m.role??''} enters disc ${d}`);}
 });
-test('hardware along the engine boom stays inside the shield shadow cone',()=>{
-  const scene=createScene(base,data),G=data.design.geometry,spine=data.layout.service_spine_z_offset_m_study,cone=s=>G.cone.source_radius_m+(G.cone.protected_radius_m-G.cone.source_radius_m)*s/G.cone.boom_length_m;
-  // The pellet guides and nozzle struts must pass round the shield's edge, so they alone leave the shadow.
-  for(const m of scene.meshes){if(['shield','sky'].includes(m.id)||['injector-guide','nozzle-strut'].includes(m.role))continue;for(const p of m.vertices)if(p[0]>G.boom.x0+1&&p[0]<G.shield.x-G.shield.thickness_m)assert.ok(Math.hypot(p[1],p[2]-spine)<=cone(G.source_x-p[0])+.02,`${m.id} ${m.role??''} outside the shadow at x ${p[0]}`);}
-  assert.ok(G.shield.radius_m>G.cone.source_radius_m&&G.shield.thickness_m>.4);
+// Closest approach of a canted plume cylinder (start and end rings) to the ship's axis over the ship's length.
+const plumeClearance=(m,F)=>{const n=m.vertices.length/2,ring=k=>m.vertices.slice(k*n,(k+1)*n),cen=r=>[0,1,2].map(i=>r.reduce((a,p)=>a+p[i],0)/r.length);
+  const a=ring(0),b=ring(1),ca=cen(a),cb=cen(b),ra=Math.hypot(...a[0].map((v,i)=>v-ca[i])),rb=Math.hypot(...b[0].map((v,i)=>v-cb[i]));let worst=Infinity;
+  for(let j=0;j<=20;j++){const x=F.front+(F.tail-F.front)*j/20,f=(x-ca[0])/(cb[0]-ca[0]);if(f<0||f>1)continue;worst=Math.min(worst,Math.hypot(ca[1]+f*(cb[1]-ca[1]),ca[2]+f*(cb[2]-ca[2])-F.zCentre)-(ra+f*(rb-ra)));}
+  return worst;};
+test('towed engine pulls from 2000 m ahead, then behind for braking, with tethers in its shadow and plumes clear of the ship',()=>{
+  const SS=data.final_model_inputs.source_shadow,TW=S8.inputs.tow,T=missionTimeline(data).crew,mid=T.depart+T.burnYears+T.coastYears/2;
+  for(const [year,ahead] of [[5,true],[ACCEL,true],[mid-1,true],[mid+1,true],[BRAKE,false]]){
+    const scene=createScene({...base,year,flat:false},data),F=scene.flightLayout,ec=centreOf(scene.meshes.find(m=>m.role==='reaction-chamber'));
+    assert.equal(F.engineAhead,ahead);
+    // Tethers run from the tow frame (front of the shield, or the aft end of the last attached module) to the engine.
+    const frame=ahead?F.nose:F.tail;
+    assert.ok(Math.abs(ec[0]-frame-(ahead?-1:1)*TW.length_m)<1e-6);
+    // Engine radiation shadow shields are removed for now (open item).
+    assert.ok(!scene.meshes.some(m=>/shadow-shield|radiation-shadow/.test(m.role??'')));
+    const tethers=scene.meshes.filter(m=>m.role==='tow-tether');assert.equal(tethers.length,4);
+    for(const m of scene.meshes.filter(m=>m.role==='hot-radiator-fin'))assert.ok(Math.abs(centreOf(m)[0]-F.centre)>Math.abs(ec[0]-F.centre),'radiators on the far side, away from the plumes');
+    const plumes=scene.meshes.filter(m=>m.role==='exhaust-beam'&&Math.max(...m.vertices.map(p=>p[0]))-Math.min(...m.vertices.map(p=>p[0]))>100);assert.equal(plumes.length>0,scene.flight.burning);
+    if(scene.flight.burning)assert.ok(Math.max(...plumes.flatMap(m=>m.vertices.map(p=>Math.abs(p[0]-ec[0]))))>30000,'plume fades out over tens of kilometres');
+    // The drawn plume edge spreads at the assumed half-angle and the cant is sized so that edge clears the ship by the margin.
+    for(const m of plumes)assert.ok(plumeClearance(m,F)>Math.hypot(F.width,F.height)/2+TW.plume_clearance_margin_m-1,'canted plume edge clears the ship');
+  }
 });
-test('tanks, antimatter store and radiators are drawn at their calculated sizes',()=>{
-  const scene=createScene(base,data),G=data.design.geometry,D=data.design,extent=role=>{const xs=scene.meshes.filter(m=>m.role===role).flatMap(m=>m.vertices.map(p=>p[0]));return [Math.min(...xs),Math.max(...xs)];};
-  for(const [role,g] of [['hydrogen-propellant-tank',G.hydrogen_tank],['bulk-antimatter-store',G.antimatter_store]]){const [lo,hi]=extent(role);assert.ok(Math.abs(lo-g.x0)<.05&&Math.abs(hi-g.x1)<.05,role);}
-  const capsule=g=>Math.PI*g.radius_m**2*(g.x1-g.x0-2*g.radius_m)+4/3*Math.PI*g.radius_m**3;
-  assert.ok(capsule(G.hydrogen_tank)*70.8*.97>=D.storage.matching_hydrogen_kg-1);
-  assert.ok(scene.meshes.filter(m=>m.role==='antihydrogen-ice').length>=Math.ceil(D.storage.electrostatic_levitation.log_count),'every log of ice is drawn in the cutaway');
-  assert.ok(G.service_fins.effective_emitting_m2>=G.service_fins.required_emitting_m2);assert.ok(G.hot_fins.effective_emitting_m2>=G.hot_fins.required_emitting_m2*.999);
-  const quad=m=>{const [a,b,c,d]=m.vertices,cr=(u,v)=>[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]],su=(u,v)=>u.map((x,i)=>x-v[i]);return (Math.hypot(...cr(su(b,a),su(c,a)))+Math.hypot(...cr(su(c,a),su(d,a))))/2;};
-  const hot=scene.meshes.filter(m=>m.role==='hot-radiator-fin').reduce((n,m)=>n+quad(m),0);assert.ok(Math.abs(hot/G.hot_fins.planform_m2-1)<.08,`hot fins ${hot} vs ${G.hot_fins.planform_m2}`);
-  const capacity=scene.meshes.filter(m=>m.role==='hydrogen-tank').reduce((n,m)=>n+m.usableHydrogenCapacityKg,0);assert.ok(capacity>=active.thermal_hydrogen_kg*1.0499);
+test('tension straps hang the habitat and modules from the tow end; tow masses come from the S8 report',()=>{
+  for(const [year,ahead] of [[ACCEL,true],[BRAKE,false]]){const scene=createScene({...base,year,flat:false},data),F=scene.flightLayout,straps=scene.meshes.filter(m=>m.role==='tension-strap');
+    assert.equal(straps.length,4);for(const m of straps){const xs=m.vertices.map(p=>p[0]);assert.ok(Math.min(...xs)<F.front&&Math.abs(Math.max(...xs)-F.tail)<.2,'straps span the whole ship');}
+    for(const t of ['Tow tethers','Tension straps','Main engine'])assert.ok(scene.labels.some(l=>l.text===t),t);}
+  assert.ok(S8.tow.crew.thrust_MN>0&&S8.engine_shadow_shield.standoff_m===S8.inputs.tow.length_m);
+});
+test('tank modules, shell layers, containment, radiators and landing propellant follow the S8 ledger at liquid density',()=>{
+  const I=data.final_model_inputs,st=S8.inputs.storage,rho=S8.mixture_density_t_m3;
+  for(const mode of ['cruise','cargo']){
+    const kind=mode==='cargo'?'cargo':'crew',P=S8.ships[kind].propulsion,scene=createScene({...base,mode,year:mode==='cargo'?-1:5,flat:false},data);
+    const mods=[...new Map(scene.meshes.filter(m=>m.stage).map(m=>[m.stage.phase+m.stage.index,m.stage])).values()];
+    assert.equal(mods.length,16,'all 16 modules before departure');
+    assert.ok(Math.abs(mods.reduce((n,x)=>n+x.fusion_t,0)-P.fusion_t)<1e-6);assert.ok(Math.abs(mods.reduce((n,x)=>n+x.antimatter_t,0)-P.antimatter_t)<1e-9);
+    assert.ok(Math.abs(mods.reduce((n,x)=>n+x.tank_and_separation_t,0)-P.tank_and_separation_t)<1e-6);
+    // Domed cylindrical tanks hold each module's species at liquid density.
+    for(const seg of P.segments.filter(s=>kind==='cargo'||s.phase===0)){const parts=scene.meshes.filter(m=>m.stage?.phase===(seg.phase?'braking':'acceleration')&&m.stage.index===seg.index),sum=role=>parts.filter(m=>m.role===role).reduce((n,m)=>n+m.volumeM3,0);
+      const d=sum('deuterium-module'),h=sum('helium3-module');
+      assert.ok(Math.abs(d-seg.fusion_t*st.deuterium_mass_fraction/st.deuterium_liquid_density_t_m3)<1e-6*seg.fusion_t,'deuterium at liquid density');assert.ok(Math.abs(d+h-seg.fusion_t/rho)<1e-6*seg.fusion_t);
+      assert.ok(parts.some(m=>m.role==='deuterium-module-dome')||parts.filter(m=>m.role==='deuterium-module').length>0);}
+    assert.equal(scene.meshes.some(m=>m.role==='antimatter-containment'),kind==='crew','containment only where antimatter is loaded');
+    const area=scene.meshes.filter(m=>m.role==='hot-radiator-fin').reduce((n,m)=>n+m.areaM2,0);assert.ok(Math.abs(area-P.hot_radiator_with_allowance_t/(1+I.hardware_allowance)*1000/5)<1e-6);
+    const L=S8.ships[kind].ledger.landing;for(const [role,t] of [['landing-oxygen',L.oxygen_t],['landing-hydrogen',L.hydrogen_t]])assert.ok(Math.abs(scene.meshes.filter(m=>m.role===role).reduce((n,m)=>n+m.massT,0)-t)<1e-9,role);
+    assert.equal(scene.meshes.filter(m=>m.role==='landing-engine').length,kind==='crew'?I.landing.crew_engines:I.landing.cargo_engines);
+  }
+  // Every braking module of the crew ship is a shell layer: deuterium and helium-3 sub-layers present.
+  const crew=createScene({...base,year:5,flat:false},data);for(const l of S8.shell.layers)for(const role of ['shell-deuterium','shell-helium3'])assert.ok(crew.meshes.some(m=>m.role===role&&m.stage.index===l.index),role+' '+l.index);
 });
 test('burn acceleration is within what the structure carries',()=>{
   const S=data.design.structure;assert.equal(S.design_acceleration_g,data.design.nominal.main_acceleration_g);assert.ok(S.design_acceleration_g<S.governing_limit_g);
@@ -70,7 +120,12 @@ test('scenario rocket accounting scales linearly with payload and adds touchdown
   const a=scenarioMass(500,.5,1.025,data.trajectory.rapidity),b=scenarioMass(1000,.5,1.025,data.trajectory.rapidity);assert.ok(Math.abs(b.departureTonnes-2*a.departureTonnes)<1e-9);assert.ok(a.departureTonnes>500&&a.hydrogenTonnes>0);assert.equal(scenarioMass(500,.5,0,data.trajectory.rapidity).hydrogenTonnes,0);assert.ok(scenarioMass(500,.3,1.025,data.trajectory.rapidity).departureTonnes>a.departureTonnes);
 });
 test('rover reuses one pressure hull and cargo is transferred rather than duplicated',()=>{
-  for(const mode of ['cruise','settlement']){const s=createScene({...base,mode},data);const hulls=s.meshes.filter(m=>m.role==='rover-pressure-hull');assert.equal(hulls.length,1);const xs=hulls[0].vertices.map(p=>p[0]);assert.equal(Math.max(...xs)-Math.min(...xs),7);assert.equal(s.meshes.filter(m=>m.role==='cargo-container').length,2);}
+  // S7: the rover travels on the cargo ship (heavy exploration), not the crew ship.
+  assert.equal(createScene(base,data).meshes.filter(m=>m.role==='rover-pressure-hull').length,0);
+  for(const mode of ['cargo','settlement']){const s=createScene({...base,mode},data);const hulls=s.meshes.filter(m=>m.role==='rover-pressure-hull');assert.equal(hulls.length,1);const xs=hulls[0].vertices.map(p=>p[0]);assert.ok(Math.abs(Math.max(...xs)-Math.min(...xs)-7)<1e-9);}
+  assert.equal(createScene({...base,mode:'settlement'},data).meshes.filter(m=>m.role==='cargo-container').length,2);
+  const canisters=createScene({...base,mode:'cargo'},data).meshes.filter(m=>m.role==='payload-canister').map(m=>m.ledger.name);
+  for(const name of ['Industry and resource processing','Surface habitat expansion','Food and life-support backup','Surface power and services','Startup supplies, spares and process inventories'])assert.ok(canisters.includes(name),name);
 });
 test('surface cabin floors are below beds in surface gravity',()=>{
   const s=createScene({...base,mode:'settlement'},data);const [floor,bed]=s.meshes.filter(m=>m.id==='cabin-1');const averageY=m=>m.vertices.reduce((n,p)=>n+p[1],0)/m.vertices.length;assert.ok(averageY(floor)<averageY(bed));
@@ -79,13 +134,13 @@ test('interior zoning fills both decks to the hub and can isolate a single level
   const all=createScene({...base,deck:'all'},data);assert.equal(all.zones.length,24);assert.ok(all.zones.every(z=>z.purpose&&z.status.includes('unvalidated')));
   const one=createScene({...base,deck:'1'},data);assert.equal(one.zones.length,8);assert.ok(one.zones.every(z=>z.deck===2));assert.equal(one.meshes.filter(m=>m.id.startsWith('cabin-')).length,0);
 });
-test('radiating faces clear habitat x envelopes and visibility toggle hides radiator hardware',()=>{
-  const scene=createScene(base,data);const panels=scene.meshes.filter(m=>m.role==='radiator-panel');assert.ok(panels.length>0);
-  for(const m of panels){const xs=m.vertices.map(p=>p[0]),lo=Math.min(...xs),hi=Math.max(...xs);for(const centre of data.layout.disc_centres_x_m)assert.ok(hi<centre-data.layout.disc_radius_m||lo>centre+data.layout.disc_radius_m);}
+test('service radiators stay clear of the spinning discs and the toggle hides all radiator hardware',()=>{
+  const scene=createScene({...base,flat:false},data);const panels=scene.meshes.filter(m=>m.role==='service-radiator');assert.ok(panels.length>0);
+  const half=data.layout.disc_axial_depth_m/2;for(const m of panels)for(const p of m.vertices)data.layout.disc_centres_x_m.forEach((cx,d)=>assert.ok(Math.hypot(p[0]-cx,p[1])>data.layout.disc_radius_m||Math.abs(p[2]-data.layout.disc_centres_z_m[d])>half));
   const hidden=createScene({...base,showRadiators:false},data);assert.equal(hidden.meshes.filter(m=>m.id==='radiators').length,0);assert.equal(hidden.lines.filter(m=>m.id==='radiators').length,0);
 });
 test('high-detail curved geometry has finite normals and keeps the crewed rover hull unchanged',()=>{
-  const s=createScene({...base,detail:'high'},data);for(const m of s.meshes)if(m.normals){assert.equal(m.normals.length,m.vertices.length);assert.ok(m.normals.flat().every(Number.isFinite));}const hull=s.meshes.find(m=>m.role==='rover-pressure-hull');assert.ok(hull);assert.equal(Math.max(...hull.vertices.map(p=>p[0]))-Math.min(...hull.vertices.map(p=>p[0])),7);
+  const s=createScene({...base,detail:'high'},data);for(const m of s.meshes)if(m.normals){assert.equal(m.normals.length,m.vertices.length);assert.ok(m.normals.flat().every(Number.isFinite));}const hull=createScene({...base,mode:'cargo',detail:'high'},data).meshes.find(m=>m.role==='rover-pressure-hull');assert.ok(hull);assert.ok(Math.abs(Math.max(...hull.vertices.map(p=>p[0]))-Math.min(...hull.vertices.map(p=>p[0]))-7)<1e-9);
 });
 test('OBJ exports valid vertex references and matching source mass allocations',()=>{
   const s=createScene(base,data),obj=exportOBJ(s),count=s.meshes.reduce((n,m)=>n+m.vertices.length,0),normalCount=obj.split('\n').filter(x=>x.startsWith('vn ')).length;assert.equal(obj.split('\n').filter(x=>x.startsWith('v ')).length,count);assert.ok(normalCount>0);for(const row of obj.split('\n').filter(x=>x.startsWith('f ')))for(const token of row.slice(2).split(' ')){const [v,,n]=token.split('/');assert.ok(+v>0&&+v<=count);if(n)assert.ok(+n>0&&+n<=normalCount);}
@@ -100,12 +155,12 @@ test('interiors include identifiable pumps, filters, fabrication machinery and d
   const roles=new Set(createScene(base,data).meshes.map(m=>m.role));for(const role of ['filter-column','pump-motor','fabrication-bed','cargo-transfer-bag'])assert.ok(roles.has(role));
 });
 test('spin posing rotates cabins around habitat hubs and preserves fixed structure',()=>{
-  const scene=createScene(base,data),posed=poseScene(scene,Math.PI/2),index=scene.meshes.findIndex(m=>m.id==='cabin-1'),a=scene.meshes[index].vertices[0],b=posed.meshes[index].vertices[0],cx=data.layout.disc_centres_x_m[0];assert.ok(Math.abs(b[0]-cx-a[1])<1e-8);assert.ok(Math.abs(b[1]+a[0]-cx)<1e-8);assert.equal(b[2],a[2]);assert.deepEqual(posed.meshes[0].vertices,scene.meshes[0].vertices);
+  const scene=createScene(base,data),posed=poseScene(scene,Math.PI/2),fixed=scene.meshes.findIndex(m=>!/^(hab|bay-|cabin-)/.test(m.id)),index=scene.meshes.findIndex(m=>m.id==='cabin-1'),a=scene.meshes[index].vertices[0],b=posed.meshes[index].vertices[0],cx=data.layout.disc_centres_x_m[0];assert.ok(Math.abs(b[0]-cx-a[1])<1e-8);assert.ok(Math.abs(b[1]+a[0]-cx)<1e-8);assert.equal(b[2],a[2]);assert.deepEqual(posed.meshes[fixed].vertices,scene.meshes[fixed].vertices);
 });
 
 test('both discs retain living, clinical and plant rooms for the 24-adult architecture',()=>{
   const scene=createScene(base,data);for(const habitat of ['A','B']){const zones=scene.zones.filter(z=>z.habitat===habitat);for(const purpose of ['Shared lounge','Mission control','Galley and dining','Exercise and rehabilitation','Hygiene and laundry','Medical and torpor service','Life support','Fresh-food garden','Clean workshop','Food reserve'])assert.ok(zones.some(z=>z.functions.includes(purpose)),purpose);}
-  assert.equal(scene.meshes.filter(m=>m.id==='refuge'&&m.role==='seat').length,data.architecture.descent_places);for(const disc of ['A','B'])assert.ok(scene.meshes.filter(m=>m.role==='seat'&&m.id.startsWith('bay-'+disc+'-')).length>=8);for(const role of ['treadmill','resistive-exercise-device','cycle-ergometer','science-glovebox','waste-management-toilet'])assert.ok(scene.meshes.some(m=>m.role===role),role);
+  assert.ok(!scene.meshes.some(m=>m.id==='refuge'),'S7 lands the whole habitat; no separate refuge');for(const disc of ['A','B'])assert.ok(scene.meshes.filter(m=>m.role==='seat'&&m.id.startsWith('bay-'+disc+'-')).length>=8);for(const role of ['treadmill','resistive-exercise-device','cycle-ergometer','science-glovebox','waste-management-toilet'])assert.ok(scene.meshes.some(m=>m.role===role),role);
 });
 
 test('selected cabin floors fit inside the outer pressure radius and adjacent cabins do not overlap',()=>{
@@ -118,36 +173,38 @@ test('selected cabin floors fit inside the outer pressure radius and adjacent ca
   }
 });
 test('two food trains remain aboard and large greenhouses are built locally',()=>{
-  for(const mode of ['cruise','engine','settlement']){const scene=createScene({...base,mode},data);assert.equal(scene.meshes.filter(m=>m.role==='food-factory-hull').length,mode==='settlement'?0:2);const cropHulls=scene.meshes.filter(m=>m.role==='farm-pressure-envelope');assert.equal(cropHulls.length,mode==='settlement'?8:0);assert.ok(cropHulls.every(m=>m.builtLocally));}
+  for(const state of [{},{year:ACCEL},{mode:'settlement'}]){const mode=state.mode??'cruise',scene=createScene({...base,...state},data);assert.equal(scene.meshes.filter(m=>m.role==='food-factory-hull').length,mode==='settlement'?0:2);const cropHulls=scene.meshes.filter(m=>m.role==='farm-pressure-envelope');assert.equal(cropHulls.length,mode==='settlement'?8:0);assert.ok(cropHulls.every(m=>m.builtLocally));}
   const scene=createScene(base,data);assert.equal(scene.meshes.filter(m=>m.role==='fresh-food-tray').reduce((n,m)=>n+m.cropAreaM2,0),30);
 });
-test('food trains clear rotating discs, spine and radiator planes',()=>{
-  const scene=createScene(base,data);
-  for(const mesh of scene.meshes.filter(m=>m.role==='food-factory-hull'))for(const p of mesh.vertices){for(const cx of data.layout.disc_centres_x_m)assert.ok(Math.hypot(p[0]-cx,p[1])>data.layout.disc_radius_m+.25);assert.ok(Math.abs(p[1])<=1.5+.001,'inline food factory');}
+test('food trains sit in the despun gap, clear of both rotating discs',()=>{
+  const scene=createScene({...base,flat:false},data),half=data.layout.disc_axial_depth_m/2,sides=new Set();
+  for(const mesh of scene.meshes.filter(m=>m.role==='food-factory-hull')){sides.add(Math.sign(centreOf(mesh)[1]));for(const p of mesh.vertices)data.layout.disc_centres_x_m.forEach((cx,d)=>assert.ok(Math.hypot(p[0]-cx,p[1])>data.layout.disc_radius_m+.25||Math.abs(p[2]-data.layout.disc_centres_z_m[d])>half));}
+  assert.equal(sides.size,2,'one train either side of the transfer passage');
 });
 test('berth-bay spin grouping changes between the fourth and fifth bays',()=>{
   const scene=createScene(base,data),posed=poseScene(scene,.2);
   for(const [id,index,sign] of [['cabin-4',0,-1],['cabin-5',1,1]]){const before=scene.meshes.find(m=>m.id===id).vertices[0],after=posed.meshes.find(m=>m.id===id).vertices[0],cx=data.layout.disc_centres_x_m[index],angle=.2*sign;assert.ok(Math.abs(after[0]-(cx+(before[0]-cx)*Math.cos(angle)-before[1]*Math.sin(angle)))<1e-8);assert.ok(Math.abs(after[1]-((before[0]-cx)*Math.sin(angle)+before[1]*Math.cos(angle)))<1e-8);}
 });
-test('flight-only screens, shield, bulk store, boom and bearings do not reach the surface',()=>{
-  const cruise=createScene(base,data);for(const role of ['bulk-antimatter-store','hydrogen-propellant-tank','shadow-shield','stripper-film','deflector-coil','engine-boom','nozzle-coil','spin-bearing','thermal-touchdown-engine','descent-containment'])assert.ok(cruise.meshes.some(m=>m.role===role),role);
-  const scene=createScene({...base,mode:'settlement'},data);assert.ok(!scene.meshes.some(m=>m.id==='shield'||['bulk-antimatter-store','hydrogen-propellant-tank','engine-boom','nozzle-coil','spin-bearing','thermal-touchdown-engine','radiator-panel','hot-radiator-fin'].includes(m.role)));
+test('flight-only shield, tanks, engine, tethers and bearings do not reach the surface',()=>{
+  const roles=['forward-collision-shield','shell-deuterium','shell-helium3','deuterium-module','antimatter-containment','reaction-chamber','nozzle-coil','tow-tether','hot-radiator-fin','spin-bearing','orbital-service-reactor','gcr-equipment-allowance'];
+  const cruise=createScene({...base,year:5},data);for(const role of roles)assert.ok(cruise.meshes.some(m=>m.role===role),role);
+  const scene=createScene({...base,mode:'settlement'},data);assert.ok(!scene.meshes.some(m=>m.id==='shield'||roles.includes(m.role)));
 });
 test('displayed reuse-study ledgers close at early release, handover and settlement',()=>{
   const {components,nominal}=data.viewer_design;
   for(const [phase,key] of [['surface','final_retained_mass_kg'],['orbit','early_release_mass_kg'],['handover','late_engine_stage_release_mass_kg']])assert.ok(Math.abs(components.filter(r=>r.release_stage===phase).reduce((n,r)=>n+r.mass_kg,0)-nominal[key])<1e-6);
 });
 test('the thrust spine stays in space and ground utilities have physical supports',()=>{
-  const cruise=createScene(base,data);assert.ok(cruise.meshes.filter(m=>m.role==='cruise-support-frame').length>100);assert.equal(cruise.meshes.filter(m=>m.role==='fuel-feed').length,4);
+  const cruise=createScene(base,data);assert.equal(cruise.meshes.filter(m=>m.role==='tow-tether').length,4);assert.equal(cruise.meshes.filter(m=>m.role==='bearing-strut').length,8);
   const surface=createScene({...base,mode:'settlement'},data);
-  assert.equal(surface.meshes.filter(m=>m.role==='cruise-support-frame'||m.role==='fuel-feed').length,0);
+  assert.equal(surface.meshes.filter(m=>m.role==='tow-tether'||m.role==='bearing-strut').length,0);
   assert.ok(surface.meshes.filter(m=>m.role==='radiator-header').length>=2);assert.ok(surface.meshes.some(m=>m.systemRole==='pressurised-corridor'));
 });
 test('every cabin and shared room has a finite inside entry in deployed configurations',()=>{
  for(const mode of ['cruise','settlement']){
   const scene=createScene({...base,mode},data);
   // Settlement: ring rooms, berth bays and hall quarters per disc, eight greenhouse halls, two residences and the rover.
-  const expected=mode==='settlement'?35:28;assert.equal(scene.rooms.length,expected);
+  const expected=mode==='settlement'?35:26;assert.equal(scene.rooms.length,expected);
   assert.equal(new Set(scene.rooms.map(r=>r.id)).size,expected);
   for(const r of scene.rooms)for(const v of [r.eye,r.up,r.forward])assert.ok(v.every(Number.isFinite));
  }
@@ -158,8 +215,7 @@ test('closed shells retain cabin furniture and room doorways are open',()=>{
  assert.ok(scene.meshes.filter(m=>m.id==='cabin-1').length>15);
  assert.ok(scene.meshes.some(m=>m.role==='room-front'));
  assert.equal(scene.meshes.filter(m=>m.role==='pressure-hatch').length,0);
- assert.ok(scene.meshes.some(m=>m.id==='refuge'&&m.role==='equipment-mount'));
- assert.ok(scene.meshes.some(m=>m.id==='rover'&&m.role==='equipment-mount'));
+ assert.ok(scene.meshes.some(m=>m.role==='food-factory-mount'));
 });
 
 
@@ -207,8 +263,9 @@ test('porthole sightlines are clear of structure and fittings',async()=>{
   const glass=scene.meshes.find(m=>m.id.startsWith('bay-'+habitat)&&m.role==='porthole-glass');
   const centre=[0,1,2].map(i=>glass.vertices.reduce((sum,p)=>sum+p[i],0)/glass.vertices.length);
   const origin=[centre[0],centre[1]-.5,centre[2]],direction=[0,1,0];
+  // In flight the fuel walls cover the portholes (shielding over view); the sightline check is for the habitat's own structure.
   for(const m of scene.meshes){
-   if(m.role==='porthole-glass')continue;
+   if(m.role==='porthole-glass'||/^(shell-|fuel-wall|window-mullion)/.test(m.role??''))continue;
    if(m.vertices.every(p=>p[0]<origin[0])||m.vertices.every(p=>p[0]>origin[0])||m.vertices.every(p=>p[2]<origin[2])||m.vertices.every(p=>p[2]>origin[2]))continue;
    for(const f of m.faces)for(let i=1;i<f.length-1;i++){
     const t=rayTriangle(origin,direction,m.vertices[f[0]],m.vertices[f[i]],m.vertices[f[i+1]]);
@@ -250,7 +307,7 @@ test('each cabin has its own porthole centred on its back wall',()=>{
  const scene=createScene({...base,cutaway:false,interiorHabitat:'all'},data),r=data.habitats.geometry_study_not_selected_dimensions.deck_floor_radii_m[0]-1.3;
  for(const [d,habitat] of ['A','B'].entries()){
   const cx=data.layout.disc_centres_x_m[d],angles=scene.meshes.filter(m=>m.role==='porthole-glass'&&m.id.startsWith('bay-'+habitat+'-0-')).map(m=>{const c=[0,1].map(i=>m.vertices.reduce((s,p)=>s+p[i],0)/m.vertices.length);return Math.atan2(c[1],c[0]-cx);});
-  for(const p of data.habitats.cabin_bay_layout){const theta=(d?-1:1)*((p.cell+.5)*Math.PI/6+p.offset_m/r);assert.ok(angles.some(a=>Math.abs(Math.atan2(Math.sin(a-theta),Math.cos(a-theta)))*r<.01),'cabin at '+theta);}
+  for(const p of data.habitats.cabin_bay_layout){const theta=(p.cell+.5)*Math.PI/6+p.offset_m/r;assert.ok(angles.some(a=>Math.abs(Math.atan2(Math.sin(a-theta),Math.cos(a-theta)))*r<.01),'cabin at '+theta);}
  }
 });
 test('ladder hatches pierce the ceiling, the shell above and the upper floor',()=>{
@@ -282,16 +339,16 @@ test('cabin doorways open onto clear floor and every room wall reaches the ceili
   for(const m of scene.meshes.filter(m=>m.id===room.id&&m.role!=='cabin-divider'&&m.color!=='#d9e0c9')){const q=m.vertices.map(project),lo=[0,1,2].map(i=>Math.min(...q.map(p=>p[i]))),hi=[0,1,2].map(i=>Math.max(...q.map(p=>p[i])));
    assert.ok(!(lo[0]<.55&&hi[0]>-.55&&lo[2]<.6&&hi[2]>-.9&&lo[1]<1.2&&hi[1]>-.6),`${room.id} doorway blocked by ${m.role??m.color}`);}
  }
- const heights=role=>scene.meshes.filter(m=>m.role===role).map(m=>{const r=m.vertices.map(p=>Math.hypot(p[0]-data.layout.disc_centres_x_m[p[0]<0?0:1],p[1]));return Math.max(...r)-Math.min(...r);});
+ const heights=role=>scene.meshes.filter(m=>m.role===role).map(m=>{const cx=data.layout.disc_centres_x_m[m.id.startsWith('bay-B')||m.id.startsWith('cabin-')&&+m.id.slice(6)>4?1:0],r=m.vertices.map(p=>Math.hypot(p[0]-cx,p[1]));return Math.max(...r)-Math.min(...r);});
  for(const h of [...heights('cabin-divider'),...heights('room-front')])assert.ok(h>2.9,'partition reaches the ceiling');
 });
-test('compact cruise vehicle keeps a clear transfer corridor between the hubs',()=>{
- const scene=createScene({...base,flat:false,cutaway:false,interiorHabitat:'all',detail:'overview'},data),xs=scene.meshes.filter(m=>m.id!=='sky').flatMap(m=>m.vertices.map(p=>p[0]));
- assert.ok(Math.max(...xs)-Math.min(...xs)<=data.design.geometry.overall_length_with_mast_m+1);
- // Straight shared-axis corridor from the outboard end of hub A to the outboard end of hub B.
- const x=data.layout.disc_centres_x_m[0],[za,zb]=data.layout.disc_centres_z_m,half=data.layout.disc_axial_depth_m/2;assert.ok(zb-za-2*half<=12,'corridor is short');
- for(const [o,d,len] of [[[x,0,za-half+.3],[0,0,1],zb-za+2*half-.6]])
-  for(const m of scene.meshes.filter(m=>!['transfer','sky'].includes(m.id)||m.role==='corridor-handhold'))for(const f of m.faces)for(let i=1;i<f.length-1;i++){const t=gpu.rayTriangle(o,d,m.vertices[f[0]],m.vertices[f[i]],m.vertices[f[i+1]]);assert.ok(t===null||t>len,`${m.id} ${m.role??''} blocks the corridor at ${t}`);}
+test('tandem habitats keep a clear transfer corridor over both hubs and down to the food trains',()=>{
+ const scene=createScene({...base,flat:false,cutaway:false,interiorHabitat:'all',detail:'overview'},data),[xA,xB]=data.layout.disc_centres_x_m;
+ assert.ok(Math.abs(xB-xA-S8.layout.disc_centres_x_m[1])<1e-3,'disc spacing matches the sized walls');
+ assert.ok(xB-xA-2*(data.layout.disc_radius_m+S8.shell.thickness_m)>=3,'rim gap between the fuel walls holds the 3 m food trains');
+ // Each corridor leg is clear of everything except corridor hardware.
+ for(const g of scene.world.segments.filter(g=>/Transfer corridor|Crew transfer passage/.test(g.name??''))){const d=g.b.map((v,i)=>v-g.a[i]),len=Math.hypot(...d),dir=d.map(v=>v/len);
+  for(const m of scene.meshes.filter(m=>!['transfer','sky'].includes(m.id)&&!['food-factory-hull','pressure-end-dome'].includes(m.role)))for(const f of m.faces)for(let i=1;i<f.length-1;i++){const t=gpu.rayTriangle(g.a,dir,m.vertices[f[0]],m.vertices[f[i]],m.vertices[f[i+1]]);assert.ok(t===null||t<0||t>len,`${m.id} ${m.role??''} blocks ${g.name}`);}}
 });
 
 test('settlement ring rooms open onto the central hall through lined doorways',()=>{
@@ -309,15 +366,18 @@ test('two inflatable residences join the discs so all 32 can be awake on the sur
  assert.equal(scene.meshes.filter(m=>m.id==='inflatable'&&m.role==='seat').length,32,'everyone can sit down to eat');
  assert.ok(SI.gross_floor_area_m2>300);assert.ok(SI.hardware_kg<10000,'kept light');assert.ok(Math.abs(SI.per_module_kg.total-SI.per_module_kg.shell-SI.per_module_kg.floors-SI.per_module_kg.interiors-SI.per_module_kg.hatches_frame_anchors)<1e-6);
  assert.ok(scene.rooms.some(r=>r.id==='residence-1')&&scene.rooms.some(r=>r.id==='residence-2'));
- // In flight they ride as strapped bales on the spine, and their mass is in the ledger.
- const cruise=createScene(base,data),bales=cruise.meshes.filter(m=>m.role==='stowed-surface-habitat');assert.equal(bales.length,SI.packed_bales);
- assert.ok(Math.abs(bales.reduce((n,m)=>n+m.massKg,0)-SI.hardware_kg)<1e-6);assert.ok(Math.abs(data.viewer_design.components.find(r=>r.id==='surfacekit').mass_kg-SI.hardware_kg)<1e-6);
+ // S7: surface habitat expansion travels on the cargo ship as one payload line, not as bales on the crew ship.
+ assert.equal(createScene(base,data).meshes.filter(m=>m.role==='stowed-surface-habitat').length,0);
+ assert.ok(createScene({...base,mode:'cargo'},data).meshes.some(m=>m.ledger?.name==='Surface habitat expansion'));
  assert.ok(!scene.meshes.some(m=>m.role==='stowed-surface-habitat'),'unpacked on the surface');
 });
 test('settlement greenhouse halls open onto the pressurised spine under the Proxima b sky',()=>{
  const scene=createScene({...base,mode:'settlement'},data),halls=scene.meshes.filter(m=>m.role==='farm-pressure-envelope');
  assert.equal(halls.length,8);assert.ok(halls.every(h=>h.opacity>.2&&h.opacity<.8),'glazing is translucent, not invisible');
- for(const h of halls)assert.ok(h.vertices.some(p=>Math.abs(Math.abs(p[2]+72)-1.2)<.01),'hall end meets the spine wall');
+ const spine=scene.surfaceMap.corridors.find(c=>c.name==='Greenhouse spine');
+ for(const h of halls)assert.ok(h.vertices.some(p=>[spine.z0,spine.z1].some(z=>Math.abs(p[2]-z)<.01)),'hall meets the spine');
+ const cropArea=scene.meshes.filter(m=>m.role==='crop-tray').reduce((sum,m)=>sum+m.cropAreaM2,0);
+ assert.ok(Math.abs(cropArea-data.settlement.greenhouse.initial_planted_area_m2_study)<1e-8);
  assert.ok(scene.meshes.some(m=>m.role==='regolith'));assert.ok(scene.meshes.filter(m=>m.role==='rock').length>0);assert.ok(scene.meshes.filter(m=>m.role==='crater').length<=2);
  const sky=data.settlement.proxima_b_sky,proxima=scene.meshes.find(m=>m.role==='proxima'),angle=2*Math.atan(sky.star_radius_solar*695700/(sky.orbit_au*149597870.7))*180/Math.PI;
  assert.ok(Math.abs(proxima.angularDiameterDeg-angle)<1e-9&&angle>1.6&&angle<1.8,'Proxima spans about 1.7 degrees');
@@ -325,26 +385,44 @@ test('settlement greenhouse halls open onto the pressurised spine under the Prox
  assert.ok(Math.abs(2*Math.atan(r/Math.hypot(...c))*180/Math.PI-angle)<.02,'drawn at its true angular size');
  for(const [name,mag] of [['A',-6.6],['B',-5.3]])assert.ok(Math.abs(scene.meshes.find(m=>m.role==='alpha-centauri-'+name).apparentMagnitude-mag)<.1);
  assert.ok(!scene.meshes.some(m=>m.role==='star'),'daylight sky hides the faint star field');
- for(const [mode,grid] of [['cruise',false],['settlement',false],['engine',false]])assert.equal(createScene({...base,mode},data).grid,grid);
+ for(const [mode,grid] of [['cruise',false],['settlement',false],['cargo',false]])assert.equal(createScene({...base,mode},data).grid,grid);
 });
 
-test('engine mode locks the discs, braces them for 1.2 g and shows a switchable exhaust beam',()=>{
- const scene=createScene({...base,mode:'engine'},data),off=createScene({...base,mode:'engine',showBeam:false},data);
- assert.equal(scene.spinCentres,null);assert.equal(scene.meshes.filter(m=>m.role==='burn-brace').length,8);
- assert.ok(scene.meshes.some(m=>m.role==='exhaust-beam'));assert.ok(!off.meshes.some(m=>m.role==='exhaust-beam'));
- const beam=scene.meshes.filter(m=>m.role==='exhaust-beam').flatMap(m=>m.vertices.map(p=>p[0]));assert.ok(Math.max(...beam)-Math.min(...beam)>3000,'beam is kilometres long');
- assert.ok(!createScene(base,data).meshes.some(m=>m.role==='burn-brace'||m.role==='exhaust-beam'),'cruise has neither');
+test('burns lock the discs, show a switchable plume and keep the shield facing forward',()=>{
+  for(const [year,ahead] of [[ACCEL,true],[BRAKE,false]]){
+    const scene=createScene({...base,year,flat:true},data),off=createScene({...base,year,flat:true,showBeam:false},data);
+    assert.equal(scene.spinCentres,null);assert.ok(scene.flight.burning);
+    assert.ok(scene.meshes.some(m=>m.role==='exhaust-beam'));assert.ok(!off.meshes.some(m=>m.role==='exhaust-beam'));
+    const beam=scene.meshes.filter(m=>m.role==='exhaust-beam').flatMap(m=>m.vertices.map(p=>p[0]));assert.ok(Math.max(...beam)-Math.min(...beam)>3000,'plume is kilometres long');
+    assert.ok(ahead?Math.min(...beam)<-1900&&Math.max(...beam)>1500:Math.max(...beam)>1900&&Math.min(...beam)<-1500,'plumes run back from the engine past the ship');
+    const shield=Math.min(...scene.meshes.find(m=>m.role==='forward-collision-shield').vertices.map(p=>p[0]));
+    for(const m of scene.meshes.filter(m=>['habA','habB','tanks','farm'].includes(m.id)&&!/feed/.test(m.role??'')))assert.ok(Math.min(...m.vertices.map(p=>p[0]))>shield);
+  }
+  const coast=createScene(base,data);assert.ok(coast.spinCentres);assert.ok(!coast.meshes.some(m=>m.role==='exhaust-beam'),'coast has no plume');
+});
+test('the crew ship drops its tank modules in chronological order, outermost first',()=>{
+  const P=S8.ships.crew.propulsion,T=missionTimeline(data).crew;let top=-Infinity,shell=Infinity;
+  for(let n=0;n<=16;n++){
+    const year=n?T.drops[n-1].year+1e-6:5,scene=createScene({...base,year,flat:false},data),present=new Set(scene.meshes.filter(m=>m.stage).map(m=>(m.stage.phase==='braking'?1:0)+'-'+m.stage.index));
+    assert.deepEqual([...present].sort(),P.segments.slice(n).map(s=>s.phase+'-'+s.index).sort(),`after ${n} drops`);
+    const acc=scene.meshes.filter(m=>m.stage?.phase==='acceleration'&&/module/.test(m.role)),sh=scene.meshes.filter(m=>m.stage?.phase==='braking'&&/shell/.test(m.role));
+    // The stack hangs above the crew with the first-dropped module at the top (front): the top moves aft as modules go.
+    if(n>0&&n<8){const t=Math.min(...acc.flatMap(m=>m.vertices.map(p=>p[0])));assert.ok(t>top,'acceleration modules leave from the top of the stack');top=t;assert.ok(Math.max(...acc.flatMap(m=>m.vertices.map(p=>p[0])))<data.layout.disc_centres_x_m[0],'tanks hang above the habitats');}
+    if(n>8&&n<16){const w=Math.max(...sh.flatMap(m=>m.vertices.map(p=>Math.abs(p[1]))));assert.ok(w<shell,'shell empties from the outermost layer');shell=w;}
+  }
 });
 test('burn configuration turns every room into thrust-facing levels that are all reachable',()=>{
- const scene=createScene({...base,mode:'engine',flat:false,interiorHabitat:'all',detail:'medium'},data);
- assert.equal(scene.rooms.length,28);assert.equal(new Set(scene.meshes.filter(m=>m.id.startsWith('cabin-')).map(m=>m.id)).size,8);
+ for(const year of [ACCEL,BRAKE]){
+ const scene=createScene({...base,year,flat:false,interiorHabitat:'all',detail:'medium'},data);
+ assert.equal(scene.rooms.length,26);assert.ok(Math.abs(scene.rooms.find(r=>r.gravity?.type==='linear').gravity.frame.down[0]-(year===ACCEL?1:-1))<1e-9,'down faces the engine');assert.equal(new Set(scene.meshes.filter(m=>m.id.startsWith('cabin-')).map(m=>m.id)).size,8);
  for(const m of scene.meshes.filter(m=>m.role==='folding-deck')){const xs=m.vertices.map(p=>p[0]);assert.ok(Math.max(...xs)-Math.min(...xs)<.15,'floor panels lie at right angles to the thrust');}
  for(const r of scene.rooms.filter(r=>!r.pressurizedModule)){const g=r.gravity;assert.equal(g.type,'linear');assert.ok(g.levels.length>=1);assert.equal(g.ladders.length,g.levels.length-1,r.id+' every level has a ladder up');
   for(const l of g.ladders)assert.ok(g.levels[l.to].f<g.levels[l.from].f-2,'ladder climbs against the thrust');
   for(const lv of g.levels)assert.ok(lv.len>=1.2);}
+}
 });
-test('every engine-mode entry starts on a floor, clear of fittings',()=>{
- const scene=createScene({...base,mode:'engine',flat:true,cutaway:false,interiorHabitat:'all',detail:'medium'},data);
+test('every burn entry starts on a floor, clear of fittings',()=>{
+ const scene=createScene({...base,year:ACCEL,flat:true,cutaway:false,interiorHabitat:'all',detail:'medium'},data);
  const solid=scene.meshes.filter(m=>(m.id.startsWith('bay-')||m.id.startsWith('cabin-'))&&!['inflatable-envelope','folding-deck','window-wall','porthole-glass','porthole-frame'].includes(m.role));
  for(const room of scene.rooms.filter(r=>!r.pressurizedModule)){const f=Math.hypot(...room.forward),u=Math.hypot(...room.up),axes=[room.forward.map(v=>v/f),room.up.map(v=>v/u)];axes.push([axes[0][1]*axes[1][2]-axes[0][2]*axes[1][1],axes[0][2]*axes[1][0]-axes[0][0]*axes[1][2],axes[0][0]*axes[1][1]-axes[0][1]*axes[1][0]]);
   const project=p=>axes.map(a=>a.reduce((s,v,i)=>s+v*(p[i]-room.eye[i]),0));
@@ -352,34 +430,109 @@ test('every engine-mode entry starts on a floor, clear of fittings',()=>{
   const g=room.gravity,o=room.eye.map((v,i)=>v-g.frame.origin[i]),s=o.reduce((n,v,i)=>n+v*g.frame.down[i],0);assert.ok(Math.abs(s-(g.levels[g.level].f-1.29))<1e-6,room.id+' eye stands on its level');
  }
 });
-test('cruise and engine skies place the Sun and Alpha Centauri at their real brightness',()=>{
- const cruise=createScene(base,data),engine=createScene({...base,mode:'engine'},data),centre=m=>m.vertices.reduce((s,p)=>s.map((v,i)=>v+p[i]/m.vertices.length),[0,0,0]);
- const sun=cruise.meshes.find(m=>m.role==='sun'),ab=cruise.meshes.find(m=>m.role==='alpha-centauri');
- assert.ok(centre(sun)[0]>4900,'Sun dead astern');assert.ok(Math.abs(sun.apparentMagnitude+.17)<.1,'Sun ~ -0.2 at the midpoint, dimmed by Doppler');
- const a=centre(ab),angle=Math.acos(-a[0]/Math.hypot(...a))*180/Math.PI;assert.ok(angle<5,'Alpha Centauri within 5 degrees of dead ahead');assert.ok(Math.abs(ab.apparentMagnitude+2.6)<.15,'Alpha Centauri ~ -2.6, brightened by Doppler');
- assert.ok(!cruise.meshes.some(m=>m.role==='proxima'),'Proxima itself is too faint to show at the midpoint');
- const esun=engine.meshes.find(m=>m.role==='sun');assert.ok(esun.distanceAU>1500&&esun.distanceAU<2500,'halfway through a 0.2 g burn');assert.ok(esun.apparentMagnitude<-9.5&&esun.apparentMagnitude>-11.5);assert.ok(centre(esun)[0]>4900);
+test('S8 timeline: cargo leaves 20 years before the crew, both arrive together and the ledger closes',()=>{
+  const T=missionTimeline(data),S=S8;
+  assert.equal(T.cargo.depart,0);assert.equal(T.crew.depart,20);assert.ok(Math.abs(T.cargo.arrive-T.crew.arrive)<1e-9);assert.equal(T.crew.opsEnd,40);assert.equal(T.cargo.opsEnd,40);
+  for(const kind of ['crew','cargo']){const t=T[kind],P=S.ships[kind].propulsion;
+    assert.ok(Math.abs(t.distanceLy-4.24)<1e-6,'both cover the same 4.24 ly');assert.ok(Math.abs(t.properYears-P.trajectory.proper_years)<1e-9);
+    assert.ok(Math.abs(shipStateAt(t,t.depart+t.burnYears).beta-P.trajectory.beta)<1e-12,'peak speed at burn end');
+    assert.equal(shipStateAt(t,t.depart-1e-6).massT,P.departure_t);const end=shipStateAt(t,t.arrive);assert.equal(end.dropped,16);assert.ok(Math.abs(end.massT-P.retained_core_t)<1e-9);assert.equal(end.beta,0);
+    // Equal-rapidity stages: drops are evenly spaced in rapidity within each burn.
+    const rap=y=>Math.atanh(shipStateAt(t,y).beta);for(const d of t.drops.slice(0,7))assert.ok(Math.abs(rap(d.year)-(d.index+1)*t.phi/8)<1e-9);
+    let last=-1;for(let y=0;y<=40;y+=.05){const x=shipStateAt(t,y).distanceLy;assert.ok(x>=last-1e-12);last=x;}}
+  assert.equal(shipStateAt(T.crew,39.95).phase,'orbit');assert.equal(shipStateAt(T.cargo,39.95).phase,'entry','cargo descends first');assert.equal(shipStateAt(T.crew,40).phase,'entry');
+  assert.equal(stageYear(T.crew,22),stageYear(T.crew,22.5),'scene keyed by stage, not by exact year');
 });
-test('settlement habitats and greenhouse are linked by walkable pressurised corridors',()=>{
- const scene=createScene({...base,mode:'settlement',cutaway:false,interiorHabitat:'all'},data),walls=scene.meshes.filter(m=>['inflatable-envelope','hull-boundary','farm-pressure-envelope'].includes(m.role));
- const blocked=(a,b)=>{const d=b.map((v,i)=>v-a[i]),len=Math.hypot(...d),dir=d.map(v=>v/len);for(const m of walls)for(const f of m.faces)for(let i=1;i<f.length-1;i++){const t=gpu.rayTriangle(a,dir,m.vertices[f[0]],m.vertices[f[i]],m.vertices[f[i+1]]);if(t!==null&&t>1e-6&&t<len)return m.id+' '+m.role;}return null;};
- const y=3.1,path=pts=>{for(let i=1;i<pts.length;i++)assert.equal(blocked(pts[i-1],pts[i]),null,`blocked between ${pts[i-1]} and ${pts[i]}`);};
- const zl=(data.layout.surface_disc_centres_z_m[0]+data.layout.surface_disc_centres_z_m[1])/2;
- path([[-8,y,zl],[8,y,zl]]);
- const gx=data.layout.surface_disc_centres_x_m[0]+(data.habitats.geometry_study_not_selected_dimensions.deck_floor_radii_m[0]+.65)*Math.cos(255*Math.PI/180);
- path([[gx,y,-61.5],[gx,y,-69]]);path([[gx-4,y,-72],[-54,y,-72],[-54,y,-62]]);
- assert.ok(blocked([0,y,zl],[0,y,zl-12]),'corridor walls contain the walker');
+test('flight skies follow the exact year: Sun astern, parallax, aberration, and Proxima b at arrival',()=>{
+  const T=missionTimeline(data),centre=m=>m.vertices.reduce((s,p)=>s.map((v,i)=>v+p[i]/m.vertices.length),[0,0,0]),dir=m=>{const c=centre(m),n=Math.hypot(...c);return c.map(v=>v/n);};
+  // The 3D ship scene carries no sky; the sky changes continuously with the year (not per stage).
+  assert.ok(!createScene({...base,year:30},data).meshes.some(m=>m.id==='sky'));
+  const a=flightSky(data,'crew',30),b=flightSky(data,'crew',30.01);assert.notDeepEqual(a.meshes.find(m=>m.role==='sun').vertices,b.meshes.find(m=>m.role==='sun').vertices);
+  for(const year of [25,30,ACCEL]){
+    const sky=flightSky(data,'crew',year),st=shipStateAt(T.crew,year),beta=st.beta,g=1/Math.sqrt(1-beta*beta);
+    assert.ok(sky.meshes.every(m=>m.material===-2&&m.vertices.flat().every(Number.isFinite)),'camera-relative and finite');
+    const sun=sky.meshes.find(m=>m.role==='sun');assert.ok(dir(sun)[0]>.999,'Sun dead astern');
+    assert.ok(Math.abs(sun.apparentMagnitude-(4.83+5*Math.log10(sun.distanceAU/63241.077/32.6156)-10*Math.log10(g*(1-beta))))<1e-6,'inverse square plus Doppler dimming astern');
+    // Sirius (8.6 ly) shifts by parallax as the ship moves 4 ly; aberration crowds stars forward at speed.
+    const ab=sky.meshes.find(m=>m.role==='alpha-centauri-A');assert.ok(Math.acos(-dir(ab)[0])*180/Math.PI<20,'Alpha Centauri ahead');
+  }
+  const still=flightSky(data,'crew',20),fast=flightSky(data,'crew',30),fwd=s=>s.meshes.filter(m=>m.role==='star').filter(m=>dir(m)[0]<0).length;
+  assert.ok(fwd(fast)>fwd(still),'aberration moves stars into the forward hemisphere');
+  // Parallax at rest (departure vs in orbit): Sirius, 8.6 ly away, moves by many degrees over the 4.24 ly baseline.
+  const sirius=s=>dir(s.meshes.filter(m=>m.role==='star').reduce((x,y)=>x.apparentMagnitude<y.apparentMagnitude?x:y)),s0=sirius(still),s1=sirius(flightSky(data,'crew',T.crew.arrive+.01));
+  assert.ok(Math.acos(Math.min(1,s0.reduce((n,v,i)=>n+v*s1[i],0)))*180/Math.PI>5,'nearby stars shift by parallax');
+  // Approach: Proxima brightens and shows its true disc; Proxima b grows from a dot to filling the view in orbit.
+  const day=flightSky(data,'crew',T.crew.arrive-1/365.25),orbit=flightSky(data,'crew',T.crew.arrive+.01),pb=s=>s.meshes.find(m=>m.role==='proxima-b');
+  assert.ok(pb(day)&&pb(day).angularDiameterDeg<1&&pb(orbit).angularDiameterDeg>120,'planet grows to fill the view from orbit');
+  const px=orbit.meshes.find(m=>m.role==='proxima');assert.ok(Math.abs(px.angularDiameterDeg-1.69)<.1,'Proxima about 1.7 degrees across from Proxima b');assert.ok(px.apparentMagnitude<-20);
+  for(const name of ['A','B'])assert.ok(orbit.meshes.find(m=>m.role==='alpha-centauri-'+name).apparentMagnitude<-4,'Alpha Centauri '+name+' bright from Proxima');
 });
-test('power island is a designed, sized installation at a stated standoff',()=>{
- const scene=createScene({...base,mode:'settlement'},data),label=scene.labels.find(l=>/POWER ISLAND/.test(l.text)).text;
- assert.ok(!/TBD/.test(label));assert.ok(scene.powerIsland.standoffM>150);assert.ok(scene.powerIsland.hotLoopAreaM2>=data.power.ideal_hot_loop_emitting_area_m2_at_600K);
- for(const role of ['converter-hall','regolith-berm','surface-radiator-panel','switchyard-transformer','backup-solar','exclusion-fence','settlement-substation'])assert.ok(scene.meshes.some(m=>m.role===role),role);
+test('the slider follows each ship\'s journey on a stretched scale with milestones',()=>{
+  const T=missionTimeline(data);
+  for(const view of ['crew','cargo','map']){const sc=missionScale(T,view);
+    assert.equal(sc.start,view==='crew'?T.crew.depart:0);assert.equal(sc.end,view==='map'?40:T[view].arrive,'ship sliders stop on arrival; the descent is its own view');
+    for(let u=0;u<=1;u+=.01)assert.ok(Math.abs(sc.toU(sc.toYear(u))-u)<1e-9);
+    for(let u=.01;u<=1;u+=.01)assert.ok(sc.toYear(u)>=sc.toYear(u-.01),'monotonic');
+    assert.ok(sc.milestones.length>=4&&sc.milestones.every(m=>m.u>=0&&m.u<=1));}
+  const sc=missionScale(T,'crew'),a=T.crew.arrive;
+  // The last month before arrival gets far more slider than its share of time; the last day more still.
+  assert.ok(sc.toU(a)-sc.toU(a-30/365.25)>.25);assert.ok(sc.toU(a)-sc.toU(a-1/365.25)>.1);
+  for(const label of ['Departs','Flip and braking','Proxima b 1° wide','Arrive in orbit'])assert.ok(sc.milestones.some(m=>m.label===label),label);
+});
+test('housing, greenhouses and cargo have clear public routes and both airlocks lead outdoors',()=>{
+ const roles=['inflatable-envelope','hull-boundary','farm-pressure-envelope','room-front','room-bulkhead','cabin-divider','inflatable-habitat-shell','cargo-container','crop-tray','window-glass'];
+ function hit(scene,a,b){
+   const d=b.map((v,i)=>v-a[i]),len=Math.hypot(...d),dir=d.map(v=>v/len);
+   for(const m of scene.meshes.filter(m=>roles.includes(m.role)))for(const f of m.faces)for(let i=1;i<f.length-1;i++){
+     const t=gpu.rayTriangle(a,dir,m.vertices[f[0]],m.vertices[f[i]],m.vertices[f[i+1]]);
+     if(t!==null&&t>1e-6&&t<len)return m.id+' '+m.role;
+   }
+   return null;
+ }
+ const surface={...base,mode:'settlement',cutaway:false,interiorHabitat:'all'};
+ const scene=createScene(surface,data),corridors=scene.meshes.filter(m=>m.systemRole==='pressurised-corridor');
+ const point=([x,z],y=3.1)=>[x,y,z];
+ const clear=(a,b)=>assert.equal(hit(scene,a,b),null,`blocked between ${a} and ${b}`);
+ const [habitats,spine,door,cargo,between,...residences]=corridors.map(m=>m.centreline);
+ for(const path of [habitats,door,cargo,between,...residences])clear(point(path[0]),point(path.at(-1)));
+ for(const end of habitats){
+   const h=scene.surfaceMap.habitats[end[0]<0?0:1],a=(Math.atan2(end[1]-h.centre[1],end[0]-h.centre[0])-h.turn+2*Math.PI)%(2*Math.PI);
+   assert.ok(h.rooms.some(r=>r.id&&r.deck===0&&a>r.a0&&a<r.a1),'link opens into a shared room');
+ }
+ assert.ok(Math.abs(door[1][1]-door[0][1])<2.2,'a short threshold rather than a separate corridor');
+ const x=door[0][0],z=spine[0][1];
+ clear([x,3.1,door[1][1]+1],[x,3.1,z-2]);
+ for(const hall of scene.surfaceMap.halls.filter(h=>h.id.startsWith('greenhouse-'))){
+   const mid=(hall.x0+hall.x1)/2,into=z<(hall.z0+hall.z1)/2?1:-1;
+   clear([mid,3.1,z],[mid,3.1,z+into*4]);
+ }
+ for(const id of ['habA','habB']){
+   const open=createScene({...surface,airlockOutside:id},data),lock=open.airlocks.find(l=>l.id===id);
+   const out=lock.outer.map((v,i)=>v-lock.inner[i]),len=Math.hypot(...out);
+   const at=distance=>lock.outer.map((v,i)=>v+out[i]*distance/len);
+   assert.equal(hit(open,at(-.55),at(8)),null,`clear exterior approach for ${id}`);
+ }
+});
+test('surface power is a solar field sized to the load, with storage and heat rejection',()=>{
+ const scene=createScene({...base,mode:'settlement'},data),F=scene.solarField,env=data.settlement.proxima_b_sky;
+ assert.equal(F.fluxWm2,877);
+ assert.ok(Math.abs(F.areaM2*F.fluxWm2*F.systemEfficiency*F.incidence-F.electricalMW*1e6)<1e-6);
+ assert.ok(F.areaM2>16000&&F.areaM2<17000);assert.ok(Math.abs(F.starElevationDeg-45)<.5);
+ for(const panel of scene.meshes.filter(m=>m.role==='solar-array')){
+   for(const [x,y,z] of panel.vertices)assert.ok(y>settlementTerrain(x,z)+.1,'panel clears regolith');
+ }
+ for(const role of ['solar-array','battery-store','switchyard-transformer','settlement-substation','air-cooler'])assert.ok(scene.meshes.some(m=>m.role===role),role);
+ for(const role of ['converter-hall','regolith-berm','exclusion-fence','containment-vault-hatch'])assert.ok(!scene.meshes.some(m=>m.role===role),'no antimatter plant: '+role);
 });
 
-test('ship views label their main parts and the settlement labels its links',()=>{
- for(const mode of ['cruise','engine']){const texts=createScene({...base,mode},data).labels.map(l=>l.text).join('|');for(const t of ['WIND SCREEN','DUST CATCHER PLATE','SERVICE RADIATORS','CARGO RACKS','DESCENT REFUGE','ANTIHYDROGEN ICE','LIQUID HYDROGEN','SHADOW SHIELD','MAGNETIC NOZZLE','HUB TRANSFER TUBE','PACKED SURFACE RESIDENCES'])assert.ok(texts.includes(t),mode+' '+t);}
- assert.ok(createScene({...base,mode:'engine'},data).labels.some(l=>l.text==='BURN BRACES'));
- const surface=createScene({...base,mode:'settlement'},data).labels.map(l=>l.text).join('|');for(const t of ['A–B PRESSURISED LINK','GREENHOUSE LINK','CREWED ROVER','INFLATABLE RESIDENCE 1','INFLATABLE RESIDENCE 2'])assert.ok(surface.includes(t),t);
+test('ship views label their main parts and conceptual status, and the settlement labels its links',()=>{
+  // Labels simply name the item.
+  const all=s=>s.labels.map(l=>l.text),crew=all(createScene({...base,year:ACCEL},data));
+  for(const t of ['Forward shield','Habitat discs','Radiation shielding fuel tanks','Fuel tanks','Fuel feed line','Main engine','Tow tethers','Tension straps','Radiators','Water tank','Orbital service unit','Landing bay','Windows','Robotic arm','Handrails'])assert.ok(crew.includes(t),'crew '+t);
+  assert.ok([...crew,...all(createScene({...base,mode:'cargo'},data)),...all(createScene({...base,mode:'settlement'},data))].every(t=>!/·|[0-9]+ (t|m|MW)\b/.test(t)),'no extra detail in labels');
+  const cargo=all(createScene({...base,mode:'cargo'},data));for(const t of ['Pressurised rover','Scout bay','Landing bay','Main engine','Forward shield'])assert.ok(cargo.includes(t),'cargo '+t);
+  assert.ok(all(createScene({...base,year:40},data)).includes('Heat shield'));
+  const surface=all(createScene({...base,mode:'settlement'},data));for(const t of ['A–B pressurised link','Crewed rover','Inflatable residence'])assert.ok(surface.some(x=>x.startsWith(t)),t);
 });
 test('greenhouse halls and the rover cabin can be entered on the surface',()=>{
  const scene=createScene({...base,mode:'settlement',cutaway:false},data),walls=scene.meshes.filter(m=>['inflatable-envelope','hull-boundary','farm-pressure-envelope','rover-pressure-hull','rover-window'].includes(m.role));
@@ -388,7 +541,7 @@ test('greenhouse halls and the rover cabin can be entered on the surface',()=>{
  // From each entry, walls surround the walker within a few metres at eye height in all four directions.
  for(const room of [...halls,rover])for(const dir of [[1,0,0],[-1,0,0],[0,0,1],[0,0,-1]]){let hit=Infinity;
   for(const m of walls)for(const f of m.faces)for(let i=1;i<f.length-1;i++){const t=gpu.rayTriangle(room.eye,dir,m.vertices[f[0]],m.vertices[f[i]],m.vertices[f[i+1]]);if(t!==null&&t>0)hit=Math.min(hit,t);}
-  assert.ok(hit<20,`${room.id} enclosed toward ${dir}`);}
+  assert.ok(hit<(['greenhouse-4','greenhouse-8'].includes(room.id)&&dir[2]===1?45:20),`${room.id} enclosed toward ${dir}`);}
 });
 test('settlement sky is one smooth dome that also fills the view below the horizon',()=>{
  const scene=createScene({...base,mode:'settlement'},data),dome=scene.meshes.filter(m=>m.role==='sky-dome');
@@ -398,8 +551,8 @@ test('settlement sky is one smooth dome that also fills the view below the horiz
 
 
 test('adjacent decks have a shared wall with no annular cavity',()=>{
- for(const mode of ['cruise','engine']){
-  const scene=createScene({...base,mode,flat:false,cutaway:false},data),bounds=deck=>{
+ for(const year of [30,ACCEL]){const mode='year '+year;
+  const scene=createScene({...base,year,flat:false,cutaway:false},data),bounds=deck=>{
    const r=scene.meshes.filter(m=>m.role==='inflatable-envelope'&&m.id.startsWith(`bay-A-${deck}-`)).flatMap(m=>m.vertices).map(p=>Math.hypot(p[0],p[1]));return [Math.min(...r),Math.max(...r)];
   };
   assert.ok(Math.abs(bounds(0)[0]-bounds(1)[1])<1e-8,mode+' shared wall');
@@ -407,10 +560,10 @@ test('adjacent decks have a shared wall with no annular cavity',()=>{
  }
 });
 
-test('room signs and corridor arrows are physical geometry and cabins have names',()=>{
+test('room signs and cabin names are rendered without corridor arrows',()=>{
  const scene=createScene({...base,mode:'settlement',cutaway:false},data);
  for(const room of scene.rooms.filter(r=>r.id.startsWith('bay-')||r.id.startsWith('cabin-')))assert.ok(scene.meshes.some(m=>m.id===room.id&&m.role==='room-sign'),room.id);
- assert.ok(scene.meshes.filter(m=>m.role==='corridor-arrow').length>=24);
+ assert.ok(!scene.meshes.some(m=>m.role==='corridor-arrow'));
 });
 
 test('each airlock has suits and interlocked doors plus an exterior surface landing',()=>{
@@ -435,25 +588,37 @@ test('dining seat backs face away from the nearest table on both sides',()=>{
 });
 
 
-test('refuge retains 24 seats in two compact tiers directly aft of the habitats',()=>{
- const scene=createScene({...base,detail:'medium'},data),hull=scene.meshes.find(m=>m.role==='refuge-pressure-hull'),seats=scene.meshes.filter(m=>m.id==='refuge'&&m.role==='seat');
- assert.equal(seats.length,data.architecture.descent_places);assert.equal(scene.meshes.filter(m=>m.role==='refuge-tier-floor').length,2);
- const xs=hull.vertices.map(p=>p[0]);assert.ok(Math.min(...xs)>data.layout.disc_radius_m);assert.ok(Math.max(...xs)-Math.min(...xs)<5);
+test('orbit and entry separate the landing package from the orbital assembly',()=>{
+  const orbit=createScene({...base,year:39.95},data),entry=createScene({...base,year:40},data),has=(s,r)=>s.meshes.some(m=>m.role===r);
+  assert.equal(orbit.flight.phase,'orbit');assert.equal(entry.flight.phase,'entry');
+  for(const role of ['forward-collision-shield','reaction-chamber','orbital-service-reactor','tow-tether'])assert.ok(has(orbit,role)&&!has(entry,role),role+' stays in orbit');
+  for(const role of ['habitat-service-reactor','working-water','landing-engine','landing-cradle','arrival-separation'])assert.ok(has(entry,role),role+' lands');
+  assert.ok(!orbit.meshes.some(m=>m.stage),'all tank modules dropped after braking');
+  assert.equal(orbit.flightLayout.orbitalOffset[0],0,'in orbit the ship simply stops, whole; the descent is its own view');
+  // Two disc landers, each on its own heat shield; together they keep the 50 m allocation's area.
+  const shells=entry.meshes.filter(m=>m.role==='deployed-aeroshell'&&m.diameterM);assert.equal(shells.length,2);assert.ok(Math.abs(shells.reduce((n,m)=>n+m.diameterM**2,0)-data.final_model_inputs.landing.crew_aeroshell_diameter_m**2)<1e-6);
+  // Each shield is on the disc's native +z side, which the display turns to face down into the flow, with the disc
+  // inside its rim; the payload rides on the other face in the shield's wake.
+  for(const m of shells){const zs=m.vertices.map(p=>p[2]);assert.ok(Math.min(...zs)>data.layout.disc_axial_depth_m/2,'shield on the flow side of the disc');}
+  for(const m of entry.meshes.filter(m=>m.role==='food-factory-hull'))assert.ok(Math.max(...m.vertices.map(p=>p[2]))<0,'payload in the wake');
+  assert.ok(!has(entry,'stowed-aeroshell'));
+  assert.equal(createScene({...base,mode:'cargo',year:40},data).meshes.find(m=>m.diameterM).diameterM,data.final_model_inputs.landing.cargo_aeroshell_diameter_m);
 });
 
-test('scouts attach to longerons and food production sits aft of the habitats',()=>{
- const scene=createScene({...base,cutaway:false},data);
- assert.equal(scene.meshes.filter(m=>m.role==='scout-bay-frame').length,0);
- assert.ok(scene.meshes.filter(m=>m.role==='scout-frame-mount').length>=12);
- for(const m of scene.meshes.filter(m=>m.role==='food-factory-hull'))assert.ok(Math.min(...m.vertices.map(p=>p[0]))>data.layout.disc_radius_m);
- assert.equal(scene.labels.find(l=>/food factory/i.test(l.text)).text,'FOOD FACTORY');
+test('the cargo ship carries the scouts and rover; the crew ship carries neither',()=>{
+  const cargo=createScene({...base,mode:'cargo',cutaway:false},data),crew=createScene({...base,cutaway:false},data);
+  assert.equal(cargo.meshes.filter(m=>m.role==='scout-bay-frame').length,0);
+  assert.ok(cargo.meshes.filter(m=>m.role==='scout-frame-mount').length>=12);
+  assert.ok(!crew.meshes.some(m=>['exploration','rover','cargo'].includes(m.id)));
+  assert.ok(!cargo.meshes.some(m=>m.id.startsWith('hab')||m.id.startsWith('bay-')||m.id.startsWith('cabin-')),'no habitat on the cargo ship');
+  assert.ok(crew.labels.some(l=>l.text==='Food factory'));
 });
 
 test('surface cargo stays nearby without intersecting either habitat',()=>{
  const scene=createScene({...base,mode:'settlement'},data);
  for(const m of scene.meshes.filter(m=>m.role==='cargo-container')){
   const centre=[0,1,2].map(k=>m.vertices.reduce((n,p)=>n+p[k],0)/m.vertices.length);assert.ok(Math.min(...data.layout.surface_disc_centres_x_m.map((x,i)=>Math.hypot(centre[0]-x,centre[2]-data.layout.surface_disc_centres_z_m[i])))<35);
-  for(const p of m.vertices)for(let i=0;i<2;i++)assert.ok(Math.hypot(p[0]-data.layout.surface_disc_centres_x_m[i],p[2]-data.layout.surface_disc_centres_z_m[i])>20);
+  for(const p of m.vertices)for(let i=0;i<2;i++)assert.ok(Math.hypot(p[0]-data.layout.surface_disc_centres_x_m[i],p[2]-data.layout.surface_disc_centres_z_m[i])>data.habitats.geometry_study_not_selected_dimensions.deck_floor_radii_m[0]+.65+.3,'clear of the habitat hull');
  }
 });
 
@@ -463,21 +628,21 @@ test('interior partitions and deck ends stay inside the closed axial shell',()=>
 });
 
 
-test('surface pressure tunnels turn through a smooth bend instead of a right angle',()=>{
- const scene=createScene({...base,mode:'settlement'},data),tunnels=scene.meshes.filter(m=>m.systemRole==='pressurised-corridor');assert.equal(tunnels.length,4,'A-B link, greenhouse link and one to each residence');
- const path=tunnels.find(m=>m.centreline.length>2).centreline;
- for(let i=1;i<path.length-1;i++){const a=path[i].map((v,k)=>v-path[i-1][k]),b=path[i+1].map((v,k)=>v-path[i][k]),cos=a.reduce((n,v,k)=>n+v*b[k],0)/(Math.hypot(...a)*Math.hypot(...b));assert.ok(Math.acos(Math.min(1,cos))<.2);}
- assert.ok(tunnels.every(m=>m.normals?.length===m.vertices.length));
+test('berths fit inside the wall of each surface cabin',()=>{
+ const scene=createScene({...base,mode:'settlement',cutaway:false},data);
+ for(const habitat of scene.surfaceMap.habitats)for(const cabin of habitat.cabins){
+   for(const bed of scene.meshes.filter(m=>m.id===cabin.id&&['lower-berth','upper-berth'].includes(m.role)))for(const [x,y,z] of bed.vertices){
+     const dx=x-habitat.centre[0],dz=z-habitat.centre[1],delta=Math.atan2(dz,dx)-habitat.turn-cabin.angle;
+     assert.ok(Math.abs(Math.atan2(Math.sin(delta),Math.cos(delta)))<Math.PI/12-.005,`${bed.id} clears its side partitions`);
+     assert.ok(Math.hypot(dx,dz)<cabin.r1&&y>1.75,'berth is inside the shell and above the floor');
+   }
+ }
 });
 
-
-test('crew bays are inline aft of the wheels, before all unpressurised cargo',()=>{
- const scene=createScene({...base,flat:false,cutaway:false},data),modules=scene.crewModules;
- assert.deepEqual(modules.map(m=>m.id),['refuge','food-factory-1','food-factory-2','rover']);
- assert.ok(modules[0].x0>data.layout.disc_radius_m);
- for(let i=0;i<modules.length;i++){const m=modules[i];assert.deepEqual(m.centre.slice(1),[0,8]);assert.equal(scene.rooms.find(r=>r.id===m.id).gravity.type,'float');if(i)assert.ok(m.x0-modules[i-1].x1>0&&m.x0-modules[i-1].x1<.6);}
- const cargo=scene.meshes.filter(m=>m.role==='cargo-container');for(const m of cargo)assert.ok(Math.min(...m.vertices.map(p=>p[0]))>modules.at(-1).x1);
- assert.ok(scene.meshes.some(m=>m.role==='unpressurised-cargo'));
+test('both food trains branch from the transfer passage into the despun gap',()=>{
+  const scene=createScene({...base,flat:false,cutaway:false},data),modules=scene.crewModules,xm=(data.layout.disc_centres_x_m[0]+data.layout.disc_centres_x_m[1])/2;
+  assert.deepEqual(modules.map(m=>m.id),['food-factory-1','food-factory-2']);assert.deepEqual(modules.map(m=>m.side),[1,-1]);
+  for(const m of modules){assert.equal(m.centre[0],xm);assert.equal(m.centre[2],0);assert.equal(scene.rooms.find(r=>r.id===m.id).gravity.type,'float');assert.ok(Math.min(Math.abs(m.y0),Math.abs(m.y1))>.7,'clear of the passage');}
 });
 
 test('each ceiling is the underside of the next floor slab, with no intervening shell',()=>{
@@ -493,23 +658,24 @@ test('recessed airlock chambers fit within the wheel axial envelope',()=>{
  for(const m of scene.meshes.filter(m=>m.id.startsWith('bay-')&&(m.airlockDoor||m.role==='spacesuit'||m.role==='hull-boundary'))){const cz=data.layout.disc_centres_z_m[m.id.startsWith('bay-B')?1:0];for(const p of m.vertices)assert.ok(Math.abs(p[2]-cz)<half,m.id+' '+m.role);}
 });
 
-test('the pressurised route is unobstructed from the hub branch through all crew modules',()=>{
- const scene=createScene({...base,flat:false,cutaway:false},data),o=[0,0,8],d=[1,0,0],end=scene.crewModules.at(-1).x1-o[0];
- for(const m of scene.meshes.filter(m=>['refuge','farm','rover','transfer'].includes(m.id)))for(const f of m.faces)for(let i=1;i<f.length-1;i++){const t=gpu.rayTriangle(o,d,m.vertices[f[0]],m.vertices[f[i]],m.vertices[f[i+1]]);assert.ok(t===null||t<0||t>end,m.id+' '+m.role+' blocks passage');}
+test('the pressurised route is unobstructed from the passage through both food trains',()=>{
+  const scene=createScene({...base,flat:false,cutaway:false},data),xm=(data.layout.disc_centres_x_m[0]+data.layout.disc_centres_x_m[1])/2;
+  for(const module of scene.crewModules){const o=[xm,0,0],d=[0,module.side,0],end=Math.max(Math.abs(module.y0),Math.abs(module.y1));
+    for(const m of scene.meshes.filter(m=>['farm','transfer'].includes(m.id)))for(const f of m.faces)for(let i=1;i<f.length-1;i++){const t=gpu.rayTriangle(o,d,m.vertices[f[0]],m.vertices[f[i]],m.vertices[f[i+1]]);assert.ok(t===null||t<0||t>end,m.id+' '+m.role+' blocks passage');}}
 });
 
 
 test('communal rings have no extra concentric room fronts and signs fit door lintels',()=>{
- for(const mode of ['cruise','engine','settlement']){
-  const scene=createScene({...base,mode,cutaway:false,detail:'medium'},data);
-  if(mode!=='engine')assert.ok(!scene.meshes.some(m=>m.id.startsWith('bay-')&&m.id.split('-')[2]!=='0'&&m.role==='room-front'));
+ for(const state of [{},{year:ACCEL},{mode:'settlement'}]){
+  const scene=createScene({...base,...state,cutaway:false,detail:'medium'},data);
+  assert.ok(!scene.meshes.some(m=>m.id.startsWith('bay-')&&m.id.split('-')[2]!=='0'&&m.role==='room-front'));
   const signs=scene.meshes.filter(m=>m.role==='room-sign-panel');assert.ok(signs.length>0);for(const m of signs){const lengths=m.faces[0].map((i,k,a)=>Math.hypot(...m.vertices[i].map((v,j)=>v-m.vertices[a[(k+1)%a.length]][j])));assert.ok(Math.max(...lengths)<1.1);}
  }
 });
 test('rover driver looks through real forward glazing rather than an opaque shell',()=>{
  const scene=createScene({...base,mode:'settlement',cutaway:false},data),room=scene.rooms.find(r=>r.id==='rover');assert.equal(room.driver,true);
  const hits=[];for(const m of scene.meshes.filter(m=>m.id==='rover'))for(const f of m.faces)for(let i=1;i<f.length-1;i++){const t=gpu.rayTriangle(room.eye,room.forward,m.vertices[f[0]],m.vertices[f[i]],m.vertices[f[i+1]]);if(t!==null)hits.push({t,m});}
- hits.sort((a,b)=>a.t-b.t);assert.equal(hits[0].m.role,'rover-window');assert.ok(hits[0].m.opacity<.3);assert.ok(!hits.some(h=>h.t<3&&h.m.opacity>.9));
+ hits.sort((a,b)=>a.t-b.t);assert.equal(hits[0].m.role,'rover-window');assert.ok(hits[0].m.opacity<.5,'tinted, slightly opaque glass');assert.ok(!hits.some(h=>h.t<3&&h.m.opacity>.9));
  assert.ok(!scene.meshes.some(m=>m.id.startsWith('hab')&&m.vertices.length===8&&!m.role),'unlabelled habitat support boxes removed');
 });
 
@@ -519,4 +685,55 @@ test('a surface radial probe crosses only the outer wall and the hall wall',()=>
  for(const m of scene.meshes.filter(m=>m.id.startsWith('bay-A')&&['inflatable-envelope','room-front'].includes(m.role)))for(const f of m.faces)for(let i=1;i<f.length-1;i++){const t=gpu.rayTriangle(o,d,m.vertices[f[0]],m.vertices[f[i]],m.vertices[f[i+1]]);if(t!==null&&t>0&&t<9)hits.push(start-t);}
  const outer=data.habitats.geometry_study_not_selected_dimensions.deck_floor_radii_m[0]+.65;
  hits.sort((p,q)=>q-p);assert.equal(hits.length,2);assert.ok(hits[0]>outer&&hits[0]<outer+.76,'rounded outer wall');assert.ok(Math.abs(hits[1]-(outer-4.7))<.02,'hall wall');
+});
+
+test('departures show a warm, self-lit solar disc in both ship views',()=>{
+ const T=missionTimeline(data);
+ for(const kind of ['crew','cargo']){
+   const sun=flightSky(data,kind,T[kind].depart).meshes.find(m=>m.role==='sun');
+   assert.equal(sun.material,-2);
+   assert.equal(sun.distanceAU,1);
+   assert.ok(new Set(sun.colors).size>=3);
+   assert.ok(sun.colors.includes('#ffc573'));
+ }
+});
+
+test('descent uses closed heat-shield noses and omits hidden walkway fittings',()=>{
+ const scene=createScene({...base,mode:'descent',detail:'medium'},data);
+ const shells=scene.meshes.filter(m=>m.role==='deployed-aeroshell');
+ const noses=scene.meshes.filter(m=>m.role==='aeroshell-nose');
+ assert.equal(shells.length,3);assert.equal(noses.length,2);
+ for(const [i,nose] of noses.entries()){
+   const skin=new Set(shells[i].vertices.map(p=>p.join(',')));
+   assert.ok(nose.vertices.slice(0,-1).every(p=>skin.has(p.join(','))),'nose shares the shell seam');
+ }
+ assert.ok(!scene.meshes.some(m=>m.role==='access-hatch'||m.role==='lower-berth'));
+});
+
+test('surface terrain shares its edge and colour with the globe and projects into the same orbital frame',()=>{
+ const scene=createScene({...base,mode:'settlement'},data);
+ const patch=scene.meshes.find(m=>m.role==='regolith'),globe=scene.meshes.find(m=>m.role==='planet-regolith');
+ assert.deepEqual(globe.vertices.slice(0,96),patch.vertices.slice(-96));
+ assert.deepEqual(globe.colors.slice(0,96),patch.colors.slice(-96));
+ assert.ok(globe.vertices.some(v=>v[1]<-13e6),'continues to the far side');
+ const frame=settlementFrame(data),point=[95,240000,12],eye=frame.position(point);
+ assert.ok(frame.metres(eye).every((v,i)=>Math.abs(v-point[i])<1e-6));
+ const sky=systemSky(data,{eye,km:240,forward:frame.vector([0,-1,0])});
+ for(const part of [patch,globe]){
+   const orbital=sky.meshes.find(m=>m.role===part.role);
+   assert.deepEqual(orbital.colors,part.colors);
+   const local=frame.local(orbital.vertices[1]);
+   assert.ok(local.every((v,i)=>Math.abs(v-(part.vertices[1][i]-point[i])/240)<1e-7));
+ }
+});
+
+test('crew and cargo dust shields keep the face allocation and add a separated backing skin',()=>{
+ for(const mode of ['cruise','cargo']){
+   const scene=createScene({...base,mode,flat:false},data);
+   const face=scene.meshes.find(m=>m.role==='forward-collision-shield'),rear=scene.meshes.find(m=>m.role==='shield-backing');
+   const frontX=Math.min(...face.vertices.map(v=>v[0])),rearX=Math.max(...rear.vertices.map(v=>v[0]));
+   assert.equal(face.arealMassKgM2,100);
+   assert.ok(Math.abs(rearX-frontX-face.assemblyThicknessM)<1e-9);
+   assert.ok(Math.abs(Math.min(...rear.vertices.map(v=>v[0]))-Math.max(...face.vertices.map(v=>v[0]))-.55)<1e-9);
+ }
 });

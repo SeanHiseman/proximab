@@ -8,13 +8,16 @@ from calculations.depleted_staged_tanks import MIN_SPEED
 from calculations.integrated_specification import ledger
 
 
-def build():
-    spec=json.loads((ROOT/'data/final_model_specification.json').read_text())
+def build(spec=None, thrust_fraction=1.):
+    """thrust_fraction: axial share of exhaust momentum (cos of a nozzle cant): one value, or a dict per ship kind."""
+    spec=spec or json.loads((ROOT/'data/final_model_specification.json').read_text())
     ships={}
     for kind,years in [('crew',19.9),('cargo',39.9)]:
+        tf=thrust_fraction.get(kind,1.) if isinstance(thrust_fraction,dict) else thrust_fraction
         book=ledger(kind,spec,500 if kind=='crew' else 1000)
         selected=optimize(book['nonpropulsion_core_t'],years,'hybrid' if kind=='crew' else 'fusion',
-                          cap=20 if kind=='crew' else None)
+                          cap=spec['propulsion_selection']['crew_antimatter_t'] if kind=='crew' else None,
+                          thrust_fraction=tf)
         if kind=='crew':
             speeds=[]
             for loga in selected['parameters'][1:3]:
@@ -23,7 +26,7 @@ def build():
         else:speeds=[MIN_SPEED,MIN_SPEED]
         p=closed(*speeds,core_t=book['nonpropulsion_core_t'],
             burn_years=selected['trajectory']['burn_years'],transfer_years=years,
-            electrical_fusion=kind=='cargo')
+            electrical_fusion=kind=='cargo',thrust_fraction=tf)
         assert abs(p['departure_t']-selected['departure_t'])<1e-5
         dry=book['fixed_dry_with_margin_t']+p['engine_with_allowance_t']+p['hot_radiator_with_allowance_t']
         ships[kind]=dict(ledger=book,propulsion=p,retained_dry_hardware_t=dry,

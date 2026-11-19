@@ -11,7 +11,7 @@ payload = (dist / "design-data.json").read_text(encoding="utf-8")
 json.loads(payload)
 parts = []
 worker_bundle = None
-for name in ("model.js", "gpu.js", "renderer.js", "scene-store.js", "app.js"):
+for name in ("model.js", "gpu.js", "renderer.js", "scene-store.js", "mission-map.js", "app.js"):
     code = (dist / name).read_text(encoding="utf-8")
     code = re.sub(r"^import .*?;\s*$", "", code, flags=re.MULTILINE)
     code = re.sub(r"\bexport (?=(?:const|function|class)\b)", "", code)
@@ -24,6 +24,11 @@ for name in ("model.js", "gpu.js", "renderer.js", "scene-store.js", "app.js"):
         worker_bundle = model_code + "\n" + gpu_code + "\n" + worker_code
         worker_source = json.dumps(worker_bundle)
         code = code.replace("new URL('./scene-worker.js',import.meta.url)", "URL.createObjectURL(new Blob([" + worker_source + "],{type:'text/javascript'}))")
+        # The bundle has no imports or exports, so run it as a classic worker: module workers from blob URLs fail when
+        # the offline file is opened from disk (file://), which forced every scene build onto the main thread.
+        if ",{type:'module'})" not in code:
+            raise RuntimeError("Worker construction changed; update the offline packer")
+        code = code.replace(",{type:'module'})", ")")
     if name == "app.js":
         online = "const response=await fetch('design-data.json');if(!response.ok)throw Error('Design data could not be loaded. Serve this directory over HTTP.');data=await response.json();"
         if online not in code:

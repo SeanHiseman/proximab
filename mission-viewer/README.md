@@ -1,4 +1,49 @@
-# Current selected architecture
+# S8 ship models and mission map
+
+Views: **Crew ship**, **Cargo ship**, **Mission map**, **Descent**, **Proxima system** and **Surface**. The ship sliders stop on arrival in the parking orbit; **Descent** shows the three landers on their heat shields. The journey slider (with Play) covers the
+selected ship's own journey (the map: the whole mission) on the stretched scale from `missionScale()` in
+`dist/model.js`: burns and arrival get room, the coast is compressed, and the last month before arrival is logarithmic
+in time-to-go down to the final hour. Milestone marks jump to departure, cruise, the engine re-rig, braking, Proxima b
+reaching 1 degree, orbit arrival and the descents. Trajectories come from `missionTimeline()` using
+`reports/tandem-redesign.json` (S8); each burn has eight equal-rapidity stages. The 3D ship scene is keyed on phase,
+stages dropped and the engine's side; while the next stage builds, the current scene stays on screen and neighbouring
+stages are prefetched. Play moves evenly along the slider, so it slows through burns and the approach.
+- Sky (`flightSky()`): rebuilt for the exact year and drawn every frame outside the cached ship scene. Bright stars at
+  catalogue directions and approximate Hipparcos distances (parallax over the route), the Sun receding astern,
+  Alpha Centauri A and B and Proxima brightening ahead, with relativistic aberration and Doppler brightening. Near
+  arrival Proxima shows its true disc and a shaded mock-up of Proxima b (assumed 7,000 km radius, 400 km parking orbit,
+  tidally locked day side; not a surface map) grows to fill the view.
+
+- Habitats: two edge-on discs in tandem along the flight axis (x), parallel counterrotating spin axes (z), hubs
+  joined by a U-shaped transfer corridor; food trains and working water sit in the despun gap between them.
+- Burns: the discs lock and each room's floors re-set so 'down' is aft (the earlier in-plane burn interior). For
+  braking the discs lock half a turn round and 'down' faces forward.
+- Fuel walls: the braking fuel is built into each disc's rim and faces as 8 nested tank layers that turn with the
+  disc (last-consumed innermost; emptied outer layers are released). Radial bulkheads act as slosh baffles while
+  spinning. The walls set the disc spacing and corridor height and cover the portholes. Braking antimatter sits in an
+  isolated containment bay aft of the habitats.
+- Engine: towed on 2000 m tethers, ahead through acceleration and the first half of the coast, re-rigged behind
+  for braking. Four complete pod engines in a row across the shield width, canted by the sized angle; each pod
+  carries no radiation shadow shields for now (removed pending a redesign); tethers start at a bridle with a
+  refractory link to the engine. One forward dust shield always leads (in front of the engine, then in front of the ship). Hot radiator
+  fins with heat pipes, manifolds and leading-edge guards glow while burning. Plumes fade out over 40 km.
+- Fuel feed: acceleration tanks hang above the habitats; a trunk line runs up the straps and along the tether to a
+  buffer tank at the engine (sized for peak flow in the report).
+- Crew extras: windows along the transfer tube, EVA handrails, tether points and a small robotic arm.
+- Surface: habitats 23 m apart with a short link, a direct doorway from habitat A into the nearest greenhouse, a shared greenhouse aisle, and cargo modules on short tunnels; power yard beside habitat B.
+- Surface power draws about **903 kW on average** and **1,180 kW with crop lights on**. The model allocates 350 kW to continuous habitat and farm services, processing, workshop equipment, utilities and controls. The eight halls have 2,867 m2 of planted canopy. At 40 mol/m2/day, 3 micromol/J at the fixture, 80% delivery to the canopy and a 16-hour photoperiod, the LEDs draw about 830 kW when on. The calculation assumes full artificial lighting and budgets no daylight credit. [NASA crop-lighting study](https://ntrs.nasa.gov/citations/20140017323), [US Department of Energy lighting research](https://www.energy.gov/sites/prod/files/2020/07/f76/ssl-agriculture-jun2020.pdf)
+- The array supplies **1.47 MW** with a 25% capacity margin. A planning estimate of **16,455 m2** uses 877 W/m2 above the atmosphere, 85% assumed transmission, a 45-degree star elevation, 20% effective cell conversion and 85% balance-of-system efficiency. The assumed spectrum-specific conversion and atmospheric transmission govern the result. The 0.5 MWh battery allocation supports 125 kW of critical loads for four hours. [Proxima irradiance study](https://arxiv.org/abs/1704.08449)
+- Entry: each habitat disc lands belly-first on its own inflatable heat shield; the cargo ship lands belly-first on
+  an elongated shield under its payload.
+- Proxima system (`systemSky()`): to scale, rebuilt per frame relative to the camera; focus buttons for Proxima,
+  d, b, c (candidate), both ships and the settlement. Zoom out from the settlement to follow the curved terrain into the System view. Zoom back toward the site to return to the surface.
+- Labels simply name each item; with Labels on, interior items are labelled close up, including inside rooms.
+- Tanks: each staged module is a grid of domed cylindrical tanks (deuterium, then helium-3) in insulation with
+  bands, a feed manifold, corner longerons and end frames, holding liquid D (0.163 t/m3) and He-3 (0.059 t/m3)
+  exactly (no ullage); landing LOX/LH2 at liquid density.
+- The offline build runs its background worker as a classic worker so it also works when opened from disk.
+
+# Earlier selected architecture notes
 
 Current frozen concept: S7 in `../docs/FINAL_MODEL_SPECIFICATION.md`. The viewer panel reports both ships;
 the earlier S1 figures below are historical. No health-qualified optimum is claimed.
@@ -23,7 +68,7 @@ antimatter containment are unvalidated; the detailed geometry is conceptual.
 
 Open ../proxima-design-viewer.html directly for the offline viewer. It embeds data,
 worker code and styles. Left-drag pans at the clicked
-surface depth, right-drag orbits, and scroll zooms to component scale.
+surface depth, right-drag orbits at the current cursor position, and scroll zooms around the current cursor.
 
 Ten main configurations prepare in the background after the opening view becomes
 usable; the footer reports readiness. Spin, deck, radiator, selection and dimension
@@ -102,7 +147,7 @@ each 13 cm deck slab is the ceiling of the layer below; there is no separate
 ceiling shell or empty annular compartment between decks.
 
 Surface rover driving: select the rover to enter its driver station. W accelerates,
-S brakes before engaging reverse, A/D steer, and Space brakes. Drag to look;
+S brakes before engaging reverse, A/D steer, and Space brakes. Right-drag to orbit, left-drag to pan, and scroll to zoom;
 Escape returns outside and applies the parking brake. Forward speed is governed
 at 3 m/s (10.8 km/h), reverse at 1 m/s, level acceleration is 0.45 m/s2 and braking
 is 1 m/s2. Coasting drag is 0.15 + 0.01*v^2 m/s2. A 6 m wheelbase and limited
@@ -119,3 +164,5 @@ Communal rooms open directly to their shared partitions rather than adding an
 extra concentric front wall. Small plaques attach to both faces of doorway
 lintels and jambs; burn-level plaques use the corresponding thrust-gravity frame.
 The separate Enter room button has been removed.
+
+The dust shield geometry uses two composite skins separated by a 0.55 m gap. With the existing 100 kg/m2 face allocation and an assumed density of 1,800 kg/m3, the assembly is about 0.61 m deep. The spacing and 60/40 skin split are concept assumptions. Ballistic performance at mission speed remains unvalidated. [NASA shielding handbook](https://ntrs.nasa.gov/citations/20090010053)

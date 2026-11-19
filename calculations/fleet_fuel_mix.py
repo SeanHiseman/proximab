@@ -13,8 +13,9 @@ ROOT = Path(__file__).resolve().parents[1]
 HARDWARE_PER_W = 1.1*(1/(5e9*1000)+2.28e-5*5/(2*.9*5.670374419e-8*2000**4*1000))
 
 
-def mix(fusion_fraction, a, photon=False):
-    """a: annihilated pair mass / massive feed; fusion fraction excludes pair."""
+def mix(fusion_fraction, a, photon=False, thrust_fraction=1.):
+    """a: annihilated pair mass / massive feed; fusion fraction excludes pair. thrust_fraction: axial share of exhaust
+    momentum (e.g. cos of a nozzle cant), applied to the effective exhaust velocity."""
     if photon:
         return dict(w=.8, source=1., fusion=0., inert=0., am=.5, tank=.2805)
     q = Q*fusion_fraction
@@ -28,7 +29,7 @@ def mix(fusion_fraction, a, photon=False):
     gamma = 1+directed/(1-q)
     if gamma <= 1:
         return None
-    return dict(w=(1-q)*math.sqrt(gamma*gamma-1)/(1+a), source=(q+a)/(1+a),
+    return dict(w=thrust_fraction*(1-q)*math.sqrt(gamma*gamma-1)/(1+a), source=(q+a)/(1+a),
         fusion=fusion_fraction/(1+a), inert=(1-fusion_fraction)/(1+a),
         am=a/(2*(1+a)), tank=1.1*(.01*(1+a/2)+.5*a/2)/(1+a))
 
@@ -76,7 +77,7 @@ def solve(core, years, burn, first, last):
         trajectory=tr, effective_exhaust_c=[first['w'],last['w']])
 
 
-def optimize(core, years, mode='hybrid', cap=None, efficiency=.5, seed=7):
+def optimize(core, years, mode='hybrid', cap=None, efficiency=.5, seed=7, thrust_fraction=1.):
     # Hybrid endpoints use fusion feed; mixed additionally allows inert dilution.
     bounds = [(.2, years/2-.01)]
     if mode in ['hybrid', 'mixed', 'antimatter']:
@@ -87,12 +88,12 @@ def optimize(core, years, mode='hybrid', cap=None, efficiency=.5, seed=7):
 
     def evaluate(x):
         if mode == 'fusion':
-            pair = [mix(1,0)]*2
+            pair = [mix(1,0,thrust_fraction=thrust_fraction)]*2
         elif mode == 'photon':
             pair = [mix(0,0,True)]*2
         else:
             fractions = x[3:5] if mode == 'mixed' else [int(mode=='hybrid')]*2
-            pair = [mix(f,10**a) for f,a in zip(fractions,x[1:3])]
+            pair = [mix(f,10**a,thrust_fraction=thrust_fraction) for f,a in zip(fractions,x[1:3])]
         r = solve(core,years,x[0],*pair)
         if r:
             r['primary_ZJ'] = (Q*r['fusion_t']+2*r['antimatter_t']/efficiency)*1000*C*C/1e21

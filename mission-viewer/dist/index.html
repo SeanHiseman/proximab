@@ -3,31 +3,29 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#eaeae4">
-  <meta name="description" content="Explore a 24-adult Proxima settlement mission: 20-year crew flight, births after arrival and propulsion alternatives.">
+  <meta name="description" content="Explore the S7 Proxima mission: a 24-adult crew ship and a separate cargo ship that depart 20 years apart and arrive together.">
   <title>Proxima — Mission Design Lab</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="detail.css">
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="./" aria-label="Proxima design lab home"><svg viewBox="0 0 38 38" aria-hidden="true"><circle cx="19" cy="19" r="14"/><path d="M3 28 35 10M12 4l14 30M5 16l28 6"/><circle cx="19" cy="19" r="3"/></svg><span>PROXIMA<span class="brand-sub">MISSION DESIGN LAB</span></span></a>
-
-
-  </header>
   <main class="app">
     <section class="viewport-panel" aria-label="Interactive spacecraft layout">
-      <div class="viewport-top"><span id="configuration-label">CRUISE / DISCS SPINNING</span></div>
-      <div class="mode-switch" role="group" aria-label="Mission configuration"><button data-mode="engine" aria-pressed="false">Engine</button><button data-mode="cruise" aria-pressed="true">Cruise</button><button data-mode="settlement" aria-pressed="false">Settlement</button></div>
+      <div class="mode-switch" role="group" aria-label="Mission view"><button data-mode="cruise" aria-pressed="true">Crew ship</button><button data-mode="cargo" aria-pressed="false">Cargo ship</button><button data-mode="map" aria-pressed="false">Mission map</button><button data-mode="descent" aria-pressed="false">Descent</button><button data-mode="system" aria-pressed="false">Proxima system</button><button data-mode="settlement" aria-pressed="false">Surface</button></div>
           <div class="room-controls" aria-label="Room navigation">
 
 
 
-      <label class="room-label" for="room-select">Inside view</label><select id="room-select"><option value="">Choose a room</option></select><button id="exit-room" hidden>Return outside</button><p id="walk-help" hidden>WASD to move / Shift faster / E climb up, Q climb down at a ladder, Space to step off / in the hub and corridor you float: WASD along the view, E/Q up/down / drag to look / F near an airlock to cycle its interlocked doors / Escape to leave</p>
+      <label class="room-label" for="room-select">Inside view</label><select id="room-select"><option value="">Choose a room</option></select><button id="exit-room" hidden>Return outside</button><p id="walk-help" hidden>WASD to move / Shift faster / E climb up, Q climb down at a ladder, Space to step off / in the hub and corridor you float: WASD along the view, E/Q up/down / right-drag to orbit, left-drag to pan, scroll to zoom / F near an airlock to cycle its interlocked doors / Escape to leave</p>
 
+      <div class="view-tools"><label id="cutaway-control"><input id="cutaway" type="checkbox" checked> Cutaway</label><label id="labels-control"><input id="labels" type="checkbox"> Labels</label><label id="spin-control"><input id="spin" type="checkbox"> <span id="spin-label">Spin</span></label><label id="beam-control" hidden><input id="beam" type="checkbox" checked> Exhaust beam</label></div>
     </div>
-<div id="canvas-wrap"><canvas id="scene" tabindex="0" aria-label="3D spacecraft. Right-drag to orbit. Left-drag to pan from the cursor. Scroll to zoom down to component scale. Use system buttons to select components."></canvas><div id="loading" role="status" aria-live="polite">Preparing the design model…</div><div id="hover-label" hidden></div><div id="room-hud" role="status" aria-live="polite" hidden></div></div>
-      <div class="view-tools"><button id="reset-view" title="Reset camera">↺ <span>Reset view</span></button><button data-view="side">Side</button><button data-view="bow">Bow</button><button data-view="top">Top</button><span class="tool-separator"></span><label><input id="cutaway" type="checkbox" checked> Cutaway</label><label><input id="interiors" type="checkbox" checked> Interiors</label><label><input id="radiators" type="checkbox" checked> Radiators</label><label><input id="labels" type="checkbox"> Labels</label><label id="spin-control"><input id="spin" type="checkbox"> Spin</label><label id="beam-control" hidden><input id="beam" type="checkbox" checked> Exhaust beam</label></div>
-      <div class="viewport-footer"><span><b>LEFT DRAG</b> Pan <i>·</i> <b>RIGHT DRAG</b> Orbit <i>·</i> <b>SCROLL</b> Zoom</span><span id="view-readiness" aria-live="polite">Preparing background views...</span></div>
+<div id="canvas-wrap"><canvas id="scene" tabindex="0" aria-label="3D spacecraft. Right-drag to orbit. Left-drag to pan from the cursor. Scroll to zoom down to component scale. Use system buttons to select components."></canvas><div id="loading" role="status" aria-live="polite">Preparing the design model…</div><div id="mission-map" hidden></div><div id="hover-label" hidden></div><div id="room-hud" role="status" aria-live="polite" hidden></div><span id="view-readiness" aria-live="polite"></span></div>
+      <div class="system-panel" id="system-panel" hidden><span>Focus</span><button data-focus="proxima">Proxima Centauri</button><button data-focus="d">Proxima d</button><button data-focus="b">Proxima b</button><button data-focus="c">Proxima c (candidate)</button><label><input id="system-labels" type="checkbox" checked> Labels</label><span class="system-note">Select a planet to orbit it. Scroll toward the Settlement to enter Surface.</span></div>
+      <div class="timeline" id="timeline"><div class="timeline-row"><button id="play" aria-pressed="false">▶ Play</button><div class="year-track"><input id="year" type="range" min="0" max="1" step="0.0001" value="0" aria-label="Journey"><div class="milestones" id="milestones"></div></div><output id="year-value" for="year">Year 20.00</output></div>
+        <div class="timeline-scroll"><table class="timeline-table"><thead><tr><th>Ship</th><th>Phase</th><th>From Sun</th><th>Speed</th><th>Mass</th><th>Tank modules</th><th>Ship time</th></tr></thead><tbody id="timeline-rows"></tbody></table></div>
+</div>
+      <div class="viewport-footer"><button id="reset-view" title="Reset camera">↺ <span>Reset view</span></button><span><b>LEFT DRAG</b> Pan <i>·</i> <b>RIGHT DRAG</b> Orbit <i>·</i> <b>SCROLL</b> Zoom</span></div>
 
 
     </section>
@@ -35,18 +33,6 @@
 
   </main>
 
-  <section class="architecture-panel" aria-labelledby="architecture-title">
-    <h1 id="architecture-title">24 adults. A settlement before a family.</h1>
-    <p id="architecture-summary"></p>
-    <div class="architecture-grid">
-      <article><h2>Crew protection and space</h2><p id="architecture-habitat"></p><p id="architecture-health"></p></article>
-      <article><h2>Propulsion direction</h2><p id="architecture-propulsion"></p><p id="architecture-reference"></p></article>
-    </div>
-    <h2>Earlier external-launch comparison</h2>
-    <p>Tonnes per 100 tonnes remaining after braking. Ideal instantaneous burns, 50% conversion efficiency, optimized exhaust speed. These are propulsion benchmarks, not a complete ship or fleet budget.</p>
-    <div class="architecture-table"><table><thead><tr><th>Crew flight</th><th>Onboard launch + braking</th><th>External launch + onboard braking</th></tr></thead><tbody id="architecture-trade"></tbody></table></div>
-    <p>This earlier comparison is retained for context. The selected mission now uses fully onboard staged fusion–antimatter propulsion. The displayed engine and tanks remain a labeled geometry reference pending the staged layout.</p>
-  </section>
 
   <script type="module" src="app.js"></script>
 </body>

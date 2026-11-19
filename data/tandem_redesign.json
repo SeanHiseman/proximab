@@ -1,0 +1,87 @@
+{
+  "revision": "S8-tandem-edge-on",
+  "base_specification": "data/final_model_specification.json",
+  "status": "Conceptual redesign of S7 at the owner's direction; not engineering-qualified",
+  "changes_from_S7": [
+    "Two gravity discs inline in tandem along the flight direction, edge-on, with parallel counterrotating spin axes perpendicular to flight",
+    "Discs lock during burns; thrust lies in the disc plane and each room reconfigures so 'down' faces the thrusting engine",
+    "Braking fuel is built into each gravity disc's walls (rim and both faces) as nested tank layers that turn with the disc, consumed outermost first; disc spacing and corridor height grow with the wall thickness",
+    "Forward shield resized to the new frontal envelope at the S7 areal allocation; mass and fuel ledger recalculated to convergence",
+    "Main engine on 2000 m tow tethers: ahead and pulling through acceleration, re-rigged behind and pulling backward for braking. One forward dust shield, always at the leading end: in front of the engine while it leads, moved to the front of the ship when the engine is re-rigged behind. Dust arrives along the axis, so its shadow covers everything behind it; the four pod engines sit in a row across the shield's width so they fit its outline; four nozzle pods canted outward just enough for the plume edge to clear the ship; the thrust lost to the cant is charged to the fuel ledger",
+    "Tank volumes from liquid storage densities rather than a symbol scale"
+  ],
+  "storage": {
+    "deuterium_liquid_density_t_m3": 0.163,
+    "helium3_liquid_density_t_m3": 0.059,
+    "deuterium_mass_fraction": 0.4,
+    "antihydrogen_solid_density_t_m3": 0.086,
+    "status": "Liquid D2 near 20 K and liquid He-3 near its 3.2 K boiling point; no ullage, insulation, wall or cryocooler volume (optimistic). Antihydrogen as solid ice, containment volume excluded."
+  },
+  "habitat": {
+    "disc_radius_m": 9.5,
+    "disc_axial_depth_m": 4.5,
+    "rim_gap_m": 3.6,
+    "transfer_corridor_height_above_disc_m": 2.35,
+    "status": "Pressure hulls the fuel walls wrap. rim_gap_m is kept between the outer walls of the two discs for the food trains; the transfer corridor rides above the top walls. The food trains and corridor are despun part-time spaces outside the walls."
+  },
+  "shielding": {
+    "target_areal_density_g_cm2": null,
+    "target_status": "null = put all braking fuel in the walls. Only braking fuel remains aboard through the coast; likely below what a 20-year interstellar GCR dose budget needs; transport analysis still required. Set a number to wrap only that much and stage the remainder aft.",
+    "material_note": "Deuterium (Z/A 0.5) and helium-3 (Z/A 0.67) shield per gram roughly like water or polyethylene, not like hydrogen (Z/A 1.0)."
+  },
+  "forward_shield": {
+    "areal_mass_kg_m2": 100,
+    "supports_nominal_t": 3,
+    "margin_beyond_envelope_m": 0.2,
+    "shape": "Rectangle covering the shell's frontal envelope"
+  },
+  "tow": {
+    "length_m": 2000,
+    "fibre_strength_GPa": 5.8,
+    "fibre_density_kg_m3": 1560,
+    "safety_factor": 2,
+    "plume_edge_half_angle_deg": 5,
+    "plume_clearance_margin_m": 5,
+    "pod_offsets_y_m": [-8.9, -3.4, 3.4, 8.9],
+    "nozzle_exit_radius_m": 2.6,
+    "cargo_pod_offsets_y_m": [-2.9, -1.05, 1.05, 2.9],
+    "cargo_nozzle_exit_radius_m": 0.8,
+    "habitat_cable_length_m": 70,
+    "status": "Zylon-class fibre at its nominal strength with a safety factor of 2 (owner selection; 3 would add about 3,000 t at departure), sized for departure thrust. Tethers carry the engine's pull; tension straps hang the habitat and every tank module below the tow frame, so no long member is in compression. Tether dynamics, re-rigging between burns, abrasion, damage tolerance and creep are unsized. Nozzle cant is the smallest that keeps the plume edge (assumed 5 degree half-angle: residual ion thermal spread of a ~100 keV plasma at 0.08c exhaust, not a nozzle design) a 5 m margin clear of the ship; its thrust loss (1 - cos) is charged to the fuel ledger."
+  },
+  "crew_antimatter_t": 30,
+  "added_crew_hardware": [
+    ["Transfer-tube windows (in place of a cupola)", 0.5, false],
+    ["EVA handrails, tether points and small robotic arm (suits and airlocks are the habitats' own)", 1.5, false]
+  ],
+  "surface_solar": {
+    "continuous_load_kW": {
+      "habitation_life_support_and_habitat_hvac": 50,
+      "greenhouse_pumps_ventilation_and_dehumidification": 120,
+      "food_processing_and_refrigeration": 45,
+      "workshop_and_regolith_processing": 80,
+      "water_extraction_and_rover_charging": 30,
+      "communications_controls_and_lighting": 25
+    },
+    "capacity_margin": 0.25,
+    "top_of_atmosphere_flux_W_m2": 877,
+    "surface_transmission": 0.85,
+    "cell_efficiency": 0.2,
+    "system_efficiency": 0.85,
+    "array_kg_m2": 0.15,
+    "ground_structure_kg_m2": 0.05,
+    "laid_flat": true,
+    "star_elevation_deg": 45,
+    "storage_MWh": 0.5,
+    "battery_Wh_kg": 250,
+    "storage_note": "Four hours at an assumed 125 kW critical load, with crop lighting and workshop loads shed.",
+    "heat_rejection_kg_per_kW": 1.5,
+    "heat_rejection_note": "Fan-driven air-cooled dry coolers using the atmosphere the entry already relies on; planning figure.",
+    "switchyard_and_cable_t": 6,
+    "status": "Replaces the antimatter power plant: the settlement is in permanent daylight on the tidally locked day side, so storage only rides through flares and dust. Top-of-atmosphere irradiance from Ribas et al. (2017), with an assumed surface transmission. Crop lighting uses no daylight credit. Very thin roll-out photovoltaic blankets (thin-film on polyimide) unrolled flat on the graded ground with pegged edges and printed busbars, no frames; flat panels see the star at 45 degrees, so flux is reduced by sin(45). Masses are planning assumptions. Replaces the 15 t 'Surface power and services' allocation on the cargo ship."
+  },
+  "fuel_feed": {
+    "line_velocity_m_s": 3,
+    "status": "Cryogenic feed along the tether to a buffer tank at the engine; sized for peak flow at departure. Mass is inside the S7 'Fixed main-feed and deployment services' allocation (not resized)."
+  }
+}

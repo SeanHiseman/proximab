@@ -8,10 +8,10 @@ from calculations.depleted_staged_tanks import calculate,optimise,MIN_SPEED
 
 
 def closed(u,v,stages=8,tanks=True,core_t=500,annihilation_coupling=.8,
-           burn_years=1.25,transfer_years=19.9,electrical_fusion=False):
+           burn_years=1.25,transfer_years=19.9,electrical_fusion=False,thrust_fraction=1.):
     def run(m):
         return calculate(u,v,stages,tanks,m,burn_years,transfer_years,
-            electrical_fusion,annihilation_coupling)
+            electrical_fusion,annihilation_coupling,thrust_fraction)
     z,o=run(0),run(1000)
     if z is None or o is None:return None
     coefficient=1.1*(1/(5e9*1000)+2.28e-5*5/(2*.9*5.670374419e-8*2000**4*1000))

@@ -36,7 +36,7 @@
   "dose_status": "Unresolved; no shielding compliance claimed",
   "preferred_propulsion_study": "Crew: onboard D-He3 fusion with 20 t AM; cargo: electrical-ignition D-He3 fusion with zero AM",
   "propulsion_selection_status": "Frozen S7 concept; component-inclusive transfer only, capture fuel still excluded",
-  "displayed_propulsion_geometry": "Legacy reference geometry; selected staged hardware dimensions not yet implemented",
+  "displayed_propulsion_geometry": "S8 redesign (reports/tandem-redesign.json): tandem edge-on habitats with the braking fuel built into the disc walls, resized shield, four-pod engine towed on 2000 m tension tethers (safety factor 2, statically sized), acceleration tanks above the crew, one leading dust shield, tanks at liquid density; ship_design.py geometry remains a reference for the habitat discs only",
   "complete_dry_mass_t": null,
   "complete_fleet_antimatter_t": null,
   "landing_policy": "Conditional 500 m/s chemical crew descent, 300 m/s handover target; cargo retains 1000 m/s; verify surface services before descent",

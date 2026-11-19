@@ -83,6 +83,14 @@ from calculations.arrival_redesign import build_redesign
 data["arrival_redesign"] = build_redesign()
 data["lean_landing_plan"] = json.loads((root / "reports/lean-landing-plan.json").read_text())
 data["final_model_specification"] = json.loads((root / "reports/final-model-specification.json").read_text())
+data["final_model_inputs"] = json.loads((root / "data/final_model_specification.json").read_text())
+# Selected for the viewer: S8 tandem edge-on redesign (S7 trajectories, braking-fuel shell, resized shield).
+data["selected_specification"] = json.loads((root / "reports/tandem-redesign.json").read_text())
+# The crew discs' spacing follows the sized fuel walls; the food trains sit midway between them.
+spacing = data["selected_specification"]["layout"]["disc_centres_x_m"]
+data["layout"]["disc_centres_x_m"] = spacing
+for centre in data["layout"]["food_factory_modules_study"]["cruise_centres_m"]:
+    centre[0] = (spacing[0] + spacing[1]) / 2
 a = data["architecture"]
 data["legacy_mission_config"] = data["mission_config"]
 data["mission_config"] = dict(data["mission_config"], crew=a["crew"],

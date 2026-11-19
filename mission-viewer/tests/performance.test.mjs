@@ -17,7 +17,7 @@ test('overview cuts buffer size while retaining cabins, food production and shar
 });
 test('software close-ups cull offscreen equipment without deleting source geometry',()=>{
   const scene=createScene({mode:'cruise',landing:'horizontal',cutaway:true,detail:'medium'},data),r=renderer(),count=scene.meshes.length;
-  r.camera.distance=10;r.camera.target=[-38,0,0];r.render(scene,{mode:'cruise',dimensions:false,selected:'habA',spinAngle:0});
+  r.camera.distance=10;r.camera.target=[-16,0,0];r.render(scene,{mode:'cruise',dimensions:false,selected:'habA',spinAngle:0});
   assert.ok(r.softwareStats.visibleMeshes<count/3);assert.ok(r.softwareStats.drawnFaces>0);assert.equal(scene.meshes.length,count);
 });
 test('software spin matches a pre-rotated model without copying the scene each frame',()=>{
@@ -38,13 +38,13 @@ test('interactive geometry retains components within a 20 MiB upload budget',()=
  assert.deepEqual(new Set(medium.meshes.map(m=>m.id)),new Set(high.meshes.map(m=>m.id)));
  const compiled=compileScene(medium);
  assert.ok(compiled.streams.reduce((sum,v)=>sum+v.byteLength,0)<20*1024*1024);
- assert.equal(medium.rooms.length,28);
+ assert.equal(medium.rooms.length,26);
 });
 
 test('overview defers fittings until interiors or a habitat is requested',()=>{
  const state={mode:'cruise',landing:'horizontal',flat:true,cutaway:true,detail:'medium'};
  const overview=createScene({...state,interiorHabitat:'none'},data),one=createScene({...state,interiorHabitat:'A'},data),all=createScene({...state,interiorHabitat:'all'},data);
- assert.equal(overview.rooms.length,28);assert.equal(one.rooms.length,28);
+ assert.equal(overview.rooms.length,26);assert.equal(one.rooms.length,26);
  const a=one.meshes.filter(m=>m.id==='cabin-1').length,b=one.meshes.filter(m=>m.id==='cabin-5').length;
  assert.ok(a>b);assert.equal(b,1);
  assert.ok(overview.meshes.length<all.meshes.length*.6);

@@ -5,11 +5,11 @@
   "disc_axial_depth_m": 4.5,
   "disc_centres_x_m": [
     0,
-    0
+    27.262
   ],
   "disc_centres_z_m": [
-    3.25,
-    12.75
+    0,
+    0
   ],
   "cabin_floor_radius_m": 8.5,
   "spin_gravity_g": 0.25,
@@ -54,16 +54,17 @@
     "target_hardware_kg": 3000,
     "cruise_centres_m": [
       [
-        21.8,
-        0,
-        8
+        13.631,
+        4.35,
+        0
       ],
       [
-        28.9,
-        0,
-        8
+        13.631,
+        -4.35,
+        0
       ]
-    ]
+    ],
+    "cruise_placement": "S8: despun gap between the tandem discs, axes across the ship, either side of the transfer passage"
   },
   "hydrogen_tanks_study": {
     "count": 2,
@@ -121,8 +122,8 @@
     "bales": 8
   },
   "surface_disc_centres_x_m": [
-    -18,
-    18
+    -11.5,
+    11.5
   ],
   "surface_disc_centres_z_m": [
     -45,
@@ -131,5 +132,6 @@
   "landing_orientation": "Compare horizontal and upright; neither selected as flight-ready",
   "surface_power_standoff": "Illustrative spacing only; dose and routing study required",
   "main_acceleration_g": 0.2,
-  "main_acceleration_status": "Chosen in ship_design.py from the structural load checks; the reference studies in data/reference keep 1.2 g."
+  "main_acceleration_status": "Chosen in ship_design.py from the structural load checks; the reference studies in data/reference keep 1.2 g.",
+  "flight_arrangement": "S8 tandem edge-on: disc centres along the flight axis (x), spin axes parallel (z), hubs open toward the transfer corridor. The spacing keeps the rim gap between the fuel walls; mission-viewer/sync_data.py applies the spacing from reports/tandem-redesign.json."
 }

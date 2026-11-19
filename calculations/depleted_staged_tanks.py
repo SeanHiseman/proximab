@@ -9,7 +9,7 @@ from calculations.retained_tank_trade import mixture
 MIN_SPEED=math.sqrt(1-1/(1+.8*Q/(1-Q))**2)+1e-10
 
 
-def calculate(u1,u2,stages=8,tanks=True,core_t=500,burn_years=1.25,transfer_years=19.9,electrical_fusion=False,annihilation_coupling=.8):
+def calculate(u1,u2,stages=8,tanks=True,core_t=500,burn_years=1.25,transfer_years=19.9,electrical_fusion=False,annihilation_coupling=.8,thrust_fraction=1.):
     tr=trajectory(transfer_years,burn_years)
     rapidity=math.atanh(tr['beta'])
     mixes=[]
@@ -18,6 +18,7 @@ def calculate(u1,u2,stages=8,tanks=True,core_t=500,burn_years=1.25,transfer_year
         if a<Q/IGNITION_GAIN or not 0<u<1:return None
         m=mixture(None if electrical_fusion else a,.01 if tanks else 0,.5 if tanks else 0,.8,annihilation_coupling)
         m['tank_per_spent']*=1.1
+        m['effective_exhaust_c']*=thrust_fraction
         mixes.append(m)
     # .1 t nominal separation/services allowance per detachable module.
     kit=.11 if tanks else 0

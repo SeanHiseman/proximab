@@ -1,6 +1,7 @@
 import {createScene} from './model.js';
 import {compileScene} from './gpu.js';
-export const sceneKey=s=>[s.mode,s.cutaway,s.airlockOutside??'',s.detail,!!s.flat,s.interiorHabitat??'all',s.mode==='engine'?(s.showBeam!==false?'beam':'no-beam'):''].join('/');
+// Flight scenes also depend on the timeline stage (phase and tank drops), and on the beam while burning.
+export const sceneKey=s=>[s.mode,s.cutaway,s.airlockOutside??'',s.detail,!!s.flat,s.interiorHabitat??'all',s.stage??'',s.burning?(s.showBeam!==false?'beam':'no-beam'):''].join('/');
 export class SceneStore{
   constructor(data,worker,{timeoutMs=20000,startupTimeoutMs=1500,onStatus=()=>{}}={}){
     this.data=data;this.worker=worker;this.timeoutMs=timeoutMs;this.onStatus=onStatus;this.cache=new Map();this.pending=new Map();this.queue=[];this.busy=false;this.active=null;this.buildCount=0;

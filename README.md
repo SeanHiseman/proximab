@@ -4,19 +4,47 @@ Interactive spacecraft and surface-settlement model, with reproducible mission,
 mass-budget, food-production and shielding studies.
 
 Open **proxima-design-viewer.html** directly in a browser for the self-contained
-offline viewer. The selected architecture now has 24 adults, a 20-year crew flight,
+offline viewer. It shows the S8 crew ship (see below) and a separate cargo ship, a
+mission map of their departures (cargo year 0, crew year 20) and common arrival
+(year 39.9), and a journey slider for the selected ship (stretched so burns, the final
+month and arrival get room, with milestone marks) that drops its 16 tank modules in
+chronological order. The sky is live: real star positions with parallax along the route,
+relativistic aberration and Doppler brightening, ending in a parking orbit above a mock-up of
+Proxima b with Proxima Centauri (about 1.7 degrees across) and Alpha Centauri A and B behind. Descent is a separate view (both landers). Surface power is sized for **0.90 MW average** and **1.18 MW with crop lighting on**.
+About **16,455 m2** of flat photovoltaic blankets deliver **1.47 MW** with design margin.
+Zoom out from Surface to follow Proxima b into the System view.
+
+**S8 redesign** ([report](reports/tandem-redesign.json), `python -m calculations.tandem_redesign`):
+the two habitat discs fly edge-on in tandem and lock during burns, with each room's floors set so 'down'
+points away from the engine. All 454 t of crew braking fuel is built into the disc walls
+(8 nested layers, 2.40 m, ~27 g/cm2, no dose credit) and turns with the discs;
+emptied outer layers are released. The acceleration tanks (domed cylindrical tanks at liquid D/He-3
+density, ~916 m of modules) hang between the tow frame and the habitats, so the crew hangs at
+the bottom; modules release sideways from the top. A cryogenic trunk line runs up the straps and along
+the tether to a buffer tank at the engine: peak flow is only 0.9 kg/s, so a ~7 cm line suffices.
+The engine is towed on 2000 m tethers (Zylon-class, safety factor 2): four complete pod engines
+(each its own reaction chamber and magnetic nozzle; plasma cannot be piped round bends to shared nozzles)
+in a row across the shield width, canted 5.5 degrees so the plume edge clears the ship (the
+0.46% thrust loss is charged).  One forward dust shield, with four thin spikes covering the radiator fins' leading edges (24.2 x 12.1 m) always leads: in
+front of the engine, which leads through acceleration and the whole coast; the ship flips once, at the start of
+braking, when the engine is re-rigged behind and the shield moves to the crew end. Engine radiation shadow shields are removed from the design and the ledger for now (open item: the
+engine's radiation toward the tethers and ship is unshielded and unsized). The crew ship adds windows along
+the transfer tube, EVA handrails, tether points and a small robotic arm (suits and airlocks are the habitats' own). Each habitat disc lands separately, belly-first on its
+own stacked-ring inflatable heat shield (HIAD) with the payload in its wake. Crew antimatter is 30 t, giving a crew departure mass of 7,001 t
+(S7: 27,335 t at 20 t); the design sits near the antimatter limit, where every retained tonne costs many
+at departure (35 t of antimatter would roughly halve it). Tether dynamics and re-rigging are not yet sized.
+The selected architecture now has 24 adults, a 20-year crew flight,
 40-year cargo flight departing 20 years earlier, and births after arrival. The model
 has 24 berths, 24 descent seats and two reproductive-bank locations. Its gravity
 module envelopes are retained; 750 m³ usable space is an allocation, not a measured
-net volume. Engine/tank geometry and older mass ledgers remain labeled references.
+net volume. Older mass ledgers remain labeled references.
 The selected propulsion architecture is fully onboard staged fusion–antimatter.
-The selected target is now [20 t antimatter with zero main-fuel reserve](docs/FUSION_EFFICIENCY_RESEARCH.md),
-eight tank drops per burn. The earlier 500 t retained allocation is historical. The earlier
+The S7 target was [20 t antimatter with zero main-fuel reserve](docs/FUSION_EFFICIENCY_RESEARCH.md),
+eight tank drops per burn; the S8 redesign raises crew antimatter to 30 t (see above). The earlier 500 t retained allocation is historical. The earlier
 80% annihilation-to-exhaust coupling is an optimistic assumption unsupported by
 an engineered coupling mechanism. The viewer labels it accordingly. The
 [S3 integrated component budget](docs/INTEGRATED_DESIGN_SPECIFICATION.md) remains
 a reference; it is not a component closure for the new 500 t allocation.
-Engine and tank geometry remains a historical reference.
 
 The selected [S7 model-redesign specification](docs/FINAL_MODEL_SPECIFICATION.md) freezes 20 t crew antimatter, zero cargo antimatter, two coaxial habitat modules and a 20 m circular forward shield. Crew fusion is 26,398 t; cargo fusion 4,067 t. Crew touchdown is 228.8 t. The specification is ready for conceptual modeling; tank packaging, capture fuel, radiation and landing remain unresolved.
 

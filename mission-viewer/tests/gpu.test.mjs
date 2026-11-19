@@ -18,12 +18,15 @@ test('worker-ready streams preserve geometry, compact normals and component tags
 });
 
 test('WebGL 1 receives compatible shaders and vertex-array extension bindings',()=>{
- const sources=[],gl={createShader:()=>({}),createProgram:()=>({}),createBuffer:()=>({}),getShaderParameter:()=>true,getProgramParameter:()=>true,getUniformLocation:()=>({}),getExtension:name=>name==='OES_vertex_array_object'?{createVertexArrayOES:()=>({}),bindVertexArrayOES(){}}:null,shaderSource:(shader,source)=>sources.push(source)};
+ const sources=[],locations=[],gl={VERTEX_SHADER:1,FRAGMENT_SHADER:2,bindAttribLocation:(program,index,name)=>locations.push([index,name]),getShaderPrecisionFormat:()=>({precision:0}),createShader:()=>({}),createProgram:()=>({}),createBuffer:()=>({}),getShaderParameter:()=>true,getProgramParameter:()=>true,getUniformLocation:()=>({}),getExtension:name=>name==='OES_vertex_array_object'?{createVertexArrayOES:()=>({}),bindVertexArrayOES(){}}:null,shaderSource:(shader,source)=>sources.push(source)};
  for(const name of ['compileShader','attachShader','linkProgram','deleteShader'])gl[name]=()=>{};
  new GPUScene(gl);
  assert.equal(sources.length,2);
  for(const source of sources)assert.doesNotMatch(source,/#version 300|layout\(|^in |^out /m);
  assert.match(sources[0],/attribute vec3 position/);assert.match(sources[1],/gl_FragColor/);
+ assert.deepEqual(locations,[[0,'position'],[1,'normal'],[2,'color'],[3,'material'],[4,'spinGroup'],[5,'selectionTags'],[6,'deckGroup']]);
+ assert.match(sources[0],/precision highp float/);assert.match(sources[1],/precision mediump float/);
+ for(const source of sources)assert.match(source,/varying mediump vec4 surfaceColor/);
 });
 
 
@@ -33,4 +36,23 @@ test('moving the rover updates picking without uploading the terrain again',asyn
  const gpu=new GPUScene(gl),scene={meshes:[{id:'rover',vertices:[[89,-1,-42],[91,-1,-42],[90,1,-42]],faces:[[0,1,2]],opacity:1,color:'#aacccc'}],lines:[]},rover=createRoverState(),camera={eye:[100,-.2,-32],right:[1,0,0],up:[0,1,0],forward:[0,0,-1],focal:500,width:800,height:500,camera:{distance:10}};
  rover.x=100;placeRover(rover);gpu.draw(scene,{mode:'settlement',rover},camera);assert.equal(gpu.pick(400,255,camera),'rover');assert.equal(uploads,3);
  rover.x=110;placeRover(rover);gpu.draw(scene,{mode:'settlement',rover},camera);assert.equal(gpu.pick(400,255,camera),null);camera.eye[0]=110;assert.equal(gpu.pick(400,255,camera),'rover');assert.equal(uploads,3);
+});
+
+test('GPU close-ups skip offscreen opaque groups without another upload',()=>{
+ let uploads=0,drawn=0;
+ const gl=new Proxy({canvas:{width:800,height:500},createShader:()=>({}),createProgram:()=>({}),createBuffer:()=>({}),createVertexArray:()=>({}),getShaderParameter:()=>true,getProgramParameter:()=>true,getUniformLocation:()=>({}),bufferData:()=>uploads++,drawArrays:(kind,start,count)=>drawn+=count},{get:(o,k)=>o[k]??(()=>{})});
+ const mesh=x=>({id:'test',vertices:[[x-1,-1,0],[x+1,-1,0],[x,1,0]],faces:Array.from({length:801},()=>[0,1,2]),opacity:1,color:'#aacccc'});
+ const gpu=new GPUScene(gl),scene={meshes:[mesh(0),mesh(100),mesh(-100)],lines:[]};
+ const camera={eye:[0,0,5],forward:[0,0,-1],right:[1,0,0],up:[0,1,0],focal:600,width:800,height:500,camera:{distance:5}};
+ gpu.draw(scene,{mode:'cargo'},camera);assert.equal(drawn,801*3);assert.equal(uploads,3);
+});
+
+test('ray picking skips a panel clipped by the current near plane',()=>{
+ const gpu=Object.create(GPUScene.prototype);
+ const mesh=(id,z)=>({id,vertices:[[-1,-1,z],[1,-1,z],[0,1,z]],faces:[[0,1,2]],opacity:1,color:'#aacccc'});
+ gpu.pickEntries=compileScene({meshes:[mesh('clipped',-.01),mesh('visible',-1)],lines:[]}).pickEntries;
+ const camera={eye:[0,0,0],forward:[0,0,-1],right:[1,0,0],up:[0,1,0],focal:600,width:800,height:500,camera:{distance:90}};
+ assert.equal(gpu.pickHit(400,255,camera).id,'visible');
+ camera.camera.distance=1;
+ assert.equal(gpu.pickHit(400,255,camera).id,'clipped');
 });

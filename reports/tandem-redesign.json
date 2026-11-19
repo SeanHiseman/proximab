@@ -1,0 +1,1897 @@
+{
+  "revision": "S8-tandem-edge-on",
+  "inputs": {
+    "revision": "S8-tandem-edge-on",
+    "base_specification": "data/final_model_specification.json",
+    "status": "Conceptual redesign of S7 at the owner's direction; not engineering-qualified",
+    "changes_from_S7": [
+      "Two gravity discs inline in tandem along the flight direction, edge-on, with parallel counterrotating spin axes perpendicular to flight",
+      "Discs lock during burns; thrust lies in the disc plane and each room reconfigures so 'down' faces the thrusting engine",
+      "Braking fuel is built into each gravity disc's walls (rim and both faces) as nested tank layers that turn with the disc, consumed outermost first; disc spacing and corridor height grow with the wall thickness",
+      "Forward shield resized to the new frontal envelope at the S7 areal allocation; mass and fuel ledger recalculated to convergence",
+      "Main engine on 2000 m tow tethers: ahead and pulling through acceleration, re-rigged behind and pulling backward for braking. One forward dust shield, always at the leading end: in front of the engine while it leads, moved to the front of the ship when the engine is re-rigged behind. Dust arrives along the axis, so its shadow covers everything behind it; the four pod engines sit in a row across the shield's width so they fit its outline; four nozzle pods canted outward just enough for the plume edge to clear the ship; the thrust lost to the cant is charged to the fuel ledger",
+      "Tank volumes from liquid storage densities rather than a symbol scale"
+    ],
+    "storage": {
+      "deuterium_liquid_density_t_m3": 0.163,
+      "helium3_liquid_density_t_m3": 0.059,
+      "deuterium_mass_fraction": 0.4,
+      "antihydrogen_solid_density_t_m3": 0.086,
+      "status": "Liquid D2 near 20 K and liquid He-3 near its 3.2 K boiling point; no ullage, insulation, wall or cryocooler volume (optimistic). Antihydrogen as solid ice, containment volume excluded."
+    },
+    "habitat": {
+      "disc_radius_m": 9.5,
+      "disc_axial_depth_m": 4.5,
+      "rim_gap_m": 3.6,
+      "transfer_corridor_height_above_disc_m": 2.35,
+      "status": "Pressure hulls the fuel walls wrap. rim_gap_m is kept between the outer walls of the two discs for the food trains; the transfer corridor rides above the top walls. The food trains and corridor are despun part-time spaces outside the walls."
+    },
+    "shielding": {
+      "target_areal_density_g_cm2": null,
+      "target_status": "null = put all braking fuel in the walls. Only braking fuel remains aboard through the coast; likely below what a 20-year interstellar GCR dose budget needs; transport analysis still required. Set a number to wrap only that much and stage the remainder aft.",
+      "material_note": "Deuterium (Z/A 0.5) and helium-3 (Z/A 0.67) shield per gram roughly like water or polyethylene, not like hydrogen (Z/A 1.0)."
+    },
+    "forward_shield": {
+      "areal_mass_kg_m2": 100,
+      "supports_nominal_t": 3,
+      "margin_beyond_envelope_m": 0.2,
+      "shape": "Rectangle covering the shell's frontal envelope"
+    },
+    "tow": {
+      "length_m": 2000,
+      "fibre_strength_GPa": 5.8,
+      "fibre_density_kg_m3": 1560,
+      "safety_factor": 2,
+      "plume_edge_half_angle_deg": 5,
+      "plume_clearance_margin_m": 5,
+      "pod_offsets_y_m": [
+        -8.9,
+        -3.4,
+        3.4,
+        8.9
+      ],
+      "nozzle_exit_radius_m": 2.6,
+      "cargo_pod_offsets_y_m": [
+        -2.9,
+        -1.05,
+        1.05,
+        2.9
+      ],
+      "cargo_nozzle_exit_radius_m": 0.8,
+      "habitat_cable_length_m": 70,
+      "status": "Zylon-class fibre at its nominal strength with a safety factor of 2 (owner selection; 3 would add about 3,000 t at departure), sized for departure thrust. Tethers carry the engine's pull; tension straps hang the habitat and every tank module below the tow frame, so no long member is in compression. Tether dynamics, re-rigging between burns, abrasion, damage tolerance and creep are unsized. Nozzle cant is the smallest that keeps the plume edge (assumed 5 degree half-angle: residual ion thermal spread of a ~100 keV plasma at 0.08c exhaust, not a nozzle design) a 5 m margin clear of the ship; its thrust loss (1 - cos) is charged to the fuel ledger."
+    },
+    "crew_antimatter_t": 30,
+    "added_crew_hardware": [
+      [
+        "Transfer-tube windows (in place of a cupola)",
+        0.5,
+        false
+      ],
+      [
+        "EVA handrails, tether points and small robotic arm (suits and airlocks are the habitats' own)",
+        1.5,
+        false
+      ]
+    ],
+    "surface_solar": {
+      "continuous_load_kW": {
+        "habitation_life_support_and_habitat_hvac": 50,
+        "greenhouse_pumps_ventilation_and_dehumidification": 120,
+        "food_processing_and_refrigeration": 45,
+        "workshop_and_regolith_processing": 80,
+        "water_extraction_and_rover_charging": 30,
+        "communications_controls_and_lighting": 25
+      },
+      "capacity_margin": 0.25,
+      "top_of_atmosphere_flux_W_m2": 877,
+      "surface_transmission": 0.85,
+      "cell_efficiency": 0.2,
+      "system_efficiency": 0.85,
+      "array_kg_m2": 0.15,
+      "ground_structure_kg_m2": 0.05,
+      "laid_flat": true,
+      "star_elevation_deg": 45,
+      "storage_MWh": 0.5,
+      "battery_Wh_kg": 250,
+      "storage_note": "Four hours at an assumed 125 kW critical load, with crop lighting and workshop loads shed.",
+      "heat_rejection_kg_per_kW": 1.5,
+      "heat_rejection_note": "Fan-driven air-cooled dry coolers using the atmosphere the entry already relies on; planning figure.",
+      "switchyard_and_cable_t": 6,
+      "status": "Replaces the antimatter power plant: the settlement is in permanent daylight on the tidally locked day side, so storage only rides through flares and dust. Top-of-atmosphere irradiance from Ribas et al. (2017), with an assumed surface transmission. Crop lighting uses no daylight credit. Very thin roll-out photovoltaic blankets (thin-film on polyimide) unrolled flat on the graded ground with pegged edges and printed busbars, no frames; flat panels see the star at 45 degrees, so flux is reduced by sin(45). Masses are planning assumptions. Replaces the 15 t 'Surface power and services' allocation on the cargo ship."
+    },
+    "fuel_feed": {
+      "line_velocity_m_s": 3,
+      "status": "Cryogenic feed along the tether to a buffer tank at the engine; sized for peak flow at departure. Mass is inside the S7 'Fixed main-feed and deployment services' allocation (not resized)."
+    }
+  },
+  "ships": {
+    "crew": {
+      "ledger": {
+        "hardware_rows": [
+          [
+            "Pressure envelopes, floors and frames",
+            50,
+            true
+          ],
+          [
+            "Spin, bearings and transfers",
+            12,
+            true
+          ],
+          [
+            "Adult furnishings and exercise",
+            8,
+            true
+          ],
+          [
+            "Life support and two food-production trains",
+            22,
+            true
+          ],
+          [
+            "Medical, 24 berths and two reproductive banks",
+            10,
+            true
+          ],
+          [
+            "Habitat service fission-electric unit",
+            15,
+            true
+          ],
+          [
+            "Transit backup fission-electric unit retained in orbit",
+            15,
+            false
+          ],
+          [
+            "Service thermal management and distribution",
+            10,
+            true
+          ],
+          [
+            "Avionics, communication and autonomy",
+            4,
+            true
+          ],
+          [
+            "Landing cradle and chemical engines",
+            18,
+            true
+          ],
+          [
+            "Deployable aeroshell and fresh TPS",
+            12,
+            true
+          ],
+          [
+            "Arrival separation and power transfer",
+            8,
+            true
+          ],
+          [
+            "Water storage and plumbing",
+            6,
+            true
+          ],
+          [
+            "Forward shield face and supports",
+            29.521847577053045,
+            false
+          ],
+          [
+            "Remote engine tow assembly",
+            15.409011895587247,
+            false
+          ],
+          [
+            "Fixed main-feed and deployment services",
+            8,
+            false
+          ],
+          [
+            "Engine shadow shields and neutron-layer allowance",
+            0.0,
+            false
+          ],
+          [
+            "Unresolved GCR equipment allowance, no dose credit",
+            30,
+            false
+          ],
+          [
+            "Transfer-tube windows (in place of a cupola)",
+            0.5,
+            false
+          ],
+          [
+            "EVA handrails, tether points and small robotic arm (suits and airlocks are the habitats' own)",
+            1.5,
+            false
+          ],
+          [
+            "Dust shield radiator strips",
+            8.80467725738334,
+            false
+          ]
+        ],
+        "inventory_rows": [
+          [
+            "Crew body mass",
+            1.92
+          ],
+          [
+            "Habitat working and landing water",
+            8,
+            true
+          ],
+          [
+            "Cabin and reserve gases",
+            3
+          ],
+          [
+            "Emergency food",
+            4
+          ],
+          [
+            "Food-loop inventory",
+            1
+          ],
+          [
+            "Twenty-year makeup supplies and replaceable spares",
+            12
+          ],
+          [
+            "Service reactor fuel",
+            1
+          ]
+        ],
+        "fixed_dry_with_margin_t": 314.7664258299186,
+        "fixed_inventory_t": 30.92,
+        "nonpropulsion_core_t": 375.8834193173346,
+        "landing": {
+          "base_t": 223.42000000000002,
+          "burned_t": 27.451812261287255,
+          "loaded_t": 30.196993487415984,
+          "tank_with_margin_t": 2.657335426892607,
+          "touchdown_t": 228.82251665302135,
+          "entry_t": 256.2743289143086,
+          "oxygen_t": 25.883137274927986,
+          "hydrogen_t": 4.313856212487997,
+          "delta_v_m_s": 500
+        }
+      },
+      "propulsion": {
+        "retained_core_t": 453.32826112484355,
+        "departure_t": 7001.253859892858,
+        "fusion_t": 6398.947180113217,
+        "antimatter_t": 29.999999872530562,
+        "ordinary_annihilation_matter_t": 29.999999872530562,
+        "departure_dry_t": 542.3066800345788,
+        "tank_and_separation_t": 88.9784189097352,
+        "stages_per_burn": 8,
+        "trajectory": {
+          "beta": 0.22739676609135911,
+          "acceleration_m_s2": 1.7452947520390918,
+          "proper_years": 19.422707121115206,
+          "burn_years": 1.2710466460257477,
+          "years": 19.9
+        },
+        "exhaust_c": [
+          0.11304727363055393,
+          0.37926085236554175
+        ],
+        "segments": [
+          {
+            "phase": 0,
+            "index": 0,
+            "before_t": 7001.253859892858,
+            "after_burn_t": 5412.008445501274,
+            "after_drop_t": 5392.660661652161,
+            "spent_t": 1589.2454143915838,
+            "tank_and_separation_t": 19.347783849112382,
+            "fusion_t": 1582.7293316798773,
+            "antimatter_t": 3.2580413558532655,
+            "source_W": 260943312541051.38
+          },
+          {
+            "phase": 0,
+            "index": 1,
+            "before_t": 5392.660661652161,
+            "after_burn_t": 4168.556894040493,
+            "after_drop_t": 4153.629142498191,
+            "spent_t": 1224.1037676116682,
+            "tank_and_separation_t": 14.92775154230206,
+            "fusion_t": 1219.0848062069422,
+            "antimatter_t": 2.509480702363021,
+            "source_W": 200989531964045.56
+          },
+          {
+            "phase": 0,
+            "index": 2,
+            "before_t": 4153.629142498191,
+            "after_burn_t": 3210.7785903115973,
+            "after_drop_t": 3199.255403297982,
+            "spent_t": 942.850552186593,
+            "tank_and_separation_t": 11.52318701361545,
+            "fusion_t": 938.9847602030571,
+            "antimatter_t": 1.9328959917679072,
+            "source_W": 154809662554802.94
+          },
+          {
+            "phase": 0,
+            "index": 3,
+            "before_t": 3199.255403297982,
+            "after_burn_t": 2473.0423447649746,
+            "after_drop_t": 2464.1415502646746,
+            "spent_t": 726.2130585330074,
+            "tank_and_separation_t": 8.900794500300167,
+            "fusion_t": 723.2355043347251,
+            "antimatter_t": 1.4887770991411458,
+            "source_W": 119239256182921.56
+          },
+          {
+            "phase": 0,
+            "index": 4,
+            "before_t": 2464.1415502646746,
+            "after_burn_t": 1904.7952192305029,
+            "after_drop_t": 1897.9143431179868,
+            "spent_t": 559.3463310341716,
+            "tank_and_separation_t": 6.88087611251593,
+            "fusion_t": 557.0529489520194,
+            "antimatter_t": 1.1466910410761102,
+            "source_W": 91840871872905.64
+          },
+          {
+            "phase": 0,
+            "index": 5,
+            "before_t": 1897.9143431179868,
+            "after_burn_t": 1467.0984168469697,
+            "after_drop_t": 1461.7733987048348,
+            "spent_t": 430.8159262710172,
+            "tank_and_separation_t": 5.325018142135,
+            "fusion_t": 429.0495331238788,
+            "antimatter_t": 0.8831965735691938,
+            "source_W": 70737051608632.86
+          },
+          {
+            "phase": 0,
+            "index": 6,
+            "before_t": 1461.7733987048348,
+            "after_burn_t": 1129.9590241283913,
+            "after_drop_t": 1125.8324177828108,
+            "spent_t": 331.81437457644347,
+            "tank_and_separation_t": 4.126606345580553,
+            "fusion_t": 330.45389878705697,
+            "antimatter_t": 0.6802378946932492,
+            "source_W": 54481668637604.28
+          },
+          {
+            "phase": 0,
+            "index": 7,
+            "before_t": 1125.8324177828108,
+            "after_burn_t": 870.2747643766961,
+            "after_drop_t": 867.0712441106047,
+            "spent_t": 255.55765340611478,
+            "tank_and_separation_t": 3.2035202660914157,
+            "fusion_t": 254.50983864313093,
+            "antimatter_t": 0.5239073814919237,
+            "source_W": 41960832493916.08
+          },
+          {
+            "phase": 1,
+            "index": 0,
+            "before_t": 867.0712441106047,
+            "after_burn_t": 801.9677600138305,
+            "after_drop_t": 799.5958010380576,
+            "spent_t": 65.10348409677414,
+            "tank_and_separation_t": 2.371958975772773,
+            "fusion_t": 59.3676004206767,
+            "antimatter_t": 2.8679418380487185,
+            "source_W": 112214185970841.97
+          },
+          {
+            "phase": 1,
+            "index": 1,
+            "before_t": 799.5958010380576,
+            "after_burn_t": 739.5586669844132,
+            "after_drop_t": 737.362733548801,
+            "spent_t": 60.03713405364437,
+            "tank_and_separation_t": 2.195933435612289,
+            "fusion_t": 54.747616573042514,
+            "antimatter_t": 2.6447587403009294,
+            "source_W": 103481683343362.48
+          },
+          {
+            "phase": 1,
+            "index": 2,
+            "before_t": 737.362733548801,
+            "after_burn_t": 681.9983291550316,
+            "after_drop_t": 679.9647452916757,
+            "spent_t": 55.36440439376943,
+            "tank_and_separation_t": 2.0335838633558714,
+            "fusion_t": 50.48657354024658,
+            "antimatter_t": 2.438915426761426,
+            "source_W": 95427635817038.81
+          },
+          {
+            "phase": 1,
+            "index": 3,
+            "before_t": 679.9647452916757,
+            "after_burn_t": 628.9100317578743,
+            "after_drop_t": 627.0261840270581,
+            "spent_t": 51.05471353380139,
+            "tank_and_separation_t": 1.883847730816175,
+            "fusion_t": 46.55658410172584,
+            "antimatter_t": 2.2490647160377755,
+            "source_W": 87999332119522.06
+          },
+          {
+            "phase": 1,
+            "index": 4,
+            "before_t": 627.0261840270581,
+            "after_burn_t": 579.9463281589983,
+            "after_drop_t": 578.2005830980958,
+            "spent_t": 47.0798558680598,
+            "tank_and_separation_t": 1.745745060902555,
+            "fusion_t": 42.93192768121788,
+            "antimatter_t": 2.0739640934209618,
+            "source_W": 81148156280021.11
+          },
+          {
+            "phase": 1,
+            "index": 5,
+            "before_t": 578.2005830980958,
+            "after_burn_t": 534.7867659266078,
+            "after_drop_t": 533.1683939126365,
+            "spent_t": 43.413817171488,
+            "tank_and_separation_t": 1.618372013971388,
+            "fusion_t": 39.58888201347308,
+            "antimatter_t": 1.9124675790074583,
+            "source_W": 74829269452675.47
+          },
+          {
+            "phase": 1,
+            "index": 6,
+            "before_t": 533.1683939126365,
+            "after_burn_t": 493.13578956811256,
+            "after_drop_t": 491.63489459563993,
+            "spent_t": 40.03260434452392,
+            "tank_and_separation_t": 1.500894972472646,
+            "fusion_t": 36.50556788929986,
+            "antimatter_t": 1.7635182276120283,
+            "source_W": 69001316460053.016
+          },
+          {
+            "phase": 1,
+            "index": 7,
+            "before_t": 491.63489459563993,
+            "after_burn_t": 454.7208062100221,
+            "after_drop_t": 453.32826112484355,
+            "spent_t": 36.914088385617845,
+            "tank_and_separation_t": 1.3925450851785532,
+            "fusion_t": 33.66180596284695,
+            "antimatter_t": 1.6261412113854483,
+            "source_W": 63626155136189.805
+          }
+        ],
+        "retained_propulsion_fuel_t": 0,
+        "peak_source_TW": 260.9433125410514,
+        "engine_with_allowance_t": 57.40752875903131,
+        "hot_radiator_with_allowance_t": 20.037313048477692,
+        "core_left_after_engine_and_hot_radiator_t": 375.8834193173345,
+        "effective_exhaust_c": [
+          0.11236429097311505,
+          0.37065092568927305
+        ],
+        "ignition_antimatter_t": 0.012541936473021905,
+        "manufacture_ZJ": 10.785062099016285,
+        "primary_ZJ": 13.039488170319606,
+        "nonpropulsion_core_t": 375.8834193173346
+      },
+      "retained_dry_hardware_t": 392.2112676374276,
+      "departure_dry_hardware_t": 481.1896865471628,
+      "landed_dry_hardware_t": 195.15733542689264
+    },
+    "cargo": {
+      "ledger": {
+        "hardware_rows": [
+          [
+            "Industry and resource processing",
+            30,
+            true
+          ],
+          [
+            "Heavy exploration",
+            10,
+            true
+          ],
+          [
+            "Surface habitat expansion",
+            15,
+            true
+          ],
+          [
+            "Food and life-support backup",
+            15,
+            true
+          ],
+          [
+            "Surface power and services",
+            13.502846144539259,
+            true
+          ],
+          [
+            "Landing structure, engines and aeroshell",
+            24,
+            true
+          ],
+          [
+            "Spine, autonomy and maintenance equipment",
+            10,
+            false
+          ],
+          [
+            "Forward shield and support",
+            5,
+            false
+          ],
+          [
+            "Remote propulsion support",
+            6.73488132933864,
+            false
+          ],
+          [
+            "Feed, electronics and source protection",
+            8,
+            false
+          ],
+          [
+            "Transferred initial surface exploration and repair",
+            8,
+            true
+          ],
+          [
+            "Dust shield radiator strips",
+            1.623653450420213,
+            false
+          ]
+        ],
+        "inventory_rows": [
+          [
+            "Startup supplies, spares and process inventories",
+            25
+          ]
+        ],
+        "fixed_dry_with_margin_t": 165.48821691388196,
+        "fixed_inventory_t": 25,
+        "nonpropulsion_core_t": 235.26887483608667,
+        "landing": {
+          "base_t": 152.0531307589932,
+          "burned_t": 40.709689020186104,
+          "loaded_t": 44.78065792220472,
+          "tank_with_margin_t": 3.9406978971540156,
+          "touchdown_t": 160.06479755816585,
+          "entry_t": 200.77448657835194,
+          "oxygen_t": 38.38342107617547,
+          "hydrogen_t": 6.397236846029245,
+          "delta_v_m_s": 1000
+        }
+      },
+      "propulsion": {
+        "retained_core_t": 255.57595953476107,
+        "departure_t": 4357.421326442311,
+        "fusion_t": 4055.4751403635514,
+        "antimatter_t": 0.0,
+        "ordinary_annihilation_matter_t": 0.0,
+        "departure_dry_t": 301.9461860787601,
+        "tank_and_separation_t": 46.37022654399905,
+        "stages_per_burn": 8,
+        "trajectory": {
+          "beta": 0.10898157883193021,
+          "acceleration_m_s2": 1.0443094749997275,
+          "proper_years": 39.67025256159044,
+          "burn_years": 0.9973213247870633,
+          "years": 39.9
+        },
+        "exhaust_c": [
+          0.07854681256754453,
+          0.07854681256754453
+        ],
+        "segments": [
+          {
+            "phase": 0,
+            "index": 0,
+            "before_t": 4357.421326442311,
+            "after_burn_t": 3657.8840574447927,
+            "after_drop_t": 3650.07914748582,
+            "spent_t": 699.5372689975181,
+            "tank_and_separation_t": 7.804909958972701,
+            "fusion_t": 699.5372689975181,
+            "antimatter_t": 0.0,
+            "source_W": 68422864914548.914
+          },
+          {
+            "phase": 0,
+            "index": 1,
+            "before_t": 3650.07914748582,
+            "after_burn_t": 3064.0980804353776,
+            "after_drop_t": 3057.5422886978226,
+            "spent_t": 585.9810670504426,
+            "tank_and_separation_t": 6.555791737554869,
+            "fusion_t": 585.9810670504426,
+            "antimatter_t": 0.0,
+            "source_W": 57315750239774.43
+          },
+          {
+            "phase": 0,
+            "index": 2,
+            "before_t": 3057.5422886978226,
+            "after_burn_t": 2566.68666050765,
+            "after_drop_t": 2561.177248597558,
+            "spent_t": 490.8556281901727,
+            "tank_and_separation_t": 5.509411910091901,
+            "fusion_t": 490.8556281901727,
+            "antimatter_t": 0.0,
+            "source_W": 48011378133337.73
+          },
+          {
+            "phase": 0,
+            "index": 3,
+            "before_t": 2561.177248597558,
+            "after_burn_t": 2150.007705035121,
+            "after_drop_t": 2145.3748400559343,
+            "spent_t": 411.16954356243696,
+            "tank_and_separation_t": 4.632864979186808,
+            "fusion_t": 411.16954356243696,
+            "antimatter_t": 0.0,
+            "source_W": 40217154085966.46
+          },
+          {
+            "phase": 0,
+            "index": 4,
+            "before_t": 2145.3748400559343,
+            "after_burn_t": 1800.957914503765,
+            "after_drop_t": 1797.0593283226913,
+            "spent_t": 344.4169255521692,
+            "tank_and_separation_t": 3.898586181073861,
+            "fusion_t": 344.4169255521692,
+            "antimatter_t": 0.0,
+            "source_W": 33687973201359.094
+          },
+          {
+            "phase": 0,
+            "index": 5,
+            "before_t": 1797.0593283226913,
+            "after_burn_t": 1508.5607231653703,
+            "after_drop_t": 1505.2772385086398,
+            "spent_t": 288.4986051573209,
+            "tank_and_separation_t": 3.2834846567305305,
+            "fusion_t": 288.4986051573209,
+            "antimatter_t": 0.0,
+            "source_W": 28218512384627.77
+          },
+          {
+            "phase": 0,
+            "index": 6,
+            "before_t": 1505.2772385086398,
+            "after_burn_t": 1263.6211190692563,
+            "after_drop_t": 1260.852901755423,
+            "spent_t": 241.65611943938342,
+            "tank_and_separation_t": 2.7682173138332176,
+            "fusion_t": 241.65611943938342,
+            "antimatter_t": 0.0,
+            "source_W": 23636773548706.656
+          },
+          {
+            "phase": 0,
+            "index": 7,
+            "before_t": 1260.852901755423,
+            "after_burn_t": 1058.4364886008752,
+            "after_drop_t": 1056.0999080561753,
+            "spent_t": 202.41641315454785,
+            "tank_and_separation_t": 2.3365805447000265,
+            "fusion_t": 202.41641315454785,
+            "antimatter_t": 0.0,
+            "source_W": 19798674791993.51
+          },
+          {
+            "phase": 1,
+            "index": 0,
+            "before_t": 1056.0999080561753,
+            "after_burn_t": 886.5543924579998,
+            "after_drop_t": 884.5793917864199,
+            "spent_t": 169.5455155981754,
+            "tank_and_separation_t": 1.9750006715799298,
+            "fusion_t": 169.5455155981754,
+            "antimatter_t": 0.0,
+            "source_W": 16583519456034.38
+          },
+          {
+            "phase": 1,
+            "index": 1,
+            "before_t": 884.5793917864199,
+            "after_burn_t": 742.5696558477141,
+            "after_drop_t": 740.8975487523884,
+            "spent_t": 142.00973593870586,
+            "tank_and_separation_t": 1.6721070953257646,
+            "fusion_t": 142.00973593870586,
+            "antimatter_t": 0.0,
+            "source_W": 13890200578747.582
+          },
+          {
+            "phase": 1,
+            "index": 2,
+            "before_t": 740.8975487523884,
+            "after_burn_t": 621.9543920013831,
+            "after_drop_t": 620.536017277122,
+            "spent_t": 118.94315675100533,
+            "tank_and_separation_t": 1.418374724261059,
+            "fusion_t": 118.94315675100533,
+            "antimatter_t": 0.0,
+            "source_W": 11634021384660.389
+          },
+          {
+            "phase": 1,
+            "index": 3,
+            "before_t": 620.536017277122,
+            "after_burn_t": 520.9156137585453,
+            "after_drop_t": 519.709789319841,
+            "spent_t": 99.6204035185767,
+            "tank_and_separation_t": 1.2058244387043437,
+            "fusion_t": 99.6204035185767,
+            "antimatter_t": 0.0,
+            "source_W": 9744031826142.215
+          },
+          {
+            "phase": 1,
+            "index": 4,
+            "before_t": 519.709789319841,
+            "after_burn_t": 436.275955532437,
+            "after_drop_t": 435.24818336077556,
+            "spent_t": 83.43383378740397,
+            "tank_and_separation_t": 1.0277721716614439,
+            "fusion_t": 83.43383378740397,
+            "antimatter_t": 0.0,
+            "source_W": 8160797417869.559
+          },
+          {
+            "phase": 1,
+            "index": 5,
+            "before_t": 435.24818336077556,
+            "after_burn_t": 365.3737547218265,
+            "after_drop_t": 364.4951360067981,
+            "spent_t": 69.87442863894906,
+            "tank_and_separation_t": 0.8786187150284397,
+            "fusion_t": 69.87442863894906,
+            "antimatter_t": 0.0,
+            "source_W": 6834530201079.338
+          },
+          {
+            "phase": 1,
+            "index": 6,
+            "before_t": 364.4951360067981,
+            "after_burn_t": 305.9793504301815,
+            "after_drop_t": 305.2256767888387,
+            "spent_t": 58.51578557661659,
+            "tank_and_separation_t": 0.7536736413427825,
+            "fusion_t": 58.51578557661659,
+            "antimatter_t": 0.0,
+            "source_W": 5723523062059.687
+          },
+          {
+            "phase": 1,
+            "index": 7,
+            "before_t": 305.2256767888387,
+            "after_burn_t": 256.2249673387125,
+            "after_drop_t": 255.57595953476107,
+            "spent_t": 49.00070945012625,
+            "tank_and_separation_t": 0.6490078039513888,
+            "fusion_t": 49.00070945012625,
+            "antimatter_t": 0.0,
+            "source_W": 4792838168905.256
+          }
+        ],
+        "retained_propulsion_fuel_t": 0,
+        "peak_source_TW": 68.42286491454891,
+        "engine_with_allowance_t": 15.053030281200764,
+        "hot_radiator_with_allowance_t": 5.254054417473646,
+        "core_left_after_engine_and_hot_radiator_t": 235.26887483608667,
+        "effective_exhaust_c": [
+          0.07815635349364831,
+          0.07815635349364831
+        ],
+        "ignition_antimatter_t": 0,
+        "manufacture_ZJ": 0.0,
+        "primary_ZJ": 1.4287926795789445,
+        "nonpropulsion_core_t": 235.26887483608667
+      },
+      "retained_dry_hardware_t": 185.79530161255636,
+      "departure_dry_hardware_t": 232.1655281565554,
+      "landed_dry_hardware_t": 130.99382865614723
+    }
+  },
+  "fleet": {
+    "departure_t": 11358.675186335167,
+    "fusion_t": 10454.422320476768,
+    "antimatter_t": 29.999999872530562,
+    "ordinary_annihilation_matter_t": 29.999999872530562,
+    "primary_ZJ": 14.46828084989855
+  },
+  "envelope": {
+    "radius_m": 9.5,
+    "depth_m": 4.5,
+    "discs": 2,
+    "rim_gap_m": 3.6,
+    "corridor_height_m": 2.35
+  },
+  "shell": {
+    "layers": [
+      {
+        "index": 7,
+        "fusion_t": 33.66180596284695,
+        "antimatter_t": 1.6261412113854483,
+        "tank_and_separation_t": 1.3925450851785532,
+        "deuterium_m3": 82.60565880453238,
+        "helium3_m3": 342.32345046963,
+        "inner_offset_m": 1.9721522630525295e-29,
+        "deuterium_outer_offset_m": 0.04904005138517964,
+        "outer_offset_m": 0.24457896729782447
+      },
+      {
+        "index": 6,
+        "fusion_t": 36.50556788929986,
+        "antimatter_t": 1.7635182276120283,
+        "tank_and_separation_t": 1.500894972472646,
+        "deuterium_m3": 89.58421567926347,
+        "helium3_m3": 371.24306328101557,
+        "inner_offset_m": 0.24457896729782447,
+        "deuterium_outer_offset_m": 0.2938592964698996,
+        "outer_offset_m": 0.49062422427690344
+      },
+      {
+        "index": 5,
+        "fusion_t": 39.58888201347308,
+        "antimatter_t": 1.9124675790074583,
+        "tank_and_separation_t": 1.618372013971388,
+        "deuterium_m3": 97.15063070790941,
+        "helium3_m3": 402.5988001370144,
+        "inner_offset_m": 0.49062422427690344,
+        "deuterium_outer_offset_m": 0.540276037906966,
+        "outer_offset_m": 0.7387554520351651
+      },
+      {
+        "index": 4,
+        "fusion_t": 42.93192768121788,
+        "antimatter_t": 2.0739640934209618,
+        "tank_and_separation_t": 1.745745060902555,
+        "deuterium_m3": 105.35442375758988,
+        "helium3_m3": 436.59587472424965,
+        "inner_offset_m": 0.7387554520351651,
+        "deuterium_outer_offset_m": 0.7888939903539984,
+        "outer_offset_m": 0.9895205737059856
+      },
+      {
+        "index": 3,
+        "fusion_t": 46.55658410172584,
+        "antimatter_t": 2.2490647160377755,
+        "tank_and_separation_t": 1.883847730816175,
+        "deuterium_m3": 114.2492861392045,
+        "helium3_m3": 473.4567874751781,
+        "inner_offset_m": 0.9895205737059856,
+        "deuterium_outer_offset_m": 1.0402487639436582,
+        "outer_offset_m": 1.243411924896534
+      },
+      {
+        "index": 2,
+        "fusion_t": 50.48657354024658,
+        "antimatter_t": 2.438915426761426,
+        "tank_and_separation_t": 2.0335838633558714,
+        "deuterium_m3": 123.89343200060512,
+        "helium3_m3": 513.4227817652195,
+        "inner_offset_m": 1.243411924896534,
+        "deuterium_outer_offset_m": 1.2948230905771871,
+        "outer_offset_m": 1.5008783326901871
+      },
+      {
+        "index": 1,
+        "fusion_t": 54.747616573042514,
+        "antimatter_t": 2.6447587403009294,
+        "tank_and_separation_t": 2.195933435612289,
+        "deuterium_m3": 134.34997932034975,
+        "helium3_m3": 556.7554227767035,
+        "inner_offset_m": 1.5008783326901871,
+        "deuterium_outer_offset_m": 1.5530582410340048,
+        "outer_offset_m": 1.7623343034182164
+      },
+      {
+        "index": 0,
+        "fusion_t": 59.3676004206767,
+        "antimatter_t": 2.8679418380487185,
+        "tank_and_separation_t": 2.371958975772773,
+        "deuterium_m3": 145.68736299552566,
+        "helium3_m3": 603.738309362814,
+        "inner_offset_m": 1.7623343034182164,
+        "deuterium_outer_offset_m": 1.8153627389392168,
+        "outer_offset_m": 2.028167126147438
+      }
+    ],
+    "mass_t": 363.8465581825294,
+    "thickness_m": 2.028167126147438,
+    "inner_area_m2": 1671.3272917097697,
+    "mean_areal_density_g_cm2": 21.769916639745286,
+    "target_g_cm2": null,
+    "all_braking_fuel": true
+  },
+  "layout": {
+    "disc_centres_x_m": [
+      0.0,
+      26.656334252294876
+    ],
+    "wall_thickness_m": 2.028167126147438,
+    "top_m": 6.628167126147439,
+    "bottom_m": -4.278167126147438,
+    "z_centre_m": 1.1750000000000003,
+    "height_m": 10.906334252294876,
+    "corridor_z_m": 5.628167126147439
+  },
+  "frontal": {
+    "width_m": 23.456334252294873,
+    "height_m": 11.306334252294876,
+    "area_m2": 265.20515538999905
+  },
+  "frame": {
+    "width_m": 23.056334252294874,
+    "height_m": 10.906334252294876
+  },
+  "engine_half_span_m": {
+    "crew": 11.5,
+    "cargo": 3.7
+  },
+  "forward_shield": {
+    "face_area_m2": 265.20515538999905,
+    "nominal_t": 29.521847577053045,
+    "with_allowance_t": 32.47403233475835
+  },
+  "engine_shadow_shield": {
+    "nominal_t": 0.0,
+    "with_allowance_t": 0.0,
+    "removed": true,
+    "status": "Removed from design and ledger; engine radiation toward tethers and ship unshielded (open)",
+    "standoff_m": 2000
+  },
+  "tow": {
+    "crew": {
+      "thrust_MN": 12.219251619364439,
+      "tethers_t": 13.14622932841967,
+      "habitat_cables_t": 0.46011802649468847,
+      "stack_straps_t": 1.7960369420437772,
+      "total_t": 15.402384296958136,
+      "nozzle_cant_deg": 5.48161620651824,
+      "cant_thrust_fraction": 0.9955552468580475,
+      "pod_cants_deg": [
+        5.325442928308446,
+        5.481608964750436,
+        5.481608964750436,
+        5.325442928308446
+      ],
+      "nominal_t": 15.409011895587247,
+      "with_allowance_t": 16.949913085145973,
+      "ledger_row": "Remote engine tow assembly"
+    },
+    "cargo": {
+      "thrust_MN": 4.550496377769585,
+      "tethers_t": 4.895706447807278,
+      "habitat_cables_t": 0.17134972567325474,
+      "stack_straps_t": 1.667825303246615,
+      "total_t": 6.734881476727148,
+      "nozzle_cant_deg": 5.242552531899058,
+      "cant_thrust_fraction": 0.9958585136206584,
+      "pod_cants_deg": [
+        5.1899920054698745,
+        5.242552531899058,
+        5.242552531899058,
+        5.1899920054698745
+      ],
+      "nominal_t": 6.73488132933864,
+      "with_allowance_t": 7.408369462272504,
+      "ledger_row": "Remote propulsion support"
+    }
+  },
+  "mixture_density_t_m3": 0.0792174629324547,
+  "crew_stack": [
+    {
+      "phase": 0,
+      "index": 0,
+      "fusion_t": 1582.7293316798773,
+      "antimatter_t": 3.2580413558532655,
+      "volume_m3": 19979.550885508692,
+      "tanks": {
+        "tanks_y": 4,
+        "tanks_z": 2,
+        "deuterium": {
+          "radius_m": 2.576583563073719,
+          "cylinder_m": 19.84282595093651,
+          "length_m": 24.99599307708395,
+          "volume_m3": 3883.998359950619
+        },
+        "helium3": {
+          "radius_m": 2.576583563073719,
+          "cylinder_m": 93.03128722493013,
+          "length_m": 98.18445435107756,
+          "volume_m3": 16095.552525558076
+        },
+        "length_m": 124.68044742816151
+      },
+      "length_m": 124.68044742816151,
+      "antimatter_volume_m3": 37.88420181224728
+    },
+    {
+      "phase": 0,
+      "index": 1,
+      "fusion_t": 1219.0848062069422,
+      "antimatter_t": 2.509480702363021,
+      "volume_m3": 15389.091761830381,
+      "tanks": {
+        "tanks_y": 4,
+        "tanks_z": 2,
+        "deuterium": {
+          "radius_m": 2.576583563073719,
+          "cylinder_m": 14.494459977225667,
+          "length_m": 19.647627103373104,
+          "volume_m3": 2991.6191563360544
+        },
+        "helium3": {
+          "radius_m": 2.576583563073719,
+          "cylinder_m": 70.86729602878943,
+          "length_m": 76.02046315493686,
+          "volume_m3": 12397.47260549433
+        },
+        "length_m": 97.16809025830997
+      },
+      "length_m": 97.16809025830997,
+      "antimatter_volume_m3": 29.180008167011874
+    },
+    {
+      "phase": 0,
+      "index": 2,
+      "fusion_t": 938.9847602030571,
+      "antimatter_t": 1.9328959917679072,
+      "volume_m3": 11853.254641639922,
+      "tanks": {
+        "tanks_y": 4,
+        "tanks_z": 2,
+        "deuterium": {
+          "radius_m": 2.576583563073719,
+          "cylinder_m": 10.374839165297573,
+          "length_m": 15.52800629144501,
+          "volume_m3": 2304.2570802529012
+        },
+        "helium3": {
+          "radius_m": 2.576583563073719,
+          "cylinder_m": 53.795308087833156,
+          "length_m": 58.94847521398059,
+          "volume_m3": 9548.997561387023
+        },
+        "length_m": 75.97648150542561
+      },
+      "length_m": 75.97648150542561,
+      "antimatter_volume_m3": 22.47553478799892
+    },
+    {
+      "phase": 0,
+      "index": 3,
+      "fusion_t": 723.2355043347251,
+      "antimatter_t": 1.4887770991411458,
+      "volume_m3": 9129.74838579969,
+      "tanks": {
+        "tanks_y": 4,
+        "tanks_z": 2,
+        "deuterium": {
+          "radius_m": 2.576583563073719,
+          "cylinder_m": 7.201668945179673,
+          "length_m": 12.35483607132711,
+          "volume_m3": 1774.8110535821472
+        },
+        "helium3": {
+          "radius_m": 2.576583563073719,
+          "cylinder_m": 40.64547556548017,
+          "length_m": 45.798642691627606,
+          "volume_m3": 7354.937332217543
+        },
+        "length_m": 59.65347876295471
+      },
+      "length_m": 59.65347876295471,
+      "antimatter_volume_m3": 17.3113616179203
+    },
+    {
+      "phase": 0,
+      "index": 4,
+      "fusion_t": 557.0529489520194,
+      "antimatter_t": 1.1466910410761102,
+      "volume_m3": 7031.946345302605,
+      "tanks": {
+        "tanks_y": 4,
+        "tanks_z": 2,
+        "deuterium": {
+          "radius_m": 2.576583563073719,
+          "cylinder_m": 4.757509711716027,
+          "length_m": 9.910676837863466,
+          "volume_m3": 1367.001101722747
+        },
+        "helium3": {
+          "radius_m": 2.576583563073719,
+          "cylinder_m": 30.516713996296073,
+          "length_m": 35.66988112244351,
+          "volume_m3": 5664.9452435798585
+        },
+        "length_m": 47.080557960306976
+      },
+      "length_m": 47.080557960306976,
+      "antimatter_volume_m3": 13.333616756698957
+    },
+    {
+      "phase": 0,
+      "index": 5,
+      "fusion_t": 429.0495331238788,
+      "antimatter_t": 0.8831965735691938,
+      "volume_m3": 5416.097880964842,
+      "tanks": {
+        "tanks_y": 4,
+        "tanks_z": 2,
+        "deuterium": {
+          "radius_m": 2.576583563073719,
+          "cylinder_m": 2.8748769047361233,
+          "length_m": 8.028044030883562,
+          "volume_m3": 1052.8822898745493
+        },
+        "helium3": {
+          "radius_m": 2.576583563073719,
+          "cylinder_m": 22.71495600804884,
+          "length_m": 27.868123134196278,
+          "volume_m3": 4363.215591090293
+        },
+        "length_m": 37.39616716507984
+      },
+      "length_m": 37.39616716507984,
+      "antimatter_volume_m3": 10.269727599641788
+    },
+    {
+      "phase": 0,
+      "index": 6,
+      "fusion_t": 330.45389878705697,
+      "antimatter_t": 0.6802378946932492,
+      "volume_m3": 4171.477936232579,
+      "tanks": {
+        "tanks_y": 4,
+        "tanks_z": 2,
+        "deuterium": {
+          "radius_m": 2.576583563073719,
+          "cylinder_m": 1.424764229018854,
+          "length_m": 6.577931355166292,
+          "volume_m3": 810.9298129743729
+        },
+        "helium3": {
+          "radius_m": 2.576583563073719,
+          "cylinder_m": 16.705590767152707,
+          "length_m": 21.858757893300144,
+          "volume_m3": 3360.5481232582065
+        },
+        "length_m": 29.936689248466436
+      },
+      "length_m": 29.936689248466436,
+      "antimatter_volume_m3": 7.90974296154941
+    },
+    {
+      "phase": 0,
+      "index": 7,
+      "fusion_t": 254.50983864313093,
+      "antimatter_t": 0.5239073814919237,
+      "volume_m3": 3212.7996684284176,
+      "tanks": {
+        "tanks_y": 4,
+        "tanks_z": 2,
+        "deuterium": {
+          "radius_m": 2.576583563073719,
+          "cylinder_m": 0.3078035745143658,
+          "length_m": 5.460970700661804,
+          "volume_m3": 624.5640212101373
+        },
+        "helium3": {
+          "radius_m": 2.576583563073719,
+          "cylinder_m": 12.076830088740033,
+          "length_m": 17.229997214887472,
+          "volume_m3": 2588.2356472182805
+        },
+        "length_m": 24.190967915549273
+      },
+      "length_m": 24.190967915549273,
+      "antimatter_volume_m3": 6.091946296417718
+    }
+  ],
+  "crew_braking_antimatter": [
+    {
+      "index": 0,
+      "antimatter_t": 2.8679418380487185,
+      "volume_m3": 33.34816090754324
+    },
+    {
+      "index": 1,
+      "antimatter_t": 2.6447587403009294,
+      "volume_m3": 30.753008608150346
+    },
+    {
+      "index": 2,
+      "antimatter_t": 2.438915426761426,
+      "volume_m3": 28.35948170652821
+    },
+    {
+      "index": 3,
+      "antimatter_t": 2.2490647160377755,
+      "volume_m3": 26.151915302764834
+    },
+    {
+      "index": 4,
+      "antimatter_t": 2.0739640934209618,
+      "volume_m3": 24.115861551406535
+    },
+    {
+      "index": 5,
+      "antimatter_t": 1.9124675790074583,
+      "volume_m3": 22.23799510473789
+    },
+    {
+      "index": 6,
+      "antimatter_t": 1.7635182276120283,
+      "volume_m3": 20.506025902465446
+    },
+    {
+      "index": 7,
+      "antimatter_t": 1.6261412113854483,
+      "volume_m3": 18.908618737040097
+    }
+  ],
+  "cargo_stack": [
+    {
+      "phase": 1,
+      "index": 7,
+      "fusion_t": 49.00070945012625,
+      "antimatter_t": 0.0,
+      "volume_m3": 618.5594392477203,
+      "tanks": {
+        "tanks_y": 1,
+        "tanks_z": 1,
+        "deuterium": {
+          "radius_m": 3.061930873959718,
+          "cylinder_m": 0.0,
+          "length_m": 6.123861747919436,
+          "volume_m3": 120.24713975491106
+        },
+        "helium3": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 7.982483615971447,
+          "length_m": 15.051881182031927,
+          "volume_m3": 498.3122994928093
+        },
+        "length_m": 22.67574292995136
+      },
+      "length_m": 22.67574292995136,
+      "antimatter_volume_m3": 0.0
+    },
+    {
+      "phase": 1,
+      "index": 6,
+      "fusion_t": 58.51578557661659,
+      "antimatter_t": 0.0,
+      "volume_m3": 738.6728053448325,
+      "tanks": {
+        "tanks_y": 1,
+        "tanks_z": 1,
+        "deuterium": {
+          "radius_m": 3.2485204555863425,
+          "cylinder_m": 0.0,
+          "length_m": 6.497040911172685,
+          "volume_m3": 143.59701981991802
+        },
+        "helium3": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 10.447710030983002,
+          "length_m": 17.517107597043484,
+          "volume_m3": 595.0757855249144
+        },
+        "length_m": 25.514148508216167
+      },
+      "length_m": 25.514148508216167,
+      "antimatter_volume_m3": 0.0
+    },
+    {
+      "phase": 1,
+      "index": 5,
+      "fusion_t": 69.87442863894906,
+      "antimatter_t": 0.0,
+      "volume_m3": 882.0584004126458,
+      "tanks": {
+        "tanks_y": 1,
+        "tanks_z": 1,
+        "deuterium": {
+          "radius_m": 3.446413232592778,
+          "cylinder_m": 0.0,
+          "length_m": 6.892826465185556,
+          "volume_m3": 171.47099052502836
+        },
+        "helium3": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 13.390579488221725,
+          "length_m": 20.459977054282206,
+          "volume_m3": 710.5874098876176
+        },
+        "length_m": 28.85280351946776
+      },
+      "length_m": 28.85280351946776,
+      "antimatter_volume_m3": 0.0
+    },
+    {
+      "phase": 1,
+      "index": 4,
+      "fusion_t": 83.43383378740397,
+      "antimatter_t": 0.0,
+      "volume_m3": 1053.225270020884,
+      "tanks": {
+        "tanks_y": 1,
+        "tanks_z": 1,
+        "deuterium": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 0.5033362534614695,
+          "length_m": 7.57273381952195,
+          "volume_m3": 204.7456043862674
+        },
+        "helium3": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 16.903636378092806,
+          "length_m": 23.973033944153286,
+          "volume_m3": 848.4796656346167
+        },
+        "length_m": 33.04576776367524
+      },
+      "length_m": 33.04576776367524,
+      "antimatter_volume_m3": 0.0
+    },
+    {
+      "phase": 1,
+      "index": 3,
+      "fusion_t": 99.6204035185767,
+      "antimatter_t": 0.0,
+      "volume_m3": 1257.5560972398055,
+      "tanks": {
+        "tanks_y": 1,
+        "tanks_z": 1,
+        "deuterium": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 1.515317620081136,
+          "length_m": 8.584715186141617,
+          "volume_m3": 244.46724789834772
+        },
+        "helium3": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 21.097355770270912,
+          "length_m": 28.166753336331393,
+          "volume_m3": 1013.088849341458
+        },
+        "length_m": 38.25146852247301
+      },
+      "length_m": 38.25146852247301,
+      "antimatter_volume_m3": 0.0
+    },
+    {
+      "phase": 1,
+      "index": 2,
+      "fusion_t": 118.94315675100533,
+      "antimatter_t": 0.0,
+      "volume_m3": 1501.4764718282256,
+      "tanks": {
+        "tanks_y": 1,
+        "tanks_z": 1,
+        "deuterium": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 2.7233726031792123,
+          "length_m": 9.792770169239693,
+          "volume_m3": 291.8850472417309
+        },
+        "helium3": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 26.103617522262095,
+          "length_m": 33.17301508832257,
+          "volume_m3": 1209.5914245864951
+        },
+        "length_m": 44.46578525756227
+      },
+      "length_m": 44.46578525756227,
+      "antimatter_volume_m3": 0.0
+    },
+    {
+      "phase": 1,
+      "index": 1,
+      "fusion_t": 142.00973593870586,
+      "antimatter_t": 0.0,
+      "volume_m3": 1792.6569556991672,
+      "tanks": {
+        "tanks_y": 1,
+        "tanks_z": 1,
+        "deuterium": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 4.165490897375613,
+          "length_m": 11.234888463436093,
+          "volume_m3": 348.49014954283643
+        },
+        "helium3": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 32.07985350414379,
+          "length_m": 39.14925107020427,
+          "volume_m3": 1444.166806156331
+        },
+        "length_m": 51.884139533640365
+      },
+      "length_m": 51.884139533640365,
+      "antimatter_volume_m3": 0.0
+    },
+    {
+      "phase": 1,
+      "index": 0,
+      "fusion_t": 169.5455155981754,
+      "antimatter_t": 0.0,
+      "volume_m3": 2140.2542990140887,
+      "tanks": {
+        "tanks_y": 1,
+        "tanks_z": 1,
+        "deuterium": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 5.887022784212832,
+          "length_m": 12.956420350273312,
+          "volume_m3": 416.0626149648476
+        },
+        "helium3": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 39.213998357223446,
+          "length_m": 46.283395923283926,
+          "volume_m3": 1724.1916840492413
+        },
+        "length_m": 60.73981627355724
+      },
+      "length_m": 60.73981627355724,
+      "antimatter_volume_m3": 0.0
+    },
+    {
+      "phase": 0,
+      "index": 7,
+      "fusion_t": 202.41641315454785,
+      "antimatter_t": 0.0,
+      "volume_m3": 2555.1993924261315,
+      "tanks": {
+        "tanks_y": 1,
+        "tanks_z": 1,
+        "deuterium": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 7.942105262067933,
+          "length_m": 15.011502828128414,
+          "volume_m3": 496.7273942442892
+        },
+        "helium3": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 47.7303994730806,
+          "length_m": 54.79979703914108,
+          "volume_m3": 2058.4719981818425
+        },
+        "length_m": 71.3112998672695
+      },
+      "length_m": 71.3112998672695,
+      "antimatter_volume_m3": 0.0
+    },
+    {
+      "phase": 0,
+      "index": 6,
+      "fusion_t": 241.65611943938342,
+      "antimatter_t": 0.0,
+      "volume_m3": 3050.5410107040807,
+      "tanks": {
+        "tanks_y": 1,
+        "tanks_z": 1,
+        "deuterium": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 10.395364491872963,
+          "length_m": 17.46476205793344,
+          "volume_m3": 593.021151998487
+        },
+        "helium3": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 57.89687204405228,
+          "length_m": 64.96626961011276,
+          "volume_m3": 2457.519858705594
+        },
+        "length_m": 83.93103166804622
+      },
+      "length_m": 83.93103166804622,
+      "antimatter_volume_m3": 0.0
+    },
+    {
+      "phase": 0,
+      "index": 5,
+      "fusion_t": 288.4986051573209,
+      "antimatter_t": 0.0,
+      "volume_m3": 3641.856157439821,
+      "tanks": {
+        "tanks_y": 1,
+        "tanks_z": 1,
+        "deuterium": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 13.323948095439604,
+          "length_m": 20.393345661500085,
+          "volume_m3": 707.9720371958796
+        },
+        "helium3": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 70.03312104527339,
+          "length_m": 77.10251861133386,
+          "volume_m3": 2933.884120243942
+        },
+        "length_m": 98.99586427283396
+      },
+      "length_m": 98.99586427283396,
+      "antimatter_volume_m3": 0.0
+    },
+    {
+      "phase": 0,
+      "index": 4,
+      "fusion_t": 344.4169255521692,
+      "antimatter_t": 0.0,
+      "volume_m3": 4347.739914945756,
+      "tanks": {
+        "tanks_y": 1,
+        "tanks_z": 1,
+        "deuterium": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 16.819951216056005,
+          "length_m": 23.889348782116485,
+          "volume_m3": 845.1949093304764
+        },
+        "helium3": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 84.52079499426848,
+          "length_m": 91.59019256032897,
+          "volume_m3": 3502.54500561528
+        },
+        "length_m": 116.97954134244546
+      },
+      "length_m": 116.97954134244546,
+      "antimatter_volume_m3": 0.0
+    },
+    {
+      "phase": 0,
+      "index": 3,
+      "fusion_t": 411.16954356243696,
+      "antimatter_t": 0.0,
+      "volume_m3": 5190.390203647691,
+      "tanks": {
+        "tanks_y": 1,
+        "tanks_z": 1,
+        "deuterium": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 20.993312633662374,
+          "length_m": 28.062710199722854,
+          "volume_m3": 1009.0050148771459
+        },
+        "helium3": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 101.8154876485864,
+          "length_m": 108.88488521464689,
+          "volume_m3": 4181.385188770546
+        },
+        "length_m": 138.44759541436974
+      },
+      "length_m": 138.44759541436974,
+      "antimatter_volume_m3": 0.0
+    },
+    {
+      "phase": 0,
+      "index": 2,
+      "fusion_t": 490.8556281901727,
+      "antimatter_t": 0.0,
+      "volume_m3": 6196.305839896741,
+      "tanks": {
+        "tanks_y": 1,
+        "tanks_z": 1,
+        "deuterium": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 25.975272008714217,
+          "length_m": 33.0446695747747,
+          "volume_m3": 1204.5536888102397
+        },
+        "helium3": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 122.46106505875888,
+          "length_m": 129.53046262481936,
+          "volume_m3": 4991.752151086503
+        },
+        "length_m": 164.07513219959407
+      },
+      "length_m": 164.07513219959407,
+      "antimatter_volume_m3": 0.0
+    },
+    {
+      "phase": 0,
+      "index": 1,
+      "fusion_t": 585.9810670504426,
+      "antimatter_t": 0.0,
+      "volume_m3": 7397.1198440182725,
+      "tanks": {
+        "tanks_y": 1,
+        "tanks_z": 1,
+        "deuterium": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 31.922496974651267,
+          "length_m": 38.99189454071175,
+          "volume_m3": 1437.9903485900431
+        },
+        "helium3": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 147.10676851929458,
+          "length_m": 154.17616608535505,
+          "volume_m3": 5959.129495428229
+        },
+        "length_m": 194.66806062606682
+      },
+      "length_m": 194.66806062606682,
+      "antimatter_volume_m3": 0.0
+    },
+    {
+      "phase": 0,
+      "index": 0,
+      "fusion_t": 699.5372689975181,
+      "antimatter_t": 0.0,
+      "volume_m3": 8830.594203628854,
+      "tanks": {
+        "tanks_y": 1,
+        "tanks_z": 1,
+        "deuterium": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 39.0220098636131,
+          "length_m": 46.09140742967358,
+          "volume_m3": 1716.6558748405353
+        },
+        "helium3": {
+          "radius_m": 3.5346987830302403,
+          "cylinder_m": 176.52763125406017,
+          "length_m": 183.59702882012064,
+          "volume_m3": 7113.93832878832
+        },
+        "length_m": 231.18843624979422
+      },
+      "length_m": 231.18843624979422,
+      "antimatter_volume_m3": 0.0
+    }
+  ],
+  "cargo_envelope_radius_m": 3.7846987830302403,
+  "iterations": [
+    {
+      "shield_nominal_t": 34.41592653589794,
+      "crew_tow_nominal_t": 27,
+      "cargo_tow_nominal_t": 10,
+      "departure_t": 13908.326286095979,
+      "wall_thickness_m": 2.378311768346957,
+      "crew_cant_deg": 5.119385222375934,
+      "front": {
+        "width_m": 24.156623536693914,
+        "height_m": 12.006623536693914,
+        "area_m2": 290.03948472272333
+      }
+    },
+    {
+      "shield_nominal_t": 32.00394847227233,
+      "crew_tow_nominal_t": 30.411708116843876,
+      "cargo_tow_nominal_t": 6.797945332530073,
+      "departure_t": 10329.839603711986,
+      "wall_thickness_m": 2.2127301669000117,
+      "crew_cant_deg": 5.494873504430453,
+      "front": {
+        "width_m": 23.825460333800024,
+        "height_m": 11.675460333800023,
+        "area_m2": 278.17321706180803
+      }
+    },
+    {
+      "shield_nominal_t": 30.817321706180802,
+      "crew_tow_nominal_t": 22.552503051182256,
+      "cargo_tow_nominal_t": 6.7381982407169305,
+      "departure_t": 8584.77401681149,
+      "wall_thickness_m": 2.122644545414331,
+      "crew_cant_deg": 5.4885935410004985,
+      "front": {
+        "width_m": 23.645289090828662,
+        "height_m": 11.495289090828662,
+        "area_m2": 271.80943373529266
+      }
+    },
+    {
+      "shield_nominal_t": 30.180943373529267,
+      "crew_tow_nominal_t": 18.79404388678903,
+      "cargo_tow_nominal_t": 6.735055673054799,
+      "departure_t": 7750.579447210008,
+      "wall_thickness_m": 2.0746220172021657,
+      "crew_cant_deg": 5.485182286400163,
+      "front": {
+        "width_m": 23.54924403440433,
+        "height_m": 11.399244034404331,
+        "area_m2": 268.4435795739154
+      }
+    },
+    {
+      "shield_nominal_t": 29.844357957391537,
+      "crew_tow_nominal_t": 17.000921061759843,
+      "cargo_tow_nominal_t": 6.734890061684999,
+      "departure_t": 7352.955553603209,
+      "wall_thickness_m": 2.0504975219259363,
+      "crew_cant_deg": 5.483365430153328,
+      "front": {
+        "width_m": 23.500995043851873,
+        "height_m": 11.350995043851873,
+        "area_m2": 266.75967826835
+      }
+    },
+    {
+      "shield_nominal_t": 29.675967826835,
+      "crew_tow_nominal_t": 16.15079296167654,
+      "cargo_tow_nominal_t": 6.734881495061227,
+      "departure_t": 7165.134328339496,
+      "wall_thickness_m": 2.03883700003015,
+      "crew_cant_deg": 5.482453146095923,
+      "front": {
+        "width_m": 23.477674000060297,
+        "height_m": 11.3276740000603,
+        "area_m2": 265.9474373523747
+      }
+    },
+    {
+      "shield_nominal_t": 29.594743735237472,
+      "crew_tow_nominal_t": 15.75062133074143,
+      "cargo_tow_nominal_t": 6.734880898317838,
+      "departure_t": 7076.980472557017,
+      "wall_thickness_m": 2.032843333744691,
+      "crew_cant_deg": 5.482012299110805,
+      "front": {
+        "width_m": 23.46568666748938,
+        "height_m": 11.315686667489382,
+        "area_m2": 265.5303577667929
+      }
+    },
+    {
+      "shield_nominal_t": 29.55303577667929,
+      "crew_tow_nominal_t": 15.562922932552047,
+      "cargo_tow_nominal_t": 6.734881159556758,
+      "departure_t": 7035.1571797790175,
+      "wall_thickness_m": 2.030155602579378,
+      "crew_cant_deg": 5.48178572415094,
+      "front": {
+        "width_m": 23.460311205158753,
+        "height_m": 11.310311205158756,
+        "area_m2": 265.3434207002186
+      }
+    },
+    {
+      "shield_nominal_t": 29.53434207002186,
+      "crew_tow_nominal_t": 15.473655180954394,
+      "cargo_tow_nominal_t": 6.734881027682986,
+      "departure_t": 7015.470857540684,
+      "wall_thickness_m": 2.02902121688508,
+      "crew_cant_deg": 5.4816841272934065,
+      "front": {
+        "width_m": 23.45804243377016,
+        "height_m": 11.30804243377016,
+        "area_m2": 265.264539254254
+      }
+    },
+    {
+      "shield_nominal_t": 29.526453925425397,
+      "crew_tow_nominal_t": 15.430726075879921,
+      "cargo_tow_nominal_t": 6.734881313377088,
+      "departure_t": 7006.132491594843,
+      "wall_thickness_m": 2.0283587143407535,
+      "crew_cant_deg": 5.4816412483364685,
+      "front": {
+        "width_m": 23.456717428681507,
+        "height_m": 11.306717428681507,
+        "area_m2": 265.21847577053046
+      }
+    },
+    {
+      "shield_nominal_t": 29.521847577053045,
+      "crew_tow_nominal_t": 15.409011895587247,
+      "cargo_tow_nominal_t": 6.73488132933864,
+      "departure_t": 7001.253859892858,
+      "wall_thickness_m": 2.028167126147438,
+      "crew_cant_deg": 5.48161620651824,
+      "front": {
+        "width_m": 23.456334252294873,
+        "height_m": 11.306334252294876,
+        "area_m2": 265.20515538999905
+      }
+    }
+  ],
+  "change_from_S7": {
+    "crew_departure_t": -20333.593704808038,
+    "crew_fusion_t": -19999.55102631635,
+    "cargo_departure_t": -15.97945452244494,
+    "shield_nominal_t": -4.894078958844894,
+    "crew_tow_nominal_t": -11.590988104412753
+  },
+  "concept_only": true,
+  "radiation_verified": false,
+  "tow_statically_sized": true,
+  "tow_dynamics_sized": false,
+  "added_crew_hardware": [
+    [
+      "Transfer-tube windows (in place of a cupola)",
+      0.5,
+      false
+    ],
+    [
+      "EVA handrails, tether points and small robotic arm (suits and airlocks are the habitats' own)",
+      1.5,
+      false
+    ]
+  ],
+  "radiator_strips": {
+    "crew": {
+      "fin_reach_m": 26.830930461446325,
+      "strip_length_m": 73.36105334119554,
+      "area_m2": 88.03326400943465,
+      "nominal_t": 8.80467725738334,
+      "width_m": 1.2
+    },
+    "cargo": {
+      "fin_reach_m": 7.167310277387471,
+      "strip_length_m": 13.530445977428922,
+      "area_m2": 16.236535172914706,
+      "nominal_t": 1.623653450420213,
+      "width_m": 1.2
+    }
+  },
+  "surface_solar": {
+    "flux_W_m2": 877,
+    "incidence": 0.7071067811865476,
+    "net_efficiency": 0.14450000000000002,
+    "area_m2": 16455.202944918514,
+    "continuous_load_kW": {
+      "habitation_life_support_and_habitat_hvac": 50,
+      "greenhouse_pumps_ventilation_and_dehumidification": 120,
+      "food_processing_and_refrigeration": 45,
+      "workshop_and_regolith_processing": 80,
+      "water_extraction_and_rover_charging": 30,
+      "communications_controls_and_lighting": 25
+    },
+    "crop_lighting_kWh_day": 13274.074074074075,
+    "average_kW": 903.0864197530865,
+    "peak_kW": 1179.6296296296296,
+    "design_kW": 1474.537037037037,
+    "storage_MWh": 0.5,
+    "array_t": 3.291040588983703,
+    "battery_t": 2.0,
+    "coolers_t": 2.211805555555556,
+    "switchyard_t": 6,
+    "total_t": 13.502846144539259
+  },
+  "fuel_feed": {
+    "crew": {
+      "peak_kg_s": 0.362740117444169,
+      "peak_liquid_m3_s": 0.004579042347688689,
+      "line_inner_diameter_m": 0.04408407798020421,
+      "line_velocity_m_s": 3
+    },
+    "cargo": {
+      "peak_kg_s": 0.19421098082276023,
+      "peak_liquid_m3_s": 0.0024516182876035244,
+      "line_inner_diameter_m": 0.03225676855262427,
+      "line_velocity_m_s": 3
+    }
+  },
+  "cant_loss_charged": true,
+  "capture_fuel_included": false
+}
